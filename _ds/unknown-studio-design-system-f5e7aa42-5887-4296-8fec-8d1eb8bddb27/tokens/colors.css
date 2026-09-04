@@ -1,0 +1,36 @@
+:root {
+  /* ── Base palette ── */
+  --color-offwhite:      #F8F7F3;
+  --color-offwhite-2:    #F0EFEA;
+  --color-offwhite-3:    #E8E6DE;
+  --color-ink:           #0B0B0B;
+  --color-ink-80:        rgba(11, 11, 11, 0.80);
+  --color-ink-60:        rgba(11, 11, 11, 0.60);
+  --color-ink-30:        rgba(11, 11, 11, 0.30);
+  --color-ink-10:        rgba(11, 11, 11, 0.08);
+  --color-alien-green:   #B7FF5A;
+  --color-alien-green-2: #9CE042;
+  --color-violet:        #A48CFF;
+  --color-violet-2:      #8A70F0;
+  --color-beige:         #D6C7B1;
+  --color-metal:         #D8D8D8;
+  --color-white:         #FFFFFF;
+  --color-error:         #D64045;
+
+  /* ── Semantic aliases ── */
+  --bg-page:          var(--color-offwhite);
+  --bg-surface:       var(--color-white);
+  --bg-subtle:        var(--color-offwhite-2);
+  --bg-invert:        var(--color-ink);
+  --text-primary:     var(--color-ink);
+  --text-secondary:   #4B4741;
+  --text-muted:       #8C8880;
+  --text-invert:      var(--color-offwhite);
+  --text-green:       var(--color-alien-green);
+  --text-violet:      var(--color-violet);
+  --border-default:   var(--color-metal);
+  --border-subtle:    var(--color-offwhite-3);
+  --border-strong:    var(--color-ink);
+  --accent-1:         var(--color-alien-green);
+  --accent-2:         var(--color-violet);
+}

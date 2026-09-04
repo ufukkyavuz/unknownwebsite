@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="_ds/unknown-studio-design-system-f5e7aa42-5887-4296-8fec-8d1eb8bddb27/tokens/reset.css">
+  <link rel="stylesheet" href="_ds/unknown-studio-design-system-f5e7aa42-5887-4296-8fec-8d1eb8bddb27/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/unknown-studio-design-system-f5e7aa42-5887-4296-8fec-8d1eb8bddb27/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/unknown-studio-design-system-f5e7aa42-5887-4296-8fec-8d1eb8bddb27/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/unknown-studio-design-system-f5e7aa42-5887-4296-8fec-8d1eb8bddb27/tokens/fonts.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="_ds/unknown-studio-design-system-f5e7aa42-5887-4296-8fec-8d1eb8bddb27/styles.css">
+  <style>
+    html,body{margin:0;padding:0;background:#FFFFFF;overflow-x:clip;}
+    ::selection{background:#FFFFFF;color:#0B0B0B}
+    @media (max-width:760px){
+      #wnav-burger{display:flex !important;align-items:center;justify-content:center;}
+      nav > div:nth-of-type(1){display:none !important;}
+      nav > a[href$="#contact"]{display:none !important;}
+      #drag-hint{display:none !important;}
+      section[data-screen-label] > div[style*="left:0;bottom:0"]{padding:20px 50px 20px 20px !important;}
+      section[data-screen-label] > div[style*="left:0;bottom:0"] img{height:40px !important;}
+    }
+  </style>
+<template id="__bundler_thumbnail"><svg viewBox="0 0 80 56" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="56" fill="#0B0B0B"></rect><text x="40" y="34" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">u®</text></svg></template>
+  <style>
+    .hv-work-buzzfy-1:hover{color:#0B0B0B;}
+    .hv-work-buzzfy-2:hover{color:#0B0B0B;}
+    .hv-work-buzzfy-3:hover{color:#0B0B0B;}
+    .hv-work-buzzfy-4:hover{background:rgba(11,11,11,0.06);}
+    .hv-work-buzzfy-5:hover{color:#0B0B0B;}
+    .hv-work-buzzfy-6:hover{color:#0B0B0B;}
+  </style>
+</head>
+<body>
+<!-- ═══ NAV ═══ (same chrome as homepage) -->
+<nav style="position:fixed;top:0;left:0;right:0;z-index:200;height:72px;display:flex;align-items:center;padding:0 clamp(24px,5vw,80px);background:#FFFFFF;border-bottom:1px solid rgba(11,11,11,0.08);">
+  <a href="index.html" style="font-family:var(--font-display);font-weight:700;font-size:17px;letter-spacing:-0.025em;color:#0B0B0B;text-decoration:none;flex-shrink:0;line-height:1;">unknown®</a>
+
+  <div style="position:absolute;left:0;right:0;top:0;height:72px;display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:1;">
+    <div style="position:relative;display:flex;gap:2px;align-items:center;padding:5px 6px;border-radius:100px;pointer-events:auto;">
+      <a href="index.html" class="hv-work-buzzfy-1" style="position:relative;z-index:1;font-family:var(--font-body);font-size:13px;font-weight:500;color:rgba(11,11,11,0.6);text-decoration:none;white-space:nowrap;padding:7px 14px;border-radius:100px;transition:color 300ms ease;">Home</a>
+      <a href="index.html#work" style="position:relative;z-index:1;font-family:var(--font-body);font-size:14px;font-weight:600;color:#0B0B0B;text-decoration:none;white-space:nowrap;padding:7px 16px;border-radius:100px;transition:color 300ms ease;">Work</a>
+      <a href="index.html#services" class="hv-work-buzzfy-2" style="position:relative;z-index:1;font-family:var(--font-body);font-size:14px;font-weight:500;color:rgba(11,11,11,0.6);text-decoration:none;white-space:nowrap;padding:7px 16px;border-radius:100px;transition:color 300ms ease;">Services</a>
+      <a href="index.html#contact" class="hv-work-buzzfy-3" style="position:relative;z-index:1;font-family:var(--font-body);font-size:14px;font-weight:500;color:rgba(11,11,11,0.6);text-decoration:none;white-space:nowrap;padding:7px 16px;border-radius:100px;transition:color 300ms ease;">Contact</a>
+    </div>
+  </div>
+
+  <a href="index.html#contact" class="hv-work-buzzfy-4" style="margin-left:auto;font-family:var(--font-body);font-size:13px;font-weight:600;color:#0B0B0B;text-decoration:none;border:1.5px solid #0B0B0B;border-radius:var(--radius-full);padding:9px 22px;flex-shrink:0;white-space:nowrap;transition:background 220ms ease;">Start a project</a>
+
+  <button id="wnav-burger" aria-label="Menu" onclick="document.getElementById('wnav-mobile-menu').style.display='flex'" style="display:none;margin-left:auto;background:none;border:none;padding:8px;cursor:pointer;flex-shrink:0;">
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 6H19M3 11H19M3 16H19" stroke="#0B0B0B" stroke-width="1.6" stroke-linecap="round"></path></svg>
+  </button>
+</nav>
+
+<div id="wnav-mobile-menu" style="display:none;position:fixed;inset:0;z-index:300;background:#FFFFFF;flex-direction:column;">
+  <div style="height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(24px,5vw,80px);border-bottom:1px solid rgba(11,11,11,0.08);flex-shrink:0;">
+    <span style="font-family:var(--font-display);font-weight:700;font-size:17px;color:#0B0B0B;">unknown®</span>
+    <button aria-label="Close" onclick="document.getElementById('wnav-mobile-menu').style.display='none'" style="background:none;border:none;padding:8px;cursor:pointer;">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 4L16 16M16 4L4 16" stroke="#0B0B0B" stroke-width="1.6" stroke-linecap="round"></path></svg>
+    </button>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:2px;padding:20px clamp(24px,5vw,80px);">
+    <a href="index.html" style="font-family:var(--font-display);font-weight:700;font-size:26px;color:#0B0B0B;text-decoration:none;padding:16px 0;border-bottom:1px solid rgba(11,11,11,0.08);">Home</a>
+    <a href="index.html#work" style="font-family:var(--font-display);font-weight:700;font-size:26px;color:#0B0B0B;text-decoration:none;padding:16px 0;border-bottom:1px solid rgba(11,11,11,0.08);">Work</a>
+    <a href="index.html#services" style="font-family:var(--font-display);font-weight:700;font-size:26px;color:#0B0B0B;text-decoration:none;padding:16px 0;border-bottom:1px solid rgba(11,11,11,0.08);">Services</a>
+    <a href="index.html#contact" style="font-family:var(--font-display);font-weight:700;font-size:26px;color:#0B0B0B;text-decoration:none;padding:16px 0;">Contact</a>
+    <a href="index.html#contact" style="margin-top:24px;font-family:var(--font-body);font-size:15px;font-weight:600;color:#FFFFFF;background:#0B0B0B;text-decoration:none;border-radius:var(--radius-full);padding:15px 24px;text-align:center;">Start a project</a>
+  </div>
+</div>
+
+<!-- ═══ DRAG GALLERY STAGE ═══ (images to be added) -->
+<section data-screen-label="Buzzfy — Gallery" style="position:relative;height:100vh;min-height:640px;background:#FFFFFF;overflow:hidden;">
+
+  <div id="gallery-stage" style="position:absolute;inset:0;overflow:hidden;cursor:grab;touch-action:none;">
+    <div id="gallery-canvas" style="position:absolute;top:0;left:0;will-change:transform;"></div>
+
+    <!-- source pattern — cloned 2×2 by JS into a seamless, endlessly-panning tile. Empty for now — add data-photo tiles here when images are ready. -->
+    <div id="tile-pattern" style="display:none;"></div>
+  </div>
+
+  <!-- bottom-left persistent brand mark + prev/next -->
+  <div style="position:fixed;left:0;bottom:0;z-index:5;display:flex;flex-direction:column;gap:16px;padding:clamp(24px,5vw,80px) 90px 30px clamp(24px,5vw,80px);pointer-events:none;">
+    <img src="uploads/buzzfy logo.svg" alt="Buzzfy" style="height:64px;width:auto;filter:brightness(0);opacity:0.95;display:block;pointer-events:none;">
+    <div style="display:flex;align-items:center;gap:14px;pointer-events:auto;">
+      <a href="work-muse-lab.html" class="hv-work-buzzfy-5" style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(11,11,11,0.45);text-decoration:none;transition:color 200ms;">← Prev</a>
+      <span style="width:1px;height:10px;background:rgba(11,11,11,0.2);"></span>
+      <a href="work-foundby-me.html" class="hv-work-buzzfy-6" style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(11,11,11,0.45);text-decoration:none;transition:color 200ms;">Next →</a>
+    </div>
+  </div>
+
+  <!-- drag affordance hint -->
+  <div id="drag-hint" style="position:fixed;right:clamp(24px,5vw,80px);bottom:36px;z-index:5;display:flex;align-items:center;gap:8px;pointer-events:none;transition:opacity 500ms ease;">
+    <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2 7.5H13M2 7.5L5.5 4M2 7.5L5.5 11M13 7.5L9.5 4M13 7.5L9.5 11" stroke="rgba(11,11,11,0.5)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+    <span style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(11,11,11,0.45);">Drag to explore</span>
+  </div>
+</section>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+class Component {
+  componentDidMount() {
+    const wnavBurger = document.getElementById('wnav-burger');
+    const wnavMenu = document.getElementById('wnav-mobile-menu');
+    if (wnavBurger && wnavMenu) {
+      wnavBurger.addEventListener('click', () => { wnavMenu.style.display = 'flex'; });
+      wnavMenu.querySelectorAll('a, button').forEach(el => el.addEventListener('click', () => { wnavMenu.style.display = 'none'; }));
+    }
+
+    const stage      = document.getElementById('gallery-stage');
+    const canvas     = document.getElementById('gallery-canvas');
+    const hint       = document.getElementById('drag-hint');
+    const patternSrc = document.getElementById('tile-pattern');
+    if (!stage || !canvas || !patternSrc) return;
+
+    const PW = 1900, PH = 1400;
+    canvas.style.width  = (PW * 2) + 'px';
+    canvas.style.height = (PH * 2) + 'px';
+
+    const offsets = [[0, 0], [PW, 0], [0, PH], [PW, PH]];
+    const sourceTiles = [...patternSrc.children];
+    offsets.forEach(([ox, oy]) => {
+      sourceTiles.forEach(tile => {
+        const clone = tile.cloneNode(true);
+        const baseLeft = parseFloat(tile.getAttribute('data-x'));
+        const baseTop  = parseFloat(tile.getAttribute('data-y'));
+        clone.style.left = (baseLeft + ox) + 'px';
+        clone.style.top  = (baseTop + oy) + 'px';
+        canvas.appendChild(clone);
+      });
+    });
+    patternSrc.remove();
+
+    const lightbox = document.createElement('div');
+    lightbox.style.cssText = 'position:fixed;inset:0;z-index:500;background:rgba(11,11,11,0.94);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 260ms ease;';
+    const lbImg = document.createElement('img');
+    lbImg.alt = '';
+    lbImg.style.cssText = 'max-width:96vw;max-height:94vh;width:auto;height:auto;border-radius:14px;box-shadow:0 50px 120px rgba(0,0,0,0.6);object-fit:contain;opacity:0;transition:opacity 180ms ease;';
+    lightbox.appendChild(lbImg);
+    document.body.appendChild(lightbox);
+
+    let lbToken = 0;
+    const openLightbox = (src, alt) => {
+      const token = ++lbToken;
+      lbImg.style.opacity = '0';
+      lbImg.removeAttribute('src');
+      lightbox.style.opacity = '1';
+      lightbox.style.pointerEvents = 'auto';
+      const show = () => { if (token === lbToken) lbImg.style.opacity = '1'; };
+      lbImg.onload = show;
+      lbImg.alt = alt || '';
+      lbImg.src = src;
+      if (lbImg.complete && lbImg.currentSrc) show();
+    };
+    const closeLightbox = () => {
+      lbToken++;
+      lightbox.style.opacity = '0';
+      lightbox.style.pointerEvents = 'none';
+      lbImg.style.opacity = '0';
+      lbImg.removeAttribute('src');
+    };
+    lightbox.addEventListener('click', closeLightbox);
+    const onKey = (e) => { if (e.key === 'Escape') closeLightbox(); };
+    window.addEventListener('keydown', onKey);
+
+    let viewX = PW * 0.2, viewY = PH * 0.75;
+    let dragging = false;
+    let lastPX = 0, lastPY = 0;
+    let dragDistance = 0;
+    let idleTimer = null;
+    let autoplay = true;
+    const SPEED_X = 26, SPEED_Y = 20;
+    let mouseNX = 0, mouseNY = 0;
+    let parX = 0, parY = 0;
+    const PARALLAX_RANGE = 22;
+
+    const wrap = (v, m) => ((v % m) + m) % m;
+    const render = () => {
+      canvas.style.transform = `translate3d(${(-viewX + parX).toFixed(1)}px, ${(-viewY + parY).toFixed(1)}px, 0)`;
+    };
+
+    let raf = null;
+    let last = performance.now();
+    const loop = (now) => {
+      const dt = Math.min(0.05, (now - last) / 1000);
+      last = now;
+      if (autoplay && !dragging) {
+        viewX = wrap(viewX - SPEED_X * dt, PW);
+        viewY = wrap(viewY + SPEED_Y * dt, PH);
+      }
+      const targetParX = mouseNX * PARALLAX_RANGE;
+      const targetParY = mouseNY * PARALLAX_RANGE;
+      parX += (targetParX - parX) * 0.05;
+      parY += (targetParY - parY) * 0.05;
+      render();
+      raf = requestAnimationFrame(loop);
+    };
+    raf = requestAnimationFrame(loop);
+
+    const onHoverMove = (e) => {
+      const r = stage.getBoundingClientRect();
+      mouseNX = ((e.clientX - r.left) / r.width) - 0.5;
+      mouseNY = ((e.clientY - r.top) / r.height) - 0.5;
+    };
+    stage.addEventListener('mousemove', onHoverMove, { passive: true });
+    stage.addEventListener('mouseleave', () => { mouseNX = 0; mouseNY = 0; }, { passive: true });
+
+    const wakeAutoplay = () => {
+      clearTimeout(idleTimer);
+      autoplay = false;
+      idleTimer = setTimeout(() => { autoplay = true; }, 400);
+    };
+
+    const onDown = (e) => {
+      dragging = true;
+      autoplay = false;
+      dragDistance = 0;
+      clearTimeout(idleTimer);
+      stage.style.cursor = 'grabbing';
+      const p = e.touches ? e.touches[0] : e;
+      lastPX = p.clientX; lastPY = p.clientY;
+      if (hint) hint.style.opacity = '0';
+    };
+    const onMove = (e) => {
+      if (!dragging) return;
+      const p = e.touches ? e.touches[0] : e;
+      const dx = p.clientX - lastPX, dy = p.clientY - lastPY;
+      lastPX = p.clientX; lastPY = p.clientY;
+      dragDistance += Math.hypot(dx, dy);
+      viewX = wrap(viewX - dx, PW);
+      viewY = wrap(viewY - dy, PH);
+    };
+    const onUp = (e) => {
+      if (!dragging) return;
+      dragging = false;
+      stage.style.cursor = 'grab';
+      wakeAutoplay();
+      if (dragDistance < 6) {
+        const tile = e.target && e.target.closest ? e.target.closest('[data-photo]') : null;
+        if (tile) {
+          const img = tile.querySelector('img');
+          if (img) {
+            const full = img.getAttribute('data-full');
+            openLightbox(full || img.currentSrc || img.src, img.alt);
+          }
+        }
+      }
+    };
+
+    stage.addEventListener('pointerdown', onDown);
+    window.addEventListener('pointermove', onMove, { passive: true });
+    window.addEventListener('pointerup', onUp, { passive: true });
+
+    const onWheel = (e) => {
+      e.preventDefault();
+      autoplay = false;
+      clearTimeout(idleTimer);
+      viewX = wrap(viewX + e.deltaX * 0.5, PW);
+      viewY = wrap(viewY + e.deltaY * 0.5, PH);
+      wakeAutoplay();
+    };
+    stage.addEventListener('wheel', onWheel, { passive: false });
+
+    this._cleanup = () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener('pointermove', onMove);
+      window.removeEventListener('pointerup', onUp);
+      window.removeEventListener('keydown', onKey);
+      stage.removeEventListener('wheel', onWheel);
+      lightbox.remove();
+    };
+  }
+
+  componentWillUnmount() {
+    if (this._cleanup) this._cleanup();
+  }
+}
+const __component = new Component();
+__component.componentDidMount();
+});
+</script>
+</body>
+</html>
