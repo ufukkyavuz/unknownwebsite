@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>All work — unknown® studio</title>
+<link rel="stylesheet" href="_ds/unknown-studio-design-system-f5e7aa42-5887-4296-8fec-8d1eb8bddb27/tokens/reset.css">
+<link rel="stylesheet" href="_ds/unknown-studio-design-system-f5e7aa42-5887-4296-8fec-8d1eb8bddb27/tokens/colors.css">
+<link rel="stylesheet" href="_ds/unknown-studio-design-system-f5e7aa42-5887-4296-8fec-8d1eb8bddb27/tokens/typography.css">
+<link rel="stylesheet" href="_ds/unknown-studio-design-system-f5e7aa42-5887-4296-8fec-8d1eb8bddb27/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/unknown-studio-design-system-f5e7aa42-5887-4296-8fec-8d1eb8bddb27/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/unknown-studio-design-system-f5e7aa42-5887-4296-8fec-8d1eb8bddb27/styles.css">
+<style>
+  html,body{margin:0;padding:0;background:#0B0B0B;overflow-x:clip;}
+  ::selection{background:#FFFFFF;color:#0B0B0B}
+  .hv-work-all-1:hover{color:#F8F7F3;}
+  .hv-work-all-2:hover{color:#F8F7F3;}
+  .hv-work-all-3:hover{color:#F8F7F3;}
+  .hv-work-all-cta:hover{background:#E5E5E5;}
+  .work-all-card:hover [data-project-arrow]{background:#F8F7F3;border-color:#F8F7F3;}
+  .work-all-card:hover [data-project-arrow] svg path{stroke:#0B0B0B;}
+  .work-all-card:hover [data-project-image]{transform:scale(1.04);}
+  @media (max-width:760px){
+    #wa-nav-links, #wa-nav-cta{display:none !important;}
+    #wa-nav-burger{display:flex !important;align-items:center;justify-content:center;}
+    #work-all-grid{grid-template-columns:1fr !important;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ (same chrome as homepage) -->
+<nav style="position:fixed;top:0;left:0;right:0;z-index:200;height:72px;display:flex;align-items:center;padding:0 clamp(24px,5vw,80px);background:rgba(11,11,11,0.7);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(248,247,243,0.08);">
+  <a href="index.html" style="font-family:var(--font-display);font-weight:700;font-size:17px;letter-spacing:-0.025em;color:#F8F7F3;text-decoration:none;flex-shrink:0;line-height:1;">unknown®</a>
+
+  <div style="position:absolute;left:0;right:0;top:0;height:72px;display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:1;">
+    <div id="wa-nav-links" style="position:relative;display:flex;gap:2px;align-items:center;padding:5px 6px;border-radius:100px;pointer-events:auto;">
+      <a href="index.html" class="hv-work-all-1" style="font-family:var(--font-body);font-size:13px;font-weight:500;color:rgba(248,247,243,0.6);text-decoration:none;white-space:nowrap;padding:7px 14px;border-radius:100px;">Home</a>
+      <a href="index.html#work" style="font-family:var(--font-body);font-size:14px;font-weight:600;color:#F8F7F3;text-decoration:none;white-space:nowrap;padding:7px 16px;border-radius:100px;">Work</a>
+      <a href="index.html#services" class="hv-work-all-2" style="font-family:var(--font-body);font-size:14px;font-weight:500;color:rgba(248,247,243,0.6);text-decoration:none;white-space:nowrap;padding:7px 16px;border-radius:100px;">Services</a>
+      <a href="index.html#contact" class="hv-work-all-3" style="font-family:var(--font-body);font-size:14px;font-weight:500;color:rgba(248,247,243,0.6);text-decoration:none;white-space:nowrap;padding:7px 16px;border-radius:100px;">Contact</a>
+    </div>
+  </div>
+
+  <a id="wa-nav-cta" href="index.html#contact" class="hv-work-all-cta" style="margin-left:auto;flex-shrink:0;font-family:var(--font-body);font-size:13px;font-weight:600;color:#0B0B0B;text-decoration:none;border-radius:60px;padding:9px 22px;white-space:nowrap;background:#F8F7F3;transition:background 220ms ease;">Start a project</a>
+
+  <button id="wa-nav-burger" aria-label="Menu" onclick="document.getElementById('wa-mobile-menu').style.display='flex'" style="display:none;margin-left:auto;background:none;border:none;padding:8px;cursor:pointer;flex-shrink:0;">
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 6H19M3 11H19M3 16H19" stroke="#F8F7F3" stroke-width="1.6" stroke-linecap="round"></path></svg>
+  </button>
+</nav>
+
+<div id="wa-mobile-menu" style="display:none;position:fixed;inset:0;z-index:300;background:#0B0B0B;flex-direction:column;">
+  <div style="height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(24px,5vw,80px);border-bottom:1px solid rgba(248,247,243,0.1);flex-shrink:0;">
+    <span style="font-family:var(--font-display);font-weight:700;font-size:17px;color:#F8F7F3;">unknown®</span>
+    <button aria-label="Close" onclick="document.getElementById('wa-mobile-menu').style.display='none'" style="background:none;border:none;padding:8px;cursor:pointer;">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 4L16 16M16 4L4 16" stroke="#F8F7F3" stroke-width="1.6" stroke-linecap="round"></path></svg>
+    </button>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:2px;padding:20px clamp(24px,5vw,80px);">
+    <a href="index.html" style="font-family:var(--font-display);font-weight:700;font-size:26px;color:#F8F7F3;text-decoration:none;padding:16px 0;border-bottom:1px solid rgba(248,247,243,0.1);">Home</a>
+    <a href="index.html#work" style="font-family:var(--font-display);font-weight:700;font-size:26px;color:#F8F7F3;text-decoration:none;padding:16px 0;border-bottom:1px solid rgba(248,247,243,0.1);">Work</a>
+    <a href="index.html#services" style="font-family:var(--font-display);font-weight:700;font-size:26px;color:#F8F7F3;text-decoration:none;padding:16px 0;border-bottom:1px solid rgba(248,247,243,0.1);">Services</a>
+    <a href="index.html#contact" style="font-family:var(--font-display);font-weight:700;font-size:26px;color:#F8F7F3;text-decoration:none;padding:16px 0;">Contact</a>
+    <a href="index.html#contact" style="margin-top:24px;font-family:var(--font-body);font-size:15px;font-weight:600;color:#0B0B0B;background:#FFFFFF;text-decoration:none;border-radius:var(--radius-full);padding:15px 24px;text-align:center;">Start a project</a>
+  </div>
+</div>
+
+<!-- ═══ ALL WORK ═══ -->
+<section style="padding:clamp(120px,14vw,160px) clamp(24px,5vw,80px) clamp(80px,8vw,130px);">
+  <h1 style="font-family:var(--font-display);font-weight:700;font-size:clamp(36px,4vw,64px);color:#F8F7F3;letter-spacing:var(--tracking-tighter);margin:0 0 8px;line-height:1.04;">All work</h1>
+  <p style="font-family:var(--font-body);font-size:var(--text-base);color:rgba(248,247,243,0.6);max-width:360px;margin:0 0 48px;line-height:var(--leading-relaxed);">Every brand, every story.</p>
+
+  <div id="work-all-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px;">
+
+    <a data-project-card="" href="work-alix-avien.html" class="work-all-card" style="aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;position:relative;cursor:pointer;background:#A0653A;display:block;text-decoration:none;">
+      <div data-project-image="" style="position:absolute;inset:0;background:url(&quot;./alix-avien-cover-mrbrnfql-web.jpg&quot;) center / cover no-repeat;transition:transform 600ms var(--ease-standard);"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,11,11,0.9) 0%,transparent 60%);pointer-events:none;"></div>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:32px;">
+        <p style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(248,247,243,0.7);margin:0 0 14px;line-height:1.55;">Website design and funnel improvements that lifted sales. Studio-grade product visuals now anchor the site and every performance ad.</p>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;"><div style="font-family:var(--font-display);font-weight:700;font-size:clamp(22px,2.2vw,32px);color:#F8F7F3;letter-spacing:-0.025em;line-height:1.1;">Alix Avien</div><div data-project-arrow="" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(248,247,243,0.32);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 220ms var(--ease-spring);"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9H15M10 4L15 9L10 14" stroke="rgba(248,247,243,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
+      </div>
+    </a>
+
+    <a data-project-card="" href="work-ino-beauty.html" class="work-all-card" style="aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;position:relative;cursor:pointer;background:#120820;display:block;text-decoration:none;">
+      <div data-project-image="" style="position:absolute;inset:0;transition:transform 600ms var(--ease-standard);"><img alt="INO Beauty" style="width:100%;height:100%;object-fit:cover;" src="./ino-cover-mrbro0zg-web.jpg"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,11,11,0.9) 0%,transparent 60%);pointer-events:none;"></div>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:32px;">
+        <p style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(248,247,243,0.7);margin:0 0 14px;line-height:1.55;">Studio-grade product visuals and marketplace storefronts for Trendyol and Hepsiburada, plus ongoing mentorship on their website roadmap.</p>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:12px;"><div style="font-family:var(--font-display);font-weight:700;font-size:clamp(22px,2.2vw,32px);color:#F8F7F3;letter-spacing:-0.025em;line-height:1.1;">INO Beauty</div><div data-project-arrow="" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(248,247,243,0.32);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 220ms;"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9H15M10 4L15 9L10 14" stroke="rgba(248,247,243,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
+      </div>
+    </a>
+
+    <a data-project-card="" href="work-muse-lab.html" class="work-all-card" style="aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;position:relative;cursor:pointer;background:#060e2e;display:block;text-decoration:none;">
+      <div data-project-image="" style="position:absolute;inset:0;transition:transform 600ms var(--ease-standard);"><img src="./muse-cover-mrbrompd-web.jpg" alt="Muse Lab" style="width:100%;height:100%;object-fit:cover;"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,11,11,0.9) 0%,transparent 60%);pointer-events:none;"></div>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:28px;">
+        <p style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(248,247,243,0.7);margin:0 0 10px;line-height:1.55;">Studio-grade product visuals and marketplace storefronts for Trendyol and Hepsiburada, plus ongoing mentorship on their website roadmap.</p>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:10px;"><div style="font-family:var(--font-display);font-weight:700;font-size:clamp(20px,2vw,30px);color:#F8F7F3;letter-spacing:-0.025em;line-height:1.1;">Muse Lab</div><div data-project-arrow="" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(248,247,243,0.32);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 220ms;"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9H15M10 4L15 9L10 14" stroke="rgba(248,247,243,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
+      </div>
+    </a>
+
+    <a data-project-card="" href="work-buzzfy.html" class="work-all-card" style="aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;position:relative;cursor:pointer;background:url(&quot;uploads/grow wit trial reels 1080x1920-0e100456-web.jpg&quot;) center / cover no-repeat;display:block;text-decoration:none;">
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,11,11,0.9) 0%,transparent 60%);pointer-events:none;"></div>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:28px;">
+        <p style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(248,247,243,0.7);margin:0 0 10px;line-height:1.55;">Web and mobile app plus landing pages, followed by the social media and paid campaigns that carried them to launch.</p>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:10px;"><div style="font-family:var(--font-display);font-weight:700;font-size:clamp(20px,2vw,30px);color:#F8F7F3;letter-spacing:-0.025em;">Buzzfy</div><div data-project-arrow="" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(248,247,243,0.32);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 220ms;"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9H15M10 4L15 9L10 14" stroke="rgba(248,247,243,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
+      </div>
+    </a>
+
+    <a data-project-card="" href="work-foundby-me.html" class="work-all-card" style="aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;position:relative;cursor:pointer;background:url(&quot;./fbm-cover-mrcoftc9-web.jpg&quot;) center / cover no-repeat;display:block;text-decoration:none;">
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,11,11,0.9) 0%,transparent 60%);pointer-events:none;"></div>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:28px;">
+        <p style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(248,247,243,0.7);margin:0 0 10px;line-height:1.55;">Web and mobile app plus landing pages, followed by the social media and paid campaigns that carried them to launch.</p>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:10px;"><div style="font-family:var(--font-display);font-weight:700;font-size:clamp(20px,2vw,30px);color:#F8F7F3;letter-spacing:-0.025em;">Foundby.me</div><div data-project-arrow="" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(248,247,243,0.32);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 220ms;"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9H15M10 4L15 9L10 14" stroke="rgba(248,247,243,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
+      </div>
+    </a>
+
+    <a data-project-card="" href="work-kind-people.html" class="work-all-card" style="aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;position:relative;cursor:pointer;background:url(&quot;./slide-53-mrbtvwmx.png&quot;) center / cover no-repeat;display:block;text-decoration:none;">
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,11,11,0.9) 0%,transparent 60%);pointer-events:none;"></div>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:32px;">
+        <p style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(248,247,243,0.7);margin:0 0 14px;line-height:1.55;">Corporate identity and website, built from the ground up.</p>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;"><div style="font-family:var(--font-display);font-weight:700;font-size:clamp(20px,2vw,30px);color:#F8F7F3;letter-spacing:-0.025em;">Kind People</div><div data-project-arrow="" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(248,247,243,0.32);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 220ms;"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9H15M10 4L15 9L10 14" stroke="rgba(248,247,243,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
+      </div>
+    </a>
+
+    <a data-project-card="" href="work-hansgrohe.html" class="work-all-card" style="aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;position:relative;cursor:pointer;background:#1A2530;display:block;text-decoration:none;">
+      <div data-project-image="" style="position:absolute;inset:0;background:url(&quot;./stage_raindance-alive_key-visual_16x9-mretlfm7-web.jpg&quot;) center / cover no-repeat;transition:transform 600ms var(--ease-standard);"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,11,11,0.9) 0%,transparent 60%);pointer-events:none;"></div>
+      <div style="position:absolute;inset:0;padding:32px;display:flex;flex-direction:column;justify-content:flex-end;">
+        <p style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(248,247,243,0.6);margin:0 0 12px;">Years of ongoing work: seasonal product catalogs, in-store one-ways, calendar and notebook design, and video invitations for new store openings.</p>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;"><div style="font-family:var(--font-display);font-weight:700;font-size:clamp(22px,2.2vw,32px);color:#F8F7F3;letter-spacing:-0.03em;">Hansgrohe</div><div data-project-arrow="" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(248,247,243,0.32);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 220ms;"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9H15M10 4L15 9L10 14" stroke="rgba(248,247,243,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ (same chrome as homepage) -->
+<footer style="background:#0B0B0B;padding:64px clamp(24px,5vw,80px) 40px;border-top:1px solid rgba(248,247,243,0.05);">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:64px;flex-wrap:wrap;gap:48px;">
+    <div>
+      <div style="font-family:var(--font-display);font-weight:700;font-size:24px;letter-spacing:-0.025em;color:#F8F7F3;margin-bottom:12px;line-height:1;">unknown®</div>
+      <p style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(248,247,243,0.32);max-width:220px;line-height:1.65;margin:0 0 28px;">Visuals for brands that don't want to look ordinary.</p>
+      <a href="mailto:hello@unknownstudio.co" style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(248,247,243,0.42);text-decoration:none;">hello@unknownstudio.co</a>
+    </div>
+    <div style="display:flex;gap:64px;flex-wrap:wrap;">
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <span style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,247,243,0.2);margin-bottom:4px;">Studio</span>
+        <a href="index.html#work" style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(248,247,243,0.4);text-decoration:none;">Work</a>
+        <a href="index.html#services" style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(248,247,243,0.4);text-decoration:none;">Services</a>
+        <a href="index.html#brand-dna" style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(248,247,243,0.4);text-decoration:none;">Brand DNA</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <span style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,247,243,0.2);margin-bottom:4px;">Links</span>
+        <a href="index.html#process" style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(248,247,243,0.4);text-decoration:none;">Process</a>
+        <a href="index.html#contact" style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(248,247,243,0.4);text-decoration:none;">Contact</a>
+        <a href="#" style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(248,247,243,0.4);text-decoration:none;">Instagram</a>
+        <a href="#" style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(248,247,243,0.4);text-decoration:none;">Behance</a>
+      </div>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid rgba(248,247,243,0.05);flex-wrap:wrap;gap:12px;">
+    <span style="font-family:var(--font-mono);font-size:10px;color:rgba(248,247,243,0.18);letter-spacing:0.1em;">© 2025 unknown® studio. All rights reserved.</span>
+    <span style="font-family:var(--font-mono);font-size:10px;color:rgba(248,247,243,0.18);letter-spacing:0.1em;">Handcrafted with intent.</span>
+  </div>
+</footer>
+
+</body>
+</html>

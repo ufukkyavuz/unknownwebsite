@@ -50,8 +50,10 @@
       #work-scroll{flex-direction:column !important;transform:none !important;min-width:0 !important;align-items:stretch !important;gap:16px !important;}
       #work-scroll > a{width:100% !important;height:auto !important;}
       #work-scroll [data-project-desc]{opacity:1 !important;transform:none !important;}
+      #work-scroll > a[data-project-card]:nth-of-type(n+5){display:none !important;}
+      #work-see-all{display:flex !important;}
+      #brand-dna{display:none !important;}
       [data-jstep]{max-width:60% !important;}
-      #brand-dna-grid{grid-template-columns:repeat(2,1fr) !important;}
       #testimonials-grid{grid-template-columns:1fr !important;}
       #contact-form-wrap{grid-template-columns:1fr !important;}
       #contact-fields-grid{grid-template-columns:1fr !important;}
@@ -59,13 +61,10 @@
       /* Nav: solid bar so logo/burger don't clash with content */
       #site-nav{background:linear-gradient(180deg,rgba(14,14,14,0.6) 0%,rgba(11,11,11,0.38) 100%);backdrop-filter:blur(26px) saturate(1.9);-webkit-backdrop-filter:blur(26px) saturate(1.9);border-bottom:1px solid rgba(248,247,243,0.1);box-shadow:inset 0 1px 0 rgba(248,247,243,0.1),0 8px 30px rgba(0,0,0,0.28);}
 
-      /* Trusted by: 2-col static grid instead of marquee */
-      #clients-fade-l, #clients-fade-r{display:none !important;}
-      #clients-track{animation:none !important;width:100% !important;display:block !important;transform:none !important;}
-      #clients-group-2{display:none !important;}
-      #clients-group-1{display:grid !important;grid-template-columns:repeat(2,1fr) !important;}
-      #clients-group-1 > div{padding:0 !important;height:72px !important;border-right:none !important;border:none !important;}
-      #clients-group-1 img{width:112px !important;height:26px !important;object-fit:contain !important;}
+      /* Trusted by: single row, scaled down, still sliding left */
+      #clients-track{animation-duration:30s !important;}
+      #clients-group-1 > div, #clients-group-2 > div{padding:0 28px !important;height:56px !important;}
+      #clients-group-1 img, #clients-group-2 img{height:16px !important;width:auto !important;}
 
       /* What we do: flat stacked rows, desc always visible (no hover) */
       [data-service-row] > div{flex-direction:column !important;align-items:flex-start !important;gap:14px !important;}
@@ -77,10 +76,6 @@
       /* Proof: single horizontal row, swipe/auto-scroll */
       #testimonials-grid{overflow-x:auto !important;margin:0 -24px !important;padding:0 24px 8px !important;-webkit-overflow-scrolling:touch !important;scroll-snap-type:x mandatory !important;}
       #testimonials-grid > a{flex:0 0 80% !important;min-width:0 !important;scroll-snap-align:start !important;}
-
-      /* Brand Visual DNA: single-column auto-height tiles (no clipping) */
-      #brand-dna-grid{grid-template-columns:1fr !important;grid-auto-rows:auto !important;}
-      #brand-dna-grid > div{grid-column:auto !important;grid-row:auto !important;}
     }
   </style>
 <template id="__bundler_thumbnail"><svg viewBox="0 0 80 56" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="56" fill="#0B0B0B"></rect><text x="40" y="34" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">u®</text></svg></template>
@@ -266,6 +261,9 @@
         <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;"><div style="font-family:var(--font-display);font-weight:700;font-size:clamp(22px,2.2vw,32px);color:#F8F7F3;letter-spacing:-0.03em;">Hansgrohe</div><div data-project-arrow="" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(248,247,243,0.32);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 220ms;"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9H15M10 4L15 9L10 14" stroke="rgba(248,247,243,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
       </div>
     </a>
+
+    <!-- mobile-only: shown after the first 4 cards, hidden on desktop -->
+    <a id="work-see-all" href="work-all.html" style="display:none;flex:0 0 auto;width:100%;padding:26px 24px;border-radius:var(--radius-lg);border:1px solid rgba(248,247,243,0.16);align-items:center;justify-content:center;gap:10px;text-decoration:none;font-family:var(--font-body);font-size:15px;font-weight:600;color:#F8F7F3;">See all work <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
 
     <!-- scroll end padding -->
     <div style="flex:0 0 clamp(24px,5vw,80px);"></div>
@@ -1200,10 +1198,10 @@ class Component {
       // Referans: viewport ortası — bir section ekranın ortasına gelince rengi baskın olsun
       const vBot = sy + vh * 0.5;
 
-      const stops = STOPS.map(s => ({
-        top: document.getElementById(s.id)?.offsetTop ?? 0,
-        rgb: s.rgb,
-      }));
+      const stops = STOPS
+        .map(s => ({ el: document.getElementById(s.id), rgb: s.rgb }))
+        .filter(s => s.el && s.el.offsetParent !== null) // skip hidden sections (e.g. Brand DNA on mobile)
+        .map(s => ({ top: s.el.offsetTop, rgb: s.rgb }));
 
       let color = stops[0].rgb;
       for (let i = 0; i < stops.length - 1; i++) {
