@@ -1451,8 +1451,8 @@ class Component {
     const form = document.getElementById('contact-form-wrap');
     const succ = document.getElementById('contact-success');
     if (!btn || !form || !succ) return;
-    // Messages go through FormSubmit (no backend needed); the first one triggers an activation email.
-    const ENDPOINT = 'https://formsubmit.co/ajax/ufukkyavuz51@gmail.com';
+    // Messages go to our own Vercel function (api/contact.js), which emails them via Resend.
+    const ENDPOINT = '/api/contact';
     const label = btn.firstChild && btn.firstChild.nodeType === 3 ? btn.firstChild : null;
     const setLabel = txt => { if (label) label.textContent = txt; };
     const val = n => (form.querySelector(`[name="${n}"]`) || {}).value?.trim() || '';
@@ -1464,15 +1464,19 @@ class Component {
       if (bad.length) { bad[0].focus(); return; }
       const pill = [...document.querySelectorAll('[data-budget-pill]')].find(p => p.style.background === 'rgb(255, 255, 255)');
       btn.disabled = true; setLabel('Sending… ');
+      // Abort a hung request so the button never stays stuck on "Sending…".
+      const ctrl = new AbortController(), timer = setTimeout(() => ctrl.abort(), 20000);
       try {
-        const res = await fetch(ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        const res = await fetch(ENDPOINT, { method: 'POST', signal: ctrl.signal, headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
           body: JSON.stringify({ name: val('name'), brand: val('brand'), email: val('email'), need: val('need'),
-            budget: pill ? pill.textContent.trim() : '', website: val('website'),
-            _subject: `New project enquiry — ${val('brand') || val('name')} · joke® studio`, _replyto: val('email'), _template: 'table' }) });
-        if (!res.ok) throw new Error(res.status);
+            budget: pill ? pill.textContent.trim() : '', website: val('website') }) });
+        const data = await res.json().catch(() => null);
+        if (!res.ok || !data || data.ok !== true) throw new Error(res.status);
       } catch (e) {
         btn.disabled = false; setLabel("Couldn't send — try again ");
         return;
+      } finally {
+        clearTimeout(timer);
       }
       form.style.transition = 'opacity 300ms';
       form.style.opacity    = '0';

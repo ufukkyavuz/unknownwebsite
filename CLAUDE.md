@@ -31,6 +31,7 @@ No dependencies. Test both desktop (1440×900) and mobile (390×844) widths.
 | `uploads/opt/joke-smile.webp` / `uploads/joke-smile.png` | The joke® smiley logo (724×837, transparent). Source: Figma file `2dUT2JUuwfITmXhKdqBpcC`, node `9:5`. A real SVG export would be sharper. |
 | `uploads/opt/spray-edge.png` | Rough sprayed edge used as the mask on the "What we do" hover fill. |
 | `uploads/opt/` | Optimized images that pages load directly. |
+| `api/contact.js` | Contact form endpoint (Resend). |
 | `tools/optimize-images.py` | `--scan` lists heavy images loaded directly; `--fix` writes optimized copies to `uploads/opt/`. Run after adding new project images. |
 | `_ds/joke-studio-design-system-…/` | Design tokens/fonts (Space Grotesk, DM Sans, Space Mono) from Claude Design. |
 
@@ -43,11 +44,13 @@ No dependencies. Test both desktop (1440×900) and mobile (390×844) widths.
 - Nav / mobile menu / footer logo: smile image + "joke®" wordmark at 26px.
 
 ## Contact form
-`_setupContactSubmit` POSTs JSON to **FormSubmit** (`https://formsubmit.co/ajax/ufukkyavuz51@gmail.com`).
-Fields: name, brand, email, need, budget (selected pill), website. Name + email are required.
-- The **first** submission triggers a FormSubmit activation email to ufukkyavuz51@gmail.com; nothing is delivered until it's confirmed.
-- After activation FormSubmit gives a random alias; swap it in for the email in `ENDPOINT` so the address isn't in the page source.
-- The owner plans to switch to a studio address later (e.g. hello@jokestudio.co).
+`_setupContactSubmit` POSTs JSON to **`/api/contact`** (`api/contact.js`, a Vercel function), which validates it and emails it via **Resend**.
+Fields: name, brand, email, need, budget (selected pill), website. Name + email are required. The page shows success only when the function answers `{ ok: true }`; any failure or a 20 s timeout shows "Couldn't send — try again".
+- Vercel env vars (Production): `RESEND_API_KEY` (required), `CONTACT_TO` (default `ufukkyavuz51@gmail.com`), `CONTACT_FROM` (default `onboarding@resend.dev`).
+- Until `jokestudio.co` is verified in Resend, the default sender can only deliver to the Resend account's own email, so sign up with the same address as `CONTACT_TO`.
+- Once the domain is verified in Resend, set `CONTACT_FROM` to e.g. `joke studio <hello@jokestudio.co>`. `hello@jokestudio.co` has no MX record yet, so it cannot receive mail.
+- Replaced FormSubmit (formsubmit.co), which returned Cloudflare 522 timeouts on 2026-10-22.
+- The function is not served by `python3 -m http.server`; test it with `vercel dev` or on a preview deploy.
 
 ## Open items (as of 2026-10-22)
 1. **Domain `jokestudio.co`** (registered at GoDaddy, nameservers `ns27/ns28.domaincontrol.com`), not connected yet:
@@ -56,7 +59,7 @@ Fields: name, brand, email, need, budget (selected pill), website. Name + email 
    - Verify: `dig +short jokestudio.co` → `76.76.21.21`, then Vercel shows "Valid Configuration".
 2. **Rename** GitHub repo `ufukkyavuz/unknownwebsite` → `jokestudio` and the Vercel project → `jokestudio` (Settings → General).
    No `®` in names. GitHub redirects the old URL; Vercel tracks the repo by id.
-3. FormSubmit activation + alias (see above).
+3. Set `RESEND_API_KEY` in Vercel and test the form (see Contact form).
 4. Optional: delete unused `uploads/girl-space-web.mp4`; get the logo as SVG from Figma.
 
 ## History (short)
