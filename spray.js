@@ -100,15 +100,12 @@
       P.stroke(pts, { w, dur: .6, seed });
       P.drip(pts[8][0], pts[8][1], bh * (.1 + r() * .08), { w: w * .4, t0: .5 });
     } else if (kind === 'fill') {
-      // spray the whole box green in quick back-and-forth passes, then let the paint settle solid
-      const w = bh * .5, n = Math.ceil(bh / (w * .55)) + 1;
-      for (let i = 0; i < n; i++) {
-        const y = by + (i + .25) * bh / n, ltr = i % 2 === 0, x0 = ltr ? bx - w * .3 : bx + bw + w * .3, x1 = ltr ? bx + bw + w * .3 : bx - w * .3;
-        P.stroke(bez([x0, y + (r() - .5) * w * .3], [bx + bw * .35, y + (r() - .5) * w * .4], [bx + bw * .65, y + (r() - .5) * w * .4], [x1, y + (r() - .5) * w * .3], 40),
-          { w, t0: i * .06, dur: .34, seed: seed + i, flat: true });
-      }
-      P.wash(bx, by, bw, bh, { t0: .3, dur: .25 });
-      for (let i = 0; i < 3; i++) P.drip(bx + bw * (.2 + .3 * i + (r() - .5) * .1), by + bh * .8, bh * (.08 + r() * .08), { w: bh * .05, t0: .4 + i * .05, dur: .5 });
+      // one fat pass sprayed left to right across the whole row, then the paint settles solid
+      const w = bh * 1.35, y = by + bh / 2;
+      P.stroke(bez([bx - w * .3, y + (r() - .5) * bh * .08], [bx + bw * .35, y + (r() - .5) * bh * .12], [bx + bw * .65, y + (r() - .5) * bh * .12], [bx + bw + w * .3, y], 60),
+        { w, dur: .42, seed, flat: true });
+      P.wash(bx, by, bw, bh, { t0: .38, dur: .2 });
+      for (let i = 0; i < 3; i++) P.drip(bx + bw * (.2 + .3 * i + (r() - .5) * .1), by + bh * .8, bh * (.08 + r() * .08), { w: bh * .05, t0: .3 + i * .06, dur: .5 });
     } else if (kind === 'circle') {
       // loose ring that overshoots where it closes; no drips
       const w = Math.max(6, bh * .3), cx = bx + bw / 2, cy = by + bh * .55, rx = bw * .66, ry = bh * .95, pts = [];
