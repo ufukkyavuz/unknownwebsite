@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="_ds/unknown-studio-design-system-f5e7aa42-5887-4296-8fec-8d1eb8bddb27/tokens/reset.css">
-  <link rel="stylesheet" href="_ds/unknown-studio-design-system-f5e7aa42-5887-4296-8fec-8d1eb8bddb27/tokens/colors.css">
-  <link rel="stylesheet" href="_ds/unknown-studio-design-system-f5e7aa42-5887-4296-8fec-8d1eb8bddb27/tokens/typography.css">
-  <link rel="stylesheet" href="_ds/unknown-studio-design-system-f5e7aa42-5887-4296-8fec-8d1eb8bddb27/tokens/spacing.css">
-  <link rel="stylesheet" href="_ds/unknown-studio-design-system-f5e7aa42-5887-4296-8fec-8d1eb8bddb27/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/joke-studio-design-system-f5e7aa42-5887-4296-8fec-8d1eb8bddb27/tokens/reset.css">
+  <link rel="stylesheet" href="_ds/joke-studio-design-system-f5e7aa42-5887-4296-8fec-8d1eb8bddb27/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/joke-studio-design-system-f5e7aa42-5887-4296-8fec-8d1eb8bddb27/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/joke-studio-design-system-f5e7aa42-5887-4296-8fec-8d1eb8bddb27/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/joke-studio-design-system-f5e7aa42-5887-4296-8fec-8d1eb8bddb27/tokens/fonts.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double&amp;display=swap">
-  <link rel="stylesheet" href="_ds/unknown-studio-design-system-f5e7aa42-5887-4296-8fec-8d1eb8bddb27/styles.css">
+  <link rel="stylesheet" href="_ds/joke-studio-design-system-f5e7aa42-5887-4296-8fec-8d1eb8bddb27/styles.css">
   <style>
     @keyframes fade-up { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
     @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
@@ -44,7 +44,6 @@
       #nav-links, #nav-cta{display:none !important;}
       #nav-burger{display:flex !important;align-items:center;justify-content:center;}
       #hero-text{width:100% !important;}
-      #hero-video{object-position:50% center !important;}
       #work-sticky-wrap{height:auto !important;padding-bottom:48px !important;}
       #work{position:relative !important;height:auto !important;overflow:visible !important;padding-bottom:8px !important;}
       #work-scroll{flex-direction:column !important;transform:none !important;min-width:0 !important;align-items:stretch !important;gap:16px !important;}
@@ -78,7 +77,7 @@
       #testimonials-grid > a{flex:0 0 80% !important;min-width:0 !important;scroll-snap-align:start !important;}
     }
   </style>
-<template id="__bundler_thumbnail"><svg viewBox="0 0 80 56" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="56" fill="#0B0B0B"></rect><text x="40" y="34" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">u®</text></svg></template>
+<template id="__bundler_thumbnail"><svg viewBox="0 0 80 56" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="56" fill="#0B0B0B"></rect><text x="40" y="34" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">j®</text></svg></template>
   <style>
     .hv-index-1:active{transform:scale(0.96);background:#E5E5E5;}
     .hv-index-2:hover{color:#F8F7F3;border-bottom-color:#F8F7F3;}
@@ -97,7 +96,7 @@
 <body>
 <!-- ═══ NAV ═══ -->
 <nav id="site-nav" style="position:fixed;top:0;left:0;right:0;z-index:200;height:72px;display:flex;align-items:center;padding:0 clamp(24px,5vw,80px);">
-  <a href="#" id="nav-logo" style="font-family:var(--font-display);font-weight:700;font-size:17px;letter-spacing:-0.025em;color:#F8F7F3;text-decoration:none;flex-shrink:0;line-height:1;transition:opacity 420ms ease, transform 420ms ease;">unknown®</a>
+  <a href="#" id="nav-logo" style="font-family:var(--font-display);font-weight:700;font-size:26px;display:inline-flex;align-items:center;gap:9px;letter-spacing:-0.025em;color:#F8F7F3;text-decoration:none;flex-shrink:0;line-height:1;transition:opacity 420ms ease, transform 420ms ease;"><img src="uploads/opt/joke-smile.webp" alt="" style="height:34px;width:auto;display:block;">joke®</a>
 
   <!-- Links always centered absolutely — never repositioned -->
   <div style="position:absolute;left:0;right:0;top:0;height:72px;display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:1;">
@@ -121,7 +120,7 @@
 
 <div id="mobile-menu" style="display:none;position:fixed;inset:0;z-index:300;background:#0B0B0B;flex-direction:column;">
   <div style="height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(24px,5vw,80px);border-bottom:1px solid rgba(248,247,243,0.1);flex-shrink:0;">
-    <span style="font-family:var(--font-display);font-weight:700;font-size:17px;color:#F8F7F3;">unknown®</span>
+    <span style="font-family:var(--font-display);font-weight:700;font-size:26px;display:inline-flex;align-items:center;gap:9px;color:#F8F7F3;"><img src="uploads/opt/joke-smile.webp" alt="" style="height:34px;width:auto;display:block;">joke®</span>
     <button aria-label="Close" onclick="document.getElementById('mobile-menu').style.display='none'" style="background:none;border:none;padding:8px;cursor:pointer;">
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 4L16 16M16 4L4 16" stroke="#F8F7F3" stroke-width="1.6" stroke-linecap="round"></path></svg>
     </button>
@@ -137,11 +136,11 @@
 
 <!-- ═══ HERO ═══ -->
 <section id="hero" data-screen-label="Hero" style="position:relative;height:100vh;min-height:680px;background:#0B0B0B;overflow:hidden;">
-  <video id="hero-video" autoplay="" muted="" loop="" playsinline="" webkit-playsinline="" preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:65% center;z-index:0;transform-origin:center;will-change:transform,opacity;opacity:0.5;" src="uploads/girl-space-web.mp4"></video>
+  <canvas id="hero-smile" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;z-index:0;transform-origin:center;will-change:transform,opacity;"></canvas>
   <div style="position:absolute;bottom:0;left:0;right:0;height:55%;background:linear-gradient(180deg,transparent,#0B0B0B);z-index:1;pointer-events:none;"></div>
   <div id="hero-text" style="position:absolute;left:0;top:0;bottom:0;z-index:3;display:flex;flex-direction:column;justify-content:flex-end;padding:80px clamp(24px,5vw,80px) clamp(48px,6vw,96px);width:62%;will-change:transform,opacity;">
     
-    <h1 style="font-family:var(--font-display);font-weight:700;font-size:clamp(44px,5.2vw,96px);line-height:1.04;letter-spacing:-0.04em;color:#F8F7F3;margin:0 0 26px;max-width:600px;text-wrap:pretty;animation:fade-up 0.9s var(--ease-spring) 0.22s both;">We Create<br>What People<br><span style="white-space:nowrap;">Don't Expect.</span></h1>
+    <h1 style="font-family:var(--font-display);font-weight:700;font-size:clamp(44px,5.2vw,96px);line-height:1.04;letter-spacing:-0.04em;color:#F8F7F3;margin:0 0 26px;max-width:600px;text-wrap:pretty;animation:fade-up 0.9s var(--ease-spring) 0.22s both;">We Create<br>What People<br><span style="white-space:nowrap;" data-spray="underline" data-spray-delay="4300">Don't Expect.</span></h1>
     <p style="font-family:var(--font-body);font-size:clamp(15px,1.3vw,18px);color:rgba(248,247,243,0.5);line-height:1.72;max-width:440px;margin:0 0 44px;animation:fade-up 0.9s var(--ease-spring) 0.38s both;">We create product campaigns, social media visuals and AI-assisted creative systems that make brands impossible to ignore.</p>
     <div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap;animation:fade-up 0.9s var(--ease-spring) 0.54s both;">
       
@@ -533,16 +532,16 @@
 <section id="contact" data-panel="" data-screen-label="Contact" style="background:#0B0B0B;padding-bottom:0;padding:clamp(80px,7vw,110px) clamp(24px,5vw,80px);position:relative;z-index:10;">
   <div id="contact-form-wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(48px,6vw,100px);align-items:start;">
     <div>
-      <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(36px,4.2vw,64px);color:#F8F7F3;letter-spacing:-0.04em;line-height:1.04;margin:0 0 20px;text-wrap:pretty;"><span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">Got</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">a</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">brand</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">that</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">looks</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">too</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">normal?</span></span><span style="color: rgb(255, 255, 255);"> <br><span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">Let's</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">fix</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">that.</span></span></span></h2>
+      <h2 data-spray-host="" style="font-family:var(--font-display);font-weight:700;font-size:clamp(36px,4.2vw,64px);color:#F8F7F3;letter-spacing:-0.04em;line-height:1.04;margin:0 0 20px;text-wrap:pretty;"><span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">Got</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">a</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">brand</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">that</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">looks</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">too</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);" data-spray="scribble" data-spray-delay="700">normal?</span></span><span style="color: rgb(255, 255, 255);"> <br><span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">Let's</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">fix</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">that.</span></span></span></h2>
       <p style="font-family:var(--font-body);font-size:clamp(15px,1.2vw,17px);color:rgba(248,247,243,0.4);margin:0 0 56px;max-width:380px;line-height:var(--leading-relaxed);">Tell us about your brand. We'll figure out the rest.</p>
 
     </div>
     <div>
       <div id="contact-fields-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:0 40px;">
-        <div style="border-bottom:1px solid rgba(248,247,243,0.12);padding:18px 0;display:flex;flex-direction:column;gap:8px;"><label style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,247,243,0.28);">Name</label><input type="text" placeholder="Your name" style="background:transparent;border:none;outline:none;font-family:var(--font-body);font-size:16px;color:#F8F7F3;padding:0;width:100%;"></div>
-        <div style="border-bottom:1px solid rgba(248,247,243,0.12);padding:18px 0;display:flex;flex-direction:column;gap:8px;"><label style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,247,243,0.28);">Brand</label><input type="text" placeholder="Your brand name" style="background:transparent;border:none;outline:none;font-family:var(--font-body);font-size:16px;color:#F8F7F3;padding:0;width:100%;"></div>
-        <div style="border-bottom:1px solid rgba(248,247,243,0.12);padding:18px 0;display:flex;flex-direction:column;gap:8px;"><label style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,247,243,0.28);">Email</label><input type="email" placeholder="hello@brand.co" style="background:transparent;border:none;outline:none;font-family:var(--font-body);font-size:16px;color:#F8F7F3;padding:0;width:100%;"></div>
-        <div style="border-bottom:1px solid rgba(248,247,243,0.12);padding:18px 0;display:flex;flex-direction:column;gap:8px;"><label style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,247,243,0.28);">What do you need?</label><input type="text" placeholder="Campaign, socials, AI visuals..." style="background:transparent;border:none;outline:none;font-family:var(--font-body);font-size:16px;color:#F8F7F3;padding:0;width:100%;"></div>
+        <div style="border-bottom:1px solid rgba(248,247,243,0.12);padding:18px 0;display:flex;flex-direction:column;gap:8px;"><label style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,247,243,0.28);">Name</label><input type="text" name="name" placeholder="Your name" style="background:transparent;border:none;outline:none;font-family:var(--font-body);font-size:16px;color:#F8F7F3;padding:0;width:100%;"></div>
+        <div style="border-bottom:1px solid rgba(248,247,243,0.12);padding:18px 0;display:flex;flex-direction:column;gap:8px;"><label style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,247,243,0.28);">Brand</label><input type="text" name="brand" placeholder="Your brand name" style="background:transparent;border:none;outline:none;font-family:var(--font-body);font-size:16px;color:#F8F7F3;padding:0;width:100%;"></div>
+        <div style="border-bottom:1px solid rgba(248,247,243,0.12);padding:18px 0;display:flex;flex-direction:column;gap:8px;"><label style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,247,243,0.28);">Email</label><input type="email" name="email" placeholder="hello@brand.co" style="background:transparent;border:none;outline:none;font-family:var(--font-body);font-size:16px;color:#F8F7F3;padding:0;width:100%;"></div>
+        <div style="border-bottom:1px solid rgba(248,247,243,0.12);padding:18px 0;display:flex;flex-direction:column;gap:8px;"><label style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,247,243,0.28);">What do you need?</label><input type="text" name="need" placeholder="Campaign, socials, AI visuals..." style="background:transparent;border:none;outline:none;font-family:var(--font-body);font-size:16px;color:#F8F7F3;padding:0;width:100%;"></div>
         <div style="grid-column:span 2;border-bottom:1px solid rgba(248,247,243,0.12);padding:20px 0;">
           <label style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,247,243,0.28);display:block;margin-bottom:14px;">Budget range</label>
           <div style="display:flex;gap:8px;flex-wrap:wrap;">
@@ -552,7 +551,7 @@
             <button data-budget-pill="" style="font-family:var(--font-body);font-size:13px;font-weight:500;padding:8px 18px;border-radius:var(--radius-full);border:1px solid rgba(248,247,243,0.2);background:transparent;color:rgba(248,247,243,0.45);transition:all 200ms var(--ease-spring);">$30k+</button>
           </div>
         </div>
-        <div style="grid-column:span 2;border-bottom:1px solid rgba(248,247,243,0.12);padding:18px 0;display:flex;flex-direction:column;gap:8px;"><label style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,247,243,0.28);">Website / Instagram</label><input type="text" placeholder="brand.com or @yourbrand" style="background:transparent;border:none;outline:none;font-family:var(--font-body);font-size:16px;color:#F8F7F3;padding:0;width:100%;"></div>
+        <div style="grid-column:span 2;border-bottom:1px solid rgba(248,247,243,0.12);padding:18px 0;display:flex;flex-direction:column;gap:8px;"><label style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,247,243,0.28);">Website / Instagram</label><input type="text" name="website" placeholder="brand.com or @yourbrand" style="background:transparent;border:none;outline:none;font-family:var(--font-body);font-size:16px;color:#F8F7F3;padding:0;width:100%;"></div>
         <div style="grid-column:span 2;padding-top:40px;">
           <button id="contact-submit" class="hv-index-3" style="font-family:var(--font-body);font-size:16px;font-weight:600;color:#0B0B0B;background:#FFFFFF;padding:16px 38px;border:none;border-radius:var(--radius-full);display:inline-flex;align-items:center;gap:10px;transition:all 230ms var(--ease-spring);cursor:pointer;">Start a project <svg id="contact-submit-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" style="transition:transform 280ms var(--ease-spring);"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
         </div>
@@ -571,9 +570,9 @@
 <footer id="footer" data-panel="" data-screen-label="Footer" style="background:#0B0B0B;padding:64px clamp(24px,5vw,80px) 40px;">
   <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:64px;flex-wrap:wrap;gap:48px;">
     <div>
-      <div style="font-family:var(--font-display);font-weight:700;font-size:24px;letter-spacing:-0.025em;color:#F8F7F3;margin-bottom:12px;line-height:1;">unknown®</div>
+      <div style="font-family:var(--font-display);font-weight:700;font-size:24px;letter-spacing:-0.025em;color:#F8F7F3;margin-bottom:12px;line-height:1;"><span data-spray="circle" data-spray-delay="200">joke®</span></div>
       <p style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(248,247,243,0.32);max-width:220px;line-height:1.65;margin:0 0 28px;">Visuals for brands that don't want to look ordinary.</p>
-      <a href="mailto:hello@unknownstudio.co" class="hv-index-4" style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(248,247,243,0.42);text-decoration:none;transition:color 200ms;">hello@unknownstudio.co</a>
+      <a href="mailto:hello@jokestudio.co" class="hv-index-4" style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(248,247,243,0.42);text-decoration:none;transition:color 200ms;">hello@jokestudio.co</a>
     </div>
     <div style="display:flex;gap:64px;flex-wrap:wrap;">
       <div style="display:flex;flex-direction:column;gap:14px;">
@@ -592,7 +591,7 @@
     </div>
   </div>
   <div style="display:flex;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid rgba(248,247,243,0.05);flex-wrap:wrap;gap:12px;">
-    <span style="font-family:var(--font-mono);font-size:10px;color:rgba(248,247,243,0.18);letter-spacing:0.1em;">© 2025 unknown® studio. All rights reserved.</span>
+    <span style="font-family:var(--font-mono);font-size:10px;color:rgba(248,247,243,0.18);letter-spacing:0.1em;">© 2025 joke® studio. All rights reserved.</span>
     <span style="font-family:var(--font-mono);font-size:10px;color:rgba(248,247,243,0.18);letter-spacing:0.1em;">Handcrafted with intent.</span>
   </div>
 </footer>
@@ -860,7 +859,7 @@ class Component {
     const p  = Math.min(1, sy / hH);
 
     // Video parallax
-    const vid = document.getElementById('hero-video');
+    const vid = document.getElementById('hero-smile');
     if (vid) {
       vid.style.transform = `scale(${(1 + p * 0.06).toFixed(4)})`;
       vid.style.opacity   = (1 - p * 0.5).toFixed(3);
@@ -1366,7 +1365,7 @@ class Component {
 
       // Soldan sağa açılan siyah dolgu katmanı
       const wipe = document.createElement('div');
-      wipe.style.cssText = 'position:absolute;inset:0;background:#F8F7F3;transform:scaleX(0);transform-origin:left center;transition:transform 460ms cubic-bezier(0.16,1,0.3,1);z-index:0;pointer-events:none;';
+      wipe.style.cssText = 'position:absolute;top:-2px;bottom:-2px;left:0;width:calc(100% + 220px);background:#CCFF01;-webkit-mask:url(uploads/opt/spray-edge.png) right top/220px 100% no-repeat,linear-gradient(#000,#000) left top/calc(100% - 219px) 100% no-repeat;mask:url(uploads/opt/spray-edge.png) right top/220px 100% no-repeat,linear-gradient(#000,#000) left top/calc(100% - 219px) 100% no-repeat;transform:translate3d(-100%,0,0);transition:transform 520ms cubic-bezier(0.22,1,0.36,1);will-change:transform;z-index:0;pointer-events:none;';
       row.insertBefore(wipe, row.firstChild);
       if (content) { content.style.position = 'relative'; content.style.zIndex = '1'; }
 
@@ -1376,8 +1375,7 @@ class Component {
       const arrow  = row.querySelector('[data-svc-arrow]');
 
       row.addEventListener('mouseenter', () => {
-        wipe.style.transformOrigin = 'left center';
-        wipe.style.transform = 'scaleX(1)';
+        wipe.style.transform = 'translate3d(0,0,0)';
         if (icon)   icon.style.transform = 'scale(1.16) rotate(-4deg)';
         if (title)  title.style.color = '#0B0B0B';
         if (desc)   { desc.style.opacity = '1'; desc.style.color = 'rgba(11,11,11,0.55)'; }
@@ -1385,8 +1383,7 @@ class Component {
       });
 
       row.addEventListener('mouseleave', () => {
-        wipe.style.transformOrigin = 'right center';
-        wipe.style.transform = 'scaleX(0)';
+        wipe.style.transform = 'translate3d(-100%,0,0)';
         if (icon)   icon.style.transform = 'scale(1) rotate(0deg)';
         if (title)  title.style.color = '#F8F7F3';
         if (desc)   { desc.style.opacity = '0'; }
@@ -1454,7 +1451,29 @@ class Component {
     const form = document.getElementById('contact-form-wrap');
     const succ = document.getElementById('contact-success');
     if (!btn || !form || !succ) return;
-    btn.addEventListener('click', () => {
+    // Messages go through FormSubmit (no backend needed); the first one triggers an activation email.
+    const ENDPOINT = 'https://formsubmit.co/ajax/ufukkyavuz51@gmail.com';
+    const label = btn.firstChild && btn.firstChild.nodeType === 3 ? btn.firstChild : null;
+    const setLabel = txt => { if (label) label.textContent = txt; };
+    const val = n => (form.querySelector(`[name="${n}"]`) || {}).value?.trim() || '';
+    btn.addEventListener('click', async () => {
+      if (btn.disabled) return;
+      const emailEl = form.querySelector('[name="email"]'), nameEl = form.querySelector('[name="name"]');
+      const bad = [nameEl, emailEl].filter(el => el && !(el.value.trim() && (el !== emailEl || /.+@.+\..+/.test(el.value))));
+      [nameEl, emailEl].forEach(el => { if (el) el.parentElement.style.borderBottomColor = bad.includes(el) ? '#FF5A5A' : ''; });
+      if (bad.length) { bad[0].focus(); return; }
+      const pill = [...document.querySelectorAll('[data-budget-pill]')].find(p => p.style.background === 'rgb(255, 255, 255)');
+      btn.disabled = true; setLabel('Sending… ');
+      try {
+        const res = await fetch(ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({ name: val('name'), brand: val('brand'), email: val('email'), need: val('need'),
+            budget: pill ? pill.textContent.trim() : '', website: val('website'),
+            _subject: `New project enquiry — ${val('brand') || val('name')} · joke® studio`, _replyto: val('email'), _template: 'table' }) });
+        if (!res.ok) throw new Error(res.status);
+      } catch (e) {
+        btn.disabled = false; setLabel("Couldn't send — try again ");
+        return;
+      }
       form.style.transition = 'opacity 300ms';
       form.style.opacity    = '0';
       setTimeout(() => {
@@ -1497,5 +1516,7 @@ const __component = new Component();
 __component.componentDidMount();
 });
 </script>
+<script src="spray.js" defer></script>
+<script src="hero-smile.js" defer></script>
 </body>
 </html>

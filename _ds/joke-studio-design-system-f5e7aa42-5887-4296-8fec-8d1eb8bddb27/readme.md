@@ -1,6 +1,6 @@
-# unknown® studio — Design System
+# joke® studio — Design System
 
-> Visual identity, component library, and UI kit for **unknown® studio** — a premium creative agency specializing in scroll-stopping product visuals, social media campaigns, brand content, and AI-assisted visual production.
+> Visual identity, component library, and UI kit for **joke® studio** — a premium creative agency specializing in scroll-stopping product visuals, social media campaigns, brand content, and AI-assisted visual production.
 
 ---
 
@@ -22,7 +22,7 @@ The studio's own brand identity (`unknownwebsite` repo) was empty at build time.
 
 ## Brand Overview
 
-**unknown® studio** is a visual production studio that creates campaign visuals, social media content, and AI-assisted creative systems for brands that refuse to look ordinary. Their clients include:
+**joke® studio** is a visual production studio that creates campaign visuals, social media content, and AI-assisted creative systems for brands that refuse to look ordinary. Their clients include:
 
 - **INO Beauty** — SPF skincare, multi-use serums, cosmetics. White luxury aesthetic.
 - **Muse Lab** — Skincare serums. Dark blue editorial aesthetic (#273A97, Source Code Pro).
@@ -48,7 +48,7 @@ The studio positions itself as anti-corporate, editorial, and slightly alien —
 - **ALL CAPS** only for micro-labels, badge text, and category tags (sparingly).
 - **"We" for the studio,** "you / your" for clients and brands.
 - Short sentences. Long sentences break the rhythm.
-- Use the registered mark **®** as a brand motif — "unknown® studio" always, never "Unknown Studio".
+- Use the registered mark **®** as a brand motif — "joke® studio" always, never "Joke Studio".
 
 ### Copy Examples (from the brief)
 - Hero: *"Visuals for brands that don't want to look ordinary."*
@@ -154,7 +154,7 @@ The studio's signature visual element — an abstract orbital shape suggesting "
 ## Iconography
 
 ### Approach
-unknown® studio uses **minimal, purposeful iconography** — not decorative icon sets.
+joke® studio uses **minimal, purposeful iconography** — not decorative icon sets.
 
 - **No icon library.** No Lucide, no Heroicons, no Feather icons.
 - **Geometric primitives:** Circles (dots), lines, and the orbital ring motif replace conventional icons.
@@ -179,7 +179,7 @@ unknown® studio uses **minimal, purposeful iconography** — not decorative ico
 ## File Index
 
 ```
-unknown® studio Design System
+joke® studio Design System
 ├── styles.css                     ← Global entry point (import list only)
 ├── tokens/
 │   ├── colors.css                 ← Base palette + semantic aliases
@@ -220,5 +220,5 @@ unknown® studio Design System
 │       └── muselab-all-products.png
 └── ui_kits/
     └── website/
-        └── index.html             ← unknown® studio website prototype
+        └── index.html             ← joke® studio website prototype
 ```
