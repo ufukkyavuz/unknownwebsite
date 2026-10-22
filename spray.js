@@ -171,6 +171,7 @@
     }, { threshold: .6 }).observe(el);
   }
 
+  window.JokeSpray = { Paint, bez };
   const go = () => document.querySelectorAll('[data-spray]').forEach(attach);
   (document.fonts ? document.fonts.ready : Promise.resolve()).then(() => document.readyState === 'loading' ? addEventListener('DOMContentLoaded', go) : go());
 })();
