@@ -47,17 +47,22 @@
     wash(x, y, w, h, { t0 = 0, dur = .3 }) { this.items.push({ k: 'w', x, y, w, h, t0, dur }); return this; }
     drip(x, y, len, { w, t0 = 0, dur = .8 }) { this.items.push({ k: 'd', x, y, len, w, t0, dur }); return this; }
     get end() { return Math.max(...this.items.map(i => i.t0 + i.dur)); }
-    draw(c, t) {
+    // fast: skip the soft halo and blur passes (used for masks, where only coverage matters)
+    draw(c, t, fast = false) {
       c.fillStyle = GREEN;
       for (const it of this.items) {
         const pr = p(t, it.t0, it.dur); if (pr <= 0) continue;
         if (it.k === 's') {
           const e = eo(pr), last = Math.floor(e * (it.pts.length - 1));
-          const stamp = (scale) => { c.beginPath(); for (let i = 0; i <= last; i++) { const [x, y] = it.pts[i], rr = (it.flat ? flatTaper : taper)(i / (it.pts.length - 1)) * it.w * .5 * scale; c.moveTo(x + rr, y); c.arc(x, y, rr, 0, 6.283); } c.fill(); };
+          const step = fast ? 3 : 1, stamp = (scale) => { c.beginPath(); for (let i = 0; i <= last; i += step) { const [x, y] = it.pts[i], rr = (it.flat ? flatTaper : taper)(i / (it.pts.length - 1)) * it.w * .5 * scale; c.moveTo(x + rr, y); c.arc(x, y, rr, 0, 6.283); } c.fill(); };
           c.save();
-          c.filter = `blur(${it.w * .22}px)`; c.globalAlpha = .45; stamp(1.35);
-          c.filter = `blur(${Math.max(.5, it.w * .04)}px)`; c.globalAlpha = 1; stamp(.92);
+          if (fast) stamp(1);
+          else {
+            c.filter = `blur(${it.w * .22}px)`; c.globalAlpha = .45; stamp(1.35);
+            c.filter = `blur(${Math.max(.5, it.w * .04)}px)`; c.globalAlpha = 1; stamp(.92);
+          }
           c.restore();
+          if (fast) continue;
           for (const [s, x, y, rr, a] of it.dots) { if (s > e) continue; c.globalAlpha = a; c.fillRect(x - rr / 2, y - rr / 2, rr, rr); }
           c.globalAlpha = 1;
         } else if (it.k === 'w') {
