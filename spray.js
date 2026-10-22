@@ -3,7 +3,7 @@
 // [data-spray-host] (or the parent). Options: data-spray-delay (ms) for scroll-in marks;
 // data-spray-trigger="<ancestor selector>" paints on hover/tap of that ancestor instead of on scroll-in.
 (() => {
-  const GREEN = '#B7FF5A';
+  const GREEN = '#CCFF01';
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
   const p = (t, s, d) => clamp((t - s) / d);
