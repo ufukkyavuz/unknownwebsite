@@ -105,7 +105,6 @@
       P.stroke(bez([bx - w * .3, y + (r() - .5) * bh * .08], [bx + bw * .35, y + (r() - .5) * bh * .12], [bx + bw * .65, y + (r() - .5) * bh * .12], [bx + bw + w * .3, y], 60),
         { w, dur: .42, seed, flat: true });
       P.wash(bx, by, bw, bh, { t0: .38, dur: .2 });
-      for (let i = 0; i < 3; i++) P.drip(bx + bw * (.2 + .3 * i + (r() - .5) * .1), by + bh * .8, bh * (.08 + r() * .08), { w: bh * .05, t0: .3 + i * .06, dur: .5 });
     } else if (kind === 'circle') {
       // loose ring that overshoots where it closes; no drips
       const w = Math.max(6, bh * .3), cx = bx + bw / 2, cy = by + bh * .55, rx = bw * .66, ry = bh * .95, pts = [];
