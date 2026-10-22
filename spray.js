@@ -15,11 +15,13 @@
     return [v*v*v*a[0] + 3*v*v*u*b[0] + 3*v*u*u*c[0] + u*u*u*d[0], v*v*v*a[1] + 3*v*v*u*b[1] + 3*v*u*u*c[1] + u*u*u*d[1]];
   });
   // Width along a stroke: a quick swell where the can starts, then a long taper to a thin tail.
+  // Fill passes stay full width and only ease off at the very end.
+  const flatTaper = s => s < .9 ? 1 : 1 - (s - .9) * 5;
   const taper = s => s < .06 ? .7 + 5 * s : Math.max(.07, Math.pow(1 - (s - .06) / .94, .6));
 
   class Paint {
     constructor() { this.items = []; }
-    stroke(pts, { w, t0 = 0, dur = .45, seed = 1 }) {
+    stroke(pts, { w, t0 = 0, dur = .45, seed = 1, flat = false }) {
       // resample to ~1px spacing so the stamped stroke stays solid
       const r = rand(seed), res = [pts[0]];
       for (let i = 1; i < pts.length; i++) {
@@ -28,11 +30,11 @@
       }
       const N = res.length, dots = [];
       res.forEach(([x, y], i) => {
-        const s = i / (N - 1), tw = taper(s) * w;
+        const s = i / (N - 1), tw = (flat ? flatTaper(s) : taper(s)) * w;
         for (let k = 0; k < 3; k++) { const g = gauss(r) * tw * .42, a = r() * 6.283; dots.push([s, x + Math.cos(a) * g, y + Math.sin(a) * g, (r() * 1.4 + .5) * Math.max(.7, w / 30), r() * .5 + .25]); }
         if (r() < .35) { const g = tw * (.8 + r() * 1.2), a = r() * 6.283; dots.push([s, x + Math.cos(a) * g, y + Math.sin(a) * g, (r() * 1.1 + .4) * Math.max(.7, w / 30), r() * .45 + .15]); }
       });
-      this.items.push({ k: 's', pts: res, w, t0, dur, dots });
+      this.items.push({ k: 's', pts: res, w, t0, dur, dots, flat });
       return this;
     }
     splat(x, y, R, { t0 = 0, dur = .28, seed = 2 }) {
@@ -42,6 +44,7 @@
       this.items.push({ k: 'p', x, y, R, t0, dur, dots });
       return this;
     }
+    wash(x, y, w, h, { t0 = 0, dur = .3 }) { this.items.push({ k: 'w', x, y, w, h, t0, dur }); return this; }
     drip(x, y, len, { w, t0 = 0, dur = .8 }) { this.items.push({ k: 'd', x, y, len, w, t0, dur }); return this; }
     get end() { return Math.max(...this.items.map(i => i.t0 + i.dur)); }
     draw(c, t) {
@@ -50,13 +53,15 @@
         const pr = p(t, it.t0, it.dur); if (pr <= 0) continue;
         if (it.k === 's') {
           const e = eo(pr), last = Math.floor(e * (it.pts.length - 1));
-          const stamp = (scale) => { c.beginPath(); for (let i = 0; i <= last; i++) { const [x, y] = it.pts[i], rr = taper(i / (it.pts.length - 1)) * it.w * .5 * scale; c.moveTo(x + rr, y); c.arc(x, y, rr, 0, 6.283); } c.fill(); };
+          const stamp = (scale) => { c.beginPath(); for (let i = 0; i <= last; i++) { const [x, y] = it.pts[i], rr = (it.flat ? flatTaper : taper)(i / (it.pts.length - 1)) * it.w * .5 * scale; c.moveTo(x + rr, y); c.arc(x, y, rr, 0, 6.283); } c.fill(); };
           c.save();
           c.filter = `blur(${it.w * .22}px)`; c.globalAlpha = .45; stamp(1.35);
           c.filter = `blur(${Math.max(.5, it.w * .04)}px)`; c.globalAlpha = 1; stamp(.92);
           c.restore();
           for (const [s, x, y, rr, a] of it.dots) { if (s > e) continue; c.globalAlpha = a; c.fillRect(x - rr / 2, y - rr / 2, rr, rr); }
           c.globalAlpha = 1;
+        } else if (it.k === 'w') {
+          c.globalAlpha = eo(pr); c.fillRect(it.x, it.y, it.w, it.h); c.globalAlpha = 1;
         } else if (it.k === 'p') {
           const e = eo(pr);
           c.save(); c.filter = `blur(${it.R * .1}px)`; c.globalAlpha = .95; c.beginPath(); c.ellipse(it.x, it.y, it.R * .48 * e, it.R * .42 * e, .3, 0, 7); c.fill(); c.restore();
@@ -94,6 +99,16 @@
       }
       P.stroke(pts, { w, dur: .6, seed });
       P.drip(pts[8][0], pts[8][1], bh * (.1 + r() * .08), { w: w * .4, t0: .5 });
+    } else if (kind === 'fill') {
+      // spray the whole box green in quick back-and-forth passes, then let the paint settle solid
+      const w = bh * .5, n = Math.ceil(bh / (w * .55)) + 1;
+      for (let i = 0; i < n; i++) {
+        const y = by + (i + .25) * bh / n, ltr = i % 2 === 0, x0 = ltr ? bx - w * .3 : bx + bw + w * .3, x1 = ltr ? bx + bw + w * .3 : bx - w * .3;
+        P.stroke(bez([x0, y + (r() - .5) * w * .3], [bx + bw * .35, y + (r() - .5) * w * .4], [bx + bw * .65, y + (r() - .5) * w * .4], [x1, y + (r() - .5) * w * .3], 40),
+          { w, t0: i * .06, dur: .34, seed: seed + i, flat: true });
+      }
+      P.wash(bx, by, bw, bh, { t0: .3, dur: .25 });
+      for (let i = 0; i < 3; i++) P.drip(bx + bw * (.2 + .3 * i + (r() - .5) * .1), by + bh * .8, bh * (.08 + r() * .08), { w: bh * .05, t0: .4 + i * .05, dur: .5 });
     } else if (kind === 'circle') {
       // loose ring that overshoots where it closes; no drips
       const w = Math.max(6, bh * .3), cx = bx + bw / 2, cy = by + bh * .55, rx = bw * .66, ry = bh * .95, pts = [];
@@ -113,12 +128,12 @@
   function attach(el) {
     const kind = el.dataset.spray, host = el.closest('[data-spray-host]') || el.parentElement;
     if (getComputedStyle(host).position === 'static') host.style.position = 'relative';
-    const behind = kind === 'splat';
+    const behind = kind === 'splat' || kind === 'fill';
     const cv = document.createElement('canvas');
     cv.setAttribute('aria-hidden', 'true');
     cv.style.cssText = `position:absolute;pointer-events:none;z-index:${behind ? 0 : 2};transition:opacity 380ms ease`;
     host.insertBefore(cv, behind ? host.firstChild : null);
-    if (behind) { el.style.position = 'relative'; el.style.zIndex = 1; }
+    if (kind === 'splat') { el.style.position = 'relative'; el.style.zIndex = 1; }
     let seed = seedN++, paint, raf = 0, played = false, dpr = 1;
 
     function layout() {
