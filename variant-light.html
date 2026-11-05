@@ -168,15 +168,15 @@
     .v-stk-in{transform:rotate(var(--r));animation:v-float 6s ease-in-out infinite}
     .v-stk.v-drag .v-stk-in,.v-stk.v-fly .v-stk-in{animation-play-state:paused}
     @keyframes v-float{0%,100%{translate:0 0}50%{translate:0 -10px}}
-    .v-fold{position:relative;display:block}
+    .v-fold{position:relative;display:block;filter:drop-shadow(0 4px 3px rgba(0,0,0,.10)) drop-shadow(0 12px 14px rgba(0,0,0,.14))}
     .v-face{position:relative;font-family:var(--font-body);font-weight:700;color:#0B0B0B;white-space:nowrap}
-    .v-pill{padding:13px 24px;border-radius:100px;font-size:clamp(14px,1.2vw,19px);border:3px solid #fff;box-shadow:0 10px 22px rgba(0,0,0,.14)}
+    .v-pill{padding:13px 24px;border-radius:100px;font-size:clamp(14px,1.2vw,19px);border:3px solid #fff}
     .v-holo{background:linear-gradient(115deg,#CCFF01 0%,#7CF7C8 28%,#A48CFF 52%,#D9B8FF 66%,#CCFF01 100%);background-size:220% 100%;background-position:var(--hx,30%) 50%;transition:background-position .4s ease}
     .v-holo2{background:linear-gradient(115deg,#A48CFF 0%,#D9B8FF 25%,#CCFF01 55%,#7CF7C8 75%,#A48CFF 100%);background-size:220% 100%;background-position:var(--hx,30%) 50%}
-    .v-circle{width:clamp(88px,8vw,132px);height:clamp(88px,8vw,132px);border-radius:50%;border:4px solid #fff;box-shadow:0 10px 22px rgba(0,0,0,.16);display:flex;align-items:center;justify-content:center}
+    .v-circle{width:clamp(88px,8vw,132px);height:clamp(88px,8vw,132px);border-radius:50%;border:4px solid #fff;display:flex;align-items:center;justify-content:center}
     .v-dot{width:78%;height:78%;border-radius:50%;background:#0B0B0B;display:flex;align-items:center;justify-content:center}
     .v-dot img{width:74%;height:auto;pointer-events:none}
-    .v-star{width:clamp(104px,9vw,148px);height:clamp(104px,9vw,148px);display:flex;align-items:center;justify-content:center;filter:drop-shadow(0 10px 14px rgba(0,0,0,.16))}
+    .v-star{width:clamp(104px,9vw,148px);height:clamp(104px,9vw,148px);display:flex;align-items:center;justify-content:center}
     .v-star svg{position:absolute;inset:0;width:100%;height:100%}
     .v-star span{position:relative;font-size:clamp(13px,1.1vw,17px);text-align:center;line-height:1.05}
     .v-back{position:absolute;left:0;top:0;pointer-events:none;filter:grayscale(1) brightness(1.75) contrast(.6);box-shadow:none!important}
