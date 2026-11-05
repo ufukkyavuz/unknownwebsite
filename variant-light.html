@@ -136,10 +136,10 @@
 </div>
 
 <!-- ═══ HERO ═══ -->
-<section id="hero" data-screen-label="Hero" style="position:relative;height:100vh;min-height:720px;background:#F3F3F1;overflow:hidden;">
+<section id="hero" data-screen-label="Hero" style="position:relative;height:calc(100vh - 150px);min-height:600px;background:#F3F3F1;overflow:hidden;">
   <style>
     @font-face{font-family:VDisp;src:url(_variant/Archivo_ExtraCondensed-Black.ttf);font-weight:900}@font-face{font-family:VDisp;src:url(_variant/Archivo_ExtraCondensed-Light.ttf);font-weight:300}
-    .v-h1{font-family:'Archivo',Impact,sans-serif;font-stretch:62%;font-weight:900;text-transform:uppercase;color:#0B0B0B;text-align:center;line-height:.88;letter-spacing:-.005em;font-size:clamp(64px,10.6vw,200px);margin:0}
+    .v-h1{font-family:'Archivo',Impact,sans-serif;font-stretch:62%;font-weight:900;text-transform:uppercase;color:#0B0B0B;text-align:center;line-height:.88;letter-spacing:-.005em;font-size:clamp(64px,12.2vw,240px);margin:0}
     @keyframes v-float-x{0%,100%{transform:translateY(0) rotate(var(--r))}50%{transform:translateY(-10px) rotate(var(--r))}}
     section:not(#hero) h2{font-family:'Archivo',Impact,sans-serif!important;font-stretch:62%!important;font-weight:900!important;text-transform:uppercase;letter-spacing:0!important;line-height:.95!important;font-size:clamp(48px,6.4vw,112px)!important}
     #contact h2 span[style*="color:#FFFFFF"],#contact h2 [style*="color:#FFFFFF"]{color:#0B0B0B!important}
@@ -153,7 +153,7 @@
 
     /* retro pixel cursors */
     html,body,*{cursor:image-set(url(_variant/cursor.png) 1x,url(_variant/cursor@2x.png) 2x) 0 0,auto}
-    a,a *,button,button *,[role=button],label,select,summary,[onclick],[data-budget-pill],.v-stk,.v-stk *,#work-scroll a,#work-scroll a *{cursor:image-set(url(_variant/cursor-hand.png) 1x,url(_variant/cursor-hand@2x.png) 2x) 5 0,pointer!important}
+    a,a *,button,button *,[role=button],label,select,summary,[onclick],[data-budget-pill],.v-stk,.v-stk *,#work-scroll a,#work-scroll a *{cursor:image-set(url(_variant/cursor-hand.png) 1x,url(_variant/cursor-hand@2x.png) 2x) 10 0,pointer!important}
     input,textarea{cursor:text!important}
     /* availability pill */
     .v-avail{display:inline-flex;align-items:center;gap:12px;padding:8px 16px 8px 12px;border-radius:100px;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.06),0 6px 18px rgba(0,0,0,.06);font-family:var(--font-body);font-size:13px;text-decoration:none;margin-bottom:clamp(22px,2.4vw,36px);transition:transform .25s var(--ease-spring)}
@@ -181,29 +181,29 @@
     .v-star span{position:relative;font-size:clamp(13px,1.1vw,17px);text-align:center;line-height:1.05}
     .v-back{position:absolute;left:0;top:0;pointer-events:none;filter:grayscale(1) brightness(1.75) contrast(.6);box-shadow:none!important}
   </style>
-  <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:96px clamp(24px,5vw,80px) 40px;z-index:3">
+  <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:84px clamp(24px,5vw,80px) 10px;z-index:3">
     <a href="#contact" class="v-avail" style="animation:fade-up 0.9s var(--ease-spring) 0.05s both;"><span class="v-live"></span><span style="font-weight:600;color:#0B0B0B">Available for new projects</span><span style="color:rgba(11,11,11,.55)">Book a call →</span></a>
-    <h1 class="v-h1 v-big" style="animation:fade-up 0.9s var(--ease-spring) 0.15s both;">We create what<br>people don't expect.</h1>
-    <p style="font-family:var(--font-body);font-size:clamp(15px,1.15vw,18px);color:rgba(11,11,11,0.6);line-height:1.6;max-width:520px;text-align:center;margin:clamp(28px,2.4vw,40px) 0 28px;animation:fade-up 0.9s var(--ease-spring) 0.3s both;">We create product campaigns, social media visuals and AI-assisted creative systems that make brands impossible to ignore.</p>
+    <h1 class="v-h1 v-big" style="animation:fade-up 0.9s var(--ease-spring) 0.15s both;">Good work.<br>Bad habits.</h1>
+    <p style="font-family:var(--font-body);font-size:clamp(15px,1.15vw,18px);color:rgba(11,11,11,0.6);line-height:1.6;max-width:520px;text-align:center;margin:clamp(28px,2.4vw,40px) 0 28px;animation:fade-up 0.9s var(--ease-spring) 0.3s both;">We create brands, campaigns and digital experiences for people who expect more than the ordinary.</p>
     <div style="display:flex;gap:10px;animation:fade-up 0.9s var(--ease-spring) 0.45s both;">
       <a class="v-btn" href="#contact" style="background:#0B0B0B;color:#F3F3F1;">Start a project</a>
       <a class="v-btn" href="#work" style="background:transparent;color:#0B0B0B;border:1px solid rgba(11,11,11,.18);">See our work</a>
     </div>
   </div>
-  <div class="v-stk" style="left:9%;top:20%;--r:-8deg"><div class="v-stk-in"><div class="v-face v-pill v-holo">Creative studio</div></div></div>
-  <div class="v-stk" style="right:9%;top:15%;--r:6deg"><div class="v-stk-in" style="animation-delay:-2s"><div class="v-face v-circle v-holo"><span class="v-dot"><img src="uploads/opt/joke-smile.webp" alt="" draggable="false"></span></div></div></div>
-  <div class="v-stk" style="left:8%;bottom:20%;--r:-10deg"><div class="v-stk-in" style="animation-delay:-4s"><div class="v-face v-star"><svg viewBox="0 0 100 100"><defs><linearGradient id="vg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#CCFF01"/><stop offset=".5" stop-color="#7CF7C8"/><stop offset="1" stop-color="#A48CFF"/></linearGradient></defs><polygon fill="#fff" points="50,0 59,15 76,7 78,25 96,26 88,42 100,55 85,64 91,82 73,82 67,99 53,89 39,100 33,83 15,87 16,69 0,60 12,46 2,31 20,27 21,9 38,15"/><polygon fill="url(#vg1)" points="50,5 58,18 73,11 75,28 91,29 84,43 95,55 82,62 87,78 71,78 65,93 53,85 40,95 35,80 19,83 20,67 5,59 16,47 7,33 23,30 24,14 39,19"/></svg><span>Product<br>campaigns</span></div></div></div>
-  <div class="v-stk" style="right:10%;bottom:24%;--r:5deg"><div class="v-stk-in" style="animation-delay:-3s"><div class="v-face v-pill v-holo v-holo2">Social media visuals</div></div></div>
+  <div class="v-stk" style="left:20%;top:14%;--r:-8deg"><div class="v-stk-in"><div class="v-face v-pill v-holo">Made you look.</div></div></div>
+  <div class="v-stk" style="right:19%;top:10%;--r:6deg"><div class="v-stk-in" style="animation-delay:-2s"><div class="v-face v-circle v-holo"><span class="v-dot"><img src="uploads/opt/joke-smile.webp" alt="" draggable="false"></span></div></div></div>
+  <div class="v-stk" style="left:17%;bottom:16%;--r:-10deg"><div class="v-stk-in" style="animation-delay:-4s"><div class="v-face v-star"><svg viewBox="0 0 100 100"><defs><linearGradient id="vg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#CCFF01"/><stop offset=".5" stop-color="#7CF7C8"/><stop offset="1" stop-color="#A48CFF"/></linearGradient></defs><polygon fill="#fff" points="50,0 59,15 76,7 78,25 96,26 88,42 100,55 85,64 91,82 73,82 67,99 53,89 39,100 33,83 15,87 16,69 0,60 12,46 2,31 20,27 21,9 38,15"/><polygon fill="url(#vg1)" points="50,5 58,18 73,11 75,28 91,29 84,43 95,55 82,62 87,78 71,78 65,93 53,85 40,95 35,80 19,83 20,67 5,59 16,47 7,33 23,30 24,14 39,19"/></svg><span>Stay<br>weird.</span></div></div></div>
+  <div class="v-stk" style="right:18%;bottom:22%;--r:5deg"><div class="v-stk-in" style="animation-delay:-3s"><div class="v-face v-pill v-holo v-holo2">Look again.</div></div></div>
 </section>
 
 <!-- ═══ CLIENTS ═══ -->
-<div id="clients" data-screen-label="Clients" style="background:#F3F3F1;padding:40px 0 72px 0;overflow:hidden;will-change:opacity;">
-  <div style="max-width:720px;margin:0 auto 22px;padding:0 24px;display:flex;align-items:center;gap:16px;">
+<div id="clients" data-screen-label="Clients" style="background:#F3F3F1;padding:10px 0 72px 0;overflow:hidden;will-change:opacity;">
+  <div style="max-width:760px;margin:0 auto 18px;padding:0 24px;display:flex;align-items:center;gap:16px;">
     <div style="flex:1;height:1px;background:linear-gradient(90deg,rgba(11,11,11,0),rgba(11,11,11,0.16))"></div>
     <span style="font-family:var(--font-body);font-size:13px;color:rgba(11,11,11,0.5);">Trusted by</span>
     <div style="flex:1;height:1px;background:linear-gradient(90deg,rgba(11,11,11,0.16),rgba(11,11,11,0))"></div>
   </div>
-  <div id="clients-strip" style="position:relative;max-width:720px;margin:0 auto;overflow:hidden;">
+  <div id="clients-strip" style="position:relative;max-width:760px;margin:0 auto;overflow:hidden;">
     <div id="clients-fade-l" style="position:absolute;left:0;top:0;bottom:0;width:100px;background:linear-gradient(to right,#F3F3F1,transparent);z-index:2;pointer-events:none;"></div>
     <div id="clients-fade-r" style="position:absolute;right:0;top:0;bottom:0;width:100px;background:linear-gradient(to left,#F3F3F1,transparent);z-index:2;pointer-events:none;"></div>
     <div id="clients-track" style="display:flex;width:max-content;animation:marquee 38s linear infinite;will-change:transform;">
