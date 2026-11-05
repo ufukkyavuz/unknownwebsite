@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="_ds/joke-studio-design-system-f5e7aa42-5887-4296-8fec-8d1eb8bddb27/tokens/fonts.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;display=swap">
   <link rel="stylesheet" href="_ds/joke-studio-design-system-f5e7aa42-5887-4296-8fec-8d1eb8bddb27/styles.css">
   <style>
     @keyframes fade-up { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
@@ -138,37 +139,56 @@
 <section id="hero" data-screen-label="Hero" style="position:relative;height:100vh;min-height:720px;background:#F3F3F1;overflow:hidden;">
   <style>
     @font-face{font-family:VDisp;src:url(_variant/Archivo_ExtraCondensed-Black.ttf);font-weight:900}@font-face{font-family:VDisp;src:url(_variant/Archivo_ExtraCondensed-Light.ttf);font-weight:300}
-    .v-h1{font-family:VDisp,Impact,sans-serif;font-weight:900;text-transform:uppercase;color:#0B0B0B;text-align:center;line-height:.88;letter-spacing:-.005em;font-size:clamp(64px,10.6vw,200px);margin:0}
-    .v-sticker{position:absolute;z-index:4;font-family:var(--font-body);font-weight:600;white-space:nowrap;box-shadow:0 10px 24px rgba(0,0,0,.14),inset 0 1px 0 rgba(255,255,255,.6);animation:v-float 6s ease-in-out infinite}
-    @keyframes v-float{0%,100%{transform:translateY(0) rotate(var(--r))}50%{transform:translateY(-10px) rotate(var(--r))}}
-    .v-pill{padding:12px 22px;border-radius:100px;font-size:clamp(14px,1.2vw,19px)}
-    section:not(#hero) h2{font-family:VDisp,Impact,sans-serif!important;font-weight:900!important;text-transform:uppercase;letter-spacing:0!important;line-height:.95!important;font-size:clamp(48px,6.4vw,112px)!important}
+    .v-h1{font-family:'Archivo',Impact,sans-serif;font-stretch:62%;font-weight:900;text-transform:uppercase;color:#0B0B0B;text-align:center;line-height:.88;letter-spacing:-.005em;font-size:clamp(64px,10.6vw,200px);margin:0}
+    @keyframes v-float-x{0%,100%{transform:translateY(0) rotate(var(--r))}50%{transform:translateY(-10px) rotate(var(--r))}}
+    section:not(#hero) h2{font-family:'Archivo',Impact,sans-serif!important;font-stretch:62%!important;font-weight:900!important;text-transform:uppercase;letter-spacing:0!important;line-height:.95!important;font-size:clamp(48px,6.4vw,112px)!important}
     #contact h2 span[style*="color:#FFFFFF"],#contact h2 [style*="color:#FFFFFF"]{color:#0B0B0B!important}
     #contact h2 [data-wm-i]{color:#0B0B0B!important}
     #contact button[type=submit],#contact [data-submit]{background:#0B0B0B!important;color:#F3F3F1!important}
     #brand-dna span[style*="color:#F3F3F1"]{color:#0B0B0B!important}
-    .v-w{display:inline-block;transition:color .2s}
-    .v-w:hover,section:not(#hero) h2 [data-wm-i]:hover,.v-say span:hover{font-weight:300!important}
-    .v-sticker{cursor:grab;touch-action:none;user-select:none}
-    .v-sticker.v-drag{cursor:grabbing;animation:none!important;z-index:50}
-    #process h2,#process h2 *,#process h3,#process [data-reveal] p,#process p{color:#F3F3F1!important}
-    #process p{color:rgba(243,243,241,.6)!important}
+    #process h2,#process h2 *,#process h3{color:color-mix(in srgb,#F3F3F1 calc(var(--dk,0)*100%),#0B0B0B)!important}
+    #process p{color:color-mix(in srgb,rgba(243,243,241,.62) calc(var(--dk,0)*100%),rgba(11,11,11,.6))!important}
     .v-btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:100px;font-family:var(--font-body);font-size:14px;font-weight:600;text-decoration:none}
+
+    /* availability pill */
+    .v-avail{display:inline-flex;align-items:center;gap:12px;padding:8px 16px 8px 12px;border-radius:100px;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.06),0 6px 18px rgba(0,0,0,.06);font-family:var(--font-body);font-size:13px;text-decoration:none;margin-bottom:clamp(22px,2.4vw,36px);transition:transform .25s var(--ease-spring)}
+    .v-avail:hover{transform:translateY(-2px)}
+    .v-live{width:8px;height:8px;border-radius:50%;background:#2BD15A;box-shadow:0 0 0 0 rgba(43,209,90,.5);animation:v-ping 1.8s infinite}
+    @keyframes v-ping{0%{box-shadow:0 0 0 0 rgba(43,209,90,.45)}70%{box-shadow:0 0 0 8px rgba(43,209,90,0)}100%{box-shadow:0 0 0 0 rgba(43,209,90,0)}}
+    /* big type: per-letter variable weight */
+    .v-big .v-ch{display:inline-block;text-align:center;font-variation-settings:"wght" 900}
+    /* stickers */
+    .v-stk{position:absolute;z-index:6;touch-action:none;user-select:none;cursor:grab;will-change:transform}
+    .v-stk.v-drag{cursor:grabbing;z-index:60}
+    .v-stk-in{transform:rotate(var(--r));animation:v-float 6s ease-in-out infinite}
+    .v-stk.v-drag .v-stk-in,.v-stk.v-fly .v-stk-in{animation-play-state:paused}
+    @keyframes v-float{0%,100%{translate:0 0}50%{translate:0 -10px}}
+    .v-fold{position:relative;display:block}
+    .v-face{position:relative;font-family:var(--font-body);font-weight:700;color:#0B0B0B;white-space:nowrap}
+    .v-pill{padding:13px 24px;border-radius:100px;font-size:clamp(14px,1.2vw,19px);border:3px solid #fff;box-shadow:0 10px 22px rgba(0,0,0,.14)}
+    .v-holo{background:linear-gradient(115deg,#CCFF01 0%,#7CF7C8 28%,#A48CFF 52%,#D9B8FF 66%,#CCFF01 100%);background-size:220% 100%;background-position:var(--hx,30%) 50%;transition:background-position .4s ease}
+    .v-holo2{background:linear-gradient(115deg,#A48CFF 0%,#D9B8FF 25%,#CCFF01 55%,#7CF7C8 75%,#A48CFF 100%);background-size:220% 100%;background-position:var(--hx,30%) 50%}
+    .v-circle{width:clamp(88px,8vw,132px);height:clamp(88px,8vw,132px);border-radius:50%;border:4px solid #fff;box-shadow:0 10px 22px rgba(0,0,0,.16);display:flex;align-items:center;justify-content:center}
+    .v-dot{width:78%;height:78%;border-radius:50%;background:#0B0B0B;display:flex;align-items:center;justify-content:center}
+    .v-dot img{width:74%;height:auto;pointer-events:none}
+    .v-star{width:clamp(104px,9vw,148px);height:clamp(104px,9vw,148px);display:flex;align-items:center;justify-content:center;filter:drop-shadow(0 10px 14px rgba(0,0,0,.16))}
+    .v-star svg{position:absolute;inset:0;width:100%;height:100%}
+    .v-star span{position:relative;font-size:clamp(13px,1.1vw,17px);text-align:center;line-height:1.05}
+    .v-back{position:absolute;left:0;top:0;pointer-events:none;filter:grayscale(1) brightness(1.75) contrast(.6);box-shadow:none!important}
   </style>
   <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:96px clamp(24px,5vw,80px) 40px;z-index:3">
-    <h1 class="v-h1" style="animation:fade-up 0.9s var(--ease-spring) 0.15s both;"><span class="v-w">We</span> <span class="v-w">create</span> <span class="v-w">what</span><br><span class="v-w">people</span> <span class="v-w">don't</span> <span class="v-w">expect.</span></h1>
+    <a href="#contact" class="v-avail" style="animation:fade-up 0.9s var(--ease-spring) 0.05s both;"><span class="v-live"></span><span style="font-weight:600;color:#0B0B0B">Available for new projects</span><span style="color:rgba(11,11,11,.55)">Book a call →</span></a>
+    <h1 class="v-h1 v-big" style="animation:fade-up 0.9s var(--ease-spring) 0.15s both;">We create what<br>people don't expect.</h1>
     <p style="font-family:var(--font-body);font-size:clamp(15px,1.15vw,18px);color:rgba(11,11,11,0.6);line-height:1.6;max-width:520px;text-align:center;margin:clamp(28px,2.4vw,40px) 0 28px;animation:fade-up 0.9s var(--ease-spring) 0.3s both;">We create product campaigns, social media visuals and AI-assisted creative systems that make brands impossible to ignore.</p>
     <div style="display:flex;gap:10px;animation:fade-up 0.9s var(--ease-spring) 0.45s both;">
       <a class="v-btn" href="#contact" style="background:#0B0B0B;color:#F3F3F1;">Start a project</a>
       <a class="v-btn" href="#work" style="background:transparent;color:#0B0B0B;border:1px solid rgba(11,11,11,.18);">See our work</a>
     </div>
   </div>
-  <div class="v-sticker v-pill" style="--r:-8deg;left:9%;top:20%;background:linear-gradient(135deg,#E9E9E6,#FFFFFF 40%,#BDBDB8 70%,#F6F6F4);color:#0B0B0B;border:1px solid rgba(0,0,0,.08)">Creative studio</div>
-  <div class="v-sticker" style="--r:6deg;right:9%;top:15%;width:clamp(84px,8vw,132px);height:clamp(84px,8vw,132px);border-radius:50%;background:#0B0B0B;display:flex;align-items:center;justify-content:center;animation-delay:-2s"><img src="uploads/opt/joke-smile.webp" alt="" draggable="false" style="width:70%;height:auto;pointer-events:none"></div>
-  <div class="v-sticker" style="--r:-10deg;left:8%;bottom:20%;width:clamp(96px,8.5vw,140px);height:clamp(96px,8.5vw,140px);display:flex;align-items:center;justify-content:center;animation-delay:-4s;box-shadow:none;filter:drop-shadow(0 10px 16px rgba(0,0,0,.16))">
-    <svg viewBox="0 0 100 100" style="position:absolute;inset:0;width:100%;height:100%"><polygon fill="#CCFF01" points="50,2 58,16 74,9 76,26 93,27 86,42 98,54 84,63 89,80 72,80 66,96 53,87 40,98 34,82 17,86 18,69 3,60 14,47 4,33 21,29 22,12 38,17"/></svg>
-    <span style="position:relative;font-family:var(--font-body);font-weight:700;font-size:clamp(13px,1.1vw,17px);color:#0B0B0B;text-align:center;line-height:1.05">Product<br>campaigns</span></div>
-  <div class="v-sticker v-pill" style="--r:5deg;right:10%;bottom:24%;background:#0B0B0B;color:#CCFF01;animation-delay:-3s">Social media visuals</div>
+  <div class="v-stk" style="left:9%;top:20%;--r:-8deg"><div class="v-stk-in"><div class="v-face v-pill v-holo">Creative studio</div></div></div>
+  <div class="v-stk" style="right:9%;top:15%;--r:6deg"><div class="v-stk-in" style="animation-delay:-2s"><div class="v-face v-circle v-holo"><span class="v-dot"><img src="uploads/opt/joke-smile.webp" alt="" draggable="false"></span></div></div></div>
+  <div class="v-stk" style="left:8%;bottom:20%;--r:-10deg"><div class="v-stk-in" style="animation-delay:-4s"><div class="v-face v-star"><svg viewBox="0 0 100 100"><defs><linearGradient id="vg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#CCFF01"/><stop offset=".5" stop-color="#7CF7C8"/><stop offset="1" stop-color="#A48CFF"/></linearGradient></defs><polygon fill="#fff" points="50,0 59,15 76,7 78,25 96,26 88,42 100,55 85,64 91,82 73,82 67,99 53,89 39,100 33,83 15,87 16,69 0,60 12,46 2,31 20,27 21,9 38,15"/><polygon fill="url(#vg1)" points="50,5 58,18 73,11 75,28 91,29 84,43 95,55 82,62 87,78 71,78 65,93 53,85 40,95 35,80 19,83 20,67 5,59 16,47 7,33 23,30 24,14 39,19"/></svg><span>Product<br>campaigns</span></div></div></div>
+  <div class="v-stk" style="right:10%;bottom:24%;--r:5deg"><div class="v-stk-in" style="animation-delay:-3s"><div class="v-face v-pill v-holo v-holo2">Social media visuals</div></div></div>
 </section>
 
 <!-- ═══ CLIENTS ═══ -->
@@ -434,79 +454,7 @@
 
 
 
-<!-- ═══ 03 · BRAND VISUAL DNA ═══ -->
-<section id="brand-dna" data-panel="" data-screen-label="Brand Visual DNA" style="background:#E9E9E5;padding:clamp(80px,8vw,130px) clamp(24px,5vw,80px);position:relative;">
-    <div data-reveal="" style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:60px;flex-wrap:wrap;gap:20px;">
-    <div>
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
-        <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(36px,4vw,64px);color:#0B0B0B;letter-spacing:var(--tracking-tighter);margin:0;line-height:1.04;" data-split="">Brand visual DNA</h2>
-      </div>
-      <p style="font-family:var(--font-body);font-size:var(--text-base);color:rgba(11,11,11,0.6);max-width:420px;margin:0;line-height:var(--leading-relaxed);">We don't just make things look good. We analyze, decode, and rebuild how your brand shows up.</p>
-    </div>
-  </div>
-  <div id="brand-dna-grid" data-reveal="" data-reveal-delay="140" style="display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:clamp(178px,19vw,228px);gap:14px;">
 
-    <!-- 01 · Visual Language — large 2x2 -->
-    <div style="grid-column:span 2;grid-row:span 2;background:#E9E9E5;border:1px solid rgba(11,11,11,0.09);border-radius:var(--radius-lg);padding:clamp(28px,3vw,44px);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;position:relative;">
-      <div>
-        <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#D8D8D8;margin-bottom:16px;">01 · Visual Language</div>
-        <h3 style="font-family:var(--font-display);font-weight:700;font-size:clamp(22px,2.1vw,32px);color:#0B0B0B;letter-spacing:-0.025em;margin:0 0 12px;line-height:1.14;">The look, decoded</h3>
-        <p style="font-family:var(--font-body);font-size:var(--text-base);color:rgba(11,11,11,0.6);line-height:1.6;margin:0;max-width:340px;">Color, form, texture, composition — the coded DNA of how your brand reads before a word is.</p>
-      </div>
-      <div>
-        <div style="font-family:var(--font-display);font-weight:700;font-size:clamp(72px,10vw,150px);line-height:0.82;letter-spacing:-0.05em;color:#0B0B0B;margin-bottom:24px;">Aa</div>
-        <div style="display:flex;gap:10px;align-items:center;">
-          <div style="width:26px;height:26px;border-radius:50%;background:#FDFCF8;border:1px solid rgba(11,11,11,0.16);"></div>
-          <div style="width:26px;height:26px;border-radius:50%;background:#F3F3F1;border:1px solid rgba(11,11,11,0.18);"></div>
-          <div style="width:26px;height:26px;border-radius:50%;background:#FFFFFF;"></div>
-          <div style="width:26px;height:26px;border-radius:50%;background:#A48CFF;"></div>
-          <div style="width:26px;height:26px;border-radius:50%;background:#D6C7B1;"></div>
-          <div style="width:26px;height:26px;border-radius:50%;background:#D8D8D8;"></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 02 · Content Hooks — wide 2x1 -->
-    <div style="grid-column:span 2;background:#E9E9E5;border:1px solid rgba(11,11,11,0.09);border-radius:var(--radius-lg);padding:clamp(26px,2.6vw,40px);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;">
-      <div>
-        <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#A48CFF;margin-bottom:12px;">02 · Content Hooks</div>
-        <h3 style="font-family:var(--font-display);font-weight:700;font-size:clamp(20px,1.8vw,28px);color:#0B0B0B;letter-spacing:-0.025em;margin:0;line-height:1.14;">The angles that make people stop</h3>
-      </div>
-      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;">
-        <span style="font-family:var(--font-body);font-size:13px;font-weight:500;color:rgba(11,11,11,0.6);background:#E9E9E5;border:1px solid rgba(11,11,11,0.16);padding:7px 14px;border-radius:var(--radius-full);">Before / after</span>
-        <span style="font-family:var(--font-body);font-size:13px;font-weight:500;color:rgba(11,11,11,0.6);background:#E9E9E5;border:1px solid rgba(11,11,11,0.16);padding:7px 14px;border-radius:var(--radius-full);">POV</span>
-        <span style="font-family:var(--font-body);font-size:13px;font-weight:500;color:#F3F3F1;background:#FFFFFF;border:1px solid #FFFFFF;padding:7px 14px;border-radius:var(--radius-full);">Unboxing</span>
-        <span style="font-family:var(--font-body);font-size:13px;font-weight:500;color:rgba(11,11,11,0.6);background:#E9E9E5;border:1px solid rgba(11,11,11,0.16);padding:7px 14px;border-radius:var(--radius-full);">Founder story</span>
-        <span style="font-family:var(--font-body);font-size:13px;font-weight:500;color:rgba(11,11,11,0.6);background:#E9E9E5;border:1px solid rgba(11,11,11,0.16);padding:7px 14px;border-radius:var(--radius-full);">Behind the scenes</span>
-        <span style="font-family:var(--font-body);font-size:13px;font-weight:500;color:rgba(11,11,11,0.6);background:#E9E9E5;border:1px solid rgba(11,11,11,0.16);padding:7px 14px;border-radius:var(--radius-full);">Teaser drop</span>
-      </div>
-    </div>
-
-    <!-- 03 · Campaign Potential — 1x1 -->
-    <div style="background:#E9E9E5;border:1px solid rgba(11,11,11,0.09);border-radius:var(--radius-lg);padding:clamp(24px,2.4vw,32px);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;">
-      <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#D8D8D8;">03 · Potential</div>
-      <div style="display:flex;align-items:flex-end;gap:6px;height:56px;margin-top:8px;">
-        <div style="flex:1;height:34%;background:rgba(11,11,11,0.16);border-radius:3px;"></div>
-        <div style="flex:1;height:52%;background:rgba(11,11,11,0.16);border-radius:3px;"></div>
-        <div style="flex:1;height:68%;background:rgba(11,11,11,0.16);border-radius:3px;"></div>
-        <div style="flex:1;height:82%;background:rgba(11,11,11,0.16);border-radius:3px;"></div>
-        <div style="flex:1;height:100%;background:#FFFFFF;border-radius:3px;"></div>
-      </div>
-      <div style="font-family:var(--font-display);font-weight:700;font-size:clamp(26px,2.4vw,34px);color:#0B0B0B;letter-spacing:-0.03em;line-height:1;">+240%<span style="font-family:var(--font-body);font-size:12px;font-weight:500;color:#8C8880;letter-spacing:0;margin-left:8px;">campaign reach</span></div>
-    </div>
-
-    <!-- 04 · Social Identity — 1x1 -->
-    <div style="background:#E9E9E5;border:1px solid rgba(11,11,11,0.09);border-radius:var(--radius-lg);padding:clamp(24px,2.4vw,32px);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;">
-      <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#A48CFF;">04 · Social Identity</div>
-      <div style="display:flex;flex-direction:column;gap:9px;margin:6px 0;">
-        <div style="display:flex;align-items:center;gap:10px;"><div style="width:22px;height:22px;border-radius:50%;background:#A48CFF;flex-shrink:0;"></div><div style="flex:1;height:8px;border-radius:4px;background:rgba(11,11,11,0.16);"></div></div>
-        <div style="height:8px;border-radius:4px;background:rgba(11,11,11,0.12);width:100%;"></div>
-        <div style="height:8px;border-radius:4px;background:rgba(11,11,11,0.12);width:72%;"></div>
-      </div>
-      <div style="font-family:var(--font-body);font-size:13px;color:rgba(11,11,11,0.6);line-height:1.4;">Tone, pacing, format — locked in.</div>
-    </div>
-  </div>
-</section>
 
 
 
@@ -590,23 +538,22 @@
 <!-- ═══ FOOTER ═══ -->
 <footer id="footer" data-screen-label="Footer" style="background:#F3F3F1;position:relative;overflow:hidden;">
   <style>
-    .v-say{font-family:VDisp,Impact,sans-serif;font-weight:900;text-transform:uppercase;color:#0B0B0B;line-height:.8;letter-spacing:-.01em;font-size:23.5vw;white-space:nowrap;margin:0;padding:9vw 1.2vw 5vw;display:flex;justify-content:space-between}
-    .v-say span{display:inline-block;transition:font-weight .1s}
+    .v-say{font-family:'Archivo',Impact,sans-serif;font-stretch:62%;font-weight:900;text-transform:uppercase;color:#0B0B0B;line-height:.8;letter-spacing:-.01em;font-size:23.5vw;white-space:nowrap;margin:0;padding:9vw 0 5vw;text-align:center}
     .v-fcols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;border-top:1px solid rgba(11,11,11,.12)}
     .v-fcols>div{padding:24px 24px 40px;border-left:1px solid rgba(11,11,11,.12)}
     .v-fcols>div:first-child{border-left:none}
     .v-flabel{font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(11,11,11,.5);margin-bottom:14px}
-    .v-fbig{font-family:VDisp,Impact,sans-serif;font-weight:900;text-transform:uppercase;font-size:22px;line-height:1.15;color:#0B0B0B;text-decoration:none;display:block}
+    .v-fbig{font-family:'Archivo',Impact,sans-serif;font-stretch:62%;font-weight:900;text-transform:uppercase;font-size:22px;line-height:1.15;color:#0B0B0B;text-decoration:none;display:block}
     .v-fbig:hover{font-weight:300}
     .v-fsmall{font-family:var(--font-body);font-size:13px;line-height:1.7;color:#0B0B0B;display:block;text-decoration:none}
     .v-fbar{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;border-top:1px solid rgba(11,11,11,.12);font-family:var(--font-body);font-size:12px;color:rgba(11,11,11,.6)}
     @media(max-width:860px){.v-fcols{grid-template-columns:1fr 1fr}.v-fcols>div:nth-child(3){border-left:none}}
   </style>
   <div style="position:relative">
-    <h2 class="v-say" aria-label="Say hello"><span>S</span><span>A</span><span>Y</span><span style="width:3vw"></span><span>H</span><span>E</span><span>L</span><span>L</span><span>O</span></h2>
-    <div class="v-sticker v-pill" style="--r:-7deg;left:3%;top:9%;background:#CCFF01;color:#0B0B0B">Let's fix that.</div>
-    <div class="v-sticker" style="--r:8deg;right:4%;top:6%;width:clamp(76px,7vw,118px);height:clamp(76px,7vw,118px);border-radius:50%;background:#0B0B0B;display:flex;align-items:center;justify-content:center;animation-delay:-2s"><img src="uploads/opt/joke-smile.webp" alt="" draggable="false" style="width:70%;height:auto;pointer-events:none"></div>
-    <div class="v-sticker v-pill" style="--r:-4deg;left:40%;bottom:6%;background:linear-gradient(135deg,#E9E9E6,#FFFFFF 40%,#BDBDB8 70%,#F6F6F4);color:#0B0B0B;border:1px solid rgba(0,0,0,.08);animation-delay:-4s">Creative studio</div>
+    <h2 class="v-say v-big" aria-label="Say hello">Say hello</h2>
+    <div class="v-stk" style="left:3%;top:9%;--r:-7deg"><div class="v-stk-in"><div class="v-face v-pill v-holo v-holo2">Let's fix that.</div></div></div>
+    <div class="v-stk" style="right:4%;top:6%;--r:8deg"><div class="v-stk-in" style="animation-delay:-2s"><div class="v-face v-circle v-holo"><span class="v-dot"><img src="uploads/opt/joke-smile.webp" alt="" draggable="false"></span></div></div></div>
+    <div class="v-stk" style="left:42%;bottom:6%;--r:-4deg"><div class="v-stk-in" style="animation-delay:-4s"><div class="v-face v-pill v-holo">Creative studio</div></div></div>
   </div>
   <div class="v-fcols">
     <div>
@@ -616,7 +563,7 @@
     </div>
     <div>
       <div class="v-flabel">Pages</div>
-      <a class="v-fbig" href="#">Home</a><a class="v-fbig" href="#work">Work</a><a class="v-fbig" href="#services">Services</a><a class="v-fbig" href="#brand-dna">Brand DNA</a><a class="v-fbig" href="#contact">Contact</a>
+      <a class="v-fbig" href="#">Home</a><a class="v-fbig" href="#work">Work</a><a class="v-fbig" href="#services">Services</a><a class="v-fbig" href="#contact">Contact</a>
       <div class="v-flabel" style="margin-top:26px">Services</div>
       <span class="v-fsmall">Creative Direction</span><span class="v-fsmall">Social Media Visuals</span><span class="v-fsmall">Product Campaigns</span><span class="v-fsmall">AI-Assisted Visual Production</span><span class="v-fsmall">Website</span><span class="v-fsmall">Brand Design</span>
     </div>
@@ -639,16 +586,6 @@
   (function(){
     // local time
     const el=document.getElementById('v-time');const tick=()=>{try{el.textContent=new Date().toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',timeZone:'Europe/Istanbul'})}catch(e){}};tick();setInterval(tick,30000);
-    // draggable stickers
-    document.querySelectorAll('.v-sticker').forEach(st=>{
-      let sx=0,sy=0,ox=0,oy=0,drag=false;
-      st.addEventListener('pointerdown',e=>{drag=true;st.setPointerCapture(e.pointerId);const r=st.getBoundingClientRect(),pr=st.offsetParent.getBoundingClientRect();
-        st.style.left=(r.left-pr.left)+'px';st.style.top=(r.top-pr.top)+'px';st.style.right='auto';st.style.bottom='auto';
-        sx=e.clientX;sy=e.clientY;ox=r.left-pr.left;oy=r.top-pr.top;st.classList.add('v-drag');st.style.transform='rotate(var(--r)) scale(1.08)';});
-      st.addEventListener('pointermove',e=>{if(!drag)return;st.style.left=(ox+e.clientX-sx)+'px';st.style.top=(oy+e.clientY-sy)+'px';});
-      const end=()=>{if(!drag)return;drag=false;st.classList.remove('v-drag');st.style.transform='rotate(var(--r))';st.style.animation='none';};
-      st.addEventListener('pointerup',end);st.addEventListener('pointercancel',end);
-    });
   })();
   </script>
 </footer>
@@ -1031,7 +968,6 @@ class Component {
       { id: 'work',         label: 'Selected Work' },
       { id: 'services',     label: 'What we do' },
       { id: 'process',      label: 'How we work' },
-      { id: 'brand-dna',    label: 'Brand DNA' },
       { id: 'testimonials', label: 'Proof' },
       { id: 'contact',      label: 'Contact' },
     ];
@@ -1232,7 +1168,6 @@ class Component {
       { id: 'work-sticky-wrap', rgb: [243,243,241] },
       { id: 'services',         rgb: [243,243,241] },
       { id: 'process',          rgb: [9,9,9] },
-      { id: 'brand-dna',        rgb: [243,243,241] },
       { id: 'testimonials',     rgb: [243,243,241] },
       { id: 'contact',          rgb: [243,243,241] },
     ];
@@ -1244,8 +1179,8 @@ class Component {
 
     const lerp  = (a, b, t) => a + (b - a) * t;
     const lerp3 = (ca, cb, t) => ca.map((v, i) => Math.round(lerp(v, cb[i], t)));
-    const ease  = t => 1 - Math.pow(1 - Math.min(1, Math.max(0, t)), 3);
-    const ZONE  = 280; // transition zone px (section sınırının etrafında)
+    const ease  = t => { t=Math.min(1,Math.max(0,t)); return t*t*(3-2*t); };
+    const ZONE  = 560; // transition zone px (section sınırının etrafında)
 
     const update = () => {
       const sy = this._sy();
@@ -1273,6 +1208,7 @@ class Component {
 
       const bg = `rgb(${color})`;
       document.body.style.background            = bg;
+      document.documentElement.style.setProperty('--dk', ((243 - color[0]) / 234).toFixed(3));
       document.documentElement.style.background = bg;
     };
 
@@ -1579,5 +1515,101 @@ __component.componentDidMount();
 </script>
 
 <script src="hero-smile.js" defer></script>
+
+<script>
+(function(){
+  const H=document.documentElement;
+  /* ---------- 1. big headings: weight follows the cursor radius, eased ---------- */
+  const RAD=260, MINW=100, MAXW=900;
+  const letters=[];
+  function split(root){
+    const walk=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,null);const nodes=[];
+    while(walk.nextNode()){const n=walk.currentNode;if(n.nodeValue.trim())nodes.push(n)}
+    nodes.forEach(n=>{const frag=document.createDocumentFragment();
+      for(const ch of n.nodeValue){ if(ch===' '){frag.appendChild(document.createTextNode(' '));continue}
+        const s=document.createElement('span');s.className='v-ch';s.textContent=ch;frag.appendChild(s);letters.push({el:s,w:MAXW,t:MAXW})}
+      n.parentNode.replaceChild(frag,n)});
+  }
+  function fixWidths(){letters.forEach(l=>{l.el.style.width='';});letters.forEach(l=>{l.el.style.width=l.el.getBoundingClientRect().width/parseFloat(getComputedStyle(l.el).fontSize)+'em'})}
+  let mx=-9999,my=-9999;
+  addEventListener('pointermove',e=>{mx=e.clientX;my=e.clientY},{passive:true});
+  document.addEventListener('pointerleave',()=>{mx=my=-9999});
+  function tick(){
+    const vh=innerHeight;
+    for(const l of letters){
+      const r=l.el.getBoundingClientRect();
+      if(r.bottom<-50||r.top>vh+50){ if(l.w!==MAXW){l.w=MAXW;l.el.style.fontVariationSettings='"wght" 900'} continue }
+      const d=Math.hypot(r.left+r.width/2-mx,r.top+r.height/2-my);
+      const k=Math.max(0,1-d/RAD); l.t=MAXW-(MAXW-MINW)*k*k*(3-2*k);
+      l.w+= (l.t-l.w)*0.12;
+      if(Math.abs(l.t-l.w)<0.5)l.w=l.t;
+      l.el.style.fontVariationSettings='"wght" '+l.w.toFixed(1);
+    }
+    requestAnimationFrame(tick);
+  }
+  function initType(){
+    document.querySelectorAll('.v-big, section:not(#hero) h2:not(.v-say)').forEach(split);
+    document.fonts.ready.then(()=>{fixWidths();});
+    addEventListener('resize',()=>setTimeout(fixWidths,50));
+    requestAnimationFrame(tick);
+  }
+  setTimeout(initType,1600);   // after the site's own heading reveal has split words
+
+  /* ---------- 2. stickers: holo shift, peel on hover, drag, drop, return ---------- */
+  document.querySelectorAll('.v-stk').forEach(st=>{
+    const inner=st.querySelector('.v-stk-in'),face=inner.querySelector('.v-face');
+    // fold wrapper + back side (a desaturated copy = the paper backing)
+    const fold=document.createElement('div');fold.className='v-fold';face.parentNode.insertBefore(fold,face);fold.appendChild(face);
+    const back=face.cloneNode(true);back.classList.add('v-back');back.removeAttribute('id');fold.appendChild(back);
+    back.querySelectorAll('[id]').forEach(n=>n.removeAttribute('id'));
+    let peel=0,peelT=0;
+    function drawPeel(){
+      const W=face.offsetWidth,Hh=face.offsetHeight,P=Math.min(W,Hh)*(face.classList.contains('v-pill')?1.0:0.62)*peel;
+      if(P<0.5){face.style.clipPath='';back.style.display='none';return}
+      const c=W+Hh-P;
+      face.style.clipPath=`polygon(0 0,${W}px 0,${W}px ${Hh-P}px,${W-P}px ${Hh}px,0 ${Hh}px)`;
+      back.style.display='';back.style.width=W+'px';back.style.height=Hh+'px';
+      back.style.clipPath=`polygon(${W}px ${Hh-P}px,${W}px ${Hh}px,${W-P}px ${Hh}px)`;
+      back.style.transformOrigin='0 0';back.style.transform=`matrix(0,-1,-1,0,${c},${c})`;
+      back.style.boxShadow='none';
+    }
+    st.addEventListener('pointerenter',()=>{peelT=1});
+    st.addEventListener('pointerleave',()=>{peelT=0;face.style.setProperty('--hx','30%')});
+    st.addEventListener('pointermove',e=>{const r=st.getBoundingClientRect();face.style.setProperty('--hx',(10+80*(e.clientX-r.left)/r.width).toFixed(1)+'%')});
+    // physics
+    let x=0,y=0,vx=0,vy=0,rot=0,vr=0,sc=1,mode='home',grab=null,last=null,timer=0;
+    const apply=()=>{st.style.transform=`translate(${x}px,${y}px) rotate(${rot}deg) scale(${sc})`};
+    st.addEventListener('pointerdown',e=>{
+      e.preventDefault();st.setPointerCapture(e.pointerId);clearTimeout(timer);
+      mode='drag';st.classList.add('v-drag');st.classList.remove('v-fly');peelT=0;
+      grab={px:e.clientX-x,py:e.clientY-y};last={x:e.clientX,y:e.clientY,t:performance.now()};vx=vy=0;sc=1.08;apply();
+    });
+    st.addEventListener('pointermove',e=>{
+      if(mode!=='drag')return;const now=performance.now(),dt=Math.max(8,now-last.t);
+      vx=(e.clientX-last.x)/dt*16;vy=(e.clientY-last.y)/dt*16;last={x:e.clientX,y:e.clientY,t:now};
+      x=e.clientX-grab.px;y=e.clientY-grab.py;rot=Math.max(-25,Math.min(25,vx*1.2));apply();
+    });
+    const release=()=>{
+      if(mode!=='drag')return;mode='fall';st.classList.remove('v-drag');st.classList.add('v-fly');sc=1;vr=vx*0.6+(Math.random()-.5)*4;
+      const host=st.offsetParent,limit=host.getBoundingClientRect().height+300;
+      const fall=()=>{
+        if(mode!=='fall')return;
+        vy+=0.9;vx*=0.99;x+=vx;y+=vy;rot+=vr;apply();
+        const top=st.offsetTop+y;
+        if(top<limit)requestAnimationFrame(fall);
+        else{mode='gone';st.style.opacity='0';timer=setTimeout(comeBack,1800)}
+      };requestAnimationFrame(fall);
+    };
+    st.addEventListener('pointerup',release);st.addEventListener('pointercancel',release);
+    function comeBack(){
+      x=0;y=0;rot=0;sc=0.2;apply();st.style.opacity='1';mode='back';
+      let v=0,s=0.2;const spring=()=>{ if(mode!=='back')return; v+=(1-s)*0.18;v*=0.72;s+=v;sc=s;apply();
+        if(Math.abs(1-s)>0.002||Math.abs(v)>0.002)requestAnimationFrame(spring);else{sc=1;apply();mode='home';st.classList.remove('v-fly')} };
+      requestAnimationFrame(spring);
+    }
+    (function loop(){ peel+=(peelT-peel)*0.16; if(Math.abs(peelT-peel)<0.002)peel=peelT; drawPeel(); requestAnimationFrame(loop)})();
+  });
+})();
+</script>
 </body>
 </html>
