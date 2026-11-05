@@ -150,6 +150,11 @@
     #process p{color:color-mix(in srgb,rgba(243,243,241,.62) calc(var(--dk,0)*100%),rgba(11,11,11,.6))!important}
     .v-btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:100px;font-family:var(--font-body);font-size:14px;font-weight:600;text-decoration:none}
 
+
+    /* retro pixel cursors */
+    html,body,*{cursor:image-set(url(_variant/cursor.png) 1x,url(_variant/cursor@2x.png) 2x) 0 0,auto}
+    a,a *,button,button *,[role=button],label,select,summary,[onclick],[data-budget-pill],.v-stk,.v-stk *,#work-scroll a,#work-scroll a *{cursor:image-set(url(_variant/cursor-hand.png) 1x,url(_variant/cursor-hand@2x.png) 2x) 5 0,pointer!important}
+    input,textarea{cursor:text!important}
     /* availability pill */
     .v-avail{display:inline-flex;align-items:center;gap:12px;padding:8px 16px 8px 12px;border-radius:100px;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.06),0 6px 18px rgba(0,0,0,.06);font-family:var(--font-body);font-size:13px;text-decoration:none;margin-bottom:clamp(22px,2.4vw,36px);transition:transform .25s var(--ease-spring)}
     .v-avail:hover{transform:translateY(-2px)}
@@ -158,8 +163,8 @@
     /* big type: per-letter variable weight */
     .v-big .v-ch{display:inline-block;text-align:center;font-variation-settings:"wght" 900}
     /* stickers */
-    .v-stk{position:absolute;z-index:6;touch-action:none;user-select:none;cursor:grab;will-change:transform}
-    .v-stk.v-drag{cursor:grabbing;z-index:60}
+    .v-stk{position:absolute;z-index:6;touch-action:none;user-select:none;will-change:transform}
+    .v-stk.v-drag{z-index:60}
     .v-stk-in{transform:rotate(var(--r));animation:v-float 6s ease-in-out infinite}
     .v-stk.v-drag .v-stk-in,.v-stk.v-fly .v-stk-in{animation-play-state:paused}
     @keyframes v-float{0%,100%{translate:0 0}50%{translate:0 -10px}}
@@ -192,32 +197,33 @@
 </section>
 
 <!-- ═══ CLIENTS ═══ -->
-<div id="clients" data-screen-label="Clients" style="background:#F3F3F1;padding:88px 0 60px 0;overflow:hidden;will-change:opacity;">
-  <div style="padding:0 clamp(24px,5vw,80px);margin-bottom:32px;display:flex;align-items:center;gap:16px;">
-    <span style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(11,11,11,0.5);">Trusted by</span>
-    <div style="flex: 1; height: 1px; background-color: rgba(11,11,11,0.14)"></div>
+<div id="clients" data-screen-label="Clients" style="background:#F3F3F1;padding:40px 0 72px 0;overflow:hidden;will-change:opacity;">
+  <div style="max-width:720px;margin:0 auto 22px;padding:0 24px;display:flex;align-items:center;gap:16px;">
+    <div style="flex:1;height:1px;background:linear-gradient(90deg,rgba(11,11,11,0),rgba(11,11,11,0.16))"></div>
+    <span style="font-family:var(--font-body);font-size:13px;color:rgba(11,11,11,0.5);">Trusted by</span>
+    <div style="flex:1;height:1px;background:linear-gradient(90deg,rgba(11,11,11,0.16),rgba(11,11,11,0))"></div>
   </div>
-  <div id="clients-strip" style="position:relative;">
+  <div id="clients-strip" style="position:relative;max-width:720px;margin:0 auto;overflow:hidden;">
     <div id="clients-fade-l" style="position:absolute;left:0;top:0;bottom:0;width:100px;background:linear-gradient(to right,#F3F3F1,transparent);z-index:2;pointer-events:none;"></div>
     <div id="clients-fade-r" style="position:absolute;right:0;top:0;bottom:0;width:100px;background:linear-gradient(to left,#F3F3F1,transparent);z-index:2;pointer-events:none;"></div>
-    <div id="clients-track" style="display:flex;width:max-content;animation:marquee 52s linear infinite;will-change:transform;">
+    <div id="clients-track" style="display:flex;width:max-content;animation:marquee 38s linear infinite;will-change:transform;">
       <div id="clients-group-1" style="display:flex;align-items:center;flex-shrink:0;">
-        <div style="display:flex;align-items:center;justify-content:center;padding:0 72px;height:80px;border-right:1px solid rgba(11,11,11,0.1);"><img src="uploads/alix avien logo.png" alt="Alix Avien" style="height:20px;width:auto;filter:brightness(0) opacity(0.55);display:block;"></div>
-        <div style="display:flex;align-items:center;justify-content:center;padding:0 72px;height:80px;border-right:1px solid rgba(11,11,11,0.1);"><img src="uploads/ino logo.svg" alt="INO Beauty" style="height:24px;width:auto;filter:brightness(0) opacity(0.55);display:block;"></div>
-        <div style="display:flex;align-items:center;justify-content:center;padding:0 72px;height:80px;border-right:1px solid rgba(11,11,11,0.1);"><img src="uploads/muselab logo.svg" alt="Muse Lab" style="height:22px;width:auto;filter:brightness(0) opacity(0.55);display:block;"></div>
-        <div style="display:flex;align-items:center;justify-content:center;padding:0 72px;height:80px;border-right:1px solid rgba(11,11,11,0.1);"><img src="uploads/buzzfy logo.svg" alt="Buzzfy" style="height:24px;width:auto;filter:brightness(0) opacity(0.55);display:block;"></div>
-        <div style="display:flex;align-items:center;justify-content:center;padding:0 72px;height:80px;border-right:1px solid rgba(11,11,11,0.1);"><img src="uploads/foundbyme logo.svg" alt="Foundby.me" style="height:22px;width:auto;filter:brightness(0) opacity(0.55);display:block;"></div>
-        <div style="display:flex;align-items:center;justify-content:center;padding:0 72px;height:80px;border-right:1px solid rgba(11,11,11,0.1);"><img src="uploads/june logo.svg" alt="June Community" style="height:22px;width:auto;filter:brightness(0) opacity(0.55);display:block;"></div>
-        <div style="display:flex;align-items:center;justify-content:center;padding:0 72px;height:80px;border-right:1px solid rgba(11,11,11,0.1);"><img src="uploads/Hansgrohe-Logo -09cc8051.svg" alt="Hansgrohe" style="height:20px;width:auto;filter:brightness(0) opacity(0.55);display:block;"></div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 30px;height:56px;"><img src="uploads/alix avien logo.png" alt="Alix Avien" style="height:20px;width:auto;filter:brightness(0) opacity(0.4);display:block;"></div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 30px;height:56px;"><img src="uploads/ino logo.svg" alt="INO Beauty" style="height:24px;width:auto;filter:brightness(0) opacity(0.4);display:block;"></div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 30px;height:56px;"><img src="uploads/muselab logo.svg" alt="Muse Lab" style="height:22px;width:auto;filter:brightness(0) opacity(0.4);display:block;"></div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 30px;height:56px;"><img src="uploads/buzzfy logo.svg" alt="Buzzfy" style="height:24px;width:auto;filter:brightness(0) opacity(0.4);display:block;"></div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 30px;height:56px;"><img src="uploads/foundbyme logo.svg" alt="Foundby.me" style="height:22px;width:auto;filter:brightness(0) opacity(0.4);display:block;"></div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 30px;height:56px;"><img src="uploads/june logo.svg" alt="June Community" style="height:22px;width:auto;filter:brightness(0) opacity(0.4);display:block;"></div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 30px;height:56px;"><img src="uploads/Hansgrohe-Logo -09cc8051.svg" alt="Hansgrohe" style="height:20px;width:auto;filter:brightness(0) opacity(0.4);display:block;"></div>
       </div>
       <div id="clients-group-2" style="display:flex;align-items:center;flex-shrink:0;">
-        <div style="display:flex;align-items:center;justify-content:center;padding:0 72px;height:80px;border-right:1px solid rgba(11,11,11,0.1);"><img src="uploads/alix avien logo.png" alt="Alix Avien" style="height:20px;width:auto;filter:brightness(0) opacity(0.55);display:block;"></div>
-        <div style="display:flex;align-items:center;justify-content:center;padding:0 72px;height:80px;border-right:1px solid rgba(11,11,11,0.1);"><img src="uploads/ino logo.svg" alt="INO Beauty" style="height:24px;width:auto;filter:brightness(0) opacity(0.55);display:block;"></div>
-        <div style="display:flex;align-items:center;justify-content:center;padding:0 72px;height:80px;border-right:1px solid rgba(11,11,11,0.1);"><img src="uploads/muselab logo.svg" alt="Muse Lab" style="height:22px;width:auto;filter:brightness(0) opacity(0.55);display:block;"></div>
-        <div style="display:flex;align-items:center;justify-content:center;padding:0 72px;height:80px;border-right:1px solid rgba(11,11,11,0.1);"><img src="uploads/buzzfy logo.svg" alt="Buzzfy" style="height:24px;width:auto;filter:brightness(0) opacity(0.55);display:block;"></div>
-        <div style="display:flex;align-items:center;justify-content:center;padding:0 72px;height:80px;border-right:1px solid rgba(11,11,11,0.1);"><img src="uploads/foundbyme logo.svg" alt="Foundby.me" style="height:22px;width:auto;filter:brightness(0) opacity(0.55);display:block;"></div>
-        <div style="display:flex;align-items:center;justify-content:center;padding:0 72px;height:80px;border-right:1px solid rgba(11,11,11,0.1);"><img src="uploads/june logo.svg" alt="June Community" style="height:22px;width:auto;filter:brightness(0) opacity(0.55);display:block;"></div>
-        <div style="display:flex;align-items:center;justify-content:center;padding:0 72px;height:80px;border-right:1px solid rgba(11,11,11,0.1);"><img src="uploads/Hansgrohe-Logo -09cc8051.svg" alt="Hansgrohe" style="height:20px;width:auto;filter:brightness(0) opacity(0.55);display:block;"></div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 30px;height:56px;"><img src="uploads/alix avien logo.png" alt="Alix Avien" style="height:20px;width:auto;filter:brightness(0) opacity(0.4);display:block;"></div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 30px;height:56px;"><img src="uploads/ino logo.svg" alt="INO Beauty" style="height:24px;width:auto;filter:brightness(0) opacity(0.4);display:block;"></div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 30px;height:56px;"><img src="uploads/muselab logo.svg" alt="Muse Lab" style="height:22px;width:auto;filter:brightness(0) opacity(0.4);display:block;"></div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 30px;height:56px;"><img src="uploads/buzzfy logo.svg" alt="Buzzfy" style="height:24px;width:auto;filter:brightness(0) opacity(0.4);display:block;"></div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 30px;height:56px;"><img src="uploads/foundbyme logo.svg" alt="Foundby.me" style="height:22px;width:auto;filter:brightness(0) opacity(0.4);display:block;"></div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 30px;height:56px;"><img src="uploads/june logo.svg" alt="June Community" style="height:22px;width:auto;filter:brightness(0) opacity(0.4);display:block;"></div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 30px;height:56px;"><img src="uploads/Hansgrohe-Logo -09cc8051.svg" alt="Hansgrohe" style="height:20px;width:auto;filter:brightness(0) opacity(0.4);display:block;"></div>
       </div>
     </div>
   </div>
