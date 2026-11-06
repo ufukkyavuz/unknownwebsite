@@ -161,9 +161,7 @@
       #site-nav{background:rgba(243,243,241,.82)!important;border-bottom:1px solid rgba(11,11,11,.08)!important;box-shadow:none!important}
       .v-h1{font-size:14.6vw!important}
       .v-stk-in{scale:.62}
-      .hs1{left:13%!important;top:21%!important}
-      .hs2{right:15%!important;left:auto!important;top:18%!important}
-      .hs3{left:20%!important;right:auto!important;bottom:4%!important;top:auto!important}
+      .hs1,.hs2,.hs3{display:none!important}   /* mobile hero: only NO JOKE stays */
       .fs1{left:0!important;top:2%!important}
       .fs2{right:0!important;top:0!important}
       .fs3{left:auto!important;right:2%!important;bottom:2%!important}
@@ -1553,7 +1551,7 @@ __component.componentDidMount();
     while(walk.nextNode()){const n=walk.currentNode;if(n.nodeValue.trim())nodes.push(n)}
     nodes.forEach(n=>{const frag=document.createDocumentFragment();
       for(const ch of n.nodeValue){ if(ch===' '){frag.appendChild(document.createTextNode(' '));continue}
-        const s=document.createElement('span');s.className='v-ch';s.textContent=ch;frag.appendChild(s);letters.push({el:s,w:MAXW,t:MAXW})}
+        const s=document.createElement('span');s.className='v-ch';s.textContent=ch;frag.appendChild(s);letters.push({el:s,w:MAXW,t:MAXW,root})}
       n.parentNode.replaceChild(frag,n)});
   }
   // lock each letter's box at its widest (900) weight, so changing weight never shifts the line
@@ -1577,21 +1575,29 @@ __component.componentDidMount();
   const coarse=matchMedia('(hover:none)').matches;
   let sweepT0=0;   // the sweep starts only after the headline has settled, so the first open stays clean
   addEventListener('v-type-ready',()=>setTimeout(()=>{sweepT0=performance.now()},1600),{once:true});
-  function sweep(now){
-    if(!coarse||touching||!sweepT0)return;
-    const h=document.querySelector('#hero .v-big');if(!h)return;
-    const r=h.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight){mx=my=-9999;return}
-    const p=((now-sweepT0)%5200)/5200;                               // one pass every 5.2 s
-    mx=r.left-RAD+(r.width+RAD*2)*p;                      // left to right, starting and ending off the text
-    my=r.top+r.height*(0.25+0.5*Math.sin(p*Math.PI*2)*0.5+0.25);
+  // touch screens have no cursor, so each heading gets its own light spot:
+  //   hero headline: a slow timed sweep; other headings: the spot crosses the heading as you scroll past it
+  function spotFor(root,now){
+    const r=root.getBoundingClientRect(),vh=innerHeight;
+    if(r.bottom<0||r.top>vh)return null;
+    if(root.closest('#hero')){
+      if(!sweepT0)return null;
+      const p=((now-sweepT0)%5200)/5200;                  // one pass every 5.2 s
+      return [r.left-RAD+(r.width+RAD*2)*p, r.top+r.height*(0.5+0.25*Math.sin(p*Math.PI*2))];
+    }
+    const p=(vh*0.92-r.top)/(vh*0.62);                     // 0 when the heading enters, 1 when it nears the top
+    if(p<=0||p>=1)return null;
+    return [r.left-RAD+(r.width+RAD*2)*p, r.top+r.height/2];
   }
   function tick(now){
-    sweep(now||performance.now());
-    const vh=innerHeight;
+    now=now||performance.now();
+    const vh=innerHeight,auto=coarse&&!touching,spots=new Map();
     for(const l of letters){
       const r=l.el.getBoundingClientRect();
       if(r.bottom<-50||r.top>vh+50){ if(l.w!==MAXW){l.w=MAXW;l.el.style.fontVariationSettings='"wght" 900'} continue }
-      const d=Math.hypot(r.left+r.width/2-mx,r.top+r.height/2-my);
+      let x=mx,y=my;
+      if(auto){ if(!spots.has(l.root))spots.set(l.root,spotFor(l.root,now)); const sp=spots.get(l.root); x=sp?sp[0]:-9999; y=sp?sp[1]:-9999 }
+      const d=Math.hypot(r.left+r.width/2-x,r.top+r.height/2-y);
       const k=Math.max(0,1-d/RAD); l.t=MAXW-(MAXW-MINW)*k*k*(3-2*k);
       l.w+= (l.t-l.w)*0.12;
       if(Math.abs(l.t-l.w)<0.5)l.w=l.t;
