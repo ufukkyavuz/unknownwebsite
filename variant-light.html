@@ -155,6 +155,24 @@
     html,body,*{cursor:image-set(url(_variant/cursor.png) 1x,url(_variant/cursor@2x.png) 2x) 0 0,auto}
     a,a *,button,button *,[role=button],label,select,summary,[onclick],[data-budget-pill],.v-stk,.v-stk *,#work-scroll a,#work-scroll a *{cursor:image-set(url(_variant/cursor-hand.png) 1x,url(_variant/cursor-hand@2x.png) 2x) 10 0,pointer!important}
     input,textarea{cursor:text!important}
+
+    /* ---- variant: mobile ---- */
+    @media (max-width:760px){
+      #site-nav{background:rgba(243,243,241,.82)!important;border-bottom:1px solid rgba(11,11,11,.08)!important;box-shadow:none!important}
+      .v-h1{font-size:14.6vw!important}
+      .v-stk-in{scale:.62}
+      .hs1{left:3%!important;top:11%!important}
+      .hs2{right:4%!important;left:auto!important;top:9%!important}
+      .hs3{right:6%!important;left:auto!important;bottom:3%!important;top:auto!important}
+      .fs1{left:0!important;top:2%!important}
+      .fs2{right:0!important;top:0!important}
+      .fs3{left:auto!important;right:2%!important;bottom:2%!important}
+      .v-fcols{grid-template-columns:1fr!important}
+      .v-fcols>div{border-left:none!important;border-top:1px solid rgba(11,11,11,.12)}
+      .v-fcols>div:first-child{border-top:none}
+      .v-fbar{flex-direction:column;gap:8px;text-align:center}
+      .v-avail{font-size:12px;gap:8px}
+    }
     /* availability pill */
     .v-avail{display:inline-flex;align-items:center;gap:12px;padding:8px 16px 8px 12px;border-radius:100px;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.06),0 6px 18px rgba(0,0,0,.06);font-family:var(--font-body);font-size:13px;text-decoration:none;margin-bottom:clamp(22px,2.4vw,36px);transition:transform .25s var(--ease-spring)}
     .v-avail:hover{transform:translateY(-2px)}
@@ -190,9 +208,9 @@
       <a class="v-btn" href="#work" style="background:transparent;color:#0B0B0B;border:1px solid rgba(11,11,11,.18);">See our work</a>
     </div>
   </div>
-  <div class="v-stk" style="left:20%;top:14%;--r:-8deg"><div class="v-stk-in"><div class="v-face v-pill v-holo">Made you look.</div></div></div>
-  <div class="v-stk" style="right:19%;top:10%;--r:6deg"><div class="v-stk-in" style="animation-delay:-2s"><div class="v-face v-circle v-holo"><span class="v-dot"><img src="uploads/opt/joke-smile.webp" alt="" draggable="false"></span></div></div></div>
-  <div class="v-stk" style="left:17%;bottom:16%;--r:-10deg"><div class="v-stk-in" style="animation-delay:-4s"><div class="v-face v-star"><svg viewBox="0 0 100 100"><defs><linearGradient id="vg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#CCFF01"/><stop offset=".5" stop-color="#7CF7C8"/><stop offset="1" stop-color="#A48CFF"/></linearGradient></defs><polygon fill="#fff" points="50,0 59,15 76,7 78,25 96,26 88,42 100,55 85,64 91,82 73,82 67,99 53,89 39,100 33,83 15,87 16,69 0,60 12,46 2,31 20,27 21,9 38,15"/><polygon fill="url(#vg1)" points="50,5 58,18 73,11 75,28 91,29 84,43 95,55 82,62 87,78 71,78 65,93 53,85 40,95 35,80 19,83 20,67 5,59 16,47 7,33 23,30 24,14 39,19"/></svg><span>Stay<br>weird.</span></div></div></div>
+  <div class="v-stk hs1" style="left:20%;top:14%;--r:-8deg"><div class="v-stk-in"><div class="v-face v-pill v-holo">Made you look.</div></div></div>
+  <div class="v-stk hs2" style="right:19%;top:10%;--r:6deg"><div class="v-stk-in" style="animation-delay:-2s"><div class="v-face v-circle v-holo"><span class="v-dot"><img src="uploads/opt/joke-smile.webp" alt="" draggable="false"></span></div></div></div>
+  <div class="v-stk hs3" style="left:17%;bottom:16%;--r:-10deg"><div class="v-stk-in" style="animation-delay:-4s"><div class="v-face v-star"><svg viewBox="0 0 100 100"><defs><linearGradient id="vg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#CCFF01"/><stop offset=".5" stop-color="#7CF7C8"/><stop offset="1" stop-color="#A48CFF"/></linearGradient></defs><polygon fill="#fff" points="50,0 59,15 76,7 78,25 96,26 88,42 100,55 85,64 91,82 73,82 67,99 53,89 39,100 33,83 15,87 16,69 0,60 12,46 2,31 20,27 21,9 38,15"/><polygon fill="url(#vg1)" points="50,5 58,18 73,11 75,28 91,29 84,43 95,55 82,62 87,78 71,78 65,93 53,85 40,95 35,80 19,83 20,67 5,59 16,47 7,33 23,30 24,14 39,19"/></svg><span>Stay<br>weird.</span></div></div></div>
   <div class="v-stk" id="v-nojoke" style="left:0;top:0;--r:-6deg;opacity:0;transition:opacity .35s ease"><div class="v-stk-in" style="animation-delay:-3s"><div class="v-face v-pill v-holo v-holo2" style="font-weight:600;font-size:clamp(22px,2.1vw,36px);padding:15px 32px;letter-spacing:.01em">NO JOKE.</div></div></div>
 </section>
 
@@ -478,7 +496,7 @@
   <div id="testimonials-grid" data-reveal="" data-reveal-delay="100" style="display:flex;gap:20px;align-items:stretch;">
     <a href="work-alix-avien.html" data-proof-card="" style="flex:1 1 0;min-width:300px;background:linear-gradient(180deg,#E9E9E5 0%,#F3F3F1 100%);border:1px solid rgba(11,11,11,0.09);border-radius:28px 28px 200px 200px / 28px 28px 132px 132px;padding:64px 36px 76px;display:flex;flex-direction:column;align-items:center;text-align:center;text-decoration:none;transition:border-color 260ms ease;">
       <div style="height:100px;display:flex;align-items:center;justify-content:center;margin-bottom:76px;">
-        <img src="uploads/alix avien logo.png" alt="" style="height:20px;width:auto;filter:brightness(0) invert(1);display:block;">
+        <img src="uploads/alix avien logo.png" alt="" style="height:20px;width:auto;filter:brightness(0);display:block;">
       </div>
       <h3 style="font-family:var(--font-display);font-weight:700;font-size:clamp(20px,1.6vw,26px);color:#0B0B0B;letter-spacing:-0.02em;line-height:1.18;margin:0 0 18px;text-wrap:balance;">A site built to sell</h3>
       <p style="font-family:var(--font-body);font-size:15px;color:rgba(11,11,11,0.48);line-height:1.62;margin:0 0 40px;max-width:290px;text-wrap:pretty;">Website and funnel work with studio-grade product visuals that lifted Alix Avien’s sales.</p>
@@ -486,7 +504,7 @@
     </a>
     <a href="work-ino-beauty.html" data-proof-card="" style="flex:1 1 0;min-width:300px;background:linear-gradient(180deg,#E9E9E5 0%,#F3F3F1 100%);border:1px solid rgba(11,11,11,0.09);border-radius:28px 28px 200px 200px / 28px 28px 132px 132px;padding:64px 36px 76px;display:flex;flex-direction:column;align-items:center;text-align:center;text-decoration:none;transition:border-color 260ms ease;">
       <div style="height:100px;display:flex;align-items:center;justify-content:center;margin-bottom:76px;">
-        <img src="uploads/ino logo.svg" alt="" style="height:24px;width:auto;filter:brightness(0) invert(1);display:block;">
+        <img src="uploads/ino logo.svg" alt="" style="height:24px;width:auto;filter:brightness(0);display:block;">
       </div>
       <h3 style="font-family:var(--font-display);font-weight:700;font-size:clamp(20px,1.6vw,26px);color:#0B0B0B;letter-spacing:-0.02em;line-height:1.18;margin:0 0 18px;text-wrap:balance;">Studio-grade product visuals</h3>
       <p style="font-family:var(--font-body);font-size:15px;color:rgba(11,11,11,0.48);line-height:1.62;margin:0 0 40px;max-width:290px;text-wrap:pretty;">Marketplace storefronts and campaign visuals that lifted INO Beauty’s conversion across Trendyol and Hepsiburada.</p>
@@ -494,7 +512,7 @@
     </a>
     <a href="work-muse-lab.html" data-proof-card="" style="flex:1 1 0;min-width:300px;background:linear-gradient(180deg,#E9E9E5 0%,#F3F3F1 100%);border:1px solid rgba(11,11,11,0.09);border-radius:28px 28px 200px 200px / 28px 28px 132px 132px;padding:64px 36px 76px;display:flex;flex-direction:column;align-items:center;text-align:center;text-decoration:none;transition:border-color 260ms ease;">
       <div style="height:100px;display:flex;align-items:center;justify-content:center;margin-bottom:76px;">
-        <img src="uploads/muselab logo.svg" alt="" style="height:22px;width:auto;filter:brightness(0) invert(1);display:block;">
+        <img src="uploads/muselab logo.svg" alt="" style="height:22px;width:auto;filter:brightness(0);display:block;">
       </div>
       <h3 style="font-family:var(--font-display);font-weight:700;font-size:clamp(20px,1.6vw,26px);color:#0B0B0B;letter-spacing:-0.02em;line-height:1.18;margin:0 0 18px;text-wrap:balance;">Editorial identity, end to end</h3>
       <p style="font-family:var(--font-body);font-size:15px;color:rgba(11,11,11,0.48);line-height:1.62;margin:0 0 40px;max-width:290px;text-wrap:pretty;">A dark, editorial visual system and product campaign that made Muse Lab impossible to scroll past.</p>
@@ -559,9 +577,9 @@
   </style>
   <div style="position:relative">
     <h2 class="v-say v-big" aria-label="Say hello">Say hello</h2>
-    <div class="v-stk" style="left:3%;top:9%;--r:-7deg"><div class="v-stk-in"><div class="v-face v-pill v-holo v-holo2">Let's fix that.</div></div></div>
-    <div class="v-stk" style="right:4%;top:6%;--r:8deg"><div class="v-stk-in" style="animation-delay:-2s"><div class="v-face v-circle v-holo"><span class="v-dot"><img src="uploads/opt/joke-smile.webp" alt="" draggable="false"></span></div></div></div>
-    <div class="v-stk" style="left:42%;bottom:6%;--r:-4deg"><div class="v-stk-in" style="animation-delay:-4s"><div class="v-face v-pill v-holo">Creative studio</div></div></div>
+    <div class="v-stk fs1" style="left:3%;top:9%;--r:-7deg"><div class="v-stk-in"><div class="v-face v-pill v-holo v-holo2">Let's fix that.</div></div></div>
+    <div class="v-stk fs2" style="right:4%;top:6%;--r:8deg"><div class="v-stk-in" style="animation-delay:-2s"><div class="v-face v-circle v-holo"><span class="v-dot"><img src="uploads/opt/joke-smile.webp" alt="" draggable="false"></span></div></div></div>
+    <div class="v-stk fs3" style="left:42%;bottom:6%;--r:-4deg"><div class="v-stk-in" style="animation-delay:-4s"><div class="v-face v-pill v-holo">Creative studio</div></div></div>
   </div>
   <div class="v-fcols">
     <div>
@@ -1643,8 +1661,11 @@ __component.componentDidMount();
     const st=document.getElementById('v-nojoke'),hero=document.getElementById('hero'),h1=hero&&hero.querySelector('h1');
     if(!st||!h1)return;
     const hr=hero.getBoundingClientRect(),r=lastCharRect(h1),w=st.offsetWidth,h=st.offsetHeight;
-    // centre the sticker on the period, sitting on the baseline area
-    st.style.left=(r.left-hr.left-w*0.24)+'px';
+    const sc=innerWidth<=760?0.62:1, vw=w*sc;            // visual width after the mobile scale
+    // the sticker sits on the period, slightly down-left
+    let vl=r.left-hr.left-vw*0.24;                          // visual left edge
+    vl=Math.max(8,Math.min(vl,hr.width-vw-8));             // never off-screen
+    st.style.left=(vl-(w-vw)/2)+'px';
     st.style.top=(r.top+r.height*0.8-hr.top-h/2)+'px';
     if(!shown){shown=true;requestAnimationFrame(()=>{st.style.opacity='1'})}
   }
