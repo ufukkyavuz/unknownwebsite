@@ -1598,14 +1598,21 @@ __component.componentDidMount();
       x=e.clientX-grab.px;y=e.clientY-grab.py;rot=Math.max(-25,Math.min(25,vx*1.2));apply();
     });
     const release=()=>{
-      if(mode!=='drag')return;mode='fall';st.classList.remove('v-drag');st.classList.add('v-fly');sc=1;vr=vx*0.6+(Math.random()-.5)*4;
+      if(mode!=='drag')return;mode='fall';st.classList.remove('v-drag');st.classList.add('v-fly');sc=1;vr=vx*0.5+(Math.random()-.5)*3;vx=Math.max(-18,Math.min(18,vx));vy=Math.max(-14,Math.min(10,vy));
       const host=st.offsetParent,limit=host.getBoundingClientRect().height+300;
+      let tt=0;const ph=Math.random()*6.28,sway=0.9+Math.random()*0.6,fx0=x;
       const fall=()=>{
-        if(mode!=='fall')return;
-        vy+=0.9;vx*=0.99;x+=vx;y+=vy;rot+=vr;apply();
+        if(mode!=='fall')return;tt+=1/60;
+        // light paper: weak gravity, strong air drag, terminal speed, side-to-side flutter
+        vy+=0.11; vy*=0.968; vx*=0.955;
+        if(vy>3.1)vy=3.1;
+        const flutter=Math.sin(tt*2.6*sway+ph);
+        x+=vx+flutter*1.6; y+=vy*(0.75+0.25*Math.abs(Math.cos(tt*2.6*sway+ph)));
+        vr*=0.97; rot+=vr*0.35+flutter*0.9;
+        apply();
         const top=st.offsetTop+y;
         if(top<limit)requestAnimationFrame(fall);
-        else{mode='gone';st.style.opacity='0';timer=setTimeout(comeBack,1800)}
+        else{mode='gone';st.style.opacity='0';timer=setTimeout(comeBack,1400)}
       };requestAnimationFrame(fall);
     };
     st.addEventListener('pointerup',release);st.addEventListener('pointercancel',release);
