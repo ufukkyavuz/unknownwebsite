@@ -315,7 +315,8 @@ class Component {
     if (!stage || !canvas || !patternSrc) return;
 
     const PW = 2182, PH = 5648;
-    const NX = Math.max(2, Math.ceil(window.innerWidth / PW) + 1), NY = Math.max(2, Math.ceil(window.innerHeight / PH) + 1);
+    const GS = window.innerWidth <= 760 ? 0.42 : 1;
+    const NX = Math.max(2, Math.ceil(window.innerWidth / (PW * GS)) + 1), NY = Math.max(2, Math.ceil(window.innerHeight / (PH * GS)) + 1);
     canvas.style.width  = (PW * NX) + 'px';
     canvas.style.height = (PH * NY) + 'px';
 
@@ -381,7 +382,7 @@ class Component {
 
     const wrap = (v, m) => ((v % m) + m) % m;
     const render = () => {
-      canvas.style.transform = `translate3d(${(-viewX + parX).toFixed(1)}px, ${(-viewY + parY).toFixed(1)}px, 0)`;
+      canvas.style.transformOrigin = '0 0'; canvas.style.transform = `translate3d(${(-viewX * GS + parX).toFixed(1)}px, ${(-viewY * GS + parY).toFixed(1)}px, 0) scale(${GS})`;
     };
 
     let raf = null;
@@ -390,8 +391,8 @@ class Component {
       const dt = Math.min(0.05, (now - last) / 1000);
       last = now;
       if (autoplay && !dragging) {
-        viewX = wrap(viewX - SPEED_X * dt, PW);
-        viewY = wrap(viewY + SPEED_Y * dt, PH);
+        viewX = wrap(viewX - SPEED_X * dt / GS, PW);
+        viewY = wrap(viewY + SPEED_Y * dt / GS, PH);
       }
       const targetParX = mouseNX * PARALLAX_RANGE;
       const targetParY = mouseNY * PARALLAX_RANGE;
@@ -432,8 +433,8 @@ class Component {
       const dx = p.clientX - lastPX, dy = p.clientY - lastPY;
       lastPX = p.clientX; lastPY = p.clientY;
       dragDistance += Math.hypot(dx, dy);
-      viewX = wrap(viewX - dx, PW);
-      viewY = wrap(viewY - dy, PH);
+      viewX = wrap(viewX - dx / GS, PW);
+      viewY = wrap(viewY - dy / GS, PH);
     };
     const onUp = (e) => {
       if (!dragging) return;
@@ -462,8 +463,8 @@ class Component {
       e.preventDefault();
       autoplay = false;
       clearTimeout(idleTimer);
-      viewX = wrap(viewX + e.deltaX * 0.5, PW);
-      viewY = wrap(viewY + e.deltaY * 0.5, PH);
+      viewX = wrap(viewX + e.deltaX * 0.5 / GS, PW);
+      viewY = wrap(viewY + e.deltaY * 0.5 / GS, PH);
       wakeAutoplay();
     };
     stage.addEventListener('wheel', onWheel, { passive: false });

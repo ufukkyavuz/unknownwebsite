@@ -21,6 +21,7 @@
       section[data-screen-label] > div[style*="left:0;bottom:0"]{padding:20px 50px 20px 20px !important;}
       section[data-screen-label] > div[style*="left:0;bottom:0"] img{height:40px !important;}
     }
+    @media (max-width:760px){ section[data-screen-label] > div[style*="left:0;bottom:0"] img.brandmark{height:15px !important;} }
   </style>
 <template id="__bundler_thumbnail"><svg viewBox="0 0 80 56" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="56" fill="#0B0B0B"></rect><text x="40" y="34" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">u®</text></svg></template>
   <style>
@@ -218,7 +219,7 @@
 
   <!-- bottom-left persistent brand mark + prev/next -->
   <div style="position:fixed;left:0;bottom:0;z-index:5;display:flex;flex-direction:column;gap:16px;padding:clamp(24px,5vw,80px) 90px 30px clamp(24px,5vw,80px);pointer-events:none;">
-    <img src="_variant/sickscience-logo.png" alt="SickScience Labs" style="height:34px;width:auto;filter:brightness(0);opacity:0.95;display:block;pointer-events:none;">
+    <img class="brandmark" src="_variant/sickscience-logo.png" alt="SickScience Labs" style="height:34px;width:auto;filter:brightness(0);opacity:0.95;display:block;pointer-events:none;">
     <div style="display:flex;align-items:center;gap:14px;pointer-events:auto;">
       <a href="work-hansgrohe.html" class="hv-work-sickscience-5" style="font-family:var(--font-mono);font-size:13px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(11,11,11,0.65);text-decoration:none;transition:all 200ms;display:inline-flex;align-items:center;padding:10px 18px;border:1px solid rgba(11,11,11,0.18);border-radius:var(--radius-full);">← Prev</a>
       <span style="width:1px;height:10px;background:rgba(11,11,11,0.2);"></span>
@@ -250,7 +251,8 @@ class Component {
     if (!stage || !canvas || !patternSrc) return;
 
     const PW = 2200, PH = 3142;
-    const NX = Math.max(2, Math.ceil(window.innerWidth / PW) + 1), NY = Math.max(2, Math.ceil(window.innerHeight / PH) + 1);
+    const GS = window.innerWidth <= 760 ? 0.42 : 1;
+    const NX = Math.max(2, Math.ceil(window.innerWidth / (PW * GS)) + 1), NY = Math.max(2, Math.ceil(window.innerHeight / (PH * GS)) + 1);
     canvas.style.width  = (PW * NX) + 'px';
     canvas.style.height = (PH * NY) + 'px';
 
@@ -316,7 +318,7 @@ class Component {
 
     const wrap = (v, m) => ((v % m) + m) % m;
     const render = () => {
-      canvas.style.transform = `translate3d(${(-viewX + parX).toFixed(1)}px, ${(-viewY + parY).toFixed(1)}px, 0)`;
+      canvas.style.transformOrigin = '0 0'; canvas.style.transform = `translate3d(${(-viewX * GS + parX).toFixed(1)}px, ${(-viewY * GS + parY).toFixed(1)}px, 0) scale(${GS})`;
     };
 
     let raf = null;
@@ -325,8 +327,8 @@ class Component {
       const dt = Math.min(0.05, (now - last) / 1000);
       last = now;
       if (autoplay && !dragging) {
-        viewX = wrap(viewX - SPEED_X * dt, PW);
-        viewY = wrap(viewY + SPEED_Y * dt, PH);
+        viewX = wrap(viewX - SPEED_X * dt / GS, PW);
+        viewY = wrap(viewY + SPEED_Y * dt / GS, PH);
       }
       const targetParX = mouseNX * PARALLAX_RANGE;
       const targetParY = mouseNY * PARALLAX_RANGE;
@@ -367,8 +369,8 @@ class Component {
       const dx = p.clientX - lastPX, dy = p.clientY - lastPY;
       lastPX = p.clientX; lastPY = p.clientY;
       dragDistance += Math.hypot(dx, dy);
-      viewX = wrap(viewX - dx, PW);
-      viewY = wrap(viewY - dy, PH);
+      viewX = wrap(viewX - dx / GS, PW);
+      viewY = wrap(viewY - dy / GS, PH);
     };
     const onUp = (e) => {
       if (!dragging) return;
@@ -397,8 +399,8 @@ class Component {
       e.preventDefault();
       autoplay = false;
       clearTimeout(idleTimer);
-      viewX = wrap(viewX + e.deltaX * 0.5, PW);
-      viewY = wrap(viewY + e.deltaY * 0.5, PH);
+      viewX = wrap(viewX + e.deltaX * 0.5 / GS, PW);
+      viewY = wrap(viewY + e.deltaY * 0.5 / GS, PH);
       wakeAutoplay();
     };
     stage.addEventListener('wheel', onWheel, { passive: false });
