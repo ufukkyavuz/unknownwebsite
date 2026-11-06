@@ -1556,7 +1556,13 @@ __component.componentDidMount();
         const s=document.createElement('span');s.className='v-ch';s.textContent=ch;frag.appendChild(s);letters.push({el:s,w:MAXW,t:MAXW})}
       n.parentNode.replaceChild(frag,n)});
   }
-  function fixWidths(){letters.forEach(l=>{l.el.style.width='';});letters.forEach(l=>{l.el.style.width=l.el.getBoundingClientRect().width/parseFloat(getComputedStyle(l.el).fontSize)+'em'})}
+  // lock each letter's box at its widest (900) weight, so changing weight never shifts the line
+  function fixWidths(){
+    letters.forEach(l=>{l.el.style.width='';l.el.style.fontVariationSettings='"wght" 900'});
+    letters.forEach(l=>{l.el.style.width=l.el.offsetWidth/parseFloat(getComputedStyle(l.el).fontSize)+'em'});
+    letters.forEach(l=>{l.el.style.fontVariationSettings='"wght" '+l.w.toFixed(1)});
+  }
+  const fontsIn=()=>Promise.all([document.fonts.ready,document.fonts.load('900 50px Archivo').catch(()=>{})]);
   let mx=-9999,my=-9999;
   addEventListener('pointermove',e=>{if(e.pointerType==='mouse'){mx=e.clientX;my=e.clientY}},{passive:true});
   document.addEventListener('pointerleave',()=>{mx=my=-9999});
@@ -1569,11 +1575,13 @@ __component.componentDidMount();
   addEventListener('touchend',tEnd,{passive:true});addEventListener('touchcancel',tEnd,{passive:true});
   // no cursor on touch screens: a slow light sweep runs across the hero headline while the finger is up
   const coarse=matchMedia('(hover:none)').matches;
+  let sweepT0=0;   // the sweep starts only after the headline has settled, so the first open stays clean
+  addEventListener('v-type-ready',()=>setTimeout(()=>{sweepT0=performance.now()},1600),{once:true});
   function sweep(now){
-    if(!coarse||touching)return;
+    if(!coarse||touching||!sweepT0)return;
     const h=document.querySelector('#hero .v-big');if(!h)return;
     const r=h.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight){mx=my=-9999;return}
-    const p=(now%5200)/5200;                               // one pass every 5.2 s
+    const p=((now-sweepT0)%5200)/5200;                               // one pass every 5.2 s
     mx=r.left-RAD+(r.width+RAD*2)*p;                      // left to right, starting and ending off the text
     my=r.top+r.height*(0.25+0.5*Math.sin(p*Math.PI*2)*0.5+0.25);
   }
@@ -1593,10 +1601,10 @@ __component.componentDidMount();
   }
   // hero headline: split right away so its layout is final before anything is pinned to it
   document.querySelectorAll('#hero .v-big').forEach(split);
-  document.fonts.ready.then(()=>{fixWidths();window.dispatchEvent(new Event('v-type-ready'))});
+  fontsIn().then(()=>{fixWidths();window.dispatchEvent(new Event('v-type-ready'))});
   function initType(){
     document.querySelectorAll('.v-big:not(#hero .v-big), section:not(#hero) h2:not(.v-say)').forEach(split);
-    document.fonts.ready.then(()=>{fixWidths();});
+    fontsIn().then(()=>{fixWidths();});
     addEventListener('resize',()=>setTimeout(fixWidths,50));
   }
   requestAnimationFrame(tick);
