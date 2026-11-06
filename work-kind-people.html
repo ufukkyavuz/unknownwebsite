@@ -76,7 +76,41 @@
     <div id="gallery-canvas" style="position:absolute;top:0;left:0;will-change:transform;"></div>
 
     <!-- source pattern — cloned 2×2 by JS into a seamless, endlessly-panning tile. Empty for now — add data-photo tiles here when images are ready. -->
-    <div id="tile-pattern" style="display:none;"></div>
+    <div id="tile-pattern" style="display:none;">
+      <!-- row 0 -->
+      <div data-photo="" data-x="40" data-y="40" style="position:absolute;width:643px;height:366px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/kind-people-01-web.jpg" src="uploads/opt/kind-people-01.jpg" alt="Kind People — talent management page" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="783" data-y="40" style="position:absolute;width:659px;height:366px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/kind-people-02-web.jpg" src="uploads/opt/kind-people-02.jpg" alt="Kind People — what we offer section" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="1542" data-y="40" style="position:absolute;width:599px;height:366px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/kind-people-03-web.jpg" src="uploads/opt/kind-people-03.jpg" alt="Kind People — kit sending page" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <!-- row 1 -->
+      <div data-photo="" data-x="40" data-y="506" style="position:absolute;width:779px;height:303px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/kind-people-04-web.jpg" src="uploads/opt/kind-people-04.jpg" alt="Kind People — our approach section" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="919" data-y="506" style="position:absolute;width:545px;height:303px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/kind-people-05-web.jpg" src="uploads/opt/kind-people-05.jpg" alt="Kind People — strategy and concept page" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="1564" data-y="506" style="position:absolute;width:574px;height:303px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/kind-people-06-web.jpg" src="uploads/opt/kind-people-06.jpg" alt="Kind People — what we do section" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <!-- row 2 -->
+      <div data-photo="" data-x="40" data-y="909" style="position:absolute;width:378px;height:259px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/kind-people-07-web.jpg" src="uploads/opt/kind-people-07.jpg" alt="Kind People — influencer marketing contact page" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="518" data-y="909" style="position:absolute;width:445px;height:259px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/kind-people-08-web.jpg" src="uploads/opt/kind-people-08.jpg" alt="Kind People — why work with us section" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="1063" data-y="909" style="position:absolute;width:373px;height:259px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/kind-people-09-web.jpg" src="uploads/opt/kind-people-09.jpg" alt="Kind People — creator tools coming soon page" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="1536" data-y="909" style="position:absolute;width:605px;height:259px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/kind-people-10-web.jpg" src="uploads/opt/kind-people-10.jpg" alt="Kind People — why Kind People section" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+    </div>
   </div>
 
   <!-- bottom-left persistent brand mark + prev/next -->
@@ -112,7 +146,7 @@ class Component {
     const patternSrc = document.getElementById('tile-pattern');
     if (!stage || !canvas || !patternSrc) return;
 
-    const PW = 1900, PH = 1400;
+    const PW = 2200, PH = 1228;
     canvas.style.width  = (PW * 2) + 'px';
     canvas.style.height = (PH * 2) + 'px';
 
