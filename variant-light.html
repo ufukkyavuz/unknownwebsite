@@ -161,9 +161,9 @@
       #site-nav{background:rgba(243,243,241,.82)!important;border-bottom:1px solid rgba(11,11,11,.08)!important;box-shadow:none!important}
       .v-h1{font-size:14.6vw!important}
       .v-stk-in{scale:.62}
-      .hs1{left:3%!important;top:11%!important}
-      .hs2{right:4%!important;left:auto!important;top:9%!important}
-      .hs3{right:6%!important;left:auto!important;bottom:3%!important;top:auto!important}
+      .hs1{left:13%!important;top:21%!important}
+      .hs2{right:15%!important;left:auto!important;top:18%!important}
+      .hs3{left:20%!important;right:auto!important;bottom:4%!important;top:auto!important}
       .fs1{left:0!important;top:2%!important}
       .fs2{right:0!important;top:0!important}
       .fs3{left:auto!important;right:2%!important;bottom:2%!important}
@@ -1558,9 +1558,27 @@ __component.componentDidMount();
   }
   function fixWidths(){letters.forEach(l=>{l.el.style.width='';});letters.forEach(l=>{l.el.style.width=l.el.getBoundingClientRect().width/parseFloat(getComputedStyle(l.el).fontSize)+'em'})}
   let mx=-9999,my=-9999;
-  addEventListener('pointermove',e=>{mx=e.clientX;my=e.clientY},{passive:true});
+  addEventListener('pointermove',e=>{if(e.pointerType==='mouse'){mx=e.clientX;my=e.clientY}},{passive:true});
   document.addEventListener('pointerleave',()=>{mx=my=-9999});
-  function tick(){
+  // touch: follow the finger while it is down (also while scrolling), then let the letters ease back
+  let touching=false;
+  const tp=e=>{const t=e.touches[0];if(t){touching=true;mx=t.clientX;my=t.clientY}};
+  addEventListener('touchstart',tp,{passive:true});
+  addEventListener('touchmove',tp,{passive:true});
+  const tEnd=()=>{touching=false;mx=my=-9999};
+  addEventListener('touchend',tEnd,{passive:true});addEventListener('touchcancel',tEnd,{passive:true});
+  // no cursor on touch screens: a slow light sweep runs across the hero headline while the finger is up
+  const coarse=matchMedia('(hover:none)').matches;
+  function sweep(now){
+    if(!coarse||touching)return;
+    const h=document.querySelector('#hero .v-big');if(!h)return;
+    const r=h.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight){mx=my=-9999;return}
+    const p=(now%5200)/5200;                               // one pass every 5.2 s
+    mx=r.left-RAD+(r.width+RAD*2)*p;                      // left to right, starting and ending off the text
+    my=r.top+r.height*(0.25+0.5*Math.sin(p*Math.PI*2)*0.5+0.25);
+  }
+  function tick(now){
+    sweep(now||performance.now());
     const vh=innerHeight;
     for(const l of letters){
       const r=l.el.getBoundingClientRect();
