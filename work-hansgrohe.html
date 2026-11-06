@@ -145,11 +145,11 @@ class Component {
 
     const PW = 2200, PH = 1090;
     const GS = window.innerWidth <= 760 ? 0.42 : 1;
-    const NX = Math.max(2, Math.ceil(window.innerWidth / (PW * GS)) + 1), NY = Math.max(2, Math.ceil(window.innerHeight / (PH * GS)) + 1);
+    const NX = Math.ceil(window.innerWidth / (PW * GS)) + 2, NY = Math.max(2, Math.ceil(window.innerHeight / (PH * GS)) + 1);
     canvas.style.width  = (PW * NX) + 'px';
     canvas.style.height = (PH * NY) + 'px';
 
-    const offsets = []; for (let i = 0; i < NX; i++) for (let j = 0; j < NY; j++) offsets.push([i * PW, j * PH]);
+    const offsets = []; for (let i = 0; i < NX; i++) for (let j = (i % 2 ? -1 : 0); j < NY; j++) offsets.push([i * PW, j * PH + (i % 2 ? Math.round(PH / 2) : 0)]); // every other copy sits half a pattern lower, so a row never meets itself
     const sourceTiles = [...patternSrc.children];
     const lbItems = sourceTiles.map(t => { const v = t.querySelector('video'), im = t.querySelector('img'); return v ? { type: 'v', src: v.getAttribute('data-full') || v.getAttribute('src') } : { type: 'i', src: im ? (im.getAttribute('data-full') || im.getAttribute('src')) : '', alt: im ? im.alt : '' }; });
     offsets.forEach(([ox, oy]) => {
@@ -251,7 +251,7 @@ class Component {
       const dt = Math.min(0.05, (now - last) / 1000);
       last = now;
       if (autoplay && !dragging) {
-        viewX = wrap(viewX - SPEED_X * dt / GS, PW);
+        viewX = wrap(viewX - SPEED_X * dt / GS, 2 * PW);
         viewY = wrap(viewY + SPEED_Y * dt / GS, PH);
       }
       const targetParX = mouseNX * PARALLAX_RANGE;
@@ -293,7 +293,7 @@ class Component {
       const dx = p.clientX - lastPX, dy = p.clientY - lastPY;
       lastPX = p.clientX; lastPY = p.clientY;
       dragDistance += Math.hypot(dx, dy);
-      viewX = wrap(viewX - dx / GS, PW);
+      viewX = wrap(viewX - dx / GS, 2 * PW);
       viewY = wrap(viewY - dy / GS, PH);
     };
     const onUp = (e) => {
@@ -325,7 +325,7 @@ class Component {
       e.preventDefault();
       autoplay = false;
       clearTimeout(idleTimer);
-      viewX = wrap(viewX + e.deltaX * 0.5 / GS, PW);
+      viewX = wrap(viewX + e.deltaX * 0.5 / GS, 2 * PW);
       viewY = wrap(viewY + e.deltaY * 0.5 / GS, PH);
       wakeAutoplay();
     };
