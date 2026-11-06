@@ -35,7 +35,7 @@
 <body>
 <!-- ═══ NAV ═══ (same chrome as homepage) -->
 <nav style="position:fixed;top:0;left:0;right:0;z-index:200;height:72px;display:flex;align-items:center;padding:0 clamp(24px,5vw,80px);background:#FFFFFF;border-bottom:1px solid rgba(11,11,11,0.08);">
-  <a href="index.html" style="font-family:var(--font-display);font-weight:700;font-size:26px;display:inline-flex;align-items:center;gap:9px;letter-spacing:-0.025em;color:#0B0B0B;text-decoration:none;flex-shrink:0;line-height:1;"><img src="uploads/opt/joke-smile.webp" alt="" style="height:34px;width:auto;display:block;">joke®</a>
+  <a href="index.html" style="font-family:var(--font-display);font-weight:700;font-size:26px;display:inline-flex;align-items:center;gap:9px;letter-spacing:-0.025em;color:#0B0B0B;text-decoration:none;flex-shrink:0;line-height:1;">joke®</a>
 
   <div style="position:absolute;left:0;right:0;top:0;height:72px;display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:1;">
     <div style="position:relative;display:flex;gap:2px;align-items:center;padding:5px 6px;border-radius:100px;pointer-events:auto;">
@@ -55,7 +55,7 @@
 
 <div id="wnav-mobile-menu" style="display:none;position:fixed;inset:0;z-index:300;background:#FFFFFF;flex-direction:column;">
   <div style="height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(24px,5vw,80px);border-bottom:1px solid rgba(11,11,11,0.08);flex-shrink:0;">
-    <span style="font-family:var(--font-display);font-weight:700;font-size:26px;display:inline-flex;align-items:center;gap:9px;color:#0B0B0B;"><img src="uploads/opt/joke-smile.webp" alt="" style="height:34px;width:auto;display:block;">joke®</span>
+    <span style="font-family:var(--font-display);font-weight:700;font-size:26px;display:inline-flex;align-items:center;gap:9px;color:#0B0B0B;">joke®</span>
     <button aria-label="Close" onclick="document.getElementById('wnav-mobile-menu').style.display='none'" style="background:none;border:none;padding:8px;cursor:pointer;">
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 4L16 16M16 4L4 16" stroke="#0B0B0B" stroke-width="1.6" stroke-linecap="round"></path></svg>
     </button>
@@ -77,158 +77,160 @@
 
     <!-- source pattern — cloned 2×2 by JS into a seamless, endlessly-panning tile. Empty for now — add data-photo tiles here when images are ready. -->
     <div id="tile-pattern" style="display:none;">
-      <!-- row 0 -->
-      <div data-photo="" data-x="40" data-y="40" style="position:absolute;width:341px;height:341px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="40" data-y="40" style="position:absolute;width:322px;height:326px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209003809-0-web.jpg" src="uploads/opt/muse-pasted-1784209003809-0.jpg" alt="Muse Lab — postcard from HQ beach campaign" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="481" data-y="40" style="position:absolute;width:341px;height:341px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="462" data-y="40" style="position:absolute;width:322px;height:326px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209051892-0-web.jpg" src="uploads/opt/muse-pasted-1784209051892-0.jpg" alt="Muse Lab — 3-step glow set model" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="922" data-y="40" style="position:absolute;width:192px;height:341px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="884" data-y="40" style="position:absolute;width:182px;height:326px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209045603-0-web.jpg" src="uploads/opt/muse-pasted-1784209045603-0.jpg" alt="Muse Lab — first order 15% off gift set" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1214" data-y="40" style="position:absolute;width:192px;height:341px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="1166" data-y="40" style="position:absolute;width:182px;height:326px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209353319-0-web.jpg" src="uploads/opt/muse-pasted-1784209353319-0.jpg" alt="Muse Lab — before after glow serum" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1506" data-y="40" style="position:absolute;width:341px;height:341px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="1448" data-y="40" style="position:absolute;width:322px;height:326px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209061927-0-web.jpg" src="uploads/opt/muse-pasted-1784209061927-0.jpg" alt="Muse Lab — ingredients infographic" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1947" data-y="40" style="position:absolute;width:192px;height:341px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="1870" data-y="40" style="position:absolute;width:182px;height:326px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209070598-0-web.jpg" src="uploads/opt/muse-pasted-1784209070598-0.jpg" alt="Muse Lab — mobile app screenshot" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <!-- row 1 -->
-      <div data-photo="" data-x="40" data-y="481" style="position:absolute;width:341px;height:341px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-video="" data-x="2152" data-y="40" style="position:absolute;width:183px;height:326px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <video src="uploads/muse-v01.mp4" data-full="uploads/muse-v01-full.mp4" poster="uploads/opt/muse-v01.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Muse Lab — colour collage reel" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-x="2435" data-y="40" style="position:absolute;width:323px;height:326px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209076251-0-web.jpg" src="uploads/opt/muse-pasted-1784209076251-0.jpg" alt="Muse Lab — problems vs solution comparison" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="481" data-y="481" style="position:absolute;width:192px;height:341px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="2858" data-y="40" style="position:absolute;width:182px;height:326px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209083910-0-web.jpg" src="uploads/opt/muse-pasted-1784209083910-0.jpg" alt="Muse Lab — Love Everyday cream with oranges" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="773" data-y="481" style="position:absolute;width:192px;height:341px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="40" data-y="466" style="position:absolute;width:238px;height:427px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209102769-0-web.jpg" src="uploads/opt/muse-pasted-1784209102769-0.jpg" alt="Muse Lab — full skincare routine 8-piece set" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1065" data-y="481" style="position:absolute;width:192px;height:341px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="378" data-y="466" style="position:absolute;width:238px;height:427px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209365376-0-web.jpg" src="uploads/opt/muse-pasted-1784209365376-0.jpg" alt="Muse Lab — Shine Bright serum face closeup 30% off" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1357" data-y="481" style="position:absolute;width:341px;height:341px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="716" data-y="466" style="position:absolute;width:424px;height:427px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209117005-0-web.jpg" src="uploads/opt/muse-pasted-1784209117005-0.jpg" alt="Muse Lab — glow skin set navy card" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1798" data-y="481" style="position:absolute;width:341px;height:341px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="1240" data-y="466" style="position:absolute;width:422px;height:427px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209587018-0-web.jpg" src="uploads/opt/muse-pasted-1784209587018-0.jpg" alt="Muse Lab — three models 30% off campaign" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <!-- row 2 -->
-      <div data-photo="" data-x="40" data-y="922" style="position:absolute;width:325px;height:325px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="1762" data-y="466" style="position:absolute;width:422px;height:427px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209148687-0-web.jpg" src="uploads/opt/muse-pasted-1784209148687-0.jpg" alt="Muse Lab — every body glows sticker collage" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="465" data-y="922" style="position:absolute;width:325px;height:325px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="2284" data-y="466" style="position:absolute;width:422px;height:427px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209187450-0-web.jpg" src="uploads/opt/muse-pasted-1784209187450-0.jpg" alt="Muse Lab — Breeze Soothing Serum on peonies" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="890" data-y="922" style="position:absolute;width:183px;height:325px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="2806" data-y="466" style="position:absolute;width:234px;height:427px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209180552-0-web.jpg" src="uploads/opt/muse-pasted-1784209180552-0.jpg" alt="Muse Lab — Mother's Day 30% off balloon type" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1173" data-y="922" style="position:absolute;width:260px;height:325px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="40" data-y="993" style="position:absolute;width:304px;height:385px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209447713-0-web.jpg" src="uploads/opt/muse-pasted-1784209447713-0.jpg" alt="Muse Lab — New Year sale in snow" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1533" data-y="922" style="position:absolute;width:183px;height:325px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="444" data-y="993" style="position:absolute;width:213px;height:385px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209624102-0-web.jpg" src="uploads/opt/muse-pasted-1784209624102-0.jpg" alt="Muse Lab — 15% off closeup face with blush icons" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1816" data-y="922" style="position:absolute;width:325px;height:325px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="757" data-y="993" style="position:absolute;width:379px;height:385px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209639693-0-web.jpg" src="uploads/opt/muse-pasted-1784209639693-0.jpg" alt="Muse Lab — anti-aging serum ingredient diagram" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <!-- row 3 -->
-      <div data-photo="" data-x="40" data-y="1347" style="position:absolute;width:232px;height:412px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-video="" data-x="1236" data-y="993" style="position:absolute;width:217px;height:385px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <video src="uploads/muse-v02.mp4" data-full="uploads/muse-v02-full.mp4" poster="uploads/opt/muse-v02.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Muse Lab — L&#x27;appart reel" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-x="1553" data-y="993" style="position:absolute;width:215px;height:385px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209667525-0-web.jpg" src="uploads/opt/muse-pasted-1784209667525-0.jpg" alt="Muse Lab — retro curlers rotary phone campaign" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="372" data-y="1347" style="position:absolute;width:412px;height:412px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="1868" data-y="993" style="position:absolute;width:380px;height:385px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209311989-0-web.jpg" src="uploads/opt/muse-pasted-1784209311989-0.jpg" alt="Muse Lab — Love Everyday cream 20% off" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="884" data-y="1347" style="position:absolute;width:412px;height:412px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="2348" data-y="993" style="position:absolute;width:380px;height:385px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260325_064952_8e008891-6f58-4b4b-97cd-22016aaffde6-web.jpg" src="uploads/opt/muse-hf_20260325_064952_8e008891-6f58-4b4b-97cd-22016aaffde6.jpg" alt="Muse Lab — makeup sponge and serum model" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1396" data-y="1347" style="position:absolute;width:232px;height:412px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="2828" data-y="993" style="position:absolute;width:212px;height:385px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209326913-0-web.jpg" src="uploads/opt/muse-pasted-1784209326913-0.jpg" alt="Muse Lab — sun protection set 35% off" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1728" data-y="1347" style="position:absolute;width:412px;height:412px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="40" data-y="1478" style="position:absolute;width:318px;height:320px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209763086-0-web.jpg" src="uploads/opt/muse-pasted-1784209763086-0.jpg" alt="Muse Lab — three tubes with lab glassware 15% off" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <!-- row 4 -->
-      <div data-photo="" data-x="40" data-y="1859" style="position:absolute;width:1222px;height:376px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="458" data-y="1478" style="position:absolute;width:1029px;height:320px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209493366-0-web.jpg" src="uploads/opt/muse-pasted-1784209493366-0.jpg" alt="Muse Lab — skincare and makeup together banner" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1362" data-y="1859" style="position:absolute;width:303px;height:376px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="1587" data-y="1478" style="position:absolute;width:255px;height:320px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260324_174035_fc3b12db-f97d-4573-9a2a-0bbbdedb7732-web.jpg" src="uploads/opt/muse-hf_20260324_174035_fc3b12db-f97d-4573-9a2a-0bbbdedb7732.jpg" alt="Muse Lab — bronze cream blush on knee" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1765" data-y="1859" style="position:absolute;width:376px;height:376px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="1942" data-y="1478" style="position:absolute;width:317px;height:320px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260325_092634_7488552d-c291-41c7-8e36-36a98844b873-web.jpg" src="uploads/opt/muse-hf_20260325_092634_7488552d-c291-41c7-8e36-36a98844b873.jpg" alt="Muse Lab — model applying serum in sunlight" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <!-- row 5 -->
-      <div data-photo="" data-x="40" data-y="2335" style="position:absolute;width:430px;height:430px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="2359" data-y="1478" style="position:absolute;width:372px;height:320px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209575773-0-web.jpg" src="uploads/opt/muse-pasted-1784209575773-0.jpg" alt="Muse Lab — AM routine hands holding products" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="570" data-y="2335" style="position:absolute;width:242px;height:430px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="2831" data-y="1478" style="position:absolute;width:209px;height:320px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209811354-0-web.jpg" src="uploads/opt/muse-pasted-1784209811354-0.jpg" alt="Muse Lab — model eating cake with tubes" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="912" data-y="2335" style="position:absolute;width:430px;height:430px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="40" data-y="1898" style="position:absolute;width:403px;height:347px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209580190-0-web.jpg" src="uploads/opt/muse-pasted-1784209580190-0.jpg" alt="Muse Lab — PM routine hands holding products" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1442" data-y="2335" style="position:absolute;width:430px;height:430px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="543" data-y="1898" style="position:absolute;width:403px;height:347px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209976113-0-web.jpg" src="uploads/opt/muse-pasted-1784209976113-0.jpg" alt="Muse Lab — three tubes on dark blue water" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <!-- row 6 -->
-      <div data-photo="" data-x="40" data-y="2865" style="position:absolute;width:1398px;height:430px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-video="" data-x="1046" data-y="1898" style="position:absolute;width:197px;height:347px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <video src="uploads/muse-v03.mp4" data-full="uploads/muse-v03-full.mp4" poster="uploads/opt/muse-v03.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Muse Lab — L&#x27;appart reel" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-x="1343" data-y="1898" style="position:absolute;width:1213px;height:347px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209507819-0-web.jpg" src="uploads/opt/muse-pasted-1784209507819-0.jpg" alt="Muse Lab — skincare and makeup together model" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1538" data-y="2865" style="position:absolute;width:444px;height:430px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="2656" data-y="1898" style="position:absolute;width:384px;height:347px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784210125426-0-web.jpg" src="uploads/opt/muse-pasted-1784210125426-0.jpg" alt="Muse Lab — hand holding serum against sky" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <!-- row 7 -->
-      <div data-photo="" data-x="40" data-y="3395" style="position:absolute;width:1186px;height:365px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="40" data-y="2345" style="position:absolute;width:1106px;height:344px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209514968-0-web.jpg" src="uploads/opt/muse-pasted-1784209514968-0.jpg" alt="Muse Lab — skincare and makeup together serum" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1326" data-y="3395" style="position:absolute;width:205px;height:365px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="1246" data-y="2345" style="position:absolute;width:191px;height:344px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209678865-0-web.jpg" src="uploads/opt/muse-pasted-1784209678865-0.jpg" alt="Muse Lab — hands passing product tubes" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1631" data-y="3395" style="position:absolute;width:204px;height:365px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="1537" data-y="2345" style="position:absolute;width:191px;height:344px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260313_092653_18e9b46b-122d-4cd7-a827-9a6bd2fede9a-web.jpg" src="uploads/opt/muse-hf_20260313_092653_18e9b46b-122d-4cd7-a827-9a6bd2fede9a.jpg" alt="Muse Lab — model in blue light holding serum" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1935" data-y="3395" style="position:absolute;width:204px;height:365px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="1828" data-y="2345" style="position:absolute;width:191px;height:344px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260331_180457_eaef54a6-1e54-4e2b-9ddf-5895c2426bae-web.jpg" src="uploads/opt/muse-hf_20260331_180457_eaef54a6-1e54-4e2b-9ddf-5895c2426bae.jpg" alt="Muse Lab — hands exchanging product tubes" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <!-- row 8 -->
-      <div data-photo="" data-x="40" data-y="3860" style="position:absolute;width:210px;height:377px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="2119" data-y="2345" style="position:absolute;width:186px;height:344px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260313_080427_5184e989-3d23-4b2f-97da-a82f344d1c7e-web.jpg" src="uploads/opt/muse-hf_20260313_080427_5184e989-3d23-4b2f-97da-a82f344d1c7e.jpg" alt="Muse Lab — model in soft light holding serum" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="350" data-y="3860" style="position:absolute;width:377px;height:377px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="2405" data-y="2345" style="position:absolute;width:340px;height:344px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209558636-0-web.jpg" src="uploads/opt/muse-pasted-1784209558636-0.jpg" alt="Muse Lab — gift guide 4-product grid" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="827" data-y="3860" style="position:absolute;width:212px;height:377px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="2845" data-y="2345" style="position:absolute;width:195px;height:344px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784210148049-0-web.jpg" src="uploads/opt/muse-pasted-1784210148049-0.jpg" alt="Muse Lab — pink face serum closeup" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1139" data-y="3860" style="position:absolute;width:212px;height:377px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="40" data-y="2789" style="position:absolute;width:170px;height:306px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209565282-0-web.jpg" src="uploads/opt/muse-pasted-1784209565282-0.jpg" alt="Muse Lab — AM to PM moon phase routine" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1451" data-y="3860" style="position:absolute;width:377px;height:377px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="310" data-y="2789" style="position:absolute;width:303px;height:306px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784210164766-0-web.jpg" src="uploads/opt/muse-pasted-1784210164766-0.jpg" alt="Muse Lab — cream jar floating in pool" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1928" data-y="3860" style="position:absolute;width:210px;height:377px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="713" data-y="2789" style="position:absolute;width:168px;height:306px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260205_125659_2cb2eebc-bd27-41e9-8903-fd8d9a02f119-web.jpg" src="uploads/opt/muse-hf_20260205_125659_2cb2eebc-bd27-41e9-8903-fd8d9a02f119.jpg" alt="Muse Lab — model with sponge and serum" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <!-- row 9 -->
-      <div data-photo="" data-x="40" data-y="4337" style="position:absolute;width:212px;height:377px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-video="" data-x="981" data-y="2789" style="position:absolute;width:173px;height:306px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <video src="uploads/muse-v04.mp4" data-full="uploads/muse-v04-full.mp4" poster="uploads/opt/muse-v04.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Muse Lab — L&#x27;appart reel" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-x="1254" data-y="2789" style="position:absolute;width:170px;height:306px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784210085036-0-web.jpg" src="uploads/opt/muse-pasted-1784210085036-0.jpg" alt="Muse Lab — tubes with lemons on blue backdrop" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="352" data-y="4337" style="position:absolute;width:210px;height:377px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="1524" data-y="2789" style="position:absolute;width:169px;height:306px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260313_093149_025d02f5-bcad-4235-a644-82295968fbac-web.jpg" src="uploads/opt/muse-hf_20260313_093149_025d02f5-bcad-4235-a644-82295968fbac.jpg" alt="Muse Lab — model against blue holding blush" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="662" data-y="4337" style="position:absolute;width:212px;height:377px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="1793" data-y="2789" style="position:absolute;width:170px;height:306px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784210108714-0-web.jpg" src="uploads/opt/muse-pasted-1784210108714-0.jpg" alt="Muse Lab — products among clouds and flowers" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="974" data-y="4337" style="position:absolute;width:377px;height:377px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="2063" data-y="2789" style="position:absolute;width:303px;height:306px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784210172908-0-web.jpg" src="uploads/opt/muse-pasted-1784210172908-0.jpg" alt="Muse Lab — cream jar open in pool" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1451" data-y="4337" style="position:absolute;width:377px;height:377px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="2466" data-y="2789" style="position:absolute;width:303px;height:306px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209652939-0-web.jpg" src="uploads/opt/muse-pasted-1784209652939-0.jpg" alt="Muse Lab — first order discount fold banner" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1928" data-y="4337" style="position:absolute;width:212px;height:377px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="2869" data-y="2789" style="position:absolute;width:171px;height:306px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209134890-0-web.jpg" src="uploads/opt/muse-pasted-1784209134890-0.jpg" alt="Muse Lab — bronze cream blush collage" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
     </div>
@@ -267,15 +269,19 @@ class Component {
     const patternSrc = document.getElementById('tile-pattern');
     if (!stage || !canvas || !patternSrc) return;
 
-    const PW = 2181, PH = 4754;
-    canvas.style.width  = (PW * 2) + 'px';
-    canvas.style.height = (PH * 2) + 'px';
+    const PW = 3100, PH = 3155;
+    const GS = window.innerWidth <= 760 ? 0.42 : 1;
+    const NX = Math.ceil(window.innerWidth / (PW * GS)) + 1, NY = Math.max(2, Math.ceil(window.innerHeight / (PH * GS)) + 1);
+    canvas.style.width  = (PW * NX) + 'px';
+    canvas.style.height = (PH * NY) + 'px';
 
-    const offsets = [[0, 0], [PW, 0], [0, PH], [PW, PH]];
+    const offsets = []; for (let i = 0; i < NX; i++) for (let j = 0; j < NY; j++) offsets.push([i * PW, j * PH]); // the pattern is wider than a screen, so a row never shows twice side by side
     const sourceTiles = [...patternSrc.children];
+    const lbItems = sourceTiles.map(t => { const v = t.querySelector('video'), im = t.querySelector('img'); return v ? { type: 'v', src: v.getAttribute('data-full') || v.getAttribute('src') } : { type: 'i', src: im ? (im.getAttribute('data-full') || im.getAttribute('src')) : '', alt: im ? im.alt : '' }; });
     offsets.forEach(([ox, oy]) => {
-      sourceTiles.forEach(tile => {
+      sourceTiles.forEach((tile, ti) => {
         const clone = tile.cloneNode(true);
+        clone.setAttribute('data-idx', ti);
         const baseLeft = parseFloat(tile.getAttribute('data-x'));
         const baseTop  = parseFloat(tile.getAttribute('data-y'));
         clone.style.left = (baseLeft + ox) + 'px';
@@ -292,9 +298,40 @@ class Component {
     lbImg.style.cssText = 'max-width:96vw;max-height:94vh;width:auto;height:auto;border-radius:14px;box-shadow:0 50px 120px rgba(0,0,0,0.6);object-fit:contain;opacity:0;transition:opacity 180ms ease;';
     lightbox.appendChild(lbImg);
     document.body.appendChild(lightbox);
+    const lbClose = document.createElement('button'); lbClose.id = 'lb-close'; lbClose.type = 'button'; lbClose.setAttribute('aria-label', 'Close');
+    lbClose.innerHTML = '<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 4L16 16M16 4L4 16" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/></svg>';
+    lbClose.style.cssText = 'position:fixed;top:calc(16px + env(safe-area-inset-top));right:16px;z-index:510;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,0.35);background:rgba(11,11,11,0.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;';
+    lbClose.addEventListener('click', (e) => { e.stopPropagation(); closeLightbox(); });
+    lightbox.appendChild(lbClose);
+    // browse with arrows, keys and swipe
+    let lbIdx = -1;
+    const showItem = (i) => {
+      const nItems = lbItems.length; if (!nItems) return;
+      lbIdx = ((i % nItems) + nItems) % nItems; const it = lbItems[lbIdx];
+      if (it.type === 'v') { openVideo(it.src); }
+      else { lbVid.pause(); lbVid.removeAttribute('src'); lbVid.load(); lbVid.style.display = 'none'; openLightbox(it.src, it.alt); }
+    };
+    const mob = window.innerWidth <= 760;
+    const mkArrow = (dir) => {
+      const b = document.createElement('button'); b.type = 'button'; b.id = dir < 0 ? 'lb-prev' : 'lb-next'; b.setAttribute('aria-label', dir < 0 ? 'Previous' : 'Next');
+      b.innerHTML = dir < 0 ? '<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12.5 4L6.5 10L12.5 16" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' : '<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 4L13.5 10L7.5 16" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      const pos = mob ? ('bottom:calc(20px + env(safe-area-inset-bottom));' + (dir < 0 ? 'left:calc(50% - 64px);' : 'left:calc(50% + 12px);')) : ('top:50%;margin-top:-26px;' + (dir < 0 ? 'left:20px;' : 'right:20px;'));
+      b.style.cssText = 'position:fixed;' + pos + 'z-index:510;width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,0.35);background:rgba(11,11,11,0.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;';
+      b.addEventListener('click', (e) => { e.stopPropagation(); showItem(lbIdx + dir); });
+      lightbox.appendChild(b);
+    };
+    mkArrow(-1); mkArrow(1);
+    const lbOpen = () => lightbox.style.opacity === '1';
+    window.addEventListener('keydown', (e) => { if (!lbOpen()) return; if (e.key === 'ArrowLeft') showItem(lbIdx - 1); if (e.key === 'ArrowRight') showItem(lbIdx + 1); });
+    let swX = null, swY = null;
+    lightbox.addEventListener('touchstart', (e) => { const t = e.touches[0]; swX = t.clientX; swY = t.clientY; }, { passive: true });
+    lightbox.addEventListener('touchend', (e) => { if (swX === null) return; const t = e.changedTouches[0]; const dx = t.clientX - swX, dy = t.clientY - swY; swX = null; if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.3) showItem(lbIdx + (dx < 0 ? 1 : -1)); }, { passive: true });
+    /*vlb*/ const lbVid=document.createElement('video');lbVid.controls=true;lbVid.playsInline=true;lbVid.style.cssText='max-width:96vw;max-height:calc(100vh - 140px);width:auto;height:auto;border-radius:14px;box-shadow:0 50px 120px rgba(0,0,0,0.6);display:none;background:#000;';lightbox.appendChild(lbVid);lbVid.addEventListener('click',e=>e.stopPropagation());
+    const openVideo=(src)=>{lbToken++;lbImg.style.display='none';lbVid.style.display='block';lightbox.style.opacity='1';lightbox.style.pointerEvents='auto';lbVid.src=src;lbVid.muted=false;lbVid.play().catch(()=>{lbVid.muted=true;lbVid.play().catch(()=>{})});};
 
     let lbToken = 0;
     const openLightbox = (src, alt) => {
+      lbImg.style.display = '';
       const token = ++lbToken;
       lbImg.style.opacity = '0';
       lbImg.removeAttribute('src');
@@ -307,6 +344,7 @@ class Component {
       if (lbImg.complete && lbImg.currentSrc) show();
     };
     const closeLightbox = () => {
+      lbVid.pause();lbVid.removeAttribute('src');lbVid.load();lbVid.style.display='none';lbImg.style.display='';
       lbToken++;
       lightbox.style.opacity = '0';
       lightbox.style.pointerEvents = 'none';
@@ -330,7 +368,7 @@ class Component {
 
     const wrap = (v, m) => ((v % m) + m) % m;
     const render = () => {
-      canvas.style.transform = `translate3d(${(-viewX + parX).toFixed(1)}px, ${(-viewY + parY).toFixed(1)}px, 0)`;
+      canvas.style.transformOrigin = '0 0'; canvas.style.transform = `translate3d(${(-viewX * GS + parX).toFixed(1)}px, ${(-viewY * GS + parY).toFixed(1)}px, 0) scale(${GS})`;
     };
 
     let raf = null;
@@ -339,8 +377,8 @@ class Component {
       const dt = Math.min(0.05, (now - last) / 1000);
       last = now;
       if (autoplay && !dragging) {
-        viewX = wrap(viewX - SPEED_X * dt, PW);
-        viewY = wrap(viewY + SPEED_Y * dt, PH);
+        viewX = wrap(viewX - SPEED_X * dt / GS, PW);
+        viewY = wrap(viewY + SPEED_Y * dt / GS, PH);
       }
       const targetParX = mouseNX * PARALLAX_RANGE;
       const targetParY = mouseNY * PARALLAX_RANGE;
@@ -381,8 +419,8 @@ class Component {
       const dx = p.clientX - lastPX, dy = p.clientY - lastPY;
       lastPX = p.clientX; lastPY = p.clientY;
       dragDistance += Math.hypot(dx, dy);
-      viewX = wrap(viewX - dx, PW);
-      viewY = wrap(viewY - dy, PH);
+      viewX = wrap(viewX - dx / GS, PW);
+      viewY = wrap(viewY - dy / GS, PH);
     };
     const onUp = (e) => {
       if (!dragging) return;
@@ -392,6 +430,10 @@ class Component {
       if (dragDistance < 6) {
         const tile = e.target && e.target.closest ? e.target.closest('[data-photo]') : null;
         if (tile) {
+          const ix = parseInt(tile.getAttribute('data-idx'), 10);
+          if (!isNaN(ix)) { showItem(ix); return; }
+          const vEl = tile.querySelector('video');
+          if (vEl) { openVideo(vEl.getAttribute('data-full') || vEl.currentSrc || vEl.src); return; }
           const img = tile.querySelector('img');
           if (img) {
             const full = img.getAttribute('data-full');
@@ -409,8 +451,8 @@ class Component {
       e.preventDefault();
       autoplay = false;
       clearTimeout(idleTimer);
-      viewX = wrap(viewX + e.deltaX * 0.5, PW);
-      viewY = wrap(viewY + e.deltaY * 0.5, PH);
+      viewX = wrap(viewX + e.deltaX * 0.5 / GS, PW);
+      viewY = wrap(viewY + e.deltaY * 0.5 / GS, PH);
       wakeAutoplay();
     };
     stage.addEventListener('wheel', onWheel, { passive: false });
@@ -433,5 +475,6 @@ const __component = new Component();
 __component.componentDidMount();
 });
 </script>
+<script data-video-io>(()=>{const io=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting){v.play().catch(()=>{})}else{v.pause()}}),{rootMargin:'150px'});let seen=new WeakSet();const go=()=>document.querySelectorAll('#gallery-canvas video').forEach(v=>{if(!seen.has(v)){seen.add(v);io.observe(v)}});addEventListener('load',()=>{go();setTimeout(go,800)});new MutationObserver(go).observe(document.documentElement,{childList:true,subtree:true});})();</script>
 </body>
 </html>

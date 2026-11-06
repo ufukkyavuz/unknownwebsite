@@ -21,6 +21,7 @@
       section[data-screen-label] > div[style*="left:0;bottom:0"]{padding:20px 50px 20px 20px !important;}
       section[data-screen-label] > div[style*="left:0;bottom:0"] img{height:40px !important;}
     }
+    @media (max-width:760px){ section[data-screen-label] > div[style*="left:0;bottom:0"] img.brandmark{height:30px !important;} }
   </style>
 <template id="__bundler_thumbnail"><svg viewBox="0 0 80 56" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="56" fill="#0B0B0B"></rect><text x="40" y="34" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">u®</text></svg></template>
   <style>
@@ -35,7 +36,7 @@
 <body>
 <!-- ═══ NAV ═══ (same chrome as homepage) -->
 <nav style="position:fixed;top:0;left:0;right:0;z-index:200;height:72px;display:flex;align-items:center;padding:0 clamp(24px,5vw,80px);background:#FFFFFF;border-bottom:1px solid rgba(11,11,11,0.08);">
-  <a href="index.html" style="font-family:var(--font-display);font-weight:700;font-size:26px;display:inline-flex;align-items:center;gap:9px;letter-spacing:-0.025em;color:#0B0B0B;text-decoration:none;flex-shrink:0;line-height:1;"><img src="uploads/opt/joke-smile.webp" alt="" style="height:34px;width:auto;display:block;">joke®</a>
+  <a href="index.html" style="font-family:var(--font-display);font-weight:700;font-size:26px;display:inline-flex;align-items:center;gap:9px;letter-spacing:-0.025em;color:#0B0B0B;text-decoration:none;flex-shrink:0;line-height:1;">joke®</a>
 
   <div style="position:absolute;left:0;right:0;top:0;height:72px;display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:1;">
     <div style="position:relative;display:flex;gap:2px;align-items:center;padding:5px 6px;border-radius:100px;pointer-events:auto;">
@@ -55,7 +56,7 @@
 
 <div id="wnav-mobile-menu" style="display:none;position:fixed;inset:0;z-index:300;background:#FFFFFF;flex-direction:column;">
   <div style="height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(24px,5vw,80px);border-bottom:1px solid rgba(11,11,11,0.08);flex-shrink:0;">
-    <span style="font-family:var(--font-display);font-weight:700;font-size:26px;display:inline-flex;align-items:center;gap:9px;color:#0B0B0B;"><img src="uploads/opt/joke-smile.webp" alt="" style="height:34px;width:auto;display:block;">joke®</span>
+    <span style="font-family:var(--font-display);font-weight:700;font-size:26px;display:inline-flex;align-items:center;gap:9px;color:#0B0B0B;">joke®</span>
     <button aria-label="Close" onclick="document.getElementById('wnav-mobile-menu').style.display='none'" style="background:none;border:none;padding:8px;cursor:pointer;">
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 4L16 16M16 4L4 16" stroke="#0B0B0B" stroke-width="1.6" stroke-linecap="round"></path></svg>
     </button>
@@ -76,12 +77,91 @@
     <div id="gallery-canvas" style="position:absolute;top:0;left:0;will-change:transform;"></div>
 
     <!-- source pattern — cloned 2×2 by JS into a seamless, endlessly-panning tile. Empty for now — add data-photo tiles here when images are ready. -->
-    <div id="tile-pattern" style="display:none;"></div>
+    <div id="tile-pattern" style="display:none;">
+      <div data-photo="" data-x="40" data-y="40" style="position:absolute;width:672px;height:378px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/kind-people-01-web.jpg" src="uploads/opt/kind-people-01.jpg" alt="Kind People — pattern variant" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="812" data-y="40" style="position:absolute;width:672px;height:378px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/kind-people-02-web.jpg" src="uploads/opt/kind-people-02.jpg" alt="Kind People — master logo" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="1584" data-y="40" style="position:absolute;width:672px;height:378px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/kind-people-03-web.jpg" src="uploads/opt/kind-people-03.jpg" alt="Kind People — social avatars" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="2356" data-y="40" style="position:absolute;width:684px;height:378px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/kind-people-04-web.jpg" src="uploads/opt/kind-people-04.jpg" alt="Kind People — strategy and concept page" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="40" data-y="518" style="position:absolute;width:677px;height:381px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/kind-people-05-web.jpg" src="uploads/opt/kind-people-05.jpg" alt="Kind People — colour palette" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="817" data-y="518" style="position:absolute;width:677px;height:381px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/kind-people-06-web.jpg" src="uploads/opt/kind-people-06.jpg" alt="Kind People — logo on photography" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="1594" data-y="518" style="position:absolute;width:677px;height:381px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/kind-people-07-web.jpg" src="uploads/opt/kind-people-07.jpg" alt="Kind People — pattern" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="2371" data-y="518" style="position:absolute;width:669px;height:381px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/kind-people-08-web.jpg" src="uploads/opt/kind-people-08.jpg" alt="Kind People — talent management page" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="40" data-y="999" style="position:absolute;width:689px;height:388px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/kind-people-09-web.jpg" src="uploads/opt/kind-people-09.jpg" alt="Kind People — logo misuse guidance" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="829" data-y="999" style="position:absolute;width:689px;height:388px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/kind-people-10-web.jpg" src="uploads/opt/kind-people-10.jpg" alt="Kind People — typography" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="1618" data-y="999" style="position:absolute;width:690px;height:388px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/kind-people-11-web.jpg" src="uploads/opt/kind-people-11.jpg" alt="Kind People — social media screens" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="2408" data-y="999" style="position:absolute;width:632px;height:388px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/kind-people-12-web.jpg" src="uploads/opt/kind-people-12.jpg" alt="Kind People — kit sending page" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-video="" data-x="40" data-y="1487" style="position:absolute;width:689px;height:377px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <video src="uploads/kind-people-13.mp4" data-full="uploads/kind-people-13-full.mp4" poster="uploads/opt/kind-people-13.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Kind People — pattern animation" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-x="829" data-y="1487" style="position:absolute;width:670px;height:377px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/kind-people-14-web.jpg" src="uploads/opt/kind-people-14.jpg" alt="Kind People — colourways" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="1599" data-y="1487" style="position:absolute;width:670px;height:377px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/kind-people-15-web.jpg" src="uploads/opt/kind-people-15.jpg" alt="Kind People — business card" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="2369" data-y="1487" style="position:absolute;width:671px;height:377px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/kind-people-16-web.jpg" src="uploads/opt/kind-people-16.jpg" alt="Kind People — colour scale" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="40" data-y="1964" style="position:absolute;width:608px;height:338px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/kind-people-17-web.jpg" src="uploads/opt/kind-people-17.jpg" alt="Kind People — what we offer section" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="748" data-y="1964" style="position:absolute;width:190px;height:338px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/kind-people-18-web.jpg" src="uploads/opt/kind-people-18.jpg" alt="Kind People — pattern story" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="1038" data-y="1964" style="position:absolute;width:601px;height:338px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/kind-people-19-web.jpg" src="uploads/opt/kind-people-19.jpg" alt="Kind People — icon set" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="1739" data-y="1964" style="position:absolute;width:600px;height:338px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/kind-people-20-web.jpg" src="uploads/opt/kind-people-20.jpg" alt="Kind People — symbol" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="2439" data-y="1964" style="position:absolute;width:601px;height:338px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/kind-people-21-web.jpg" src="uploads/opt/kind-people-21.jpg" alt="Kind People — tote bags" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="40" data-y="2402" style="position:absolute;width:776px;height:332px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/kind-people-22-web.jpg" src="uploads/opt/kind-people-22.jpg" alt="Kind People — why Kind People section" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="916" data-y="2402" style="position:absolute;width:590px;height:332px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/kind-people-23-web.jpg" src="uploads/opt/kind-people-23.jpg" alt="Kind People — app sample" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-video="" data-x="1606" data-y="2402" style="position:absolute;width:332px;height:332px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <video src="uploads/kind-people-24.mp4" data-full="uploads/kind-people-24-full.mp4" poster="uploads/opt/kind-people-24.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Kind People — pattern animation" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-video="" data-x="2038" data-y="2402" style="position:absolute;width:332px;height:332px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <video src="uploads/kind-people-25.mp4" data-full="uploads/kind-people-25-full.mp4" poster="uploads/opt/kind-people-25.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Kind People — logo colourways animation" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-x="2470" data-y="2402" style="position:absolute;width:570px;height:332px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/kind-people-26-web.jpg" src="uploads/opt/kind-people-26.jpg" alt="Kind People — why work with us section" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+    </div>
   </div>
 
   <!-- bottom-left persistent brand mark + prev/next -->
   <div style="position:fixed;left:0;bottom:0;z-index:5;display:flex;flex-direction:column;gap:16px;padding:clamp(24px,5vw,80px) 90px 30px clamp(24px,5vw,80px);pointer-events:none;">
-    <span style="font-family:var(--font-display);font-weight:700;font-size:34px;letter-spacing:-0.02em;color:#0B0B0B;opacity:0.95;display:block;">Kind People</span>
+    <img class="brandmark" src="uploads/kindpeople-logo.svg" alt="Kind People" style="height:56px;width:auto;display:block;pointer-events:none;">
     <div style="display:flex;align-items:center;gap:14px;pointer-events:auto;">
       <a href="work-foundby-me.html" class="hv-work-kind-people-5" style="font-family:var(--font-mono);font-size:13px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(11,11,11,0.65);text-decoration:none;transition:all 200ms;display:inline-flex;align-items:center;padding:10px 18px;border:1px solid rgba(11,11,11,0.18);border-radius:var(--radius-full);">← Prev</a>
       <span style="width:1px;height:10px;background:rgba(11,11,11,0.2);"></span>
@@ -112,15 +192,19 @@ class Component {
     const patternSrc = document.getElementById('tile-pattern');
     if (!stage || !canvas || !patternSrc) return;
 
-    const PW = 1900, PH = 1400;
-    canvas.style.width  = (PW * 2) + 'px';
-    canvas.style.height = (PH * 2) + 'px';
+    const PW = 3100, PH = 2794;
+    const GS = window.innerWidth <= 760 ? 0.42 : 1;
+    const NX = Math.ceil(window.innerWidth / (PW * GS)) + 1, NY = Math.max(2, Math.ceil(window.innerHeight / (PH * GS)) + 1);
+    canvas.style.width  = (PW * NX) + 'px';
+    canvas.style.height = (PH * NY) + 'px';
 
-    const offsets = [[0, 0], [PW, 0], [0, PH], [PW, PH]];
+    const offsets = []; for (let i = 0; i < NX; i++) for (let j = 0; j < NY; j++) offsets.push([i * PW, j * PH]); // the pattern is wider than a screen, so a row never shows twice side by side
     const sourceTiles = [...patternSrc.children];
+    const lbItems = sourceTiles.map(t => { const v = t.querySelector('video'), im = t.querySelector('img'); return v ? { type: 'v', src: v.getAttribute('data-full') || v.getAttribute('src') } : { type: 'i', src: im ? (im.getAttribute('data-full') || im.getAttribute('src')) : '', alt: im ? im.alt : '' }; });
     offsets.forEach(([ox, oy]) => {
-      sourceTiles.forEach(tile => {
+      sourceTiles.forEach((tile, ti) => {
         const clone = tile.cloneNode(true);
+        clone.setAttribute('data-idx', ti);
         const baseLeft = parseFloat(tile.getAttribute('data-x'));
         const baseTop  = parseFloat(tile.getAttribute('data-y'));
         clone.style.left = (baseLeft + ox) + 'px';
@@ -137,9 +221,40 @@ class Component {
     lbImg.style.cssText = 'max-width:96vw;max-height:94vh;width:auto;height:auto;border-radius:14px;box-shadow:0 50px 120px rgba(0,0,0,0.6);object-fit:contain;opacity:0;transition:opacity 180ms ease;';
     lightbox.appendChild(lbImg);
     document.body.appendChild(lightbox);
+    const lbClose = document.createElement('button'); lbClose.id = 'lb-close'; lbClose.type = 'button'; lbClose.setAttribute('aria-label', 'Close');
+    lbClose.innerHTML = '<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 4L16 16M16 4L4 16" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/></svg>';
+    lbClose.style.cssText = 'position:fixed;top:calc(16px + env(safe-area-inset-top));right:16px;z-index:510;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,0.35);background:rgba(11,11,11,0.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;';
+    lbClose.addEventListener('click', (e) => { e.stopPropagation(); closeLightbox(); });
+    lightbox.appendChild(lbClose);
+    // browse with arrows, keys and swipe
+    let lbIdx = -1;
+    const showItem = (i) => {
+      const nItems = lbItems.length; if (!nItems) return;
+      lbIdx = ((i % nItems) + nItems) % nItems; const it = lbItems[lbIdx];
+      if (it.type === 'v') { openVideo(it.src); }
+      else { lbVid.pause(); lbVid.removeAttribute('src'); lbVid.load(); lbVid.style.display = 'none'; openLightbox(it.src, it.alt); }
+    };
+    const mob = window.innerWidth <= 760;
+    const mkArrow = (dir) => {
+      const b = document.createElement('button'); b.type = 'button'; b.id = dir < 0 ? 'lb-prev' : 'lb-next'; b.setAttribute('aria-label', dir < 0 ? 'Previous' : 'Next');
+      b.innerHTML = dir < 0 ? '<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12.5 4L6.5 10L12.5 16" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' : '<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 4L13.5 10L7.5 16" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      const pos = mob ? ('bottom:calc(20px + env(safe-area-inset-bottom));' + (dir < 0 ? 'left:calc(50% - 64px);' : 'left:calc(50% + 12px);')) : ('top:50%;margin-top:-26px;' + (dir < 0 ? 'left:20px;' : 'right:20px;'));
+      b.style.cssText = 'position:fixed;' + pos + 'z-index:510;width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,0.35);background:rgba(11,11,11,0.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;';
+      b.addEventListener('click', (e) => { e.stopPropagation(); showItem(lbIdx + dir); });
+      lightbox.appendChild(b);
+    };
+    mkArrow(-1); mkArrow(1);
+    const lbOpen = () => lightbox.style.opacity === '1';
+    window.addEventListener('keydown', (e) => { if (!lbOpen()) return; if (e.key === 'ArrowLeft') showItem(lbIdx - 1); if (e.key === 'ArrowRight') showItem(lbIdx + 1); });
+    let swX = null, swY = null;
+    lightbox.addEventListener('touchstart', (e) => { const t = e.touches[0]; swX = t.clientX; swY = t.clientY; }, { passive: true });
+    lightbox.addEventListener('touchend', (e) => { if (swX === null) return; const t = e.changedTouches[0]; const dx = t.clientX - swX, dy = t.clientY - swY; swX = null; if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.3) showItem(lbIdx + (dx < 0 ? 1 : -1)); }, { passive: true });
+    /*vlb*/ const lbVid=document.createElement('video');lbVid.controls=true;lbVid.playsInline=true;lbVid.style.cssText='max-width:96vw;max-height:calc(100vh - 140px);width:auto;height:auto;border-radius:14px;box-shadow:0 50px 120px rgba(0,0,0,0.6);display:none;background:#000;';lightbox.appendChild(lbVid);lbVid.addEventListener('click',e=>e.stopPropagation());
+    const openVideo=(src)=>{lbToken++;lbImg.style.display='none';lbVid.style.display='block';lightbox.style.opacity='1';lightbox.style.pointerEvents='auto';lbVid.src=src;lbVid.muted=false;lbVid.play().catch(()=>{lbVid.muted=true;lbVid.play().catch(()=>{})});};
 
     let lbToken = 0;
     const openLightbox = (src, alt) => {
+      lbImg.style.display = '';
       const token = ++lbToken;
       lbImg.style.opacity = '0';
       lbImg.removeAttribute('src');
@@ -152,6 +267,7 @@ class Component {
       if (lbImg.complete && lbImg.currentSrc) show();
     };
     const closeLightbox = () => {
+      lbVid.pause();lbVid.removeAttribute('src');lbVid.load();lbVid.style.display='none';lbImg.style.display='';
       lbToken++;
       lightbox.style.opacity = '0';
       lightbox.style.pointerEvents = 'none';
@@ -175,7 +291,7 @@ class Component {
 
     const wrap = (v, m) => ((v % m) + m) % m;
     const render = () => {
-      canvas.style.transform = `translate3d(${(-viewX + parX).toFixed(1)}px, ${(-viewY + parY).toFixed(1)}px, 0)`;
+      canvas.style.transformOrigin = '0 0'; canvas.style.transform = `translate3d(${(-viewX * GS + parX).toFixed(1)}px, ${(-viewY * GS + parY).toFixed(1)}px, 0) scale(${GS})`;
     };
 
     let raf = null;
@@ -184,8 +300,8 @@ class Component {
       const dt = Math.min(0.05, (now - last) / 1000);
       last = now;
       if (autoplay && !dragging) {
-        viewX = wrap(viewX - SPEED_X * dt, PW);
-        viewY = wrap(viewY + SPEED_Y * dt, PH);
+        viewX = wrap(viewX - SPEED_X * dt / GS, PW);
+        viewY = wrap(viewY + SPEED_Y * dt / GS, PH);
       }
       const targetParX = mouseNX * PARALLAX_RANGE;
       const targetParY = mouseNY * PARALLAX_RANGE;
@@ -226,8 +342,8 @@ class Component {
       const dx = p.clientX - lastPX, dy = p.clientY - lastPY;
       lastPX = p.clientX; lastPY = p.clientY;
       dragDistance += Math.hypot(dx, dy);
-      viewX = wrap(viewX - dx, PW);
-      viewY = wrap(viewY - dy, PH);
+      viewX = wrap(viewX - dx / GS, PW);
+      viewY = wrap(viewY - dy / GS, PH);
     };
     const onUp = (e) => {
       if (!dragging) return;
@@ -237,6 +353,10 @@ class Component {
       if (dragDistance < 6) {
         const tile = e.target && e.target.closest ? e.target.closest('[data-photo]') : null;
         if (tile) {
+          const ix = parseInt(tile.getAttribute('data-idx'), 10);
+          if (!isNaN(ix)) { showItem(ix); return; }
+          const vEl = tile.querySelector('video');
+          if (vEl) { openVideo(vEl.getAttribute('data-full') || vEl.currentSrc || vEl.src); return; }
           const img = tile.querySelector('img');
           if (img) {
             const full = img.getAttribute('data-full');
@@ -254,8 +374,8 @@ class Component {
       e.preventDefault();
       autoplay = false;
       clearTimeout(idleTimer);
-      viewX = wrap(viewX + e.deltaX * 0.5, PW);
-      viewY = wrap(viewY + e.deltaY * 0.5, PH);
+      viewX = wrap(viewX + e.deltaX * 0.5 / GS, PW);
+      viewY = wrap(viewY + e.deltaY * 0.5 / GS, PH);
       wakeAutoplay();
     };
     stage.addEventListener('wheel', onWheel, { passive: false });
@@ -278,5 +398,6 @@ const __component = new Component();
 __component.componentDidMount();
 });
 </script>
+<script data-video-io>(()=>{const io=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting){v.play().catch(()=>{})}else{v.pause()}}),{rootMargin:'150px'});let seen=new WeakSet();const go=()=>document.querySelectorAll('#gallery-canvas video').forEach(v=>{if(!seen.has(v)){seen.add(v);io.observe(v)}});addEventListener('load',()=>{go();setTimeout(go,800)});new MutationObserver(go).observe(document.documentElement,{childList:true,subtree:true});})();</script>
 </body>
 </html>

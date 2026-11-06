@@ -35,7 +35,7 @@
 <body>
 <!-- ═══ NAV ═══ (same chrome as homepage) -->
 <nav style="position:fixed;top:0;left:0;right:0;z-index:200;height:72px;display:flex;align-items:center;padding:0 clamp(24px,5vw,80px);background:#FFFFFF;border-bottom:1px solid rgba(11,11,11,0.08);">
-  <a href="index.html" style="font-family:var(--font-display);font-weight:700;font-size:26px;display:inline-flex;align-items:center;gap:9px;letter-spacing:-0.025em;color:#0B0B0B;text-decoration:none;flex-shrink:0;line-height:1;"><img src="uploads/opt/joke-smile.webp" alt="" style="height:34px;width:auto;display:block;">joke®</a>
+  <a href="index.html" style="font-family:var(--font-display);font-weight:700;font-size:26px;display:inline-flex;align-items:center;gap:9px;letter-spacing:-0.025em;color:#0B0B0B;text-decoration:none;flex-shrink:0;line-height:1;">joke®</a>
 
   <div style="position:absolute;left:0;right:0;top:0;height:72px;display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:1;">
     <div style="position:relative;display:flex;gap:2px;align-items:center;padding:5px 6px;border-radius:100px;pointer-events:auto;">
@@ -55,7 +55,7 @@
 
 <div id="wnav-mobile-menu" style="display:none;position:fixed;inset:0;z-index:300;background:#FFFFFF;flex-direction:column;">
   <div style="height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(24px,5vw,80px);border-bottom:1px solid rgba(11,11,11,0.08);flex-shrink:0;">
-    <span style="font-family:var(--font-display);font-weight:700;font-size:26px;display:inline-flex;align-items:center;gap:9px;color:#0B0B0B;"><img src="uploads/opt/joke-smile.webp" alt="" style="height:34px;width:auto;display:block;">joke®</span>
+    <span style="font-family:var(--font-display);font-weight:700;font-size:26px;display:inline-flex;align-items:center;gap:9px;color:#0B0B0B;">joke®</span>
     <button aria-label="Close" onclick="document.getElementById('wnav-mobile-menu').style.display='none'" style="background:none;border:none;padding:8px;cursor:pointer;">
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 4L16 16M16 4L4 16" stroke="#0B0B0B" stroke-width="1.6" stroke-linecap="round"></path></svg>
     </button>
@@ -76,7 +76,116 @@
     <div id="gallery-canvas" style="position:absolute;top:0;left:0;will-change:transform;"></div>
 
     <!-- source pattern — cloned 2×2 by JS into a seamless, endlessly-panning tile. Empty for now — add data-photo tiles here when images are ready. -->
-    <div id="tile-pattern" style="display:none;"></div>
+    <div id="tile-pattern" style="display:none;">
+      <div data-photo="" data-x="40" data-y="40" style="position:absolute;width:282px;height:377px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/buzzfy-01-web.jpg" src="uploads/opt/buzzfy-01.jpg" alt="Buzzfy — beauty routine reel cover" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="422" data-y="40" style="position:absolute;width:169px;height:377px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/buzzfy-02-web.jpg" src="uploads/opt/buzzfy-02.jpg" alt="Buzzfy — mobile sign-in" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="691" data-y="40" style="position:absolute;width:491px;height:377px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/buzzfy-03-web.jpg" src="uploads/opt/buzzfy-03.jpg" alt="Buzzfy — account growth analytics" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="1282" data-y="40" style="position:absolute;width:675px;height:377px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/buzzfy-04-web.jpg" src="uploads/opt/buzzfy-04.jpg" alt="Buzzfy — creator persona" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="2057" data-y="40" style="position:absolute;width:377px;height:377px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/buzzfy-05-web.jpg" src="uploads/opt/buzzfy-05.jpg" alt="Buzzfy — logo" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="2534" data-y="40" style="position:absolute;width:506px;height:377px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/buzzfy-06-web.jpg" src="uploads/opt/buzzfy-06.jpg" alt="Buzzfy — creator persona close-up" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-video="" data-x="40" data-y="517" style="position:absolute;width:177px;height:315px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <video src="uploads/buzzfy-07.mp4" data-full="uploads/buzzfy-07-full.mp4" poster="uploads/opt/buzzfy-07.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Buzzfy — UGC video" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-x="317" data-y="517" style="position:absolute;width:504px;height:315px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/buzzfy-08-web.jpg" src="uploads/opt/buzzfy-08.jpg" alt="Buzzfy — billing" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-video="" data-x="921" data-y="517" style="position:absolute;width:145px;height:315px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <video src="uploads/buzzfy-09.mp4" data-full="uploads/buzzfy-09-full.mp4" poster="uploads/opt/buzzfy-09.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Buzzfy — dashboard screen recording" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-x="1166" data-y="517" style="position:absolute;width:356px;height:315px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/buzzfy-10-web.jpg" src="uploads/opt/buzzfy-10.jpg" alt="Buzzfy — coach" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="1622" data-y="517" style="position:absolute;width:422px;height:315px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/buzzfy-11-web.jpg" src="uploads/opt/buzzfy-11.jpg" alt="Buzzfy — creator persona" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="2144" data-y="517" style="position:absolute;width:326px;height:315px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/buzzfy-12-web.jpg" src="uploads/opt/buzzfy-12.jpg" alt="Buzzfy — creator reels" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="2570" data-y="517" style="position:absolute;width:470px;height:315px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/buzzfy-13-web.jpg" src="uploads/opt/buzzfy-13.jpg" alt="Buzzfy — sign-in screen" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="40" data-y="932" style="position:absolute;width:779px;height:438px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/buzzfy-14-web.jpg" src="uploads/opt/buzzfy-14.jpg" alt="Buzzfy — typography" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="919" data-y="932" style="position:absolute;width:194px;height:438px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/buzzfy-15-web.jpg" src="uploads/opt/buzzfy-15.jpg" alt="Buzzfy — mobile dashboard" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="1213" data-y="932" style="position:absolute;width:327px;height:438px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/buzzfy-16-web.jpg" src="uploads/opt/buzzfy-16.jpg" alt="Buzzfy — glossy curls reel cover" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-video="" data-x="1640" data-y="932" style="position:absolute;width:247px;height:438px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <video src="uploads/buzzfy-17.mp4" data-full="uploads/buzzfy-17-full.mp4" poster="uploads/opt/buzzfy-17.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Buzzfy — UGC video" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-x="1987" data-y="932" style="position:absolute;width:327px;height:438px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/buzzfy-18-web.jpg" src="uploads/opt/buzzfy-18.jpg" alt="Buzzfy — creator morning selfie" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="2414" data-y="932" style="position:absolute;width:626px;height:438px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/buzzfy-19-web.jpg" src="uploads/opt/buzzfy-19.jpg" alt="Buzzfy — best time to post" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="40" data-y="1470" style="position:absolute;width:343px;height:429px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/buzzfy-20-web.jpg" src="uploads/opt/buzzfy-20.jpg" alt="Buzzfy — logo on yellow" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="483" data-y="1470" style="position:absolute;width:686px;height:429px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/buzzfy-21-web.jpg" src="uploads/opt/buzzfy-21.jpg" alt="Buzzfy — dashboard" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="1269" data-y="1470" style="position:absolute;width:575px;height:429px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/buzzfy-22-web.jpg" src="uploads/opt/buzzfy-22.jpg" alt="Buzzfy — creator persona" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="1944" data-y="1470" style="position:absolute;width:804px;height:429px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/buzzfy-23-web.jpg" src="uploads/opt/buzzfy-23.jpg" alt="Buzzfy — best reel variants" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="2848" data-y="1470" style="position:absolute;width:192px;height:429px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/buzzfy-24-web.jpg" src="uploads/opt/buzzfy-24.jpg" alt="Buzzfy — mobile trial reels" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="40" data-y="1999" style="position:absolute;width:461px;height:344px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/buzzfy-25-web.jpg" src="uploads/opt/buzzfy-25.jpg" alt="Buzzfy — creator persona" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-video="" data-x="601" data-y="1999" style="position:absolute;width:194px;height:344px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <video src="uploads/buzzfy-26.mp4" data-full="uploads/buzzfy-26-full.mp4" poster="uploads/opt/buzzfy-26.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Buzzfy — promo video" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-x="895" data-y="1999" style="position:absolute;width:344px;height:344px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/buzzfy-27-web.jpg" src="uploads/opt/buzzfy-27.jpg" alt="Buzzfy — emblem" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="1339" data-y="1999" style="position:absolute;width:476px;height:344px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/buzzfy-28-web.jpg" src="uploads/opt/buzzfy-28.jpg" alt="Buzzfy — reels breakdown" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="1915" data-y="1999" style="position:absolute;width:257px;height:344px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/buzzfy-29-web.jpg" src="uploads/opt/buzzfy-29.jpg" alt="Buzzfy — creator mirror selfie" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-video="" data-x="2272" data-y="1999" style="position:absolute;width:159px;height:344px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <video src="uploads/buzzfy-30.mp4" data-full="uploads/buzzfy-30-full.mp4" poster="uploads/opt/buzzfy-30.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Buzzfy — homepage screen recording" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-x="2531" data-y="1999" style="position:absolute;width:509px;height:344px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/buzzfy-31-web.jpg" src="uploads/opt/buzzfy-31.jpg" alt="Buzzfy — bee illustration" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="40" data-y="2443" style="position:absolute;width:558px;height:417px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/buzzfy-32-web.jpg" src="uploads/opt/buzzfy-32.jpg" alt="Buzzfy — beauty routine cover" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="698" data-y="2443" style="position:absolute;width:667px;height:417px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/buzzfy-33-web.jpg" src="uploads/opt/buzzfy-33.jpg" alt="Buzzfy — trial reels library" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="1465" data-y="2443" style="position:absolute;width:834px;height:417px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/buzzfy-34-web.jpg" src="uploads/opt/buzzfy-34.jpg" alt="Buzzfy — horizontal logo" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-video="" data-x="2399" data-y="2443" style="position:absolute;width:235px;height:417px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <video src="uploads/buzzfy-35.mp4" data-full="uploads/buzzfy-35-full.mp4" poster="uploads/opt/buzzfy-35.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Buzzfy — creator testimonial video" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-x="2734" data-y="2443" style="position:absolute;width:306px;height:417px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/buzzfy-36-web.jpg" src="uploads/opt/buzzfy-36.jpg" alt="Buzzfy — trial reel analytics" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+    </div>
   </div>
 
   <!-- bottom-left persistent brand mark + prev/next -->
@@ -112,15 +221,19 @@ class Component {
     const patternSrc = document.getElementById('tile-pattern');
     if (!stage || !canvas || !patternSrc) return;
 
-    const PW = 1900, PH = 1400;
-    canvas.style.width  = (PW * 2) + 'px';
-    canvas.style.height = (PH * 2) + 'px';
+    const PW = 3100, PH = 2920;
+    const GS = window.innerWidth <= 760 ? 0.42 : 1;
+    const NX = Math.ceil(window.innerWidth / (PW * GS)) + 1, NY = Math.max(2, Math.ceil(window.innerHeight / (PH * GS)) + 1);
+    canvas.style.width  = (PW * NX) + 'px';
+    canvas.style.height = (PH * NY) + 'px';
 
-    const offsets = [[0, 0], [PW, 0], [0, PH], [PW, PH]];
+    const offsets = []; for (let i = 0; i < NX; i++) for (let j = 0; j < NY; j++) offsets.push([i * PW, j * PH]); // the pattern is wider than a screen, so a row never shows twice side by side
     const sourceTiles = [...patternSrc.children];
+    const lbItems = sourceTiles.map(t => { const v = t.querySelector('video'), im = t.querySelector('img'); return v ? { type: 'v', src: v.getAttribute('data-full') || v.getAttribute('src') } : { type: 'i', src: im ? (im.getAttribute('data-full') || im.getAttribute('src')) : '', alt: im ? im.alt : '' }; });
     offsets.forEach(([ox, oy]) => {
-      sourceTiles.forEach(tile => {
+      sourceTiles.forEach((tile, ti) => {
         const clone = tile.cloneNode(true);
+        clone.setAttribute('data-idx', ti);
         const baseLeft = parseFloat(tile.getAttribute('data-x'));
         const baseTop  = parseFloat(tile.getAttribute('data-y'));
         clone.style.left = (baseLeft + ox) + 'px';
@@ -137,9 +250,40 @@ class Component {
     lbImg.style.cssText = 'max-width:96vw;max-height:94vh;width:auto;height:auto;border-radius:14px;box-shadow:0 50px 120px rgba(0,0,0,0.6);object-fit:contain;opacity:0;transition:opacity 180ms ease;';
     lightbox.appendChild(lbImg);
     document.body.appendChild(lightbox);
+    const lbClose = document.createElement('button'); lbClose.id = 'lb-close'; lbClose.type = 'button'; lbClose.setAttribute('aria-label', 'Close');
+    lbClose.innerHTML = '<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 4L16 16M16 4L4 16" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/></svg>';
+    lbClose.style.cssText = 'position:fixed;top:calc(16px + env(safe-area-inset-top));right:16px;z-index:510;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,0.35);background:rgba(11,11,11,0.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;';
+    lbClose.addEventListener('click', (e) => { e.stopPropagation(); closeLightbox(); });
+    lightbox.appendChild(lbClose);
+    // browse with arrows, keys and swipe
+    let lbIdx = -1;
+    const showItem = (i) => {
+      const nItems = lbItems.length; if (!nItems) return;
+      lbIdx = ((i % nItems) + nItems) % nItems; const it = lbItems[lbIdx];
+      if (it.type === 'v') { openVideo(it.src); }
+      else { lbVid.pause(); lbVid.removeAttribute('src'); lbVid.load(); lbVid.style.display = 'none'; openLightbox(it.src, it.alt); }
+    };
+    const mob = window.innerWidth <= 760;
+    const mkArrow = (dir) => {
+      const b = document.createElement('button'); b.type = 'button'; b.id = dir < 0 ? 'lb-prev' : 'lb-next'; b.setAttribute('aria-label', dir < 0 ? 'Previous' : 'Next');
+      b.innerHTML = dir < 0 ? '<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12.5 4L6.5 10L12.5 16" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' : '<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 4L13.5 10L7.5 16" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      const pos = mob ? ('bottom:calc(20px + env(safe-area-inset-bottom));' + (dir < 0 ? 'left:calc(50% - 64px);' : 'left:calc(50% + 12px);')) : ('top:50%;margin-top:-26px;' + (dir < 0 ? 'left:20px;' : 'right:20px;'));
+      b.style.cssText = 'position:fixed;' + pos + 'z-index:510;width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,0.35);background:rgba(11,11,11,0.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;';
+      b.addEventListener('click', (e) => { e.stopPropagation(); showItem(lbIdx + dir); });
+      lightbox.appendChild(b);
+    };
+    mkArrow(-1); mkArrow(1);
+    const lbOpen = () => lightbox.style.opacity === '1';
+    window.addEventListener('keydown', (e) => { if (!lbOpen()) return; if (e.key === 'ArrowLeft') showItem(lbIdx - 1); if (e.key === 'ArrowRight') showItem(lbIdx + 1); });
+    let swX = null, swY = null;
+    lightbox.addEventListener('touchstart', (e) => { const t = e.touches[0]; swX = t.clientX; swY = t.clientY; }, { passive: true });
+    lightbox.addEventListener('touchend', (e) => { if (swX === null) return; const t = e.changedTouches[0]; const dx = t.clientX - swX, dy = t.clientY - swY; swX = null; if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.3) showItem(lbIdx + (dx < 0 ? 1 : -1)); }, { passive: true });
+    /*vlb*/ const lbVid=document.createElement('video');lbVid.controls=true;lbVid.playsInline=true;lbVid.style.cssText='max-width:96vw;max-height:calc(100vh - 140px);width:auto;height:auto;border-radius:14px;box-shadow:0 50px 120px rgba(0,0,0,0.6);display:none;background:#000;';lightbox.appendChild(lbVid);lbVid.addEventListener('click',e=>e.stopPropagation());
+    const openVideo=(src)=>{lbToken++;lbImg.style.display='none';lbVid.style.display='block';lightbox.style.opacity='1';lightbox.style.pointerEvents='auto';lbVid.src=src;lbVid.muted=false;lbVid.play().catch(()=>{lbVid.muted=true;lbVid.play().catch(()=>{})});};
 
     let lbToken = 0;
     const openLightbox = (src, alt) => {
+      lbImg.style.display = '';
       const token = ++lbToken;
       lbImg.style.opacity = '0';
       lbImg.removeAttribute('src');
@@ -152,6 +296,7 @@ class Component {
       if (lbImg.complete && lbImg.currentSrc) show();
     };
     const closeLightbox = () => {
+      lbVid.pause();lbVid.removeAttribute('src');lbVid.load();lbVid.style.display='none';lbImg.style.display='';
       lbToken++;
       lightbox.style.opacity = '0';
       lightbox.style.pointerEvents = 'none';
@@ -175,7 +320,7 @@ class Component {
 
     const wrap = (v, m) => ((v % m) + m) % m;
     const render = () => {
-      canvas.style.transform = `translate3d(${(-viewX + parX).toFixed(1)}px, ${(-viewY + parY).toFixed(1)}px, 0)`;
+      canvas.style.transformOrigin = '0 0'; canvas.style.transform = `translate3d(${(-viewX * GS + parX).toFixed(1)}px, ${(-viewY * GS + parY).toFixed(1)}px, 0) scale(${GS})`;
     };
 
     let raf = null;
@@ -184,8 +329,8 @@ class Component {
       const dt = Math.min(0.05, (now - last) / 1000);
       last = now;
       if (autoplay && !dragging) {
-        viewX = wrap(viewX - SPEED_X * dt, PW);
-        viewY = wrap(viewY + SPEED_Y * dt, PH);
+        viewX = wrap(viewX - SPEED_X * dt / GS, PW);
+        viewY = wrap(viewY + SPEED_Y * dt / GS, PH);
       }
       const targetParX = mouseNX * PARALLAX_RANGE;
       const targetParY = mouseNY * PARALLAX_RANGE;
@@ -226,8 +371,8 @@ class Component {
       const dx = p.clientX - lastPX, dy = p.clientY - lastPY;
       lastPX = p.clientX; lastPY = p.clientY;
       dragDistance += Math.hypot(dx, dy);
-      viewX = wrap(viewX - dx, PW);
-      viewY = wrap(viewY - dy, PH);
+      viewX = wrap(viewX - dx / GS, PW);
+      viewY = wrap(viewY - dy / GS, PH);
     };
     const onUp = (e) => {
       if (!dragging) return;
@@ -237,6 +382,10 @@ class Component {
       if (dragDistance < 6) {
         const tile = e.target && e.target.closest ? e.target.closest('[data-photo]') : null;
         if (tile) {
+          const ix = parseInt(tile.getAttribute('data-idx'), 10);
+          if (!isNaN(ix)) { showItem(ix); return; }
+          const vEl = tile.querySelector('video');
+          if (vEl) { openVideo(vEl.getAttribute('data-full') || vEl.currentSrc || vEl.src); return; }
           const img = tile.querySelector('img');
           if (img) {
             const full = img.getAttribute('data-full');
@@ -254,8 +403,8 @@ class Component {
       e.preventDefault();
       autoplay = false;
       clearTimeout(idleTimer);
-      viewX = wrap(viewX + e.deltaX * 0.5, PW);
-      viewY = wrap(viewY + e.deltaY * 0.5, PH);
+      viewX = wrap(viewX + e.deltaX * 0.5 / GS, PW);
+      viewY = wrap(viewY + e.deltaY * 0.5 / GS, PH);
       wakeAutoplay();
     };
     stage.addEventListener('wheel', onWheel, { passive: false });
@@ -278,5 +427,6 @@ const __component = new Component();
 __component.componentDidMount();
 });
 </script>
+<script data-video-io>(()=>{const io=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting){v.play().catch(()=>{})}else{v.pause()}}),{rootMargin:'150px'});let seen=new WeakSet();const go=()=>document.querySelectorAll('#gallery-canvas video').forEach(v=>{if(!seen.has(v)){seen.add(v);io.observe(v)}});addEventListener('load',()=>{go();setTimeout(go,800)});new MutationObserver(go).observe(document.documentElement,{childList:true,subtree:true});})();</script>
 </body>
 </html>

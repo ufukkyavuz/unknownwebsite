@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="_ds/joke-studio-design-system-f5e7aa42-5887-4296-8fec-8d1eb8bddb27/tokens/fonts.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;display=swap">
   <link rel="stylesheet" href="_ds/joke-studio-design-system-f5e7aa42-5887-4296-8fec-8d1eb8bddb27/styles.css">
   <style>
     @keyframes fade-up { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
@@ -21,23 +22,23 @@
     @keyframes eye-pulse { 0%,100%{opacity:0.5} 50%{opacity:0.95} }
     @keyframes beam-flicker { 0%,100%{opacity:0.82;transform:var(--beam-t) scaleY(1)} 40%{opacity:1;transform:var(--beam-t) scaleY(1.05)} 68%{opacity:0.66;transform:var(--beam-t) scaleY(0.97)} }
     @keyframes core-flicker { 0%,100%{opacity:0.85} 40%{opacity:1} 68%{opacity:0.7} }
-    html,body{margin:0;padding:0;background:#0B0B0B;overflow-x:clip;scroll-behavior:smooth}
-    ::selection{background:#FFFFFF;color:#0B0B0B}
-    input::placeholder,textarea::placeholder{color:rgba(248,247,243,0.22)}
+    html,body{margin:0;padding:0;background:#F3F3F1;overflow-x:clip;scroll-behavior:smooth}
+    ::selection{background:#FFFFFF;color:#F3F3F1}
+    input::placeholder,textarea::placeholder{color:rgba(11,11,11,0.22)}
     input,textarea{caret-color:#FFFFFF}
     button{cursor:pointer}
     #contact-submit:hover #contact-submit-arrow{transform:translateX(4px);}
-    #proof-btn-1:hover,#proof-btn-2:hover,#proof-btn-3:hover{color:#0B0B0B !important;}
+    #proof-btn-1:hover,#proof-btn-2:hover,#proof-btn-3:hover{color:#F3F3F1 !important;}
     #proof-btn-1:hover .btn-circle,#proof-btn-2:hover .btn-circle,#proof-btn-3:hover .btn-circle{transform:translate(-50%,50%) scale(1) !important;}
-    #nav-cta:hover{color:#F8F7F3 !important;}
+    #nav-cta:hover{color:#0B0B0B !important;}
     #nav-cta:hover .nav-cta-circle{transform:translate(-50%,50%) scale(1) !important;}
     @property --border-angle{syntax:'<angle>';inherits:false;initial-value:0deg;}
     @keyframes rotate-border-angle{to{--border-angle:360deg;}}
     #proof-btn-1,#proof-btn-2,#proof-btn-3{animation:rotate-border-angle 20s linear infinite;}
     #proof-btn-1,#proof-btn-2,#proof-btn-3{position:relative;overflow:hidden;z-index:0;}
-    #proof-btn-1::before,#proof-btn-2::before,#proof-btn-3::before{content:"";position:absolute;left:50%;bottom:0;width:140%;aspect-ratio:1;border-radius:50%;background:#F8F7F3;transform:translate(-50%,50%) scale(0);transform-origin:center bottom;transition:transform 480ms var(--ease-spring);z-index:-1;}
+    #proof-btn-1::before,#proof-btn-2::before,#proof-btn-3::before{content:"";position:absolute;left:50%;bottom:0;width:140%;aspect-ratio:1;border-radius:50%;background:#0B0B0B;transform:translate(-50%,50%) scale(0);transform-origin:center bottom;transition:transform 480ms var(--ease-spring);z-index:-1;}
     #proof-btn-1:hover::before,#proof-btn-2:hover::before,#proof-btn-3:hover::before{transform:translate(-50%,50%) scale(1);}
-    #proof-btn-1:hover,#proof-btn-2:hover,#proof-btn-3:hover{color:#0B0B0B !important;}
+    #proof-btn-1:hover,#proof-btn-2:hover,#proof-btn-3:hover{color:#F3F3F1 !important;}
     
     
     @media (max-width:760px){
@@ -58,7 +59,7 @@
       #contact-fields-grid{grid-template-columns:1fr !important;}
 
       /* Nav: solid bar so logo/burger don't clash with content */
-      #site-nav{background:linear-gradient(180deg,rgba(14,14,14,0.6) 0%,rgba(11,11,11,0.38) 100%);backdrop-filter:blur(26px) saturate(1.9);-webkit-backdrop-filter:blur(26px) saturate(1.9);border-bottom:1px solid rgba(248,247,243,0.1);box-shadow:inset 0 1px 0 rgba(248,247,243,0.1),0 8px 30px rgba(0,0,0,0.28);}
+      #site-nav{background:linear-gradient(180deg,rgba(14,14,14,0.6) 0%,rgba(11,11,11,0.38) 100%);backdrop-filter:blur(26px) saturate(1.9);-webkit-backdrop-filter:blur(26px) saturate(1.9);border-bottom:1px solid rgba(11,11,11,0.1);box-shadow:inset 0 1px 0 rgba(11,11,11,0.1),0 8px 30px rgba(0,0,0,0.28);}
 
       /* Trusted by: single row, scaled down, still sliding left */
       #clients-track{animation-duration:30s !important;}
@@ -77,106 +78,172 @@
       #testimonials-grid > a{flex:0 0 80% !important;min-width:0 !important;scroll-snap-align:start !important;}
     }
   </style>
-<template id="__bundler_thumbnail"><svg viewBox="0 0 80 56" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="56" fill="#0B0B0B"></rect><text x="40" y="34" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">j®</text></svg></template>
+<template id="__bundler_thumbnail"><svg viewBox="0 0 80 56" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="56" fill="#F3F3F1"></rect><text x="40" y="34" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">j®</text></svg></template>
   <style>
     .hv-index-1:active{transform:scale(0.96);background:#E5E5E5;}
-    .hv-index-2:hover{color:#F8F7F3;border-bottom-color:#F8F7F3;}
+    .hv-index-2:hover{color:#0B0B0B;border-bottom-color:#0B0B0B;}
     .hv-index-3:hover{background:#E5E5E5;transform:translateY(-2px) scale(1.03);box-shadow:0 10px 32px rgba(255,255,255,0.18);}
     .hv-index-3:active{transform:translateY(0) scale(0.98);}
     .hv-index-4:hover{color:#FFFFFF;}
-    .hv-index-5:hover{color:#F8F7F3;}
-    .hv-index-6:hover{color:#F8F7F3;}
-    .hv-index-7:hover{color:#F8F7F3;}
-    .hv-index-8:hover{color:#F8F7F3;}
-    .hv-index-9:hover{color:#F8F7F3;}
-    .hv-index-10:hover{color:#F8F7F3;}
-    .hv-index-11:hover{color:#F8F7F3;}
+    .hv-index-5:hover{color:#0B0B0B;}
+    .hv-index-6:hover{color:#0B0B0B;}
+    .hv-index-7:hover{color:#0B0B0B;}
+    .hv-index-8:hover{color:#0B0B0B;}
+    .hv-index-9:hover{color:#0B0B0B;}
+    .hv-index-10:hover{color:#0B0B0B;}
+    .hv-index-11:hover{color:#0B0B0B;}
   </style>
 </head>
 <body>
 <!-- ═══ NAV ═══ -->
 <nav id="site-nav" style="position:fixed;top:0;left:0;right:0;z-index:200;height:72px;display:flex;align-items:center;padding:0 clamp(24px,5vw,80px);">
-  <a href="#" id="nav-logo" style="font-family:var(--font-display);font-weight:700;font-size:26px;display:inline-flex;align-items:center;gap:9px;letter-spacing:-0.025em;color:#F8F7F3;text-decoration:none;flex-shrink:0;line-height:1;transition:opacity 420ms ease, transform 420ms ease;"><img src="uploads/opt/joke-smile.webp" alt="" style="height:34px;width:auto;display:block;">joke®</a>
+  <a href="#" id="nav-logo" style="font-family:var(--font-display);font-weight:700;font-size:26px;display:inline-flex;align-items:center;gap:9px;letter-spacing:-0.025em;color:#0B0B0B;text-decoration:none;flex-shrink:0;line-height:1;transition:opacity 420ms ease, transform 420ms ease;">joke®</a>
 
   <!-- Links always centered absolutely — never repositioned -->
   <div style="position:absolute;left:0;right:0;top:0;height:72px;display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:1;">
     <div id="nav-links" style="position:relative;display:flex;gap:2px;align-items:center;padding:5px 6px;border-radius:100px;pointer-events:auto;transition:background 500ms ease, box-shadow 500ms ease, backdrop-filter 500ms ease;">
       <!-- Sliding pill indicator -->
       <div id="nav-indicator" style="position:absolute;background:#0B0B0B;border-radius:100px;pointer-events:none;z-index:0;top:5px;height:calc(100% - 10px);left:0;width:0;opacity:0;transition:left 380ms cubic-bezier(0.22,1,0.36,1), width 380ms cubic-bezier(0.22,1,0.36,1), opacity 280ms ease;"></div>
-      <a id="nl-0" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" style="position:relative;z-index:1;font-family:var(--font-body);font-size:13px;font-weight:500;color:rgba(248,247,243,0.6);text-decoration:none;white-space:nowrap;padding:7px 14px;border-radius:100px;transition:color 300ms ease;">Home</a>
-      <a id="nl-1" href="#work" style="position:relative;z-index:1;font-family:var(--font-body);font-size:14px;font-weight:500;color:rgba(248,247,243,0.6);text-decoration:none;white-space:nowrap;padding:7px 16px;border-radius:100px;transition:color 300ms ease;">Work</a>
-      <a id="nl-2" href="#services" style="position:relative;z-index:1;font-family:var(--font-body);font-size:14px;font-weight:500;color:rgba(248,247,243,0.6);text-decoration:none;white-space:nowrap;padding:7px 16px;border-radius:100px;transition:color 300ms ease;">Services</a>
+      <a id="nl-0" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" style="position:relative;z-index:1;font-family:var(--font-body);font-size:13px;font-weight:500;color:rgba(11,11,11,0.6);text-decoration:none;white-space:nowrap;padding:7px 14px;border-radius:100px;transition:color 300ms ease;">Home</a>
+      <a id="nl-1" href="#work" style="position:relative;z-index:1;font-family:var(--font-body);font-size:14px;font-weight:500;color:rgba(11,11,11,0.6);text-decoration:none;white-space:nowrap;padding:7px 16px;border-radius:100px;transition:color 300ms ease;">Work</a>
+      <a id="nl-2" href="#services" style="position:relative;z-index:1;font-family:var(--font-body);font-size:14px;font-weight:500;color:rgba(11,11,11,0.6);text-decoration:none;white-space:nowrap;padding:7px 16px;border-radius:100px;transition:color 300ms ease;">Services</a>
       
-      <a id="nl-4" href="#contact" style="position:relative;z-index:1;font-family:var(--font-body);font-size:14px;font-weight:500;color:rgba(248,247,243,0.6);text-decoration:none;white-space:nowrap;padding:7px 16px;border-radius:100px;transition:color 300ms ease;">Contact</a>
+      <a id="nl-4" href="#contact" style="position:relative;z-index:1;font-family:var(--font-body);font-size:14px;font-weight:500;color:rgba(11,11,11,0.6);text-decoration:none;white-space:nowrap;padding:7px 16px;border-radius:100px;transition:color 300ms ease;">Contact</a>
     </div>
   </div>
 
-  <a id="nav-cta" href="#contact" style="margin-left:auto;flex-shrink:0;font-family:var(--font-body);font-size:13px;font-weight:600;color:#0B0B0B;text-decoration:none;border-radius:60px;padding:9px 22px;white-space:nowrap;position:relative;overflow:hidden;z-index:0;background:#F8F7F3;transition:opacity 420ms ease, color 320ms var(--ease-standard);">Start a project<span class="nav-cta-circle" style="position:absolute;left:50%;bottom:0;width:140%;aspect-ratio:1;border-radius:50%;background:#0B0B0B;transform:translate(-50%,50%) scale(0);transform-origin:center bottom;transition:transform 480ms var(--ease-spring);z-index:-1;"></span></a>
+  <a id="nav-cta" href="#contact" style="margin-left:auto;flex-shrink:0;font-family:var(--font-body);font-size:13px;font-weight:600;color:#F3F3F1;text-decoration:none;border-radius:60px;padding:9px 22px;white-space:nowrap;position:relative;overflow:hidden;z-index:0;background:#0B0B0B;transition:opacity 420ms ease, color 320ms var(--ease-standard);">Start a project<span class="nav-cta-circle" style="position:absolute;left:50%;bottom:0;width:140%;aspect-ratio:1;border-radius:50%;background:#F3F3F1;transform:translate(-50%,50%) scale(0);transform-origin:center bottom;transition:transform 480ms var(--ease-spring);z-index:-1;"></span></a>
 
   <button id="nav-burger" aria-label="Menu" onclick="document.getElementById('mobile-menu').style.display='flex'" style="display:none;margin-left:auto;background:none;border:none;padding:8px;cursor:pointer;flex-shrink:0;">
-    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 6H19M3 11H19M3 16H19" stroke="#F8F7F3" stroke-width="1.6" stroke-linecap="round"></path></svg>
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 6H19M3 11H19M3 16H19" stroke="#0B0B0B" stroke-width="1.6" stroke-linecap="round"></path></svg>
   </button>
 </nav>
 
-<div id="mobile-menu" style="display:none;position:fixed;inset:0;z-index:300;background:#0B0B0B;flex-direction:column;">
-  <div style="height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(24px,5vw,80px);border-bottom:1px solid rgba(248,247,243,0.1);flex-shrink:0;">
-    <span style="font-family:var(--font-display);font-weight:700;font-size:26px;display:inline-flex;align-items:center;gap:9px;color:#F8F7F3;"><img src="uploads/opt/joke-smile.webp" alt="" style="height:34px;width:auto;display:block;">joke®</span>
+<div id="mobile-menu" style="display:none;position:fixed;inset:0;z-index:300;background:#F3F3F1;flex-direction:column;">
+  <div style="height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(24px,5vw,80px);border-bottom:1px solid rgba(11,11,11,0.1);flex-shrink:0;">
+    <span style="font-family:var(--font-display);font-weight:700;font-size:26px;display:inline-flex;align-items:center;gap:9px;color:#0B0B0B;">joke®</span>
     <button aria-label="Close" onclick="document.getElementById('mobile-menu').style.display='none'" style="background:none;border:none;padding:8px;cursor:pointer;">
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 4L16 16M16 4L4 16" stroke="#F8F7F3" stroke-width="1.6" stroke-linecap="round"></path></svg>
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 4L16 16M16 4L4 16" stroke="#0B0B0B" stroke-width="1.6" stroke-linecap="round"></path></svg>
     </button>
   </div>
   <div style="display:flex;flex-direction:column;gap:2px;padding:20px clamp(24px,5vw,80px);">
-    <a href="#" onclick="document.getElementById('mobile-menu').style.display='none';window.scrollTo({top:0,behavior:'smooth'});return false;" style="font-family:var(--font-display);font-weight:700;font-size:26px;color:#F8F7F3;text-decoration:none;padding:16px 0;border-bottom:1px solid rgba(248,247,243,0.1);">Home</a>
-    <a href="#work" onclick="document.getElementById('mobile-menu').style.display='none';" style="font-family:var(--font-display);font-weight:700;font-size:26px;color:#F8F7F3;text-decoration:none;padding:16px 0;border-bottom:1px solid rgba(248,247,243,0.1);">Work</a>
-    <a href="#services" onclick="document.getElementById('mobile-menu').style.display='none';" style="font-family:var(--font-display);font-weight:700;font-size:26px;color:#F8F7F3;text-decoration:none;padding:16px 0;border-bottom:1px solid rgba(248,247,243,0.1);">Services</a>
-    <a href="#contact" onclick="document.getElementById('mobile-menu').style.display='none';" style="font-family:var(--font-display);font-weight:700;font-size:26px;color:#F8F7F3;text-decoration:none;padding:16px 0;">Contact</a>
-    <a href="#contact" onclick="document.getElementById('mobile-menu').style.display='none';" class="hv-index-1" style="margin-top:24px;font-family:var(--font-body);font-size:15px;font-weight:600;color:#0B0B0B;background:#FFFFFF;text-decoration:none;border-radius:var(--radius-full);padding:15px 24px;text-align:center;transition:transform 220ms var(--ease-spring),background 220ms ease;">Start a project</a>
+    <a href="#" onclick="document.getElementById('mobile-menu').style.display='none';window.scrollTo({top:0,behavior:'smooth'});return false;" style="font-family:var(--font-display);font-weight:700;font-size:26px;color:#0B0B0B;text-decoration:none;padding:16px 0;border-bottom:1px solid rgba(11,11,11,0.1);">Home</a>
+    <a href="#work" onclick="document.getElementById('mobile-menu').style.display='none';" style="font-family:var(--font-display);font-weight:700;font-size:26px;color:#0B0B0B;text-decoration:none;padding:16px 0;border-bottom:1px solid rgba(11,11,11,0.1);">Work</a>
+    <a href="#services" onclick="document.getElementById('mobile-menu').style.display='none';" style="font-family:var(--font-display);font-weight:700;font-size:26px;color:#0B0B0B;text-decoration:none;padding:16px 0;border-bottom:1px solid rgba(11,11,11,0.1);">Services</a>
+    <a href="#contact" onclick="document.getElementById('mobile-menu').style.display='none';" style="font-family:var(--font-display);font-weight:700;font-size:26px;color:#0B0B0B;text-decoration:none;padding:16px 0;">Contact</a>
+    <a href="#contact" onclick="document.getElementById('mobile-menu').style.display='none';" class="hv-index-1" style="margin-top:24px;font-family:var(--font-body);font-size:15px;font-weight:600;color:#F3F3F1;background:#FFFFFF;text-decoration:none;border-radius:var(--radius-full);padding:15px 24px;text-align:center;transition:transform 220ms var(--ease-spring),background 220ms ease;">Start a project</a>
   </div>
 </div>
 
 <!-- ═══ HERO ═══ -->
-<section id="hero" data-screen-label="Hero" style="position:relative;height:100vh;min-height:680px;background:#0B0B0B;overflow:hidden;">
-  <canvas id="hero-smile" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;z-index:0;transform-origin:center;will-change:transform,opacity;"></canvas>
-  <div style="position:absolute;bottom:0;left:0;right:0;height:55%;background:linear-gradient(180deg,transparent,#0B0B0B);z-index:1;pointer-events:none;"></div>
-  <div id="hero-text" style="position:absolute;left:0;top:0;bottom:0;z-index:3;display:flex;flex-direction:column;justify-content:flex-end;padding:80px clamp(24px,5vw,80px) clamp(48px,6vw,96px);width:62%;will-change:transform,opacity;">
-    
-    <h1 style="font-family:var(--font-display);font-weight:700;font-size:clamp(44px,5.2vw,96px);line-height:1.04;letter-spacing:-0.04em;color:#F8F7F3;margin:0 0 26px;max-width:600px;text-wrap:pretty;animation:fade-up 0.9s var(--ease-spring) 0.22s both;">We Create<br>What People<br><span style="white-space:nowrap;" data-spray="underline" data-spray-delay="4300">Don't Expect.</span></h1>
-    <p style="font-family:var(--font-body);font-size:clamp(15px,1.3vw,18px);color:rgba(248,247,243,0.5);line-height:1.72;max-width:440px;margin:0 0 44px;animation:fade-up 0.9s var(--ease-spring) 0.38s both;">We create product campaigns, social media visuals and AI-assisted creative systems that make brands impossible to ignore.</p>
-    <div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap;animation:fade-up 0.9s var(--ease-spring) 0.54s both;">
-      
-      
+<section id="hero" data-screen-label="Hero" style="position:relative;height:calc(100vh - 150px);min-height:600px;background:#F3F3F1;overflow:hidden;">
+  <style>
+    @font-face{font-family:VDisp;src:url(_variant/Archivo_ExtraCondensed-Black.ttf);font-weight:900}@font-face{font-family:VDisp;src:url(_variant/Archivo_ExtraCondensed-Light.ttf);font-weight:300}
+    .v-h1{font-family:'Archivo',Impact,sans-serif;font-stretch:62%;font-weight:900;text-transform:uppercase;color:#0B0B0B;text-align:center;line-height:.88;letter-spacing:-.005em;font-size:clamp(52px,9.6vw,190px);margin:0}
+    @keyframes v-float-x{0%,100%{transform:translateY(0) rotate(var(--r))}50%{transform:translateY(-10px) rotate(var(--r))}}
+    section:not(#hero) h2{font-family:'Archivo',Impact,sans-serif!important;font-stretch:62%!important;font-weight:900!important;text-transform:uppercase;letter-spacing:0!important;line-height:.95!important;font-size:clamp(48px,6.4vw,112px)!important}
+    #contact h2 span[style*="color:#FFFFFF"],#contact h2 [style*="color:#FFFFFF"]{color:#0B0B0B!important}
+    #contact h2 [data-wm-i]{color:#0B0B0B!important}
+    #contact button[type=submit],#contact [data-submit]{background:#0B0B0B!important;color:#F3F3F1!important}
+    #brand-dna span[style*="color:#F3F3F1"]{color:#0B0B0B!important}
+    #process h2,#process h2 *,#process h3{color:color-mix(in srgb,#F3F3F1 calc(var(--dk,0)*100%),#0B0B0B)!important}
+    #process p{color:color-mix(in srgb,rgba(243,243,241,.62) calc(var(--dk,0)*100%),rgba(11,11,11,.6))!important}
+    .v-btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:100px;font-family:var(--font-body);font-size:14px;font-weight:600;text-decoration:none}
+
+
+    /* retro pixel cursors */
+    html,body,*{cursor:image-set(url(_variant/cursor.png) 1x,url(_variant/cursor@2x.png) 2x) 0 0,auto}
+    a,a *,button,button *,[role=button],label,select,summary,[onclick],[data-budget-pill],.v-stk,.v-stk *,#work-scroll a,#work-scroll a *{cursor:image-set(url(_variant/cursor-hand.png) 1x,url(_variant/cursor-hand@2x.png) 2x) 10 0,pointer!important}
+    input,textarea{cursor:text!important}
+
+    /* ---- variant: mobile ---- */
+    @media (max-width:760px){
+      #site-nav{background:rgba(243,243,241,.82)!important;border-bottom:1px solid rgba(11,11,11,.08)!important;box-shadow:none!important}
+      .v-h1{font-size:14.6vw!important}
+      .v-stk-in{scale:.62}
+      .hs1,.hs2,.hs3{display:none!important}   /* mobile hero: only NO JOKE stays */
+      .fs1{left:0!important;top:2%!important}
+      .fs2{right:0!important;top:0!important}
+      .fs3{left:auto!important;right:2%!important;bottom:2%!important}
+      .v-fcols{grid-template-columns:1fr!important}
+      .v-fcols>div{border-left:none!important;border-top:1px solid rgba(11,11,11,.12)}
+      .v-fcols>div:first-child{border-top:none}
+      .v-fbar{flex-direction:column;gap:8px;text-align:center}
+      .v-avail{font-size:12px;gap:8px}
+    }
+    /* availability pill */
+    .v-avail{display:inline-flex;align-items:center;gap:12px;padding:8px 16px 8px 12px;border-radius:100px;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.06),0 6px 18px rgba(0,0,0,.06);font-family:var(--font-body);font-size:13px;text-decoration:none;margin-bottom:clamp(22px,2.4vw,36px);transition:transform .25s var(--ease-spring)}
+    .v-avail:hover{transform:translateY(-2px)}
+    .v-live{width:8px;height:8px;border-radius:50%;background:#2BD15A;box-shadow:0 0 0 0 rgba(43,209,90,.5);animation:v-ping 1.8s infinite}
+    @keyframes v-ping{0%{box-shadow:0 0 0 0 rgba(43,209,90,.45)}70%{box-shadow:0 0 0 8px rgba(43,209,90,0)}100%{box-shadow:0 0 0 0 rgba(43,209,90,0)}}
+    /* big type: per-letter variable weight */
+    .v-big .v-ch{display:inline-block;text-align:center;font-variation-settings:"wght" 900}
+    /* stickers */
+    .v-stk{position:absolute;z-index:6;touch-action:none;user-select:none;will-change:transform}
+    .v-stk.v-drag{z-index:60}
+    .v-stk-in{transform:rotate(var(--r));animation:v-float 6s ease-in-out infinite}
+    .v-stk.v-drag .v-stk-in,.v-stk.v-fly .v-stk-in{animation-play-state:paused}
+    @keyframes v-float{0%,100%{translate:0 0}50%{translate:0 -10px}}
+    .v-fold{position:relative;display:block;filter:drop-shadow(0 4px 3px rgba(0,0,0,.10)) drop-shadow(0 12px 14px rgba(0,0,0,.14))}
+    .v-face{position:relative;font-family:var(--font-body);font-weight:700;color:#0B0B0B;white-space:nowrap}
+    .v-pill{padding:13px 24px;border-radius:100px;font-size:clamp(14px,1.2vw,19px);border:3px solid #fff}
+    .v-holo{background:linear-gradient(115deg,#CCFF01 0%,#7CF7C8 28%,#A48CFF 52%,#D9B8FF 66%,#CCFF01 100%);background-size:220% 100%;background-position:var(--hx,30%) 50%;transition:background-position .4s ease}
+    .v-holo2{background:linear-gradient(115deg,#A48CFF 0%,#D9B8FF 25%,#CCFF01 55%,#7CF7C8 75%,#A48CFF 100%);background-size:220% 100%;background-position:var(--hx,30%) 50%}
+    .v-circle{width:clamp(88px,8vw,132px);height:clamp(88px,8vw,132px);border-radius:50%;border:4px solid #fff;display:flex;align-items:center;justify-content:center}
+    .v-dot{width:78%;height:78%;border-radius:50%;background:#0B0B0B;display:flex;align-items:center;justify-content:center}
+    .v-dot img{width:74%;height:auto;pointer-events:none}
+    .v-star{width:clamp(104px,9vw,148px);height:clamp(104px,9vw,148px);display:flex;align-items:center;justify-content:center}
+    .v-star svg{position:absolute;inset:0;width:100%;height:100%}
+    .v-star span{position:relative;font-size:clamp(13px,1.1vw,17px);text-align:center;line-height:1.05}
+    .v-back{position:absolute;left:0;top:0;pointer-events:none;filter:grayscale(1) brightness(1.75) contrast(.6);box-shadow:none!important}
+  </style>
+  <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:84px clamp(24px,5vw,80px) 10px;z-index:3">
+    <a href="#contact" class="v-avail" style="animation:fade-up 0.9s var(--ease-spring) 0.05s both;"><span class="v-live"></span><span style="font-weight:600;color:#0B0B0B">Available for new projects</span><span style="color:rgba(11,11,11,.55)">Book a call →</span></a>
+    <h1 class="v-h1 v-big" style="animation:fade-up 0.9s var(--ease-spring) 0.15s both;">We're building<br>something.</h1>
+    <p style="font-family:var(--font-body);font-size:clamp(15px,1.15vw,18px);color:rgba(11,11,11,0.6);line-height:1.6;max-width:520px;text-align:center;margin:clamp(28px,2.4vw,40px) 0 28px;animation:fade-up 0.9s var(--ease-spring) 0.3s both;">We create brands, campaigns, websites and content that make a difference.</p>
+    <div style="display:flex;gap:10px;animation:fade-up 0.9s var(--ease-spring) 0.45s both;">
+      <a class="v-btn" href="#contact" style="background:#0B0B0B;color:#F3F3F1;">Start a project</a>
+      <a class="v-btn" href="#work" style="background:transparent;color:#0B0B0B;border:1px solid rgba(11,11,11,.18);">See our work</a>
     </div>
-    
   </div>
+  <div class="v-stk hs1" style="left:20%;top:14%;--r:-8deg"><div class="v-stk-in"><div class="v-face v-pill v-holo">Made you look.</div></div></div>
+  <div class="v-stk hs2" style="right:19%;top:10%;--r:6deg"><div class="v-stk-in" style="animation-delay:-2s"><div class="v-face v-circle v-holo"><span class="v-dot"><img src="uploads/opt/joke-smile.webp" alt="" draggable="false"></span></div></div></div>
+  <div class="v-stk hs3" style="left:17%;bottom:16%;--r:-10deg"><div class="v-stk-in" style="animation-delay:-4s"><div class="v-face v-star"><svg viewBox="0 0 100 100"><defs><linearGradient id="vg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#CCFF01"/><stop offset=".5" stop-color="#7CF7C8"/><stop offset="1" stop-color="#A48CFF"/></linearGradient></defs><polygon fill="#fff" points="50,0 59,15 76,7 78,25 96,26 88,42 100,55 85,64 91,82 73,82 67,99 53,89 39,100 33,83 15,87 16,69 0,60 12,46 2,31 20,27 21,9 38,15"/><polygon fill="url(#vg1)" points="50,5 58,18 73,11 75,28 91,29 84,43 95,55 82,62 87,78 71,78 65,93 53,85 40,95 35,80 19,83 20,67 5,59 16,47 7,33 23,30 24,14 39,19"/></svg><span>Stay<br>weird.</span></div></div></div>
+  <div class="v-stk" id="v-nojoke" style="left:0;top:0;--r:-6deg;opacity:0;transition:opacity .35s ease"><div class="v-stk-in" style="animation-delay:-3s"><div class="v-face v-pill v-holo v-holo2" style="font-weight:600;font-size:clamp(22px,2.1vw,36px);padding:15px 32px;letter-spacing:.01em">NO JOKE.</div></div></div>
 </section>
 
 <!-- ═══ CLIENTS ═══ -->
-<div id="clients" data-screen-label="Clients" style="background:#0B0B0B;padding:88px 0 60px 0;overflow:hidden;will-change:opacity;">
-  <div style="padding:0 clamp(24px,5vw,80px);margin-bottom:32px;display:flex;align-items:center;gap:16px;">
-    <span style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(248,247,243,0.5);">Trusted by</span>
-    <div style="flex: 1; height: 1px; background-color: rgba(248,247,243,0.14)"></div>
+<div id="clients" data-screen-label="Clients" style="background:#F3F3F1;padding:10px 0 72px 0;overflow:hidden;will-change:opacity;">
+  <div style="max-width:760px;margin:0 auto 18px;padding:0 24px;display:flex;align-items:center;gap:16px;">
+    <div style="flex:1;height:1px;background:linear-gradient(90deg,rgba(11,11,11,0),rgba(11,11,11,0.16))"></div>
+    <span style="font-family:var(--font-body);font-size:13px;color:rgba(11,11,11,0.5);">Trusted by</span>
+    <div style="flex:1;height:1px;background:linear-gradient(90deg,rgba(11,11,11,0.16),rgba(11,11,11,0))"></div>
   </div>
-  <div id="clients-strip" style="position:relative;">
-    <div id="clients-fade-l" style="position:absolute;left:0;top:0;bottom:0;width:100px;background:linear-gradient(to right,#0B0B0B,transparent);z-index:2;pointer-events:none;"></div>
-    <div id="clients-fade-r" style="position:absolute;right:0;top:0;bottom:0;width:100px;background:linear-gradient(to left,#0B0B0B,transparent);z-index:2;pointer-events:none;"></div>
-    <div id="clients-track" style="display:flex;width:max-content;animation:marquee 52s linear infinite;will-change:transform;">
+  <div id="clients-strip" style="position:relative;max-width:760px;margin:0 auto;overflow:hidden;">
+    <div id="clients-fade-l" style="position:absolute;left:0;top:0;bottom:0;width:100px;background:linear-gradient(to right,#F3F3F1,transparent);z-index:2;pointer-events:none;"></div>
+    <div id="clients-fade-r" style="position:absolute;right:0;top:0;bottom:0;width:100px;background:linear-gradient(to left,#F3F3F1,transparent);z-index:2;pointer-events:none;"></div>
+    <div id="clients-track" style="display:flex;width:max-content;animation:marquee 38s linear infinite;will-change:transform;">
       <div id="clients-group-1" style="display:flex;align-items:center;flex-shrink:0;">
-        <div style="display:flex;align-items:center;justify-content:center;padding:0 72px;height:80px;border-right:1px solid rgba(248,247,243,0.1);"><img src="uploads/alix avien logo.png" alt="Alix Avien" style="height:20px;width:auto;filter:brightness(0) invert(1) opacity(0.5);display:block;"></div>
-        <div style="display:flex;align-items:center;justify-content:center;padding:0 72px;height:80px;border-right:1px solid rgba(248,247,243,0.1);"><img src="uploads/ino logo.svg" alt="INO Beauty" style="height:24px;width:auto;filter:brightness(0) invert(1) opacity(0.5);display:block;"></div>
-        <div style="display:flex;align-items:center;justify-content:center;padding:0 72px;height:80px;border-right:1px solid rgba(248,247,243,0.1);"><img src="uploads/muselab logo.svg" alt="Muse Lab" style="height:22px;width:auto;filter:brightness(0) invert(1) opacity(0.5);display:block;"></div>
-        <div style="display:flex;align-items:center;justify-content:center;padding:0 72px;height:80px;border-right:1px solid rgba(248,247,243,0.1);"><img src="uploads/buzzfy logo.svg" alt="Buzzfy" style="height:24px;width:auto;filter:brightness(0) invert(1) opacity(0.5);display:block;"></div>
-        <div style="display:flex;align-items:center;justify-content:center;padding:0 72px;height:80px;border-right:1px solid rgba(248,247,243,0.1);"><img src="uploads/foundbyme logo.svg" alt="Foundby.me" style="height:22px;width:auto;filter:brightness(0) invert(1) opacity(0.5);display:block;"></div>
-        <div style="display:flex;align-items:center;justify-content:center;padding:0 72px;height:80px;border-right:1px solid rgba(248,247,243,0.1);"><img src="uploads/june logo.svg" alt="June Community" style="height:22px;width:auto;filter:brightness(0) invert(1) opacity(0.5);display:block;"></div>
-        <div style="display:flex;align-items:center;justify-content:center;padding:0 72px;height:80px;border-right:1px solid rgba(248,247,243,0.1);"><img src="uploads/Hansgrohe-Logo -09cc8051.svg" alt="Hansgrohe" style="height:20px;width:auto;filter:brightness(0) invert(1) opacity(0.5);display:block;"></div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 30px;height:56px;"><img src="uploads/alix avien logo.png" alt="Alix Avien" style="height:20px;width:auto;filter:brightness(0) opacity(0.4);display:block;"></div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 30px;height:56px;"><img src="uploads/ino logo.svg" alt="INO Beauty" style="height:24px;width:auto;filter:brightness(0) opacity(0.4);display:block;"></div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 30px;height:56px;"><img src="uploads/muselab logo.svg" alt="Muse Lab" style="height:22px;width:auto;filter:brightness(0) opacity(0.4);display:block;"></div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 30px;height:56px;"><img src="uploads/buzzfy logo.svg" alt="Buzzfy" style="height:24px;width:auto;filter:brightness(0) opacity(0.4);display:block;"></div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 30px;height:56px;"><img src="uploads/foundbyme logo.svg" alt="Foundby.me" style="height:22px;width:auto;filter:brightness(0) opacity(0.4);display:block;"></div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 30px;height:56px;"><img src="uploads/june logo.svg" alt="June Community" style="height:22px;width:auto;filter:brightness(0) opacity(0.4);display:block;"></div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 30px;height:56px;"><img src="_variant/hansgrohe-logo.svg" alt="Hansgrohe" style="height:20px;width:auto;filter:brightness(0) opacity(0.4);display:block;"></div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 30px;height:56px;"><img src="uploads/kindpeople-logo.svg" alt="Kind People" style="height:26px;width:auto;filter:brightness(0);opacity:.4;display:block;"></div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 30px;height:56px;"><img src="_variant/sickscience-logo.png" alt="SickScience Labs" style="height:15px;width:auto;filter:brightness(0) opacity(0.4);display:block;"></div>
       </div>
       <div id="clients-group-2" style="display:flex;align-items:center;flex-shrink:0;">
-        <div style="display:flex;align-items:center;justify-content:center;padding:0 72px;height:80px;border-right:1px solid rgba(248,247,243,0.1);"><img src="uploads/alix avien logo.png" alt="Alix Avien" style="height:20px;width:auto;filter:brightness(0) invert(1) opacity(0.5);display:block;"></div>
-        <div style="display:flex;align-items:center;justify-content:center;padding:0 72px;height:80px;border-right:1px solid rgba(248,247,243,0.1);"><img src="uploads/ino logo.svg" alt="INO Beauty" style="height:24px;width:auto;filter:brightness(0) invert(1) opacity(0.5);display:block;"></div>
-        <div style="display:flex;align-items:center;justify-content:center;padding:0 72px;height:80px;border-right:1px solid rgba(248,247,243,0.1);"><img src="uploads/muselab logo.svg" alt="Muse Lab" style="height:22px;width:auto;filter:brightness(0) invert(1) opacity(0.5);display:block;"></div>
-        <div style="display:flex;align-items:center;justify-content:center;padding:0 72px;height:80px;border-right:1px solid rgba(248,247,243,0.1);"><img src="uploads/buzzfy logo.svg" alt="Buzzfy" style="height:24px;width:auto;filter:brightness(0) invert(1) opacity(0.5);display:block;"></div>
-        <div style="display:flex;align-items:center;justify-content:center;padding:0 72px;height:80px;border-right:1px solid rgba(248,247,243,0.1);"><img src="uploads/foundbyme logo.svg" alt="Foundby.me" style="height:22px;width:auto;filter:brightness(0) invert(1) opacity(0.5);display:block;"></div>
-        <div style="display:flex;align-items:center;justify-content:center;padding:0 72px;height:80px;border-right:1px solid rgba(248,247,243,0.1);"><img src="uploads/june logo.svg" alt="June Community" style="height:22px;width:auto;filter:brightness(0) invert(1) opacity(0.5);display:block;"></div>
-        <div style="display:flex;align-items:center;justify-content:center;padding:0 72px;height:80px;border-right:1px solid rgba(248,247,243,0.1);"><img src="uploads/Hansgrohe-Logo -09cc8051.svg" alt="Hansgrohe" style="height:20px;width:auto;filter:brightness(0) invert(1) opacity(0.5);display:block;"></div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 30px;height:56px;"><img src="uploads/alix avien logo.png" alt="Alix Avien" style="height:20px;width:auto;filter:brightness(0) opacity(0.4);display:block;"></div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 30px;height:56px;"><img src="uploads/ino logo.svg" alt="INO Beauty" style="height:24px;width:auto;filter:brightness(0) opacity(0.4);display:block;"></div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 30px;height:56px;"><img src="uploads/muselab logo.svg" alt="Muse Lab" style="height:22px;width:auto;filter:brightness(0) opacity(0.4);display:block;"></div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 30px;height:56px;"><img src="uploads/buzzfy logo.svg" alt="Buzzfy" style="height:24px;width:auto;filter:brightness(0) opacity(0.4);display:block;"></div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 30px;height:56px;"><img src="uploads/foundbyme logo.svg" alt="Foundby.me" style="height:22px;width:auto;filter:brightness(0) opacity(0.4);display:block;"></div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 30px;height:56px;"><img src="uploads/june logo.svg" alt="June Community" style="height:22px;width:auto;filter:brightness(0) opacity(0.4);display:block;"></div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 30px;height:56px;"><img src="_variant/hansgrohe-logo.svg" alt="Hansgrohe" style="height:20px;width:auto;filter:brightness(0) opacity(0.4);display:block;"></div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 30px;height:56px;"><img src="uploads/kindpeople-logo.svg" alt="Kind People" style="height:26px;width:auto;filter:brightness(0);opacity:.4;display:block;"></div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 30px;height:56px;"><img src="_variant/sickscience-logo.png" alt="SickScience Labs" style="height:15px;width:auto;filter:brightness(0) opacity(0.4);display:block;"></div>
       </div>
     </div>
   </div>
@@ -188,80 +255,89 @@
 
 <!-- ═══ 01 · SELECTED WORK ═══ -->
 <div id="work-sticky-wrap" style="position:relative;padding-bottom:80px;">
-<section id="work" data-panel="" data-screen-label="Selected Work" style="background:#151515;padding:clamp(48px,5vw,72px) 0 0;position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;box-sizing:border-box;">
+<section id="work" data-panel="" data-screen-label="Selected Work" style="background:#E9E9E5;padding:clamp(48px,5vw,72px) 0 0;position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;box-sizing:border-box;">
   <div style="padding:0 clamp(24px,5vw,80px);margin-bottom:28px;flex-shrink:0;">
     <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:20px;">
       <div>
-        <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(36px,4vw,64px);color:#F8F7F3;letter-spacing:var(--tracking-tighter);margin:0 0 8px;line-height:1.04;">Selected work</h2>
-        <p style="font-family:var(--font-body);font-size:var(--text-base);color:rgba(248,247,243,0.6);max-width:360px;margin:0;line-height:var(--leading-relaxed);">Eight brands. Eight stories. Zero compromise.</p>
+        <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(36px,4vw,64px);color:#0B0B0B;letter-spacing:var(--tracking-tighter);margin:0 0 8px;line-height:1.04;">Selected work</h2>
+        <p style="font-family:var(--font-body);font-size:var(--text-base);color:rgba(11,11,11,0.6);max-width:360px;margin:0;line-height:var(--leading-relaxed);">Eight brands. Eight stories. Zero compromise.</p>
       </div>
-      <a href="#contact" class="hv-index-2" style="font-family:var(--font-body);font-size:14px;font-weight:500;color:rgba(248,247,243,0.6);text-decoration:none;display:flex;align-items:center;gap:7px;padding-bottom:3px;border-bottom:1px solid rgba(248,247,243,0.2);transition:all 220ms;">Start a project <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+      <a href="#contact" class="hv-index-2" style="font-family:var(--font-body);font-size:14px;font-weight:500;color:rgba(11,11,11,0.6);text-decoration:none;display:flex;align-items:center;gap:7px;padding-bottom:3px;border-bottom:1px solid rgba(11,11,11,0.2);transition:all 220ms;">Start a project <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
     </div>
   </div>
   <div id="work-scroll" style="display:flex;gap:20px;padding:0 clamp(24px,5vw,80px) 32px;flex:1;align-items:center;will-change:transform;min-width:max-content;overflow:visible;">
 
     <a data-project-card="" href="work-alix-avien.html" style="flex:0 0 auto;height:min(72vh,640px);aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;position:relative;cursor:pointer;background:#A0653A;display:block;text-decoration:none;">
       <div data-project-image="" style="position: absolute; inset: 0; background: url(&quot;./alix-avien-cover-mrbrnfql-web.jpg&quot;) center / cover no-repeat; transition: transform 600ms var(--ease-standard)"></div>
-      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,11,11,0.9) 0%,transparent 60%);pointer-events:none;"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(243,243,241,0.9) 0%,transparent 60%);pointer-events:none;"></div>
       <div style="position:absolute;bottom:0;left:0;right:0;padding:32px;">
-        <div data-project-desc="" style="opacity:0;transform:translateY(8px);transition:opacity 280ms,transform 280ms var(--ease-spring);margin-bottom:14px;pointer-events:none;"><p style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(248,247,243,0.7);margin:0;line-height:1.55;">Website design and funnel improvements that lifted sales. Studio-grade product visuals now anchor the site and every performance ad.</p></div>
-        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;"><div style="font-family:var(--font-display);font-weight:700;font-size:clamp(22px,2.2vw,32px);color:#F8F7F3;letter-spacing:-0.025em;line-height:1.1;">Alix Avien</div><div data-project-arrow="" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(248,247,243,0.32);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 220ms var(--ease-spring);"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9H15M10 4L15 9L10 14" stroke="rgba(248,247,243,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
+        <div data-project-desc="" style="opacity:0;transform:translateY(8px);transition:opacity 280ms,transform 280ms var(--ease-spring);margin-bottom:14px;pointer-events:none;"><p style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(11,11,11,0.7);margin:0;line-height:1.55;">Website design and funnel improvements that lifted sales. Studio-grade product visuals now anchor the site and every performance ad.</p></div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;"><div style="font-family:var(--font-display);font-weight:700;font-size:clamp(22px,2.2vw,32px);color:#0B0B0B;letter-spacing:-0.025em;line-height:1.1;">Alix Avien</div><div data-project-arrow="" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(11,11,11,0.32);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 220ms var(--ease-spring);"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9H15M10 4L15 9L10 14" stroke="rgba(11,11,11,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
       </div>
     </a>
 
     <a data-project-card="" href="work-ino-beauty.html" style="flex:0 0 auto;height:min(72vh,640px);aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;position:relative;cursor:pointer;background:#120820;display:block;text-decoration:none;">
       <div data-project-image="" style="position:absolute;inset:0;transition:transform 600ms var(--ease-standard);"><img alt="INO Beauty" style="width:100%;height:100%;object-fit:cover;" src="./ino-cover-mrbro0zg-web.jpg"></div>
-      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,11,11,0.9) 0%,transparent 60%);pointer-events:none;"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(243,243,241,0.9) 0%,transparent 60%);pointer-events:none;"></div>
       <div style="position:absolute;bottom:0;left:0;right:0;padding:32px;">
-        <div data-project-desc="" style="opacity:0;transform:translateY(8px);transition:opacity 280ms,transform 280ms var(--ease-spring);margin-bottom:14px;pointer-events:none;"><p style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(248,247,243,0.7);margin:0;line-height:1.55;">Studio-grade product visuals and marketplace storefronts for Trendyol and Hepsiburada, plus ongoing mentorship on their website roadmap.</p></div>
-        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:12px;"><div style="font-family:var(--font-display);font-weight:700;font-size:clamp(22px,2.2vw,32px);color:#F8F7F3;letter-spacing:-0.025em;line-height:1.1;">INO Beauty</div><div data-project-arrow="" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(248,247,243,0.32);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 220ms;"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9H15M10 4L15 9L10 14" stroke="rgba(248,247,243,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
+        <div data-project-desc="" style="opacity:0;transform:translateY(8px);transition:opacity 280ms,transform 280ms var(--ease-spring);margin-bottom:14px;pointer-events:none;"><p style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(11,11,11,0.7);margin:0;line-height:1.55;">Studio-grade product visuals and marketplace storefronts for Trendyol and Hepsiburada, plus ongoing mentorship on their website roadmap.</p></div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:12px;"><div style="font-family:var(--font-display);font-weight:700;font-size:clamp(22px,2.2vw,32px);color:#0B0B0B;letter-spacing:-0.025em;line-height:1.1;">INO Beauty</div><div data-project-arrow="" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(11,11,11,0.32);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 220ms;"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9H15M10 4L15 9L10 14" stroke="rgba(11,11,11,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
       </div>
     </a>
 
     <a data-project-card="" href="work-muse-lab.html" style="flex:0 0 auto;height:min(72vh,640px);aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;position:relative;cursor:pointer;background:#060e2e;display:block;text-decoration:none;">
       <div data-project-image="" style="position:absolute;inset:0;transition:transform 600ms var(--ease-standard);"><img src="./muse-cover-mrbrompd-web.jpg" alt="Muse Lab" style="width:100%;height:100%;object-fit:cover;"></div>
-      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,11,11,0.9) 0%,transparent 60%);pointer-events:none;"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(243,243,241,0.9) 0%,transparent 60%);pointer-events:none;"></div>
       <div style="position:absolute;bottom:0;left:0;right:0;padding:28px;">
-        <div data-project-desc="" style="opacity:0;transform:translateY(8px);transition:opacity 280ms,transform 280ms var(--ease-spring);margin-bottom:10px;pointer-events:none;"><p style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(248,247,243,0.7);margin:0;line-height:1.55;">Studio-grade product visuals and marketplace storefronts for Trendyol and Hepsiburada, plus ongoing mentorship on their website roadmap.</p></div>
-        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:10px;"><div style="font-family:var(--font-display);font-weight:700;font-size:clamp(20px,2vw,30px);color:#F8F7F3;letter-spacing:-0.025em;line-height:1.1;">Muse Lab</div><div data-project-arrow="" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(248,247,243,0.32);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 220ms;"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9H15M10 4L15 9L10 14" stroke="rgba(248,247,243,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
+        <div data-project-desc="" style="opacity:0;transform:translateY(8px);transition:opacity 280ms,transform 280ms var(--ease-spring);margin-bottom:10px;pointer-events:none;"><p style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(11,11,11,0.7);margin:0;line-height:1.55;">Studio-grade product visuals and marketplace storefronts for Trendyol and Hepsiburada, plus ongoing mentorship on their website roadmap.</p></div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:10px;"><div style="font-family:var(--font-display);font-weight:700;font-size:clamp(20px,2vw,30px);color:#0B0B0B;letter-spacing:-0.025em;line-height:1.1;">Muse Lab</div><div data-project-arrow="" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(11,11,11,0.32);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 220ms;"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9H15M10 4L15 9L10 14" stroke="rgba(11,11,11,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
       </div>
     </a>
 
     <a data-project-card="" href="work-buzzfy.html" style="flex: 0 0 auto; height: min(72vh,640px); aspect-ratio: 4/5; border-radius: var(--radius-lg); overflow: hidden; position: relative; cursor: pointer; background: url(&quot;uploads/opt/grow-wit-trial-reels-1080x1920-0e100456-web.jpg&quot;) center / cover no-repeat;display:block;text-decoration:none;">
-      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,11,11,0.9) 0%,transparent 60%);pointer-events:none;"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(243,243,241,0.9) 0%,transparent 60%);pointer-events:none;"></div>
       <div style="position:absolute;bottom:0;left:0;right:0;padding:28px;">
-        <div data-project-desc="" style="opacity:0;transform:translateY(8px);transition:opacity 280ms,transform 280ms var(--ease-spring);margin-bottom:10px;pointer-events:none;"><p style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(248,247,243,0.7);margin:0;line-height:1.55;">Web and mobile app plus landing pages, followed by the social media and paid campaigns that carried them to launch.</p></div>
-        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:10px;"><div style="font-family:var(--font-display);font-weight:700;font-size:clamp(20px,2vw,30px);color:#F8F7F3;letter-spacing:-0.025em;">Buzzfy</div><div data-project-arrow="" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(248,247,243,0.32);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 220ms;"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9H15M10 4L15 9L10 14" stroke="rgba(248,247,243,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
+        <div data-project-desc="" style="opacity:0;transform:translateY(8px);transition:opacity 280ms,transform 280ms var(--ease-spring);margin-bottom:10px;pointer-events:none;"><p style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(11,11,11,0.7);margin:0;line-height:1.55;">Web and mobile app plus landing pages, followed by the social media and paid campaigns that carried them to launch.</p></div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:10px;"><div style="font-family:var(--font-display);font-weight:700;font-size:clamp(20px,2vw,30px);color:#0B0B0B;letter-spacing:-0.025em;">Buzzfy</div><div data-project-arrow="" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(11,11,11,0.32);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 220ms;"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9H15M10 4L15 9L10 14" stroke="rgba(11,11,11,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
       </div>
     </a>
 
     <a data-project-card="" href="work-foundby-me.html" style="flex:0 0 auto;height:min(72vh,640px);aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;position:relative;cursor:pointer;background:url(&quot;./fbm-cover-mrcoftc9-web.jpg&quot;) center / cover no-repeat;display:block;text-decoration:none;">
-      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,11,11,0.9) 0%,transparent 60%);pointer-events:none;"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(243,243,241,0.9) 0%,transparent 60%);pointer-events:none;"></div>
       <div style="position:absolute;bottom:0;left:0;right:0;padding:28px;">
-        <div data-project-desc="" style="opacity:0;transform:translateY(8px);transition:opacity 280ms,transform 280ms var(--ease-spring);margin-bottom:10px;pointer-events:none;"><p style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(248,247,243,0.7);margin:0;line-height:1.55;">Web and mobile app plus landing pages, followed by the social media and paid campaigns that carried them to launch.</p></div>
-        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:10px;"><div style="font-family:var(--font-display);font-weight:700;font-size:clamp(20px,2vw,30px);color:#F8F7F3;letter-spacing:-0.025em;">Foundby.me</div><div data-project-arrow="" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(248,247,243,0.32);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 220ms;"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9H15M10 4L15 9L10 14" stroke="rgba(248,247,243,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
+        <div data-project-desc="" style="opacity:0;transform:translateY(8px);transition:opacity 280ms,transform 280ms var(--ease-spring);margin-bottom:10px;pointer-events:none;"><p style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(11,11,11,0.7);margin:0;line-height:1.55;">Web and mobile app plus landing pages, followed by the social media and paid campaigns that carried them to launch.</p></div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:10px;"><div style="font-family:var(--font-display);font-weight:700;font-size:clamp(20px,2vw,30px);color:#0B0B0B;letter-spacing:-0.025em;">Foundby.me</div><div data-project-arrow="" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(11,11,11,0.32);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 220ms;"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9H15M10 4L15 9L10 14" stroke="rgba(11,11,11,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
       </div>
     </a>
 
     <a data-project-card="" href="work-kind-people.html" style="flex:0 0 auto;height:min(72vh,640px);aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;position:relative;cursor:pointer;background:url(&quot;./slide-53-mrbtvwmx.png&quot;) center / cover no-repeat;display:block;text-decoration:none;">
-      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,11,11,0.9) 0%,transparent 60%);pointer-events:none;"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(243,243,241,0.9) 0%,transparent 60%);pointer-events:none;"></div>
       <div style="position:absolute;bottom:0;left:0;right:0;padding:32px;">
-        <div data-project-desc="" style="opacity:0;transform:translateY(8px);transition:opacity 280ms,transform 280ms var(--ease-spring);margin-bottom:14px;pointer-events:none;"><p style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(248,247,243,0.7);margin:0;line-height:1.55;">Corporate identity and website, built from the ground up.</p></div>
-        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;"><div style="font-family:var(--font-display);font-weight:700;font-size:clamp(20px,2vw,30px);color:#F8F7F3;letter-spacing:-0.025em;">Kind People</div><div data-project-arrow="" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(248,247,243,0.32);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 220ms;"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9H15M10 4L15 9L10 14" stroke="rgba(248,247,243,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
+        <div data-project-desc="" style="opacity:0;transform:translateY(8px);transition:opacity 280ms,transform 280ms var(--ease-spring);margin-bottom:14px;pointer-events:none;"><p style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(11,11,11,0.7);margin:0;line-height:1.55;">Corporate identity and website, built from the ground up.</p></div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;"><div style="font-family:var(--font-display);font-weight:700;font-size:clamp(20px,2vw,30px);color:#0B0B0B;letter-spacing:-0.025em;">Kind People</div><div data-project-arrow="" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(11,11,11,0.32);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 220ms;"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9H15M10 4L15 9L10 14" stroke="rgba(11,11,11,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
       </div>
     </a>
 
     <a data-project-card="" href="work-hansgrohe.html" style="flex:0 0 auto;height:min(72vh,640px);aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;position:relative;cursor:pointer;background:#1A2530;display:block;text-decoration:none;">
       <div data-project-image="" style="position:absolute;inset:0;background:url(&quot;./stage_raindance-alive_key-visual_16x9-mretlfm7-web.jpg&quot;) center / cover no-repeat;transition:transform 600ms var(--ease-standard);"></div>
-      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,11,11,0.9) 0%,transparent 60%);pointer-events:none;"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(243,243,241,0.9) 0%,transparent 60%);pointer-events:none;"></div>
       <div style="position:absolute;inset:0;padding:32px;display:flex;flex-direction:column;justify-content:flex-end;">
-        <div data-project-desc="" style="opacity:0;transform:translateY(8px);transition:opacity 280ms,transform 280ms var(--ease-spring);margin-bottom:12px;pointer-events:none;"><p style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(248,247,243,0.6);margin:0;">Years of ongoing work: seasonal product catalogs, in-store one-ways, calendar and notebook design, and video invitations for new store openings.</p></div>
-        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;"><div style="font-family:var(--font-display);font-weight:700;font-size:clamp(22px,2.2vw,32px);color:#F8F7F3;letter-spacing:-0.03em;">Hansgrohe</div><div data-project-arrow="" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(248,247,243,0.32);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 220ms;"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9H15M10 4L15 9L10 14" stroke="rgba(248,247,243,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
+        <div data-project-desc="" style="opacity:0;transform:translateY(8px);transition:opacity 280ms,transform 280ms var(--ease-spring);margin-bottom:12px;pointer-events:none;"><p style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(11,11,11,0.6);margin:0;">Years of ongoing work: seasonal product catalogs, in-store one-ways, calendar and notebook design, and video invitations for new store openings.</p></div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;"><div style="font-family:var(--font-display);font-weight:700;font-size:clamp(22px,2.2vw,32px);color:#0B0B0B;letter-spacing:-0.03em;">Hansgrohe</div><div data-project-arrow="" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(11,11,11,0.32);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 220ms;"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9H15M10 4L15 9L10 14" stroke="rgba(11,11,11,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
+      </div>
+    </a>
+
+    <a data-project-card="" href="work-sickscience.html" style="flex:0 0 auto;height:min(72vh,640px);aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;position:relative;cursor:pointer;background:#0B0B0B;display:block;text-decoration:none;">
+      <div data-project-image="" style="position:absolute;inset:0;background:url(&quot;uploads/sickscience-28-web.jpg&quot;) center / cover no-repeat;transition:transform 600ms var(--ease-standard);"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(243,243,241,0.9) 0%,transparent 60%);pointer-events:none;"></div>
+      <div style="position:absolute;inset:0;padding:32px;display:flex;flex-direction:column;justify-content:flex-end;">
+        <div data-project-desc="" style="opacity:0;transform:translateY(8px);transition:opacity 280ms,transform 280ms var(--ease-spring);margin-bottom:12px;pointer-events:none;"><p style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(11,11,11,0.6);margin:0;">Performance ads, Black Friday campaigns and award and press creative for a US skincare brand.</p></div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;"><div style="font-family:var(--font-display);font-weight:700;font-size:clamp(22px,2.2vw,32px);color:#0B0B0B;letter-spacing:-0.03em;">SickScience</div><div data-project-arrow="" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(11,11,11,0.32);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 220ms;"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9H15M10 4L15 9L10 14" stroke="rgba(11,11,11,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
       </div>
     </a>
 
     <!-- mobile-only: shown after the first 4 cards, hidden on desktop -->
-    <a id="work-see-all" href="work-all.html" style="display:none;flex:0 0 auto;width:100%;padding:26px 24px;border-radius:var(--radius-lg);border:1px solid rgba(248,247,243,0.16);align-items:center;justify-content:center;gap:10px;text-decoration:none;font-family:var(--font-body);font-size:15px;font-weight:600;color:#F8F7F3;">See all work <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+    <a id="work-see-all" href="work-all.html" style="display:none;flex:0 0 auto;width:100%;padding:26px 24px;border-radius:var(--radius-lg);border:1px solid rgba(11,11,11,0.16);align-items:center;justify-content:center;gap:10px;text-decoration:none;font-family:var(--font-body);font-size:15px;font-weight:600;color:#0B0B0B;">See all work <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
 
     <!-- scroll end padding -->
     <div style="flex:0 0 clamp(24px,5vw,80px);"></div>
@@ -271,74 +347,74 @@
 
 
 <!-- ═══ 02 · SERVICES ═══ -->
-<section id="services" data-panel="" data-screen-label="Services" style="background:#0B0B0B;padding:clamp(80px,8vw,130px) 0;position:relative;">
+<section id="services" data-panel="" data-screen-label="Services" style="background:#F3F3F1;padding:clamp(80px,8vw,130px) 0;position:relative;">
     <div style="padding:0 clamp(24px,5vw,80px);margin-bottom:48px;">
     <div data-reveal="">
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
-        <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(36px,4vw,64px);color:#F8F7F3;letter-spacing:var(--tracking-tighter);margin:0;line-height:1.04;" data-split="">What we do</h2>
+        <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(36px,4vw,64px);color:#0B0B0B;letter-spacing:var(--tracking-tighter);margin:0;line-height:1.04;" data-split="">What we do</h2>
       </div>
-      <p style="font-family: var(--font-body); font-size: var(--text-base); color: rgba(248,247,243,0.6); margin: 0; line-height: var(--leading-relaxed); position: static">Six ways we make your brand impossible to ignore.</p>
+      <p style="font-family: var(--font-body); font-size: var(--text-base); color: rgba(11,11,11,0.6); margin: 0; line-height: var(--leading-relaxed); position: static">Six ways we make your brand impossible to ignore.</p>
     </div>
   </div>
   <div data-reveal="" data-reveal-delay="120">
-    <div data-service-row="" style="padding:34px clamp(24px,5vw,80px);cursor:pointer;transition:background 220ms;border-top:1px solid rgba(248,247,243,0.1);">
+    <div data-service-row="" style="padding:34px clamp(24px,5vw,80px);cursor:pointer;transition:background 220ms;border-top:1px solid rgba(11,11,11,0.1);">
       <div style="display:flex;align-items:center;gap:28px;flex-wrap:wrap;">
         <div style="flex-shrink:0;width:60px;height:60px;display:flex;align-items:center;justify-content:center;">
           <img data-svc-icon="" src="uploads/opt/svc-creative-direction.webp" alt="" style="width:56px;height:56px;object-fit:contain;display:block;transition:transform 320ms var(--ease-spring);">
         </div>
-        <h3 data-svc-title="" style="font-family:var(--font-display);font-weight:700;font-size:clamp(24px,2.8vw,48px);color:#F8F7F3;letter-spacing:-0.03em;margin:0;flex:1;transition:color 220ms;line-height:1.1;">Creative Direction</h3>
-        <p data-svc-desc="" style="font-family:var(--font-body);font-size:var(--text-base);color:rgba(248,247,243,0.6);max-width:300px;margin:0;opacity:0;transition:opacity 220ms;text-align:right;line-height:var(--leading-relaxed);">Visual strategy, brand language, art direction, and campaign architecture.</p>
-        <div data-svc-arrow="" style="flex-shrink:0;width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(248,247,243,0.3);display:flex;align-items:center;justify-content:center;color:#F8F7F3;transition:border-color 240ms,color 240ms,transform 240ms cubic-bezier(0.16,1,0.3,1);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+        <h3 data-svc-title="" style="font-family:var(--font-display);font-weight:700;font-size:clamp(24px,2.8vw,48px);color:#0B0B0B;letter-spacing:-0.03em;margin:0;flex:1;transition:color 220ms;line-height:1.1;">Creative Direction</h3>
+        <p data-svc-desc="" style="font-family:var(--font-body);font-size:var(--text-base);color:rgba(11,11,11,0.6);max-width:300px;margin:0;opacity:0;transition:opacity 220ms;text-align:right;line-height:var(--leading-relaxed);">Visual strategy, brand language, art direction, and campaign architecture.</p>
+        <div data-svc-arrow="" style="flex-shrink:0;width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(11,11,11,0.3);display:flex;align-items:center;justify-content:center;color:#0B0B0B;transition:border-color 240ms,color 240ms,transform 240ms cubic-bezier(0.16,1,0.3,1);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
       </div>
     </div>
-    <div data-service-row="" style="padding:34px clamp(24px,5vw,80px);cursor:pointer;transition:background 220ms;border-top:1px solid rgba(248,247,243,0.1);">
+    <div data-service-row="" style="padding:34px clamp(24px,5vw,80px);cursor:pointer;transition:background 220ms;border-top:1px solid rgba(11,11,11,0.1);">
       <div style="display:flex;align-items:center;gap:28px;flex-wrap:wrap;">
         <div style="flex-shrink:0;width:60px;height:60px;display:flex;align-items:center;justify-content:center;">
           <img data-svc-icon="" src="uploads/opt/svc-social-media.webp" alt="" style="width:56px;height:56px;object-fit:contain;display:block;transition:transform 320ms var(--ease-spring);">
         </div>
-        <h3 data-svc-title="" style="font-family:var(--font-display);font-weight:700;font-size:clamp(24px,2.8vw,48px);color:#F8F7F3;letter-spacing:-0.03em;margin:0;flex:1;transition:color 220ms;line-height:1.1;">Social Media Visuals</h3>
-        <p data-svc-desc="" style="font-family:var(--font-body);font-size:var(--text-base);color:rgba(248,247,243,0.6);max-width:300px;margin:0;opacity:0;transition:opacity 220ms;text-align:right;line-height:var(--leading-relaxed);">Scroll-stopping static and motion content for Instagram, TikTok, and beyond.</p>
-        <div data-svc-arrow="" style="flex-shrink:0;width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(248,247,243,0.3);display:flex;align-items:center;justify-content:center;color:#F8F7F3;transition:border-color 240ms,color 240ms,transform 240ms cubic-bezier(0.16,1,0.3,1);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+        <h3 data-svc-title="" style="font-family:var(--font-display);font-weight:700;font-size:clamp(24px,2.8vw,48px);color:#0B0B0B;letter-spacing:-0.03em;margin:0;flex:1;transition:color 220ms;line-height:1.1;">Social Media Visuals</h3>
+        <p data-svc-desc="" style="font-family:var(--font-body);font-size:var(--text-base);color:rgba(11,11,11,0.6);max-width:300px;margin:0;opacity:0;transition:opacity 220ms;text-align:right;line-height:var(--leading-relaxed);">Scroll-stopping static and motion content for Instagram, TikTok, and beyond.</p>
+        <div data-svc-arrow="" style="flex-shrink:0;width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(11,11,11,0.3);display:flex;align-items:center;justify-content:center;color:#0B0B0B;transition:border-color 240ms,color 240ms,transform 240ms cubic-bezier(0.16,1,0.3,1);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
       </div>
     </div>
-    <div data-service-row="" style="padding:34px clamp(24px,5vw,80px);cursor:pointer;transition:background 220ms;border-top:1px solid rgba(248,247,243,0.1);">
+    <div data-service-row="" style="padding:34px clamp(24px,5vw,80px);cursor:pointer;transition:background 220ms;border-top:1px solid rgba(11,11,11,0.1);">
       <div style="display:flex;align-items:center;gap:28px;flex-wrap:wrap;">
         <div style="flex-shrink:0;width:60px;height:60px;display:flex;align-items:center;justify-content:center;">
           <img data-svc-icon="" src="uploads/opt/svc-product-campaigns.webp" alt="" style="width:56px;height:56px;object-fit:contain;display:block;transition:transform 320ms var(--ease-spring);">
         </div>
-        <h3 data-svc-title="" style="font-family:var(--font-display);font-weight:700;font-size:clamp(24px,2.8vw,48px);color:#F8F7F3;letter-spacing:-0.03em;margin:0;flex:1;transition:color 220ms;line-height:1.1;">Product Campaigns</h3>
-        <p data-svc-desc="" style="font-family:var(--font-body);font-size:var(--text-base);color:rgba(248,247,243,0.6);max-width:300px;margin:0;opacity:0;transition:opacity 220ms;text-align:right;line-height:var(--leading-relaxed);">Full campaign production — from concept to final delivered assets.</p>
-        <div data-svc-arrow="" style="flex-shrink:0;width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(248,247,243,0.3);display:flex;align-items:center;justify-content:center;color:#F8F7F3;transition:border-color 240ms,color 240ms,transform 240ms cubic-bezier(0.16,1,0.3,1);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+        <h3 data-svc-title="" style="font-family:var(--font-display);font-weight:700;font-size:clamp(24px,2.8vw,48px);color:#0B0B0B;letter-spacing:-0.03em;margin:0;flex:1;transition:color 220ms;line-height:1.1;">Product Campaigns</h3>
+        <p data-svc-desc="" style="font-family:var(--font-body);font-size:var(--text-base);color:rgba(11,11,11,0.6);max-width:300px;margin:0;opacity:0;transition:opacity 220ms;text-align:right;line-height:var(--leading-relaxed);">Full campaign production — from concept to final delivered assets.</p>
+        <div data-svc-arrow="" style="flex-shrink:0;width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(11,11,11,0.3);display:flex;align-items:center;justify-content:center;color:#0B0B0B;transition:border-color 240ms,color 240ms,transform 240ms cubic-bezier(0.16,1,0.3,1);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
       </div>
     </div>
-    <div data-service-row="" style="padding:34px clamp(24px,5vw,80px);cursor:pointer;transition:background 220ms;border-top:1px solid rgba(248,247,243,0.1);">
+    <div data-service-row="" style="padding:34px clamp(24px,5vw,80px);cursor:pointer;transition:background 220ms;border-top:1px solid rgba(11,11,11,0.1);">
       <div style="display:flex;align-items:center;gap:28px;flex-wrap:wrap;">
         <div style="flex-shrink:0;width:60px;height:60px;display:flex;align-items:center;justify-content:center;">
           <img data-svc-icon="" src="uploads/opt/svc-ai-production.webp" alt="" style="width:56px;height:56px;object-fit:contain;display:block;transition:transform 320ms var(--ease-spring);">
         </div>
-        <h3 data-svc-title="" style="font-family:var(--font-display);font-weight:700;font-size:clamp(24px,2.8vw,48px);color:#F8F7F3;letter-spacing:-0.03em;margin:0;flex:1;transition:color 220ms;line-height:1.1;">AI-Assisted Visual Production</h3>
-        <p data-svc-desc="" style="font-family:var(--font-body);font-size:var(--text-base);color:rgba(248,247,243,0.6);max-width:300px;margin:0;opacity:0;transition:opacity 220ms;text-align:right;line-height:var(--leading-relaxed);">Generative AI integrated into the creative pipeline for faster, stranger output.</p>
-        <div data-svc-arrow="" style="flex-shrink:0;width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(248,247,243,0.3);display:flex;align-items:center;justify-content:center;color:#F8F7F3;transition:border-color 240ms,color 240ms,transform 240ms cubic-bezier(0.16,1,0.3,1);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+        <h3 data-svc-title="" style="font-family:var(--font-display);font-weight:700;font-size:clamp(24px,2.8vw,48px);color:#0B0B0B;letter-spacing:-0.03em;margin:0;flex:1;transition:color 220ms;line-height:1.1;">AI-Assisted Visual Production</h3>
+        <p data-svc-desc="" style="font-family:var(--font-body);font-size:var(--text-base);color:rgba(11,11,11,0.6);max-width:300px;margin:0;opacity:0;transition:opacity 220ms;text-align:right;line-height:var(--leading-relaxed);">Generative AI integrated into the creative pipeline for faster, stranger output.</p>
+        <div data-svc-arrow="" style="flex-shrink:0;width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(11,11,11,0.3);display:flex;align-items:center;justify-content:center;color:#0B0B0B;transition:border-color 240ms,color 240ms,transform 240ms cubic-bezier(0.16,1,0.3,1);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
       </div>
     </div>
-    <div data-service-row="" style="padding:34px clamp(24px,5vw,80px);cursor:pointer;transition:background 220ms;border-top:1px solid rgba(248,247,243,0.1);">
+    <div data-service-row="" style="padding:34px clamp(24px,5vw,80px);cursor:pointer;transition:background 220ms;border-top:1px solid rgba(11,11,11,0.1);">
       <div style="display:flex;align-items:center;gap:28px;flex-wrap:wrap;">
         <div style="flex-shrink:0;width:60px;height:60px;display:flex;align-items:center;justify-content:center;">
           <img data-svc-icon="" src="uploads/opt/svc-website.webp" alt="" style="width:56px;height:56px;object-fit:contain;display:block;transition:transform 320ms var(--ease-spring);">
         </div>
-        <h3 data-svc-title="" style="font-family:var(--font-display);font-weight:700;font-size:clamp(24px,2.8vw,48px);color:#F8F7F3;letter-spacing:-0.03em;margin:0;flex:1;transition:color 220ms;line-height:1.1;">Website</h3>
-        <p data-svc-desc="" style="font-family:var(--font-body);font-size:var(--text-base);color:rgba(248,247,243,0.6);max-width:300px;margin:0;opacity:0;transition:opacity 220ms;text-align:right;line-height:var(--leading-relaxed);">High-performance websites that look like the campaigns you run — built for conversion and brand recall.</p>
-        <div data-svc-arrow="" style="flex-shrink:0;width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(248,247,243,0.3);display:flex;align-items:center;justify-content:center;color:#F8F7F3;transition:border-color 240ms,color 240ms,transform 240ms cubic-bezier(0.16,1,0.3,1);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+        <h3 data-svc-title="" style="font-family:var(--font-display);font-weight:700;font-size:clamp(24px,2.8vw,48px);color:#0B0B0B;letter-spacing:-0.03em;margin:0;flex:1;transition:color 220ms;line-height:1.1;">Website</h3>
+        <p data-svc-desc="" style="font-family:var(--font-body);font-size:var(--text-base);color:rgba(11,11,11,0.6);max-width:300px;margin:0;opacity:0;transition:opacity 220ms;text-align:right;line-height:var(--leading-relaxed);">High-performance websites that look like the campaigns you run — built for conversion and brand recall.</p>
+        <div data-svc-arrow="" style="flex-shrink:0;width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(11,11,11,0.3);display:flex;align-items:center;justify-content:center;color:#0B0B0B;transition:border-color 240ms,color 240ms,transform 240ms cubic-bezier(0.16,1,0.3,1);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
       </div>
     </div>
-    <div data-service-row="" style="padding:34px clamp(24px,5vw,80px);cursor:pointer;transition:background 220ms;border-top:1px solid rgba(248,247,243,0.1);border-bottom:1px solid rgba(248,247,243,0.1);">
+    <div data-service-row="" style="padding:34px clamp(24px,5vw,80px);cursor:pointer;transition:background 220ms;border-top:1px solid rgba(11,11,11,0.1);border-bottom:1px solid rgba(11,11,11,0.1);">
       <div style="display:flex;align-items:center;gap:28px;flex-wrap:wrap;">
         <div style="flex-shrink:0;width:60px;height:60px;display:flex;align-items:center;justify-content:center;">
           <img data-svc-icon="" src="uploads/opt/svc-brand-design.webp" alt="" style="width:56px;height:56px;object-fit:contain;display:block;transition:transform 320ms var(--ease-spring);">
         </div>
-        <h3 data-svc-title="" style="font-family:var(--font-display);font-weight:700;font-size:clamp(24px,2.8vw,48px);color:#F8F7F3;letter-spacing:-0.03em;margin:0;flex:1;transition:color 220ms;line-height:1.1;">Brand Design</h3>
-        <p data-svc-desc="" style="font-family:var(--font-body);font-size:var(--text-base);color:rgba(248,247,243,0.6);max-width:300px;margin:0;opacity:0;transition:opacity 220ms;text-align:right;line-height:var(--leading-relaxed);">Logo systems, visual identity, brand guidelines — the foundation every campaign needs to feel coherent.</p>
-        <div data-svc-arrow="" style="flex-shrink:0;width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(248,247,243,0.3);display:flex;align-items:center;justify-content:center;color:#F8F7F3;transition:border-color 240ms,color 240ms,transform 240ms cubic-bezier(0.16,1,0.3,1);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+        <h3 data-svc-title="" style="font-family:var(--font-display);font-weight:700;font-size:clamp(24px,2.8vw,48px);color:#0B0B0B;letter-spacing:-0.03em;margin:0;flex:1;transition:color 220ms;line-height:1.1;">Brand Design</h3>
+        <p data-svc-desc="" style="font-family:var(--font-body);font-size:var(--text-base);color:rgba(11,11,11,0.6);max-width:300px;margin:0;opacity:0;transition:opacity 220ms;text-align:right;line-height:var(--leading-relaxed);">Logo systems, visual identity, brand guidelines — the foundation every campaign needs to feel coherent.</p>
+        <div data-svc-arrow="" style="flex-shrink:0;width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(11,11,11,0.3);display:flex;align-items:center;justify-content:center;color:#0B0B0B;transition:border-color 240ms,color 240ms,transform 240ms cubic-bezier(0.16,1,0.3,1);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
       </div>
     </div>
   </div>
@@ -348,63 +424,63 @@
 
 
 <!-- ═══ 06 · PROCESS ═══ -->
-<section id="process" data-panel="" data-screen-label="Process" style="background:#0B0B0B;padding:clamp(80px,8vw,130px) clamp(24px,5vw,80px);position:relative;">
+<section id="process" data-panel="" data-screen-label="Process" style="background:#F3F3F1;padding:clamp(80px,8vw,130px) clamp(24px,5vw,80px);position:relative;">
     <div data-reveal="" style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:36px;flex-wrap:wrap;gap:20px;">
     <div>
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
-        <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(36px,4vw,64px);color:#F8F7F3;letter-spacing:var(--tracking-tighter);margin:0;line-height:1.04;" data-split="">How we work</h2>
+        <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(36px,4vw,64px);color:#0B0B0B;letter-spacing:var(--tracking-tighter);margin:0;line-height:1.04;" data-split="">How we work</h2>
       </div>
-      <p style="font-family: var(--font-body); font-size: var(--text-base); color: rgba(248,247,243,0.6); margin: 0; line-height: var(--leading-relaxed)">Four stages. No bloat. Straight to the work that matters.</p>
+      <p style="font-family: var(--font-body); font-size: var(--text-base); color: rgba(11,11,11,0.6); margin: 0; line-height: var(--leading-relaxed)">Four stages. No bloat. Straight to the work that matters.</p>
     </div>
   </div>
   <div id="process-journey" style="position:relative;width:100%;height:clamp(2000px,175vw,2600px);margin:0;">
     <svg id="journey-svg" viewBox="0 0 1000 1000" style="position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; z-index: 0; pointer-events: none; opacity: 0.16">
-      <path d="M120,80 C120,220 880,220 880,360 C880,500 120,500 120,640 C120,780 880,780 880,920" fill="none" stroke="rgba(248,247,243,0.16)" stroke-width="2"></path>
+      <path d="M120,80 C120,220 880,220 880,360 C880,500 120,500 120,640 C120,780 880,780 880,920" fill="none" stroke="rgba(11,11,11,0.16)" stroke-width="2"></path>
       <path id="journey-progress" d="M120,80 C120,220 880,220 880,360 C880,500 120,500 120,640 C120,780 880,780 880,920" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" style="filter:drop-shadow(0 0 4px rgba(255,255,255,0.55));"></path>
     </svg>
     <div id="journey-tip" style="position:absolute;left:12%;top:8%;width:14px;height:14px;border-radius:50%;background:#FFFFFF;transform:translate(-50%,-50%);box-shadow:0 0 10px 2px rgba(255,255,255,0.85),0 0 24px 7px rgba(255,255,255,0.35);opacity:0;transition:opacity 300ms ease;z-index:3;pointer-events:none;"></div>
 
     <!-- Node 01 — dot left of text -->
-    <div data-jnode="" style="position: absolute; left: 12%; top: 8%; transform: translate(-50%,-50%) scale(1); width: 20px; height: 20px; border-radius: 50%; background: rgba(248,247,243,0.22); transition: background 450ms var(--ease-spring),box-shadow 450ms var(--ease-spring),transform 450ms var(--ease-spring); z-index: 2; opacity: 1"></div>
+    <div data-jnode="" style="position: absolute; left: 12%; top: 8%; transform: translate(-50%,-50%) scale(1); width: 20px; height: 20px; border-radius: 50%; background: rgba(11,11,11,0.22); transition: background 450ms var(--ease-spring),box-shadow 450ms var(--ease-spring),transform 450ms var(--ease-spring); z-index: 2; opacity: 1"></div>
     <div data-jstep="" style="position:absolute;top:8%;left:calc(12% + 92px);transform:translateY(-50%);text-align:left;max-width:min(420px,40%);">
       <div data-jbody="" style="opacity:0.35;transform:translateY(10px);transition:opacity 550ms var(--ease-spring),transform 550ms var(--ease-spring);">
         <img src="uploads/opt/diagnose.webp" alt="" style="width:116px;height:auto;display:block;margin:0 0 22px 0;animation:icon-float 6s ease-in-out infinite;">
         <span style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#D8D8D8;display:block;margin-bottom:10px;">Stage 01</span>
-        <h3 style="font-family:var(--font-display);font-weight:700;font-size:clamp(24px,2.4vw,36px);color:#F8F7F3;letter-spacing:-0.025em;margin:0 0 12px;line-height:1.08;">Diagnose</h3>
-        <p style="font-family:var(--font-body);font-size:var(--text-base);color:rgba(248,247,243,0.6);line-height:var(--leading-relaxed);margin:0;">We analyze your brand's current visual language, competitive landscape, and untapped potential.</p>
+        <h3 style="font-family:var(--font-display);font-weight:700;font-size:clamp(24px,2.4vw,36px);color:#0B0B0B;letter-spacing:-0.025em;margin:0 0 12px;line-height:1.08;">Diagnose</h3>
+        <p style="font-family:var(--font-body);font-size:var(--text-base);color:rgba(11,11,11,0.6);line-height:var(--leading-relaxed);margin:0;">We analyze your brand's current visual language, competitive landscape, and untapped potential.</p>
       </div>
     </div>
 
     <!-- Node 02 — dot right of text -->
-    <div data-jnode="" style="position:absolute;left:88%;top:36%;transform:translate(-50%,-50%) scale(1);width:20px;height:20px;border-radius:50%;background:rgba(248,247,243,0.22);transition:background 450ms var(--ease-spring),box-shadow 450ms var(--ease-spring),transform 450ms var(--ease-spring);z-index:2;"></div>
+    <div data-jnode="" style="position:absolute;left:88%;top:36%;transform:translate(-50%,-50%) scale(1);width:20px;height:20px;border-radius:50%;background:rgba(11,11,11,0.22);transition:background 450ms var(--ease-spring),box-shadow 450ms var(--ease-spring),transform 450ms var(--ease-spring);z-index:2;"></div>
     <div data-jstep="" style="position:absolute;top:36%;right:calc(12% + 92px);transform:translateY(-50%);text-align:right;max-width:min(420px,40%);">
       <div data-jbody="" style="opacity:0.35;transform:translateY(10px);transition:opacity 550ms var(--ease-spring),transform 550ms var(--ease-spring);">
         <img src="uploads/opt/direction.webp" alt="" style="width:116px;height:auto;display:block;margin:0 0 22px auto;animation:icon-float 6.6s ease-in-out infinite;animation-delay:0.8s;">
         <span style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#D8D8D8;display:block;margin-bottom:10px;">Stage 02</span>
-        <h3 style="font-family:var(--font-display);font-weight:700;font-size:clamp(24px,2.4vw,36px);color:#F8F7F3;letter-spacing:-0.025em;margin:0 0 12px;line-height:1.08;">Direction</h3>
-        <p style="font-family:var(--font-body);font-size:var(--text-base);color:rgba(248,247,243,0.6);line-height:var(--leading-relaxed);margin:0;">We define the visual direction, content angles, and production roadmap.</p>
+        <h3 style="font-family:var(--font-display);font-weight:700;font-size:clamp(24px,2.4vw,36px);color:#0B0B0B;letter-spacing:-0.025em;margin:0 0 12px;line-height:1.08;">Direction</h3>
+        <p style="font-family:var(--font-body);font-size:var(--text-base);color:rgba(11,11,11,0.6);line-height:var(--leading-relaxed);margin:0;">We define the visual direction, content angles, and production roadmap.</p>
       </div>
     </div>
 
     <!-- Node 03 — dot left of text -->
-    <div data-jnode="" style="position:absolute;left:12%;top:64%;transform:translate(-50%,-50%) scale(1);width:20px;height:20px;border-radius:50%;background:rgba(248,247,243,0.22);transition:background 450ms var(--ease-spring),box-shadow 450ms var(--ease-spring),transform 450ms var(--ease-spring);z-index:2;"></div>
+    <div data-jnode="" style="position:absolute;left:12%;top:64%;transform:translate(-50%,-50%) scale(1);width:20px;height:20px;border-radius:50%;background:rgba(11,11,11,0.22);transition:background 450ms var(--ease-spring),box-shadow 450ms var(--ease-spring),transform 450ms var(--ease-spring);z-index:2;"></div>
     <div data-jstep="" style="position:absolute;top:64%;left:calc(12% + 92px);transform:translateY(-50%);text-align:left;max-width:min(420px,40%);">
       <div data-jbody="" style="opacity:0.35;transform:translateY(10px);transition:opacity 550ms var(--ease-spring),transform 550ms var(--ease-spring);">
         <img src="uploads/opt/production.webp" alt="" style="width:116px;height:auto;display:block;margin:0 0 22px 0;animation:icon-float 6.2s ease-in-out infinite;animation-delay:0.4s;">
         <span style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#D8D8D8;display:block;margin-bottom:10px;">Stage 03</span>
-        <h3 style="font-family:var(--font-display);font-weight:700;font-size:clamp(24px,2.4vw,36px);color:#F8F7F3;letter-spacing:-0.025em;margin:0 0 12px;line-height:1.08;">Production</h3>
-        <p style="font-family:var(--font-body);font-size:var(--text-base);color:rgba(248,247,243,0.6);line-height:var(--leading-relaxed);margin:0;">We build the assets — AI generation, photography, motion, editing — delivered and ready.</p>
+        <h3 style="font-family:var(--font-display);font-weight:700;font-size:clamp(24px,2.4vw,36px);color:#0B0B0B;letter-spacing:-0.025em;margin:0 0 12px;line-height:1.08;">Production</h3>
+        <p style="font-family:var(--font-body);font-size:var(--text-base);color:rgba(11,11,11,0.6);line-height:var(--leading-relaxed);margin:0;">We build the assets — AI generation, photography, motion, editing — delivered and ready.</p>
       </div>
     </div>
 
     <!-- Node 04 — dot right of text -->
-    <div data-jnode="" style="position:absolute;left:88%;top:92%;transform:translate(-50%,-50%) scale(1);width:20px;height:20px;border-radius:50%;background:rgba(248,247,243,0.22);transition:background 450ms var(--ease-spring),box-shadow 450ms var(--ease-spring),transform 450ms var(--ease-spring);z-index:2;"></div>
+    <div data-jnode="" style="position:absolute;left:88%;top:92%;transform:translate(-50%,-50%) scale(1);width:20px;height:20px;border-radius:50%;background:rgba(11,11,11,0.22);transition:background 450ms var(--ease-spring),box-shadow 450ms var(--ease-spring),transform 450ms var(--ease-spring);z-index:2;"></div>
     <div data-jstep="" style="position:absolute;top:92%;right:calc(12% + 92px);transform:translateY(-50%);text-align:right;max-width:min(420px,40%);">
       <div data-jbody="" style="opacity:0.35;transform:translateY(10px);transition:opacity 550ms var(--ease-spring),transform 550ms var(--ease-spring);">
         <img src="uploads/opt/optimize.webp" alt="" style="width:116px;height:auto;display:block;margin:0 0 22px auto;animation:icon-float 6.8s ease-in-out infinite;animation-delay:1.2s;">
         <span style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#D8D8D8;display:block;margin-bottom:10px;">Stage 04</span>
-        <h3 style="font-family:var(--font-display);font-weight:700;font-size:clamp(24px,2.4vw,36px);color:#F8F7F3;letter-spacing:-0.025em;margin:0 0 12px;line-height:1.08;">Optimize</h3>
-        <p style="font-family:var(--font-body);font-size:var(--text-base);color:rgba(248,247,243,0.6);line-height:var(--leading-relaxed);margin:0;">We test, learn, and refine — tuning the creative system for continuous performance.</p>
+        <h3 style="font-family:var(--font-display);font-weight:700;font-size:clamp(24px,2.4vw,36px);color:#0B0B0B;letter-spacing:-0.025em;margin:0 0 12px;line-height:1.08;">Optimize</h3>
+        <p style="font-family:var(--font-body);font-size:var(--text-base);color:rgba(11,11,11,0.6);line-height:var(--leading-relaxed);margin:0;">We test, learn, and refine — tuning the creative system for continuous performance.</p>
       </div>
     </div>
   </div>
@@ -413,115 +489,43 @@
 
 
 
-<!-- ═══ 03 · BRAND VISUAL DNA ═══ -->
-<section id="brand-dna" data-panel="" data-screen-label="Brand Visual DNA" style="background:#151515;padding:clamp(80px,8vw,130px) clamp(24px,5vw,80px);position:relative;">
-    <div data-reveal="" style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:60px;flex-wrap:wrap;gap:20px;">
-    <div>
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
-        <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(36px,4vw,64px);color:#F8F7F3;letter-spacing:var(--tracking-tighter);margin:0;line-height:1.04;" data-split="">Brand visual DNA</h2>
-      </div>
-      <p style="font-family:var(--font-body);font-size:var(--text-base);color:rgba(248,247,243,0.6);max-width:420px;margin:0;line-height:var(--leading-relaxed);">We don't just make things look good. We analyze, decode, and rebuild how your brand shows up.</p>
-    </div>
-  </div>
-  <div id="brand-dna-grid" data-reveal="" data-reveal-delay="140" style="display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:clamp(178px,19vw,228px);gap:14px;">
 
-    <!-- 01 · Visual Language — large 2x2 -->
-    <div style="grid-column:span 2;grid-row:span 2;background:#151515;border:1px solid rgba(248,247,243,0.09);border-radius:var(--radius-lg);padding:clamp(28px,3vw,44px);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;position:relative;">
-      <div>
-        <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#D8D8D8;margin-bottom:16px;">01 · Visual Language</div>
-        <h3 style="font-family:var(--font-display);font-weight:700;font-size:clamp(22px,2.1vw,32px);color:#F8F7F3;letter-spacing:-0.025em;margin:0 0 12px;line-height:1.14;">The look, decoded</h3>
-        <p style="font-family:var(--font-body);font-size:var(--text-base);color:rgba(248,247,243,0.6);line-height:1.6;margin:0;max-width:340px;">Color, form, texture, composition — the coded DNA of how your brand reads before a word is.</p>
-      </div>
-      <div>
-        <div style="font-family:var(--font-display);font-weight:700;font-size:clamp(72px,10vw,150px);line-height:0.82;letter-spacing:-0.05em;color:#F8F7F3;margin-bottom:24px;">Aa</div>
-        <div style="display:flex;gap:10px;align-items:center;">
-          <div style="width:26px;height:26px;border-radius:50%;background:#FDFCF8;border:1px solid rgba(248,247,243,0.16);"></div>
-          <div style="width:26px;height:26px;border-radius:50%;background:#0B0B0B;border:1px solid rgba(248,247,243,0.18);"></div>
-          <div style="width:26px;height:26px;border-radius:50%;background:#FFFFFF;"></div>
-          <div style="width:26px;height:26px;border-radius:50%;background:#A48CFF;"></div>
-          <div style="width:26px;height:26px;border-radius:50%;background:#D6C7B1;"></div>
-          <div style="width:26px;height:26px;border-radius:50%;background:#D8D8D8;"></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 02 · Content Hooks — wide 2x1 -->
-    <div style="grid-column:span 2;background:#151515;border:1px solid rgba(248,247,243,0.09);border-radius:var(--radius-lg);padding:clamp(26px,2.6vw,40px);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;">
-      <div>
-        <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#A48CFF;margin-bottom:12px;">02 · Content Hooks</div>
-        <h3 style="font-family:var(--font-display);font-weight:700;font-size:clamp(20px,1.8vw,28px);color:#F8F7F3;letter-spacing:-0.025em;margin:0;line-height:1.14;">The angles that make people stop</h3>
-      </div>
-      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;">
-        <span style="font-family:var(--font-body);font-size:13px;font-weight:500;color:rgba(248,247,243,0.6);background:#151515;border:1px solid rgba(248,247,243,0.16);padding:7px 14px;border-radius:var(--radius-full);">Before / after</span>
-        <span style="font-family:var(--font-body);font-size:13px;font-weight:500;color:rgba(248,247,243,0.6);background:#151515;border:1px solid rgba(248,247,243,0.16);padding:7px 14px;border-radius:var(--radius-full);">POV</span>
-        <span style="font-family:var(--font-body);font-size:13px;font-weight:500;color:#0B0B0B;background:#FFFFFF;border:1px solid #FFFFFF;padding:7px 14px;border-radius:var(--radius-full);">Unboxing</span>
-        <span style="font-family:var(--font-body);font-size:13px;font-weight:500;color:rgba(248,247,243,0.6);background:#151515;border:1px solid rgba(248,247,243,0.16);padding:7px 14px;border-radius:var(--radius-full);">Founder story</span>
-        <span style="font-family:var(--font-body);font-size:13px;font-weight:500;color:rgba(248,247,243,0.6);background:#151515;border:1px solid rgba(248,247,243,0.16);padding:7px 14px;border-radius:var(--radius-full);">Behind the scenes</span>
-        <span style="font-family:var(--font-body);font-size:13px;font-weight:500;color:rgba(248,247,243,0.6);background:#151515;border:1px solid rgba(248,247,243,0.16);padding:7px 14px;border-radius:var(--radius-full);">Teaser drop</span>
-      </div>
-    </div>
-
-    <!-- 03 · Campaign Potential — 1x1 -->
-    <div style="background:#151515;border:1px solid rgba(248,247,243,0.09);border-radius:var(--radius-lg);padding:clamp(24px,2.4vw,32px);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;">
-      <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#D8D8D8;">03 · Potential</div>
-      <div style="display:flex;align-items:flex-end;gap:6px;height:56px;margin-top:8px;">
-        <div style="flex:1;height:34%;background:rgba(248,247,243,0.16);border-radius:3px;"></div>
-        <div style="flex:1;height:52%;background:rgba(248,247,243,0.16);border-radius:3px;"></div>
-        <div style="flex:1;height:68%;background:rgba(248,247,243,0.16);border-radius:3px;"></div>
-        <div style="flex:1;height:82%;background:rgba(248,247,243,0.16);border-radius:3px;"></div>
-        <div style="flex:1;height:100%;background:#FFFFFF;border-radius:3px;"></div>
-      </div>
-      <div style="font-family:var(--font-display);font-weight:700;font-size:clamp(26px,2.4vw,34px);color:#F8F7F3;letter-spacing:-0.03em;line-height:1;">+240%<span style="font-family:var(--font-body);font-size:12px;font-weight:500;color:#8C8880;letter-spacing:0;margin-left:8px;">campaign reach</span></div>
-    </div>
-
-    <!-- 04 · Social Identity — 1x1 -->
-    <div style="background:#151515;border:1px solid rgba(248,247,243,0.09);border-radius:var(--radius-lg);padding:clamp(24px,2.4vw,32px);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;">
-      <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#A48CFF;">04 · Social Identity</div>
-      <div style="display:flex;flex-direction:column;gap:9px;margin:6px 0;">
-        <div style="display:flex;align-items:center;gap:10px;"><div style="width:22px;height:22px;border-radius:50%;background:#A48CFF;flex-shrink:0;"></div><div style="flex:1;height:8px;border-radius:4px;background:rgba(248,247,243,0.16);"></div></div>
-        <div style="height:8px;border-radius:4px;background:rgba(248,247,243,0.12);width:100%;"></div>
-        <div style="height:8px;border-radius:4px;background:rgba(248,247,243,0.12);width:72%;"></div>
-      </div>
-      <div style="font-family:var(--font-body);font-size:13px;color:rgba(248,247,243,0.6);line-height:1.4;">Tone, pacing, format — locked in.</div>
-    </div>
-  </div>
-</section>
 
 
 
 
 <!-- ═══ 07 · PROOF ═══ -->
-<section id="testimonials" data-panel="" data-screen-label="Proof" style="background:#0B0B0B;padding:clamp(80px,8vw,130px) clamp(24px,5vw,80px);position:relative;z-index:5;">
+<section id="testimonials" data-panel="" data-screen-label="Proof" style="background:#F3F3F1;padding:clamp(80px,8vw,130px) clamp(24px,5vw,80px);position:relative;z-index:5;">
     <div data-reveal="" style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:52px;flex-wrap:wrap;gap:20px;">
     <div>
-      <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(36px,4vw,64px);color:#F8F7F3;letter-spacing:var(--tracking-tighter);margin:0 0 10px;line-height:1.04;" data-split="">Proof</h2>
+      <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(36px,4vw,64px);color:#0B0B0B;letter-spacing:var(--tracking-tighter);margin:0 0 10px;line-height:1.04;" data-split="">Proof</h2>
       <p style="font-family:var(--font-body);font-size:var(--text-base);color:#8C8880;max-width:360px;margin:0;line-height:var(--leading-relaxed);">The reactions when the work goes live. Real brands, real numbers.</p>
     </div>
   </div>
   <div id="testimonials-grid" data-reveal="" data-reveal-delay="100" style="display:flex;gap:20px;align-items:stretch;">
-    <a href="work-alix-avien.html" data-proof-card="" style="flex:1 1 0;min-width:300px;background:linear-gradient(180deg,#151515 0%,#0b0b0b 100%);border:1px solid rgba(248,247,243,0.09);border-radius:28px 28px 200px 200px / 28px 28px 132px 132px;padding:64px 36px 76px;display:flex;flex-direction:column;align-items:center;text-align:center;text-decoration:none;transition:border-color 260ms ease;">
+    <a href="work-alix-avien.html" data-proof-card="" style="flex:1 1 0;min-width:300px;background:linear-gradient(180deg,#E9E9E5 0%,#F3F3F1 100%);border:1px solid rgba(11,11,11,0.09);border-radius:28px 28px 200px 200px / 28px 28px 132px 132px;padding:64px 36px 76px;display:flex;flex-direction:column;align-items:center;text-align:center;text-decoration:none;transition:border-color 260ms ease;">
       <div style="height:100px;display:flex;align-items:center;justify-content:center;margin-bottom:76px;">
-        <img src="uploads/alix avien logo.png" alt="" style="height:20px;width:auto;filter:brightness(0) invert(1);display:block;">
+        <img src="uploads/alix avien logo.png" alt="" style="height:20px;width:auto;filter:brightness(0);display:block;">
       </div>
-      <h3 style="font-family:var(--font-display);font-weight:700;font-size:clamp(20px,1.6vw,26px);color:#F8F7F3;letter-spacing:-0.02em;line-height:1.18;margin:0 0 18px;text-wrap:balance;">A site built to sell</h3>
-      <p style="font-family:var(--font-body);font-size:15px;color:rgba(248,247,243,0.48);line-height:1.62;margin:0 0 40px;max-width:290px;text-wrap:pretty;">Website and funnel work with studio-grade product visuals that lifted Alix Avien’s sales.</p>
-      <span data-proof-btn="" id="proof-btn-1" style="margin-top:auto;display:inline-block;position:relative;overflow:hidden;font-family:var(--font-body);font-size:14px;font-weight:600;color:#F8F7F3;background:linear-gradient(#0d0d0d,#0d0d0d) padding-box,linear-gradient(var(--border-angle),rgba(255,255,255,0.03) 0%,rgba(255,255,255,0.15) 25%,rgba(255,255,255,0.6) 46%,rgba(255,255,255,0.6) 54%,rgba(255,255,255,0.15) 75%,rgba(255,255,255,0.03) 100%) border-box;border:1px solid transparent;border-radius:60px;padding:14px 34px;z-index:0;transition:color 320ms var(--ease-standard);"><span style="position:absolute;left:50%;bottom:0;width:140%;aspect-ratio:1;border-radius:50%;background:#F8F7F3;transform:translate(-50%,50%) scale(0);transform-origin:center bottom;transition:transform 480ms var(--ease-spring);z-index:-1;" class="btn-circle"></span>See case study</span>
+      <h3 style="font-family:var(--font-display);font-weight:700;font-size:clamp(20px,1.6vw,26px);color:#0B0B0B;letter-spacing:-0.02em;line-height:1.18;margin:0 0 18px;text-wrap:balance;">A site built to sell</h3>
+      <p style="font-family:var(--font-body);font-size:15px;color:rgba(11,11,11,0.48);line-height:1.62;margin:0 0 40px;max-width:290px;text-wrap:pretty;">Website and funnel work with studio-grade product visuals that lifted Alix Avien’s sales.</p>
+      <span data-proof-btn="" id="proof-btn-1" style="margin-top:auto;display:inline-block;position:relative;overflow:hidden;font-family:var(--font-body);font-size:14px;font-weight:600;color:#0B0B0B;background:linear-gradient(#EDEDEA,#EDEDEA) padding-box,linear-gradient(var(--border-angle),rgba(255,255,255,0.03) 0%,rgba(255,255,255,0.15) 25%,rgba(255,255,255,0.6) 46%,rgba(255,255,255,0.6) 54%,rgba(255,255,255,0.15) 75%,rgba(255,255,255,0.03) 100%) border-box;border:1px solid transparent;border-radius:60px;padding:14px 34px;z-index:0;transition:color 320ms var(--ease-standard);"><span style="position:absolute;left:50%;bottom:0;width:140%;aspect-ratio:1;border-radius:50%;background:#0B0B0B;transform:translate(-50%,50%) scale(0);transform-origin:center bottom;transition:transform 480ms var(--ease-spring);z-index:-1;" class="btn-circle"></span>See case study</span>
     </a>
-    <a href="work-ino-beauty.html" data-proof-card="" style="flex:1 1 0;min-width:300px;background:linear-gradient(180deg,#151515 0%,#0b0b0b 100%);border:1px solid rgba(248,247,243,0.09);border-radius:28px 28px 200px 200px / 28px 28px 132px 132px;padding:64px 36px 76px;display:flex;flex-direction:column;align-items:center;text-align:center;text-decoration:none;transition:border-color 260ms ease;">
+    <a href="work-ino-beauty.html" data-proof-card="" style="flex:1 1 0;min-width:300px;background:linear-gradient(180deg,#E9E9E5 0%,#F3F3F1 100%);border:1px solid rgba(11,11,11,0.09);border-radius:28px 28px 200px 200px / 28px 28px 132px 132px;padding:64px 36px 76px;display:flex;flex-direction:column;align-items:center;text-align:center;text-decoration:none;transition:border-color 260ms ease;">
       <div style="height:100px;display:flex;align-items:center;justify-content:center;margin-bottom:76px;">
-        <img src="uploads/ino logo.svg" alt="" style="height:24px;width:auto;filter:brightness(0) invert(1);display:block;">
+        <img src="uploads/ino logo.svg" alt="" style="height:24px;width:auto;filter:brightness(0);display:block;">
       </div>
-      <h3 style="font-family:var(--font-display);font-weight:700;font-size:clamp(20px,1.6vw,26px);color:#F8F7F3;letter-spacing:-0.02em;line-height:1.18;margin:0 0 18px;text-wrap:balance;">Studio-grade product visuals</h3>
-      <p style="font-family:var(--font-body);font-size:15px;color:rgba(248,247,243,0.48);line-height:1.62;margin:0 0 40px;max-width:290px;text-wrap:pretty;">Marketplace storefronts and campaign visuals that lifted INO Beauty’s conversion across Trendyol and Hepsiburada.</p>
-      <span data-proof-btn="" id="proof-btn-2" style="margin-top:auto;display:inline-block;position:relative;overflow:hidden;font-family:var(--font-body);font-size:14px;font-weight:600;color:#F8F7F3;background:linear-gradient(#0d0d0d,#0d0d0d) padding-box,linear-gradient(var(--border-angle),rgba(255,255,255,0.03) 0%,rgba(255,255,255,0.15) 25%,rgba(255,255,255,0.6) 46%,rgba(255,255,255,0.6) 54%,rgba(255,255,255,0.15) 75%,rgba(255,255,255,0.03) 100%) border-box;border:1px solid transparent;border-radius:60px;padding:14px 34px;z-index:0;transition:color 320ms var(--ease-standard);"><span style="position:absolute;left:50%;bottom:0;width:140%;aspect-ratio:1;border-radius:50%;background:#F8F7F3;transform:translate(-50%,50%) scale(0);transform-origin:center bottom;transition:transform 480ms var(--ease-spring);z-index:-1;" class="btn-circle"></span>See case study</span>
+      <h3 style="font-family:var(--font-display);font-weight:700;font-size:clamp(20px,1.6vw,26px);color:#0B0B0B;letter-spacing:-0.02em;line-height:1.18;margin:0 0 18px;text-wrap:balance;">Studio-grade product visuals</h3>
+      <p style="font-family:var(--font-body);font-size:15px;color:rgba(11,11,11,0.48);line-height:1.62;margin:0 0 40px;max-width:290px;text-wrap:pretty;">Marketplace storefronts and campaign visuals that lifted INO Beauty’s conversion across Trendyol and Hepsiburada.</p>
+      <span data-proof-btn="" id="proof-btn-2" style="margin-top:auto;display:inline-block;position:relative;overflow:hidden;font-family:var(--font-body);font-size:14px;font-weight:600;color:#0B0B0B;background:linear-gradient(#EDEDEA,#EDEDEA) padding-box,linear-gradient(var(--border-angle),rgba(255,255,255,0.03) 0%,rgba(255,255,255,0.15) 25%,rgba(255,255,255,0.6) 46%,rgba(255,255,255,0.6) 54%,rgba(255,255,255,0.15) 75%,rgba(255,255,255,0.03) 100%) border-box;border:1px solid transparent;border-radius:60px;padding:14px 34px;z-index:0;transition:color 320ms var(--ease-standard);"><span style="position:absolute;left:50%;bottom:0;width:140%;aspect-ratio:1;border-radius:50%;background:#0B0B0B;transform:translate(-50%,50%) scale(0);transform-origin:center bottom;transition:transform 480ms var(--ease-spring);z-index:-1;" class="btn-circle"></span>See case study</span>
     </a>
-    <a href="work-muse-lab.html" data-proof-card="" style="flex:1 1 0;min-width:300px;background:linear-gradient(180deg,#151515 0%,#0b0b0b 100%);border:1px solid rgba(248,247,243,0.09);border-radius:28px 28px 200px 200px / 28px 28px 132px 132px;padding:64px 36px 76px;display:flex;flex-direction:column;align-items:center;text-align:center;text-decoration:none;transition:border-color 260ms ease;">
+    <a href="work-muse-lab.html" data-proof-card="" style="flex:1 1 0;min-width:300px;background:linear-gradient(180deg,#E9E9E5 0%,#F3F3F1 100%);border:1px solid rgba(11,11,11,0.09);border-radius:28px 28px 200px 200px / 28px 28px 132px 132px;padding:64px 36px 76px;display:flex;flex-direction:column;align-items:center;text-align:center;text-decoration:none;transition:border-color 260ms ease;">
       <div style="height:100px;display:flex;align-items:center;justify-content:center;margin-bottom:76px;">
-        <img src="uploads/muselab logo.svg" alt="" style="height:22px;width:auto;filter:brightness(0) invert(1);display:block;">
+        <img src="uploads/muselab logo.svg" alt="" style="height:22px;width:auto;filter:brightness(0);display:block;">
       </div>
-      <h3 style="font-family:var(--font-display);font-weight:700;font-size:clamp(20px,1.6vw,26px);color:#F8F7F3;letter-spacing:-0.02em;line-height:1.18;margin:0 0 18px;text-wrap:balance;">Editorial identity, end to end</h3>
-      <p style="font-family:var(--font-body);font-size:15px;color:rgba(248,247,243,0.48);line-height:1.62;margin:0 0 40px;max-width:290px;text-wrap:pretty;">A dark, editorial visual system and product campaign that made Muse Lab impossible to scroll past.</p>
-      <span data-proof-btn="" id="proof-btn-3" style="margin-top:auto;display:inline-block;position:relative;overflow:hidden;font-family:var(--font-body);font-size:14px;font-weight:600;color:#F8F7F3;background:linear-gradient(#0d0d0d,#0d0d0d) padding-box,linear-gradient(var(--border-angle),rgba(255,255,255,0.03) 0%,rgba(255,255,255,0.15) 25%,rgba(255,255,255,0.6) 46%,rgba(255,255,255,0.6) 54%,rgba(255,255,255,0.15) 75%,rgba(255,255,255,0.03) 100%) border-box;border:1px solid transparent;border-radius:60px;padding:14px 34px;z-index:0;transition:color 320ms var(--ease-standard);"><span style="position:absolute;left:50%;bottom:0;width:140%;aspect-ratio:1;border-radius:50%;background:#F8F7F3;transform:translate(-50%,50%) scale(0);transform-origin:center bottom;transition:transform 480ms var(--ease-spring);z-index:-1;" class="btn-circle"></span>See case study</span>
+      <h3 style="font-family:var(--font-display);font-weight:700;font-size:clamp(20px,1.6vw,26px);color:#0B0B0B;letter-spacing:-0.02em;line-height:1.18;margin:0 0 18px;text-wrap:balance;">Editorial identity, end to end</h3>
+      <p style="font-family:var(--font-body);font-size:15px;color:rgba(11,11,11,0.48);line-height:1.62;margin:0 0 40px;max-width:290px;text-wrap:pretty;">A dark, editorial visual system and product campaign that made Muse Lab impossible to scroll past.</p>
+      <span data-proof-btn="" id="proof-btn-3" style="margin-top:auto;display:inline-block;position:relative;overflow:hidden;font-family:var(--font-body);font-size:14px;font-weight:600;color:#0B0B0B;background:linear-gradient(#EDEDEA,#EDEDEA) padding-box,linear-gradient(var(--border-angle),rgba(255,255,255,0.03) 0%,rgba(255,255,255,0.15) 25%,rgba(255,255,255,0.6) 46%,rgba(255,255,255,0.6) 54%,rgba(255,255,255,0.15) 75%,rgba(255,255,255,0.03) 100%) border-box;border:1px solid transparent;border-radius:60px;padding:14px 34px;z-index:0;transition:color 320ms var(--ease-standard);"><span style="position:absolute;left:50%;bottom:0;width:140%;aspect-ratio:1;border-radius:50%;background:#0B0B0B;transform:translate(-50%,50%) scale(0);transform-origin:center bottom;transition:transform 480ms var(--ease-spring);z-index:-1;" class="btn-circle"></span>See case study</span>
     </a>
   </div>
 </section>
@@ -529,71 +533,96 @@
 
 
 <!-- ═══ 06 · CONTACT ═══ -->
-<section id="contact" data-panel="" data-screen-label="Contact" style="background:#0B0B0B;padding-bottom:0;padding:clamp(80px,7vw,110px) clamp(24px,5vw,80px);position:relative;z-index:10;">
+<section id="contact" data-panel="" data-screen-label="Contact" style="background:#F3F3F1;padding-bottom:0;padding:clamp(80px,7vw,110px) clamp(24px,5vw,80px);position:relative;z-index:10;">
   <div id="contact-form-wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(48px,6vw,100px);align-items:start;">
     <div>
-      <h2 data-spray-host="" style="font-family:var(--font-display);font-weight:700;font-size:clamp(36px,4.2vw,64px);color:#F8F7F3;letter-spacing:-0.04em;line-height:1.04;margin:0 0 20px;text-wrap:pretty;"><span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">Got</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">a</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">brand</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">that</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">looks</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">too</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);" data-spray="scribble" data-spray-delay="700">normal?</span></span><span style="color: rgb(255, 255, 255);"> <br><span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">Let's</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">fix</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">that.</span></span></span></h2>
-      <p style="font-family:var(--font-body);font-size:clamp(15px,1.2vw,17px);color:rgba(248,247,243,0.4);margin:0 0 56px;max-width:380px;line-height:var(--leading-relaxed);">Tell us about your brand. We'll figure out the rest.</p>
+      <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(36px,4.2vw,64px);color:#0B0B0B;letter-spacing:-0.04em;line-height:1.04;margin:0 0 20px;text-wrap:pretty;"><span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">Got</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">a</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">brand</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">that</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">looks</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">too</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">normal?</span></span><span style="color: rgb(255, 255, 255);"> <br><span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">Let's</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">fix</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.15; padding-bottom: 0.08em;"><span data-wm-i="1" style="display: inline-block; transform: translateY(0px); transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);">that.</span></span></span></h2>
+      <p style="font-family:var(--font-body);font-size:clamp(15px,1.2vw,17px);color:rgba(11,11,11,0.4);margin:0 0 56px;max-width:380px;line-height:var(--leading-relaxed);">Tell us about your brand. We'll figure out the rest.</p>
 
     </div>
     <div>
       <div id="contact-fields-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:0 40px;">
-        <div style="border-bottom:1px solid rgba(248,247,243,0.12);padding:18px 0;display:flex;flex-direction:column;gap:8px;"><label style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,247,243,0.28);">Name</label><input type="text" name="name" placeholder="Your name" style="background:transparent;border:none;outline:none;font-family:var(--font-body);font-size:16px;color:#F8F7F3;padding:0;width:100%;"></div>
-        <div style="border-bottom:1px solid rgba(248,247,243,0.12);padding:18px 0;display:flex;flex-direction:column;gap:8px;"><label style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,247,243,0.28);">Brand</label><input type="text" name="brand" placeholder="Your brand name" style="background:transparent;border:none;outline:none;font-family:var(--font-body);font-size:16px;color:#F8F7F3;padding:0;width:100%;"></div>
-        <div style="border-bottom:1px solid rgba(248,247,243,0.12);padding:18px 0;display:flex;flex-direction:column;gap:8px;"><label style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,247,243,0.28);">Email</label><input type="email" name="email" placeholder="hello@brand.co" style="background:transparent;border:none;outline:none;font-family:var(--font-body);font-size:16px;color:#F8F7F3;padding:0;width:100%;"></div>
-        <div style="border-bottom:1px solid rgba(248,247,243,0.12);padding:18px 0;display:flex;flex-direction:column;gap:8px;"><label style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,247,243,0.28);">What do you need?</label><input type="text" name="need" placeholder="Campaign, socials, AI visuals..." style="background:transparent;border:none;outline:none;font-family:var(--font-body);font-size:16px;color:#F8F7F3;padding:0;width:100%;"></div>
-        <div style="grid-column:span 2;border-bottom:1px solid rgba(248,247,243,0.12);padding:20px 0;">
-          <label style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,247,243,0.28);display:block;margin-bottom:14px;">Budget range</label>
+        <div style="border-bottom:1px solid rgba(11,11,11,0.12);padding:18px 0;display:flex;flex-direction:column;gap:8px;"><label style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(11,11,11,0.28);">Name</label><input type="text" name="name" placeholder="Your name" style="background:transparent;border:none;outline:none;font-family:var(--font-body);font-size:16px;color:#0B0B0B;padding:0;width:100%;"></div>
+        <div style="border-bottom:1px solid rgba(11,11,11,0.12);padding:18px 0;display:flex;flex-direction:column;gap:8px;"><label style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(11,11,11,0.28);">Brand</label><input type="text" name="brand" placeholder="Your brand name" style="background:transparent;border:none;outline:none;font-family:var(--font-body);font-size:16px;color:#0B0B0B;padding:0;width:100%;"></div>
+        <div style="border-bottom:1px solid rgba(11,11,11,0.12);padding:18px 0;display:flex;flex-direction:column;gap:8px;"><label style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(11,11,11,0.28);">Email</label><input type="email" name="email" placeholder="hello@brand.co" style="background:transparent;border:none;outline:none;font-family:var(--font-body);font-size:16px;color:#0B0B0B;padding:0;width:100%;"></div>
+        <div style="border-bottom:1px solid rgba(11,11,11,0.12);padding:18px 0;display:flex;flex-direction:column;gap:8px;"><label style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(11,11,11,0.28);">What do you need?</label><input type="text" name="need" placeholder="Campaign, socials, AI visuals..." style="background:transparent;border:none;outline:none;font-family:var(--font-body);font-size:16px;color:#0B0B0B;padding:0;width:100%;"></div>
+        <div style="grid-column:span 2;border-bottom:1px solid rgba(11,11,11,0.12);padding:20px 0;">
+          <label style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(11,11,11,0.28);display:block;margin-bottom:14px;">Budget range</label>
           <div style="display:flex;gap:8px;flex-wrap:wrap;">
-            <button data-budget-pill="" style="font-family:var(--font-body);font-size:13px;font-weight:500;padding:8px 18px;border-radius:var(--radius-full);border:1px solid rgba(248,247,243,0.2);background:transparent;color:rgba(248,247,243,0.45);transition:all 200ms var(--ease-spring);">Under $5k</button>
-            <button data-budget-pill="" style="font-family:var(--font-body);font-size:13px;font-weight:500;padding:8px 18px;border-radius:var(--radius-full);border:1px solid rgba(248,247,243,0.2);background:transparent;color:rgba(248,247,243,0.45);transition:all 200ms var(--ease-spring);">$5k — $15k</button>
-            <button data-budget-pill="" style="font-family:var(--font-body);font-size:13px;font-weight:500;padding:8px 18px;border-radius:var(--radius-full);border:1px solid rgba(248,247,243,0.2);background:transparent;color:rgba(248,247,243,0.45);transition:all 200ms var(--ease-spring);">$15k — $30k</button>
-            <button data-budget-pill="" style="font-family:var(--font-body);font-size:13px;font-weight:500;padding:8px 18px;border-radius:var(--radius-full);border:1px solid rgba(248,247,243,0.2);background:transparent;color:rgba(248,247,243,0.45);transition:all 200ms var(--ease-spring);">$30k+</button>
+            <button data-budget-pill="" style="font-family:var(--font-body);font-size:13px;font-weight:500;padding:8px 18px;border-radius:var(--radius-full);border:1px solid rgba(11,11,11,0.2);background:transparent;color:rgba(11,11,11,0.45);transition:all 200ms var(--ease-spring);">Under $5k</button>
+            <button data-budget-pill="" style="font-family:var(--font-body);font-size:13px;font-weight:500;padding:8px 18px;border-radius:var(--radius-full);border:1px solid rgba(11,11,11,0.2);background:transparent;color:rgba(11,11,11,0.45);transition:all 200ms var(--ease-spring);">$5k — $15k</button>
+            <button data-budget-pill="" style="font-family:var(--font-body);font-size:13px;font-weight:500;padding:8px 18px;border-radius:var(--radius-full);border:1px solid rgba(11,11,11,0.2);background:transparent;color:rgba(11,11,11,0.45);transition:all 200ms var(--ease-spring);">$15k — $30k</button>
+            <button data-budget-pill="" style="font-family:var(--font-body);font-size:13px;font-weight:500;padding:8px 18px;border-radius:var(--radius-full);border:1px solid rgba(11,11,11,0.2);background:transparent;color:rgba(11,11,11,0.45);transition:all 200ms var(--ease-spring);">$30k+</button>
           </div>
         </div>
-        <div style="grid-column:span 2;border-bottom:1px solid rgba(248,247,243,0.12);padding:18px 0;display:flex;flex-direction:column;gap:8px;"><label style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,247,243,0.28);">Website / Instagram</label><input type="text" name="website" placeholder="brand.com or @yourbrand" style="background:transparent;border:none;outline:none;font-family:var(--font-body);font-size:16px;color:#F8F7F3;padding:0;width:100%;"></div>
+        <div style="grid-column:span 2;border-bottom:1px solid rgba(11,11,11,0.12);padding:18px 0;display:flex;flex-direction:column;gap:8px;"><label style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(11,11,11,0.28);">Website / Instagram</label><input type="text" name="website" placeholder="brand.com or @yourbrand" style="background:transparent;border:none;outline:none;font-family:var(--font-body);font-size:16px;color:#0B0B0B;padding:0;width:100%;"></div>
         <div style="grid-column:span 2;padding-top:40px;">
-          <button id="contact-submit" class="hv-index-3" style="font-family:var(--font-body);font-size:16px;font-weight:600;color:#0B0B0B;background:#FFFFFF;padding:16px 38px;border:none;border-radius:var(--radius-full);display:inline-flex;align-items:center;gap:10px;transition:all 230ms var(--ease-spring);cursor:pointer;">Start a project <svg id="contact-submit-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" style="transition:transform 280ms var(--ease-spring);"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
+          <button id="contact-submit" class="hv-index-3" style="font-family:var(--font-body);font-size:16px;font-weight:600;color:#F3F3F1;background:#0B0B0B;padding:16px 38px;border:none;border-radius:var(--radius-full);display:inline-flex;align-items:center;gap:10px;transition:all 230ms var(--ease-spring);cursor:pointer;">Start a project <svg id="contact-submit-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" style="transition:transform 280ms var(--ease-spring);"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
         </div>
       </div>
     </div>
   </div>
   <div id="contact-success" style="display:none;max-width:480px;padding:48px 0;">
     <div style="width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;margin-bottom:24px;"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 11L9 16L18 7" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
-    <h3 style="font-family:var(--font-display);font-weight:700;font-size:clamp(24px,2.5vw,36px);color:#F8F7F3;letter-spacing:-0.03em;margin:0 0 12px;">We'll be in touch.</h3>
-    <p style="font-family:var(--font-body);font-size:var(--text-base);color:rgba(248,247,243,0.45);margin:0;line-height:var(--leading-relaxed);">Give us 48 hours. We review every brief personally.</p>
+    <h3 style="font-family:var(--font-display);font-weight:700;font-size:clamp(24px,2.5vw,36px);color:#0B0B0B;letter-spacing:-0.03em;margin:0 0 12px;">We'll be in touch.</h3>
+    <p style="font-family:var(--font-body);font-size:var(--text-base);color:rgba(11,11,11,0.45);margin:0;line-height:var(--leading-relaxed);">Give us 48 hours. We review every brief personally.</p>
   </div>
 </section>
 
 
 <!-- ═══ FOOTER ═══ -->
-<footer id="footer" data-panel="" data-screen-label="Footer" style="background:#0B0B0B;padding:64px clamp(24px,5vw,80px) 40px;">
-  <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:64px;flex-wrap:wrap;gap:48px;">
+<footer id="footer" data-screen-label="Footer" style="background:#F3F3F1;position:relative;overflow:hidden;">
+  <style>
+    .v-say{font-family:'Archivo',Impact,sans-serif;font-stretch:62%;font-weight:900;text-transform:uppercase;color:#0B0B0B;line-height:.8;letter-spacing:-.01em;font-size:23.5vw;white-space:nowrap;margin:0;padding:9vw 0 5vw;text-align:center}
+    .v-fcols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;border-top:1px solid rgba(11,11,11,.12)}
+    .v-fcols>div{padding:24px 24px 40px;border-left:1px solid rgba(11,11,11,.12)}
+    .v-fcols>div:first-child{border-left:none}
+    .v-flabel{font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(11,11,11,.5);margin-bottom:14px}
+    .v-fbig{font-family:'Archivo',Impact,sans-serif;font-stretch:62%;font-weight:900;text-transform:uppercase;font-size:22px;line-height:1.15;color:#0B0B0B;text-decoration:none;display:block}
+    .v-fbig:hover{font-weight:300}
+    .v-fsmall{font-family:var(--font-body);font-size:13px;line-height:1.7;color:#0B0B0B;display:block;text-decoration:none}
+    .v-fbar{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;border-top:1px solid rgba(11,11,11,.12);font-family:var(--font-body);font-size:12px;color:rgba(11,11,11,.6)}
+    @media(max-width:860px){.v-fcols{grid-template-columns:1fr 1fr}.v-fcols>div:nth-child(3){border-left:none}}
+  </style>
+  <div style="position:relative">
+    <h2 class="v-say v-big" aria-label="Say hello">Say hello</h2>
+    <div class="v-stk fs1" style="left:3%;top:9%;--r:-7deg"><div class="v-stk-in"><div class="v-face v-pill v-holo v-holo2">Let's fix that.</div></div></div>
+    <div class="v-stk fs2" style="right:4%;top:6%;--r:8deg"><div class="v-stk-in" style="animation-delay:-2s"><div class="v-face v-circle v-holo"><span class="v-dot"><img src="uploads/opt/joke-smile.webp" alt="" draggable="false"></span></div></div></div>
+    <div class="v-stk fs3" style="left:42%;bottom:6%;--r:-4deg"><div class="v-stk-in" style="animation-delay:-4s"><div class="v-face v-pill v-holo">Creative studio</div></div></div>
+  </div>
+  <div class="v-fcols">
     <div>
-      <div style="font-family:var(--font-display);font-weight:700;font-size:24px;letter-spacing:-0.025em;color:#F8F7F3;margin-bottom:12px;line-height:1;"><span data-spray="circle" data-spray-delay="200">joke®</span></div>
-      <p style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(248,247,243,0.32);max-width:220px;line-height:1.65;margin:0 0 28px;">Visuals for brands that don't want to look ordinary.</p>
-      <a href="https://www.instagram.com/jokestudio.co/" target="_blank" rel="noopener" aria-label="joke studio on Instagram" class="hv-index-4" style="display:inline-flex;color:rgba(248,247,243,0.42);text-decoration:none;transition:color 200ms;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" stroke="none"/></svg></a>
+      <div class="v-flabel">Start a project</div>
+      <div style="font-family:var(--font-body);font-size:clamp(20px,1.8vw,28px);color:#0B0B0B;margin-bottom:16px">Got a brand that looks too normal?</div>
+      <a class="v-btn" href="#contact" style="background:#0B0B0B;color:#F3F3F1;padding:10px 18px;font-size:13px">Start a project ↗</a>
     </div>
-    <div style="display:flex;gap:64px;flex-wrap:wrap;">
-      <div style="display:flex;flex-direction:column;gap:14px;">
-        <span style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,247,243,0.2);margin-bottom:4px;">Studio</span>
-        <a href="#work" class="hv-index-5" style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(248,247,243,0.4);text-decoration:none;transition:color 200ms;">Work</a>
-        <a href="#services" class="hv-index-6" style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(248,247,243,0.4);text-decoration:none;transition:color 200ms;">Services</a>
-        <a href="#brand-dna" class="hv-index-7" style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(248,247,243,0.4);text-decoration:none;transition:color 200ms;">Brand DNA</a>
-              </div>
-      <div style="display:flex;flex-direction:column;gap:14px;">
-        <span style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,247,243,0.2);margin-bottom:4px;">Links</span>
-        <a href="#process" class="hv-index-8" style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(248,247,243,0.4);text-decoration:none;transition:color 200ms;">Process</a>
-        <a href="#contact" class="hv-index-9" style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(248,247,243,0.4);text-decoration:none;transition:color 200ms;">Contact</a>
-        <a href="https://www.instagram.com/jokestudio.co/" target="_blank" rel="noopener" class="hv-index-10" style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(248,247,243,0.4);text-decoration:none;transition:color 200ms;">Instagram</a>
-        <a href="#" class="hv-index-11" style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(248,247,243,0.4);text-decoration:none;transition:color 200ms;">Behance</a>
-      </div>
+    <div>
+      <div class="v-flabel">Pages</div>
+      <a class="v-fbig" href="#">Home</a><a class="v-fbig" href="#work">Work</a><a class="v-fbig" href="#services">Services</a><a class="v-fbig" href="#contact">Contact</a>
+      <div class="v-flabel" style="margin-top:26px">Services</div>
+      <span class="v-fsmall">Creative Direction</span><span class="v-fsmall">Social Media Visuals</span><span class="v-fsmall">Product Campaigns</span><span class="v-fsmall">AI-Assisted Visual Production</span><span class="v-fsmall">Website</span><span class="v-fsmall">Brand Design</span>
+    </div>
+    <div>
+      <div class="v-flabel">Social</div>
+      <a class="v-fbig" href="https://www.instagram.com/jokestudio.co/" target="_blank" rel="noopener">Instagram</a><a class="v-fbig" href="#">Behance</a>
+    </div>
+    <div>
+      <div class="v-flabel">Based in</div>
+      <div class="v-fbig">Turkey</div>
+      <div style="font-family:var(--font-body);font-size:13px;color:rgba(11,11,11,.7);margin-top:6px;display:flex;align-items:center;gap:6px"><span style="width:7px;height:7px;border-radius:50%;background:#7BC800;display:inline-block"></span><span id="v-time">--:--</span> local time</div>
     </div>
   </div>
-  <div style="display:flex;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid rgba(248,247,243,0.05);flex-wrap:wrap;gap:12px;">
-    <span style="font-family:var(--font-mono);font-size:10px;color:rgba(248,247,243,0.18);letter-spacing:0.1em;">© 2025 joke® studio. All rights reserved.</span>
-    <span style="font-family:var(--font-mono);font-size:10px;color:rgba(248,247,243,0.18);letter-spacing:0.1em;">Handcrafted with intent.</span>
+  <div class="v-fbar">
+    <a href="#" style="display:inline-flex;align-items:center;gap:8px;font-family:var(--font-display);font-weight:700;font-size:20px;color:#0B0B0B;text-decoration:none"><img src="uploads/opt/joke-smile.webp" alt="" style="height:24px">joke®</a>
+    <span>© 2026 joke® studio. All rights reserved.</span>
+    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" style="color:rgba(11,11,11,.7);text-decoration:none">Back to top ↑</a>
   </div>
+  <script>
+  (function(){
+    // local time
+    const el=document.getElementById('v-time');const tick=()=>{try{el.textContent=new Date().toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',timeZone:'Europe/Istanbul'})}catch(e){}};tick();setInterval(tick,30000);
+  })();
+  </script>
 </footer>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
@@ -749,9 +778,9 @@ class Component {
     const logo = document.getElementById('nav-logo');
     const cta  = document.getElementById('nav-cta');
     const links = ['nl-0','nl-1','nl-2','nl-4'].map(id => document.getElementById(id));
-    if (logo) logo.style.color = '#F8F7F3';
+    if (logo) logo.style.color = '#0B0B0B';
 
-    links.forEach(l => { if (l && l.style.color !== 'rgb(255, 255, 255)') l.style.color = 'rgba(248,247,243,0.82)'; });
+    links.forEach(l => { if (l && l.style.color !== 'rgb(255, 255, 255)') l.style.color = 'rgba(11,11,11,0.82)'; });
   }
 
   _setupHeroScroll() {
@@ -900,7 +929,7 @@ class Component {
     // Links wrapper: glass pill
     if (wrapper) {
       if (scrolled) {
-        wrapper.style.background           = `rgba(22,22,22,${(t * 0.85).toFixed(3)})`;
+        wrapper.style.background           = `rgba(255,255,255,${(t * 0.78).toFixed(3)})`;
         wrapper.style.backdropFilter       = `blur(${(t * 20).toFixed(1)}px) saturate(1.7)`;
         wrapper.style.webkitBackdropFilter = wrapper.style.backdropFilter;
         wrapper.style.boxShadow            = `0 1px 18px rgba(11,11,11,${(t * 0.08).toFixed(3)})`;
@@ -927,7 +956,7 @@ class Component {
 
     // Hero'dayken hiçbir link aktif olmasın
     if (isHero) {
-      links.forEach(l => { if (l) l.style.color = 'rgba(248,247,243,0.6)'; });
+      links.forEach(l => { if (l) l.style.color = 'rgba(11,11,11,0.6)'; });
       if (indicator) indicator.style.opacity = '0';
       return;
     }
@@ -960,7 +989,7 @@ class Component {
           indicator.style.opacity = '1';
         }
       } else {
-        l.style.color = 'rgba(248,247,243,0.6)';
+        l.style.color = 'rgba(11,11,11,0.6)';
       }
     });
 
@@ -974,7 +1003,6 @@ class Component {
       { id: 'work',         label: 'Selected Work' },
       { id: 'services',     label: 'What we do' },
       { id: 'process',      label: 'How we work' },
-      { id: 'brand-dna',    label: 'Brand DNA' },
       { id: 'testimonials', label: 'Proof' },
       { id: 'contact',      label: 'Contact' },
     ];
@@ -987,7 +1015,7 @@ class Component {
     // Dot'ları oluştur
     const dots = SECTIONS.map((s, i) => {
       const d = document.createElement('div');
-      d.style.cssText = 'width:4px;height:4px;border-radius:50%;background:#F8F7F3;opacity:0.18;transition:opacity 300ms ease,transform 300ms ease;';
+      d.style.cssText = 'width:4px;height:4px;border-radius:50%;background:#0B0B0B;opacity:0.18;transition:opacity 300ms ease,transform 300ms ease;';
       dotsEl.appendChild(d);
       return d;
     });
@@ -1017,12 +1045,12 @@ class Component {
 
       // Contact section'da beyaz göster
       const inContact = SECTIONS[activeIdx].id === 'contact';
-      label.style.color = inContact ? '#F8F7F3' : '#F8F7F3';
+      label.style.color = '#F3F3F1';
       dots.forEach((d, i) => {
         const active = i === activeIdx;
         d.style.opacity   = active ? '0.9' : '0.18';
         d.style.transform = active ? 'scale(1.8)' : 'scale(1)';
-        d.style.background = inContact ? '#F8F7F3' : '#F8F7F3';
+        d.style.background = inContact ? '#0B0B0B' : '#0B0B0B';
       });
     };
 
@@ -1171,13 +1199,12 @@ class Component {
   _setupBgTransition() {
     // Section sırası + renkleri
     const STOPS = [
-      { id: 'hero',             rgb: [11,11,11] },
-      { id: 'work-sticky-wrap', rgb: [18,18,18] },
-      { id: 'services',         rgb: [11,11,11] },
-      { id: 'process',          rgb: [11,11,11] },
-      { id: 'brand-dna',        rgb: [18,18,18] },
-      { id: 'testimonials',     rgb: [11,11,11] },
-      { id: 'contact',          rgb: [11,11,11] },
+      { id: 'hero',             rgb: [243,243,241] },
+      { id: 'work-sticky-wrap', rgb: [243,243,241] },
+      { id: 'services',         rgb: [243,243,241] },
+      { id: 'process',          rgb: [9,9,9] },
+      { id: 'testimonials',     rgb: [243,243,241] },
+      { id: 'contact',          rgb: [243,243,241] },
     ];
 
     // Tüm section arka planlarını transparan yap (clients HARİÇ — kendi rengi var)
@@ -1187,8 +1214,8 @@ class Component {
 
     const lerp  = (a, b, t) => a + (b - a) * t;
     const lerp3 = (ca, cb, t) => ca.map((v, i) => Math.round(lerp(v, cb[i], t)));
-    const ease  = t => 1 - Math.pow(1 - Math.min(1, Math.max(0, t)), 3);
-    const ZONE  = 280; // transition zone px (section sınırının etrafında)
+    const ease  = t => { t=Math.min(1,Math.max(0,t)); return t*t*(3-2*t); };
+    const ZONE  = 560; // transition zone px (section sınırının etrafında)
 
     const update = () => {
       const sy = this._sy();
@@ -1216,6 +1243,7 @@ class Component {
 
       const bg = `rgb(${color})`;
       document.body.style.background            = bg;
+      document.documentElement.style.setProperty('--dk', ((243 - color[0]) / 234).toFixed(3));
       document.documentElement.style.background = bg;
     };
 
@@ -1311,7 +1339,7 @@ class Component {
       nodes.forEach((node, i) => {
         const ratio = i / last;
         const active = p >= ratio - 0.002;
-        node.style.background = active ? '#FFFFFF' : 'rgba(248,247,243,0.22)';
+        node.style.background = active ? '#FFFFFF' : 'rgba(11,11,11,0.22)';
         node.style.boxShadow = active ? '0 0 10px 2px rgba(255,255,255,0.85), 0 0 24px 7px rgba(255,255,255,0.35)' : '0 0 0 0 rgba(255,255,255,0)';
         node.style.transform = active ? 'translate(-50%,-50%) scale(1.35)' : 'translate(-50%,-50%) scale(1)';
         const body = bodies[i];
@@ -1344,14 +1372,14 @@ class Component {
         card.style.boxShadow = '0 24px 64px rgba(11,11,11,0.22)';
         if (img)   img.style.transform = 'scale(1.06)';
         if (desc)  { desc.style.opacity = '1'; desc.style.transform = 'translateY(0)'; }
-        if (arrow) { arrow.style.transform = 'translateX(4px)'; arrow.style.borderColor = 'rgba(248,247,243,0.8)'; }
+        if (arrow) { arrow.style.transform = 'translateX(4px)'; arrow.style.borderColor = 'rgba(11,11,11,0.8)'; }
       });
       card.addEventListener('mouseleave', () => {
         card.style.transform = 'translateY(0)';
         card.style.boxShadow = 'none';
         if (img)   img.style.transform = 'scale(1)';
         if (desc)  { desc.style.opacity = '0'; desc.style.transform = 'translateY(8px)'; }
-        if (arrow) { arrow.style.transform = 'translateX(0)'; arrow.style.borderColor = 'rgba(248,247,243,0.32)'; }
+        if (arrow) { arrow.style.transform = 'translateX(0)'; arrow.style.borderColor = 'rgba(11,11,11,0.32)'; }
       });
     });
   }
@@ -1385,9 +1413,9 @@ class Component {
       row.addEventListener('mouseleave', () => {
         wipe.style.transform = 'translate3d(-100%,0,0)';
         if (icon)   icon.style.transform = 'scale(1) rotate(0deg)';
-        if (title)  title.style.color = '#F8F7F3';
+        if (title)  title.style.color = '#0B0B0B';
         if (desc)   { desc.style.opacity = '0'; }
-        if (arrow)  { arrow.style.borderColor = 'rgba(248,247,243,0.3)'; arrow.style.color = '#F8F7F3'; arrow.style.transform = 'translateX(0)'; }
+        if (arrow)  { arrow.style.borderColor = 'rgba(11,11,11,0.3)'; arrow.style.color = '#0B0B0B'; arrow.style.transform = 'translateX(0)'; }
       });
     });
   }
@@ -1417,9 +1445,9 @@ class Component {
     document.querySelectorAll('[data-budget-pill]').forEach(pill => {
       pill.addEventListener('click', () => {
         document.querySelectorAll('[data-budget-pill]').forEach(p => {
-          p.style.background = 'transparent'; p.style.color = 'rgba(248,247,243,0.45)'; p.style.borderColor = 'rgba(248,247,243,0.2)';
+          p.style.background = 'transparent'; p.style.color = 'rgba(11,11,11,0.45)'; p.style.borderColor = 'rgba(11,11,11,0.2)';
         });
-        pill.style.background = '#FFFFFF'; pill.style.color = '#0B0B0B'; pill.style.borderColor = '#FFFFFF';
+        pill.style.background = '#0B0B0B'; pill.style.color = '#F3F3F1'; pill.style.borderColor = '#0B0B0B';
       });
     });
   }
@@ -1432,9 +1460,9 @@ class Component {
         const cat = tag.dataset.labTag;
         tags.forEach(t => {
           const a = t.dataset.labTag === cat;
-          t.style.background  = a ? '#0B0B0B' : 'transparent';
-          t.style.color       = a ? '#F8F7F3' : 'rgba(11,11,11,0.45)';
-          t.style.borderColor = a ? '#0B0B0B' : 'rgba(248,247,243,0.22)';
+          t.style.background  = a ? '#F3F3F1' : 'transparent';
+          t.style.color       = a ? '#0B0B0B' : 'rgba(11,11,11,0.45)';
+          t.style.borderColor = a ? '#F3F3F1' : 'rgba(11,11,11,0.22)';
         });
         tiles.forEach(tile => {
           const show = cat === 'ALL' || tile.dataset.labCat === cat;
@@ -1520,7 +1548,188 @@ const __component = new Component();
 __component.componentDidMount();
 });
 </script>
-<script src="spray.js" defer></script>
+
 <script src="hero-smile.js" defer></script>
+
+<script>
+(function(){
+  const H=document.documentElement;
+  /* ---------- 1. big headings: weight follows the cursor radius, eased ---------- */
+  const RAD=260, MINW=100, MAXW=900;
+  const letters=[];
+  function split(root){
+    const walk=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,null);const nodes=[];
+    while(walk.nextNode()){const n=walk.currentNode;if(n.nodeValue.trim())nodes.push(n)}
+    nodes.forEach(n=>{const frag=document.createDocumentFragment();
+      for(const ch of n.nodeValue){ if(ch===' '){frag.appendChild(document.createTextNode(' '));continue}
+        const s=document.createElement('span');s.className='v-ch';s.textContent=ch;frag.appendChild(s);letters.push({el:s,w:MAXW,t:MAXW,root})}
+      n.parentNode.replaceChild(frag,n)});
+  }
+  // lock each letter's box at its widest (900) weight, so changing weight never shifts the line
+  function fixWidths(){
+    letters.forEach(l=>{l.el.style.width='';l.el.style.fontVariationSettings='"wght" 900'});
+    letters.forEach(l=>{l.el.style.width=l.el.offsetWidth/parseFloat(getComputedStyle(l.el).fontSize)+'em'});
+    letters.forEach(l=>{l.el.style.fontVariationSettings='"wght" '+l.w.toFixed(1)});
+  }
+  const fontsIn=()=>Promise.all([document.fonts.ready,document.fonts.load('900 50px Archivo').catch(()=>{})]);
+  let mx=-9999,my=-9999;
+  addEventListener('pointermove',e=>{if(e.pointerType==='mouse'){mx=e.clientX;my=e.clientY}},{passive:true});
+  document.addEventListener('pointerleave',()=>{mx=my=-9999});
+  // touch: follow the finger while it is down (also while scrolling), then let the letters ease back
+  let touching=false;
+  const tp=e=>{const t=e.touches[0];if(t){touching=true;mx=t.clientX;my=t.clientY}};
+  addEventListener('touchstart',tp,{passive:true});
+  addEventListener('touchmove',tp,{passive:true});
+  const tEnd=()=>{touching=false;mx=my=-9999};
+  addEventListener('touchend',tEnd,{passive:true});addEventListener('touchcancel',tEnd,{passive:true});
+  // no cursor on touch screens: a slow light sweep runs across the hero headline while the finger is up
+  const coarse=matchMedia('(hover:none)').matches;
+  let sweepT0=0;   // the sweep starts only after the headline has settled, so the first open stays clean
+  addEventListener('v-type-ready',()=>setTimeout(()=>{sweepT0=performance.now()},1600),{once:true});
+  // touch screens have no cursor, so each heading gets its own light spot:
+  //   hero headline: a slow timed sweep; other headings: the spot crosses the heading as you scroll past it
+  function spotFor(root,now){
+    const r=root.getBoundingClientRect(),vh=innerHeight;
+    if(r.bottom<0||r.top>vh)return null;
+    if(root.closest('#hero')){
+      if(!sweepT0)return null;
+      const p=((now-sweepT0)%5200)/5200;                  // one pass every 5.2 s
+      return [r.left-RAD+(r.width+RAD*2)*p, r.top+r.height*(0.5+0.25*Math.sin(p*Math.PI*2))];
+    }
+    const p=(vh*0.92-r.top)/(vh*0.62);                     // 0 when the heading enters, 1 when it nears the top
+    if(p<=0||p>=1)return null;
+    return [r.left-RAD+(r.width+RAD*2)*p, r.top+r.height/2];
+  }
+  function tick(now){
+    now=now||performance.now();
+    const vh=innerHeight,auto=coarse&&!touching,spots=new Map();
+    for(const l of letters){
+      const r=l.el.getBoundingClientRect();
+      if(r.bottom<-50||r.top>vh+50){ if(l.w!==MAXW){l.w=MAXW;l.el.style.fontVariationSettings='"wght" 900'} continue }
+      let x=mx,y=my;
+      if(auto){ if(!spots.has(l.root))spots.set(l.root,spotFor(l.root,now)); const sp=spots.get(l.root); x=sp?sp[0]:-9999; y=sp?sp[1]:-9999 }
+      const d=Math.hypot(r.left+r.width/2-x,r.top+r.height/2-y);
+      const k=Math.max(0,1-d/RAD); l.t=MAXW-(MAXW-MINW)*k*k*(3-2*k);
+      l.w+= (l.t-l.w)*0.12;
+      if(Math.abs(l.t-l.w)<0.5)l.w=l.t;
+      l.el.style.fontVariationSettings='"wght" '+l.w.toFixed(1);
+    }
+    requestAnimationFrame(tick);
+  }
+  // hero headline: split right away so its layout is final before anything is pinned to it
+  document.querySelectorAll('#hero .v-big').forEach(split);
+  fontsIn().then(()=>{fixWidths();window.dispatchEvent(new Event('v-type-ready'))});
+  function initType(){
+    document.querySelectorAll('.v-big:not(#hero .v-big), section:not(#hero) h2:not(.v-say)').forEach(split);
+    fontsIn().then(()=>{fixWidths();});
+    addEventListener('resize',()=>setTimeout(fixWidths,50));
+  }
+  requestAnimationFrame(tick);
+  setTimeout(initType,1600);   // other headings: after the site's own reveal has split words
+
+  /* ---------- 2. stickers: holo shift, peel on hover, drag, drop, return ---------- */
+  document.querySelectorAll('.v-stk').forEach(st=>{
+    const inner=st.querySelector('.v-stk-in'),face=inner.querySelector('.v-face');
+    // fold wrapper + back side (a desaturated copy = the paper backing)
+    const fold=document.createElement('div');fold.className='v-fold';face.parentNode.insertBefore(fold,face);fold.appendChild(face);
+    const back=face.cloneNode(true);back.classList.add('v-back');back.removeAttribute('id');fold.appendChild(back);
+    back.querySelectorAll('[id]').forEach(n=>n.removeAttribute('id'));
+    let peel=0,peelT=0;
+    function drawPeel(){
+      const W=face.offsetWidth,Hh=face.offsetHeight,P=Math.min(W,Hh)*(face.classList.contains('v-pill')?1.0:0.62)*peel;
+      if(P<0.5){face.style.clipPath='';back.style.display='none';return}
+      const c=W+Hh-P;
+      face.style.clipPath=`polygon(0 0,${W}px 0,${W}px ${Hh-P}px,${W-P}px ${Hh}px,0 ${Hh}px)`;
+      back.style.display='';back.style.width=W+'px';back.style.height=Hh+'px';
+      back.style.clipPath=`polygon(${W}px ${Hh-P}px,${W}px ${Hh}px,${W-P}px ${Hh}px)`;
+      back.style.transformOrigin='0 0';back.style.transform=`matrix(0,-1,-1,0,${c},${c})`;
+      back.style.boxShadow='none';
+    }
+    st.addEventListener('pointerenter',()=>{peelT=1});
+    st.addEventListener('pointerleave',()=>{peelT=0;face.style.setProperty('--hx','30%')});
+    st.addEventListener('pointermove',e=>{const r=st.getBoundingClientRect();face.style.setProperty('--hx',(10+80*(e.clientX-r.left)/r.width).toFixed(1)+'%')});
+    // physics
+    let x=0,y=0,vx=0,vy=0,rot=0,vr=0,sc=1,mode='home',grab=null,last=null,timer=0;
+    const apply=()=>{st.style.transform=`translate(${x}px,${y}px) rotate(${rot}deg) scale(${sc})`};
+    st.addEventListener('pointerdown',e=>{
+      e.preventDefault();st.setPointerCapture(e.pointerId);clearTimeout(timer);
+      mode='drag';st.classList.add('v-drag');st.classList.remove('v-fly');peelT=0;
+      grab={px:e.clientX-x,py:e.clientY-y};last={x:e.clientX,y:e.clientY,t:performance.now()};vx=vy=0;sc=1.08;apply();
+    });
+    st.addEventListener('pointermove',e=>{
+      if(mode!=='drag')return;const now=performance.now(),dt=Math.max(8,now-last.t);
+      vx=(e.clientX-last.x)/dt*16;vy=(e.clientY-last.y)/dt*16;last={x:e.clientX,y:e.clientY,t:now};
+      x=e.clientX-grab.px;y=e.clientY-grab.py;rot=Math.max(-25,Math.min(25,vx*1.2));apply();
+    });
+    const release=()=>{
+      if(mode!=='drag')return;mode='fall';st.classList.remove('v-drag');st.classList.add('v-fly');sc=1;vr=vx*0.5+(Math.random()-.5)*3;vx=Math.max(-18,Math.min(18,vx));vy=Math.max(-14,Math.min(10,vy));
+      const host=st.offsetParent,limit=host.getBoundingClientRect().height+300;
+      let tt=0;const ph=Math.random()*6.28,sway=0.9+Math.random()*0.6,fx0=x;
+      const fall=()=>{
+        if(mode!=='fall')return;tt+=1/60;
+        // light paper: weak gravity, strong air drag, terminal speed, side-to-side flutter
+        vy+=0.11; vy*=0.968; vx*=0.955;
+        if(vy>3.1)vy=3.1;
+        const flutter=Math.sin(tt*2.6*sway+ph);
+        x+=vx+flutter*1.6; y+=vy*(0.75+0.25*Math.abs(Math.cos(tt*2.6*sway+ph)));
+        vr*=0.97; rot+=vr*0.35+flutter*0.9;
+        apply();
+        const top=st.offsetTop+y;
+        if(top<limit)requestAnimationFrame(fall);
+        else{mode='gone';st.style.opacity='0';timer=setTimeout(comeBack,1400)}
+      };requestAnimationFrame(fall);
+    };
+    st.addEventListener('pointerup',release);st.addEventListener('pointercancel',release);
+    function comeBack(){
+      x=0;y=0;rot=0;sc=0.2;apply();st.style.opacity='1';mode='back';
+      let v=0,s=0.2;const spring=()=>{ if(mode!=='back')return; v+=(1-s)*0.18;v*=0.72;s+=v;sc=s;apply();
+        if(Math.abs(1-s)>0.002||Math.abs(v)>0.002)requestAnimationFrame(spring);else{sc=1;apply();mode='home';st.classList.remove('v-fly')} };
+      requestAnimationFrame(spring);
+    }
+    (function loop(){ peel+=(peelT-peel)*0.16; if(Math.abs(peelT-peel)<0.002)peel=peelT; drawPeel(); requestAnimationFrame(loop)})();
+  });
+})();
+</script>
+
+<script>
+(function(){
+  // pin the NO JOKE. sticker on the period of "SOMETHING."
+  function lastCharRect(h1){
+    const ch=h1.querySelectorAll('.v-ch');if(ch.length)return ch[ch.length-1].getBoundingClientRect();
+    const w=document.createTreeWalker(h1,NodeFilter.SHOW_TEXT);let n=null;while(w.nextNode())if(w.currentNode.nodeValue.trim())n=w.currentNode;
+    if(!n)return h1.getBoundingClientRect();const t=n.nodeValue.replace(/\s+$/,'');const r=document.createRange();r.setStart(n,t.length-1);r.setEnd(n,t.length);return r.getBoundingClientRect();
+  }
+  let shown=false;
+  function place(){
+    const st=document.getElementById('v-nojoke'),hero=document.getElementById('hero'),h1=hero&&hero.querySelector('h1');
+    if(!st||!h1)return;
+    // layout position of the period relative to the hero, ignoring transforms (entrance animations can't skew it)
+    const ch=h1.querySelectorAll('.v-ch');let r;
+    if(ch.length){let el=ch[ch.length-1],x=0,y=0;const cw=el.offsetWidth,chh=el.offsetHeight;while(el&&el!==hero){x+=el.offsetLeft;y+=el.offsetTop;el=el.offsetParent}r={left:x,top:y,width:cw,height:chh}}
+    else{const a=lastCharRect(h1),b=hero.getBoundingClientRect();r={left:a.left-b.left,top:a.top-b.top,width:a.width,height:a.height}}
+    const hr={left:0,top:0,width:hero.offsetWidth},w=st.offsetWidth,h=st.offsetHeight;
+    const sc=innerWidth<=760?0.62:1, vw=w*sc;            // visual width after the mobile scale
+    // the sticker sits on the period, slightly down-left
+    let vl=r.left-hr.left-vw*0.24;                          // visual left edge
+    vl=Math.max(8,Math.min(vl,hr.width-vw-8));             // never off-screen
+    st.style.left=(vl-(w-vw)/2)+'px';
+    st.style.top=(r.top+r.height*0.8-hr.top-h/2)+'px';
+    if(!shown){shown=true;requestAnimationFrame(()=>{st.style.opacity='1'})}
+  }
+  const go=()=>place();
+  // measure only after the headline's entrance animation has finished, so the sticker never jumps
+  const h1el=document.querySelector('#hero h1');let anim=false,type=false,ready=false;
+  const start=()=>{if(ready||!anim||!type)return;ready=true;
+    // wait until the period stops moving (child letter animations can still be running), then place and show
+    let last='',stable=0,t0=performance.now();
+    (function settle(){const h=document.querySelector('#hero h1');const r=lastCharRect(h);const k=Math.round(r.left)+','+Math.round(r.top);
+      stable=(k===last)?stable+1:0;last=k;
+      if(stable>=10||performance.now()-t0>3000)go();else requestAnimationFrame(settle);})();};
+  if(h1el)h1el.addEventListener('animationend',()=>{anim=true;start()},{once:true});
+  addEventListener('v-type-ready',()=>{type=true;start()},{once:true});
+  setTimeout(()=>{anim=true;type=true;start()},2200);
+  addEventListener('resize',()=>requestAnimationFrame(go));
+})();
+</script>
 </body>
 </html>

@@ -35,7 +35,7 @@
 <body>
 <!-- ═══ NAV ═══ (same chrome as homepage) -->
 <nav style="position:fixed;top:0;left:0;right:0;z-index:200;height:72px;display:flex;align-items:center;padding:0 clamp(24px,5vw,80px);background:#FFFFFF;border-bottom:1px solid rgba(11,11,11,0.08);">
-  <a href="index.html" style="font-family:var(--font-display);font-weight:700;font-size:26px;display:inline-flex;align-items:center;gap:9px;letter-spacing:-0.025em;color:#0B0B0B;text-decoration:none;flex-shrink:0;line-height:1;"><img src="uploads/opt/joke-smile.webp" alt="" style="height:34px;width:auto;display:block;">joke®</a>
+  <a href="index.html" style="font-family:var(--font-display);font-weight:700;font-size:26px;display:inline-flex;align-items:center;gap:9px;letter-spacing:-0.025em;color:#0B0B0B;text-decoration:none;flex-shrink:0;line-height:1;">joke®</a>
 
   <div style="position:absolute;left:0;right:0;top:0;height:72px;display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:1;">
     <div style="position:relative;display:flex;gap:2px;align-items:center;padding:5px 6px;border-radius:100px;pointer-events:auto;">
@@ -55,7 +55,7 @@
 
 <div id="wnav-mobile-menu" style="display:none;position:fixed;inset:0;z-index:300;background:#FFFFFF;flex-direction:column;">
   <div style="height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(24px,5vw,80px);border-bottom:1px solid rgba(11,11,11,0.08);flex-shrink:0;">
-    <span style="font-family:var(--font-display);font-weight:700;font-size:26px;display:inline-flex;align-items:center;gap:9px;color:#0B0B0B;"><img src="uploads/opt/joke-smile.webp" alt="" style="height:34px;width:auto;display:block;">joke®</span>
+    <span style="font-family:var(--font-display);font-weight:700;font-size:26px;display:inline-flex;align-items:center;gap:9px;color:#0B0B0B;">joke®</span>
     <button aria-label="Close" onclick="document.getElementById('wnav-mobile-menu').style.display='none'" style="background:none;border:none;padding:8px;cursor:pointer;">
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 4L16 16M16 4L4 16" stroke="#0B0B0B" stroke-width="1.6" stroke-linecap="round"></path></svg>
     </button>
@@ -77,186 +77,193 @@
 
     <!-- source pattern — cloned 2×2 by JS into a seamless, endlessly-panning tile. Empty for now — add data-photo tiles here when images are ready. -->
     <div id="tile-pattern" style="display:none;">
-      <!-- row 0 -->
-      <div data-photo="" data-x="40" data-y="40" style="position:absolute;width:179px;height:321px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="40" data-y="40" style="position:absolute;width:187px;height:339px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260116_205449_553282d3-3411-442c-8f76-cec096c66709-web.jpg" src="uploads/opt/ino-hf_20260116_205449_553282d3-3411-442c-8f76-cec096c66709.jpg" alt="hf_20260116_205449_553282d3-3411-442c-8f76-cec096c66709.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="319" data-y="40" style="position:absolute;width:179px;height:321px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="327" data-y="40" style="position:absolute;width:187px;height:339px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260331_140252_1ea9961d-0d21-463b-8c7d-6b8271ab0cd3-web.jpg" src="uploads/opt/ino-hf_20260331_140252_1ea9961d-0d21-463b-8c7d-6b8271ab0cd3.jpg" alt="hf_20260331_140252_1ea9961d-0d21-463b-8c7d-6b8271ab0cd3.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="598" data-y="40" style="position:absolute;width:179px;height:321px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="614" data-y="40" style="position:absolute;width:187px;height:339px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260126_162512_a7880bb1-65dc-4bc4-a3e4-9c0d1bb7cf3b-web.jpg" src="uploads/opt/ino-hf_20260126_162512_a7880bb1-65dc-4bc4-a3e4-9c0d1bb7cf3b.jpg" alt="hf_20260126_162512_a7880bb1-65dc-4bc4-a3e4-9c0d1bb7cf3b.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="877" data-y="40" style="position:absolute;width:179px;height:321px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="901" data-y="40" style="position:absolute;width:187px;height:339px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260414_102552_ba7250d7-3212-4678-ac91-d48a61b7cad7-web.jpg" src="uploads/opt/ino-hf_20260414_102552_ba7250d7-3212-4678-ac91-d48a61b7cad7.jpg" alt="hf_20260414_102552_ba7250d7-3212-4678-ac91-d48a61b7cad7.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1156" data-y="40" style="position:absolute;width:240px;height:321px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="1188" data-y="40" style="position:absolute;width:251px;height:339px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260122_144211_ce4b083c-6617-4c45-b9b2-942f62b016ac-web.jpg" src="uploads/opt/ino-hf_20260122_144211_ce4b083c-6617-4c45-b9b2-942f62b016ac.jpg" alt="hf_20260122_144211_ce4b083c-6617-4c45-b9b2-942f62b016ac.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1496" data-y="40" style="position:absolute;width:642px;height:321px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-video="" data-x="1539" data-y="40" style="position:absolute;width:191px;height:339px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <video src="uploads/ino-v01.mp4" data-full="uploads/ino-v01-full.mp4" poster="uploads/opt/ino-v01.jpg" muted loop playsinline autoplay preload="metadata" aria-label="INO — 8-bit vending machine animation" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-x="1830" data-y="40" style="position:absolute;width:670px;height:339px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784203835680-0-web.jpg" src="uploads/opt/ino-pasted-1784203835680-0.jpg" alt="pasted-1784203835680-0.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <!-- row 1 -->
-      <div data-photo="" data-x="40" data-y="461" style="position:absolute;width:452px;height:347px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="2600" data-y="40" style="position:absolute;width:440px;height:339px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260203_144731_3a90ef32-33a1-40d9-bd16-b92f15a6df92 kopya-web.jpg" src="uploads/opt/ino-hf_20260203_144731_3a90ef32-33a1-40d9-bd16-b92f15a6df92_kopy.jpg" alt="hf_20260203_144731_3a90ef32-33a1-40d9-bd16-b92f15a6df92 kopya.jpg" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="592" data-y="461" style="position:absolute;width:279px;height:347px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="40" data-y="479" style="position:absolute;width:278px;height:349px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260202_132110_821c9bc8-8e56-404f-9d29-2b14ebc562b5-web.jpg" src="uploads/opt/ino-hf_20260202_132110_821c9bc8-8e56-404f-9d29-2b14ebc562b5.jpg" alt="hf_20260202_132110_821c9bc8-8e56-404f-9d29-2b14ebc562b5.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="971" data-y="461" style="position:absolute;width:750px;height:347px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="418" data-y="479" style="position:absolute;width:747px;height:349px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784203855539-0-web.jpg" src="uploads/opt/ino-pasted-1784203855539-0.jpg" alt="pasted-1784203855539-0.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1821" data-y="461" style="position:absolute;width:318px;height:347px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="1265" data-y="479" style="position:absolute;width:317px;height:349px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260202_155554_83b74280-9ec4-480a-9464-8d775e79b865-web.jpg" src="uploads/opt/ino-hf_20260202_155554_83b74280-9ec4-480a-9464-8d775e79b865.jpg" alt="hf_20260202_155554_83b74280-9ec4-480a-9464-8d775e79b865.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <!-- row 2 -->
-      <div data-photo="" data-x="40" data-y="908" style="position:absolute;width:192px;height:340px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="1682" data-y="479" style="position:absolute;width:195px;height:349px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/Modeli Bloom Claim 1080x1920-web.jpg" src="uploads/opt/ino-Modeli_Bloom_Claim_1080x1920.jpg" alt="Modeli Bloom Claim 1080x1920.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="332" data-y="908" style="position:absolute;width:263px;height:340px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="1977" data-y="479" style="position:absolute;width:268px;height:349px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260202_122441_91ef4ea1-7b81-475d-a6db-233bdf93a5a0-web.jpg" src="uploads/opt/ino-hf_20260202_122441_91ef4ea1-7b81-475d-a6db-233bdf93a5a0.jpg" alt="hf_20260202_122441_91ef4ea1-7b81-475d-a6db-233bdf93a5a0.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="695" data-y="908" style="position:absolute;width:680px;height:340px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="2345" data-y="479" style="position:absolute;width:695px;height:349px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784203880249-0-web.jpg" src="uploads/opt/ino-pasted-1784203880249-0.jpg" alt="pasted-1784203880249-0.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1475" data-y="908" style="position:absolute;width:223px;height:340px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="40" data-y="928" style="position:absolute;width:209px;height:324px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260116_200908_dfed84d9-26cf-4e96-b71b-628bd5fc093a kopya 2-web.jpg" src="uploads/opt/ino-hf_20260116_200908_dfed84d9-26cf-4e96-b71b-628bd5fc093a_kopy.jpg" alt="hf_20260116_200908_dfed84d9-26cf-4e96-b71b-628bd5fc093a kopya 2.jpg" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1798" data-y="908" style="position:absolute;width:340px;height:340px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-video="" data-x="349" data-y="928" style="position:absolute;width:182px;height:324px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <video src="uploads/ino-v02.mp4" data-full="uploads/ino-v02-full.mp4" poster="uploads/opt/ino-v02.jpg" muted loop playsinline autoplay preload="metadata" aria-label="INO — Lav Haze floating product video" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-x="631" data-y="928" style="position:absolute;width:320px;height:324px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784204832247-0-web.jpg" src="uploads/opt/ino2-pasted-1784204832247-0.jpg" alt="pasted-1784204832247-0.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <!-- row 3 -->
-      <div data-photo="" data-x="40" data-y="1348" style="position:absolute;width:192px;height:344px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="1051" data-y="928" style="position:absolute;width:179px;height:324px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260211_110839_6cb2d96d-7f1e-43bc-b62d-8f061ac26df9-web.jpg" src="uploads/opt/ino-hf_20260211_110839_6cb2d96d-7f1e-43bc-b62d-8f061ac26df9.jpg" alt="hf_20260211_110839_6cb2d96d-7f1e-43bc-b62d-8f061ac26df9.jpeg" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="332" data-y="1348" style="position:absolute;width:688px;height:344px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="1330" data-y="928" style="position:absolute;width:643px;height:324px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784203889718-0-web.jpg" src="uploads/opt/ino-pasted-1784203889718-0.jpg" alt="pasted-1784203889718-0.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1120" data-y="1348" style="position:absolute;width:192px;height:344px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="2073" data-y="928" style="position:absolute;width:179px;height:324px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260210_090125_838f022f-2b67-4ac5-b4b1-034ae0285282-web.jpg" src="uploads/opt/ino-hf_20260210_090125_838f022f-2b67-4ac5-b4b1-034ae0285282.jpg" alt="hf_20260210_090125_838f022f-2b67-4ac5-b4b1-034ae0285282.jpeg" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1412" data-y="1348" style="position:absolute;width:194px;height:344px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="2352" data-y="928" style="position:absolute;width:181px;height:324px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784204521904-0-web.jpg" src="uploads/opt/ino2-pasted-1784204521904-0.jpg" alt="pasted-1784204521904-0.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1706" data-y="1348" style="position:absolute;width:433px;height:344px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="2633" data-y="928" style="position:absolute;width:407px;height:324px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260213_150300_eb7bfe5e-dbda-4d36-adca-efa2cee911e6-web.jpg" src="uploads/opt/ino-hf_20260213_150300_eb7bfe5e-dbda-4d36-adca-efa2cee911e6.jpg" alt="hf_20260213_150300_eb7bfe5e-dbda-4d36-adca-efa2cee911e6.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <!-- row 4 -->
-      <div data-photo="" data-x="40" data-y="1792" style="position:absolute;width:371px;height:419px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="40" data-y="1352" style="position:absolute;width:316px;height:361px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/a8d55294-6160-487a-8087-b636a71b7fec-web.jpg" src="uploads/opt/ino-a8d55294-6160-487a-8087-b636a71b7fec.jpg" alt="a8d55294-6160-487a-8087-b636a71b7fec.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="511" data-y="1792" style="position:absolute;width:234px;height:419px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="456" data-y="1352" style="position:absolute;width:200px;height:361px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260219_074309_52ae73fe-ce82-429c-94ee-f10ac66b80c2-web.jpg" src="uploads/opt/ino-hf_20260219_074309_52ae73fe-ce82-429c-94ee-f10ac66b80c2.jpg" alt="hf_20260219_074309_52ae73fe-ce82-429c-94ee-f10ac66b80c2.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="845" data-y="1792" style="position:absolute;width:236px;height:419px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="756" data-y="1352" style="position:absolute;width:202px;height:361px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784204464318-0-web.jpg" src="uploads/opt/ino2-pasted-1784204464318-0.jpg" alt="pasted-1784204464318-0.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1181" data-y="1792" style="position:absolute;width:235px;height:419px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="1058" data-y="1352" style="position:absolute;width:201px;height:361px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784204054229-0-web.jpg" src="uploads/opt/ino-pasted-1784204054229-0.jpg" alt="pasted-1784204054229-0.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1516" data-y="1792" style="position:absolute;width:624px;height:419px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-video="" data-x="1359" data-y="1352" style="position:absolute;width:203px;height:361px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <video src="uploads/ino-v03.mp4" data-full="uploads/ino-v03-full.mp4" poster="uploads/opt/ino-v03.jpg" muted loop playsinline autoplay preload="metadata" aria-label="INO — 8-bit tetris animation" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-x="1662" data-y="1352" style="position:absolute;width:530px;height:361px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260305_093025_85791fd8-7727-483c-92a1-13b450efd0a5-web.jpg" src="uploads/opt/ino-hf_20260305_093025_85791fd8-7727-483c-92a1-13b450efd0a5.jpg" alt="hf_20260305_093025_85791fd8-7727-483c-92a1-13b450efd0a5.jpeg" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <!-- row 5 -->
-      <div data-photo="" data-x="40" data-y="2311" style="position:absolute;width:370px;height:370px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="2292" data-y="1352" style="position:absolute;width:358px;height:361px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784205024462-0-web.jpg" src="uploads/opt/ino2-pasted-1784205024462-0.jpg" alt="pasted-1784205024462-0.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="510" data-y="2311" style="position:absolute;width:300px;height:370px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="2750" data-y="1352" style="position:absolute;width:290px;height:361px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260303_141554_2452294e-4a5e-49ed-b87f-1b02e5f985e0-web.jpg" src="uploads/opt/ino-hf_20260303_141554_2452294e-4a5e-49ed-b87f-1b02e5f985e0.jpg" alt="hf_20260303_141554_2452294e-4a5e-49ed-b87f-1b02e5f985e0.jpeg" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="910" data-y="2311" style="position:absolute;width:215px;height:370px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="40" data-y="1813" style="position:absolute;width:180px;height:313px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260329_122518_5040194d-ecdf-4959-9250-abb6d12a122f-web.jpg" src="uploads/opt/ino-hf_20260329_122518_5040194d-ecdf-4959-9250-abb6d12a122f.jpg" alt="hf_20260329_122518_5040194d-ecdf-4959-9250-abb6d12a122f.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1225" data-y="2311" style="position:absolute;width:208px;height:370px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="320" data-y="1813" style="position:absolute;width:174px;height:313px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784204687477-0-web.jpg" src="uploads/opt/ino2-pasted-1784204687477-0.jpg" alt="pasted-1784204687477-0.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1533" data-y="2311" style="position:absolute;width:298px;height:370px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="594" data-y="1813" style="position:absolute;width:249px;height:313px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260317_103729_f5ea121f-eb0d-4b01-9600-35d35f8d85fc-web.jpg" src="uploads/opt/ino-hf_20260317_103729_f5ea121f-eb0d-4b01-9600-35d35f8d85fc.jpg" alt="hf_20260317_103729_f5ea121f-eb0d-4b01-9600-35d35f8d85fc.jpeg" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1931" data-y="2311" style="position:absolute;width:208px;height:370px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="943" data-y="1813" style="position:absolute;width:173px;height:313px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784204787685-0-web.jpg" src="uploads/opt/ino2-pasted-1784204787685-0.jpg" alt="pasted-1784204787685-0.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <!-- row 6 -->
-      <div data-photo="" data-x="40" data-y="2781" style="position:absolute;width:412px;height:412px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="1216" data-y="1813" style="position:absolute;width:310px;height:313px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784204450887-0-web.jpg" src="uploads/opt/ino2-pasted-1784204450887-0.jpg" alt="pasted-1784204450887-0.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="552" data-y="2781" style="position:absolute;width:412px;height:412px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="1626" data-y="1813" style="position:absolute;width:311px;height:313px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784204547512-0-web.jpg" src="uploads/opt/ino2-pasted-1784204547512-0.jpg" alt="pasted-1784204547512-0.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1064" data-y="2781" style="position:absolute;width:233px;height:412px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-video="" data-x="2037" data-y="1813" style="position:absolute;width:313px;height:313px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <video src="uploads/ino-v04.mp4" data-full="uploads/ino-v04-full.mp4" poster="uploads/opt/ino-v04.jpg" muted loop playsinline autoplay preload="metadata" aria-label="INO — Lip Quartet brush video" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-x="2450" data-y="1813" style="position:absolute;width:175px;height:313px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784205112876-0-web.jpg" src="uploads/opt/ino2-pasted-1784205112876-0.jpg" alt="pasted-1784205112876-0.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1397" data-y="2781" style="position:absolute;width:412px;height:412px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="2725" data-y="1813" style="position:absolute;width:315px;height:313px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784204587829-0-web.jpg" src="uploads/opt/ino2-pasted-1784204587829-0.jpg" alt="pasted-1784204587829-0.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1909" data-y="2781" style="position:absolute;width:230px;height:412px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="40" data-y="2226" style="position:absolute;width:230px;height:417px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260226_152834_471cc436-1d46-43c0-bf1f-d8a186cd9745-web.jpg" src="uploads/opt/ino-hf_20260226_152834_471cc436-1d46-43c0-bf1f-d8a186cd9745.jpg" alt="hf_20260226_152834_471cc436-1d46-43c0-bf1f-d8a186cd9745.jpeg" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <!-- row 7 -->
-      <div data-photo="" data-x="40" data-y="3293" style="position:absolute;width:359px;height:359px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="370" data-y="2226" style="position:absolute;width:412px;height:417px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784204739691-0-web.jpg" src="uploads/opt/ino2-pasted-1784204739691-0.jpg" alt="pasted-1784204739691-0.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="499" data-y="3293" style="position:absolute;width:200px;height:359px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="882" data-y="2226" style="position:absolute;width:229px;height:417px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260219_113128_5f09aa15-ee13-4b7e-8230-f2c51e6736b1-web.jpg" src="uploads/opt/ino-hf_20260219_113128_5f09aa15-ee13-4b7e-8230-f2c51e6736b1.jpg" alt="hf_20260219_113128_5f09aa15-ee13-4b7e-8230-f2c51e6736b1.jpeg" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="799" data-y="3293" style="position:absolute;width:359px;height:359px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="1211" data-y="2226" style="position:absolute;width:412px;height:417px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784205156117-0-web.jpg" src="uploads/opt/ino2-pasted-1784205156117-0.jpg" alt="pasted-1784205156117-0.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1258" data-y="3293" style="position:absolute;width:241px;height:359px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="1723" data-y="2226" style="position:absolute;width:277px;height:417px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/3ee482cb-3fa1-43be-b15b-f392fa37b092-web.jpg" src="uploads/opt/ino-3ee482cb-3fa1-43be-b15b-f392fa37b092.jpg" alt="3ee482cb-3fa1-43be-b15b-f392fa37b092.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1599" data-y="3293" style="position:absolute;width:202px;height:359px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="2100" data-y="2226" style="position:absolute;width:231px;height:417px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784205066796-0-web.jpg" src="uploads/opt/ino2-pasted-1784205066796-0.jpg" alt="pasted-1784205066796-0.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1901" data-y="3293" style="position:absolute;width:241px;height:359px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="2431" data-y="2226" style="position:absolute;width:275px;height:417px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/b2214b32-cfba-4acd-b39e-c88880219d10-web.jpg" src="uploads/opt/ino-b2214b32-cfba-4acd-b39e-c88880219d10.jpg" alt="b2214b32-cfba-4acd-b39e-c88880219d10.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <!-- row 8 -->
-      <div data-photo="" data-x="40" data-y="3752" style="position:absolute;width:187px;height:333px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="2806" data-y="2226" style="position:absolute;width:234px;height:417px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784204971923-0-web.jpg" src="uploads/opt/ino2-pasted-1784204971923-0.jpg" alt="pasted-1784204971923-0.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="327" data-y="3752" style="position:absolute;width:186px;height:333px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-video="" data-x="40" data-y="2743" style="position:absolute;width:205px;height:364px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <video src="uploads/ino-v05.mp4" data-full="uploads/ino-v05-full.mp4" poster="uploads/opt/ino-v05.jpg" muted loop playsinline autoplay preload="metadata" aria-label="INO — 8-bit boss level animation" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-x="345" data-y="2743" style="position:absolute;width:199px;height:364px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260304_131648_c08c39d6-b019-4e7a-8d27-a7b1c8303855-web.jpg" src="uploads/opt/ino-hf_20260304_131648_c08c39d6-b019-4e7a-8d27-a7b1c8303855.jpg" alt="hf_20260304_131648_c08c39d6-b019-4e7a-8d27-a7b1c8303855.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="613" data-y="3752" style="position:absolute;width:187px;height:333px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="644" data-y="2743" style="position:absolute;width:202px;height:364px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784205045004-0-web.jpg" src="uploads/opt/ino2-pasted-1784205045004-0.jpg" alt="pasted-1784205045004-0.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="900" data-y="3752" style="position:absolute;width:187px;height:333px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="946" data-y="2743" style="position:absolute;width:202px;height:364px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784204535681-0-web.jpg" src="uploads/opt/ino2-pasted-1784204535681-0.jpg" alt="pasted-1784204535681-0.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1187" data-y="3752" style="position:absolute;width:954px;height:333px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="1248" data-y="2743" style="position:absolute;width:1030px;height:364px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784205175553-0-web.jpg" src="uploads/opt/ino2-pasted-1784205175553-0.jpg" alt="pasted-1784205175553-0.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <!-- row 9 -->
-      <div data-photo="" data-x="40" data-y="4185" style="position:absolute;width:205px;height:363px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="2378" data-y="2743" style="position:absolute;width:203px;height:364px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784204572527-0-web.jpg" src="uploads/opt/ino2-pasted-1784204572527-0.jpg" alt="pasted-1784204572527-0.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="345" data-y="4185" style="position:absolute;width:363px;height:363px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="2681" data-y="2743" style="position:absolute;width:359px;height:364px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784205262370-0-web.jpg" src="uploads/opt/ino2-pasted-1784205262370-0.jpg" alt="pasted-1784205262370-0.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="808" data-y="4185" style="position:absolute;width:726px;height:363px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="40" data-y="3207" style="position:absolute;width:576px;height:291px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784205551201-0-web.jpg" src="uploads/opt/ino3-pasted-1784205551201-0.jpg" alt="pasted-1784205551201-0.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1634" data-y="4185" style="position:absolute;width:203px;height:363px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="716" data-y="3207" style="position:absolute;width:161px;height:291px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260703_113229_3a95e63e-13db-417f-9ac2-686c6e17b2dc-web.jpg" src="uploads/opt/ino3-hf_20260703_113229_3a95e63e-13db-417f-9ac2-686c6e17b2dc.jpg" alt="hf_20260703_113229_3a95e63e-13db-417f-9ac2-686c6e17b2dc.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1937" data-y="4185" style="position:absolute;width:203px;height:363px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="977" data-y="3207" style="position:absolute;width:161px;height:291px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260703_120521_02290c38-fa8f-4d3b-981a-533e6c5c7123-web.jpg" src="uploads/opt/ino3-hf_20260703_120521_02290c38-fa8f-4d3b-981a-533e6c5c7123.jpg" alt="hf_20260703_120521_02290c38-fa8f-4d3b-981a-533e6c5c7123.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <!-- row 10 -->
-      <div data-photo="" data-x="40" data-y="4648" style="position:absolute;width:430px;height:430px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-video="" data-x="1238" data-y="3207" style="position:absolute;width:167px;height:291px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <video src="uploads/ino-v06.mp4" data-full="uploads/ino-v06-full.mp4" poster="uploads/opt/ino-v06.jpg" muted loop playsinline autoplay preload="metadata" aria-label="INO — 8-bit block Lip Combo animation" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-x="1505" data-y="3207" style="position:absolute;width:301px;height:291px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260629_114354_85cc890a-24f7-4c5a-8d85-e9bac75e8c9d-web.jpg" src="uploads/opt/ino3-hf_20260629_114354_85cc890a-24f7-4c5a-8d85-e9bac75e8c9d.jpg" alt="hf_20260629_114354_85cc890a-24f7-4c5a-8d85-e9bac75e8c9d.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="570" data-y="4648" style="position:absolute;width:323px;height:430px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="1906" data-y="3207" style="position:absolute;width:226px;height:291px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784207672796-0-web.jpg" src="uploads/opt/ino4-pasted-1784207672796-0.jpg" alt="INO Beauty — Yaza Merhaba %25 indirim campaign visual" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="993" data-y="4648" style="position:absolute;width:240px;height:430px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="2232" data-y="3207" style="position:absolute;width:168px;height:291px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260703_075857_0c7cdedf-5efe-44df-9906-a1a285fe01cf-web.jpg" src="uploads/opt/ino3-hf_20260703_075857_0c7cdedf-5efe-44df-9906-a1a285fe01cf.jpg" alt="hf_20260703_075857_0c7cdedf-5efe-44df-9906-a1a285fe01cf.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1333" data-y="4648" style="position:absolute;width:288px;height:430px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="2500" data-y="3207" style="position:absolute;width:202px;height:291px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260322_103752_e75cfbb5-508c-45ca-b3cd-1e8067dc4371-web.jpg" src="uploads/opt/ino-hf_20260322_103752_e75cfbb5-508c-45ca-b3cd-1e8067dc4371.jpg" alt="hf_20260322_103752_e75cfbb5-508c-45ca-b3cd-1e8067dc4371.jpeg" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1721" data-y="4648" style="position:absolute;width:346px;height:430px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="2802" data-y="3207" style="position:absolute;width:238px;height:291px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260629_115658_7be92b07-1de4-4721-b8eb-6aaf66f7a096-web.jpg" src="uploads/opt/ino3-hf_20260629_115658_7be92b07-1de4-4721-b8eb-6aaf66f7a096.jpg" alt="hf_20260629_115658_7be92b07-1de4-4721-b8eb-6aaf66f7a096.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
     </div>
@@ -295,15 +302,19 @@ class Component {
     const patternSrc = document.getElementById('tile-pattern');
     if (!stage || !canvas || !patternSrc) return;
 
-    const PW = 2182, PH = 5118;
-    canvas.style.width  = (PW * 2) + 'px';
-    canvas.style.height = (PH * 2) + 'px';
+    const PW = 3100, PH = 3558;
+    const GS = window.innerWidth <= 760 ? 0.42 : 1;
+    const NX = Math.ceil(window.innerWidth / (PW * GS)) + 1, NY = Math.max(2, Math.ceil(window.innerHeight / (PH * GS)) + 1);
+    canvas.style.width  = (PW * NX) + 'px';
+    canvas.style.height = (PH * NY) + 'px';
 
-    const offsets = [[0, 0], [PW, 0], [0, PH], [PW, PH]];
+    const offsets = []; for (let i = 0; i < NX; i++) for (let j = 0; j < NY; j++) offsets.push([i * PW, j * PH]); // the pattern is wider than a screen, so a row never shows twice side by side
     const sourceTiles = [...patternSrc.children];
+    const lbItems = sourceTiles.map(t => { const v = t.querySelector('video'), im = t.querySelector('img'); return v ? { type: 'v', src: v.getAttribute('data-full') || v.getAttribute('src') } : { type: 'i', src: im ? (im.getAttribute('data-full') || im.getAttribute('src')) : '', alt: im ? im.alt : '' }; });
     offsets.forEach(([ox, oy]) => {
-      sourceTiles.forEach(tile => {
+      sourceTiles.forEach((tile, ti) => {
         const clone = tile.cloneNode(true);
+        clone.setAttribute('data-idx', ti);
         const baseLeft = parseFloat(tile.getAttribute('data-x'));
         const baseTop  = parseFloat(tile.getAttribute('data-y'));
         clone.style.left = (baseLeft + ox) + 'px';
@@ -320,9 +331,40 @@ class Component {
     lbImg.style.cssText = 'max-width:96vw;max-height:94vh;width:auto;height:auto;border-radius:14px;box-shadow:0 50px 120px rgba(0,0,0,0.6);object-fit:contain;opacity:0;transition:opacity 180ms ease;';
     lightbox.appendChild(lbImg);
     document.body.appendChild(lightbox);
+    const lbClose = document.createElement('button'); lbClose.id = 'lb-close'; lbClose.type = 'button'; lbClose.setAttribute('aria-label', 'Close');
+    lbClose.innerHTML = '<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 4L16 16M16 4L4 16" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/></svg>';
+    lbClose.style.cssText = 'position:fixed;top:calc(16px + env(safe-area-inset-top));right:16px;z-index:510;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,0.35);background:rgba(11,11,11,0.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;';
+    lbClose.addEventListener('click', (e) => { e.stopPropagation(); closeLightbox(); });
+    lightbox.appendChild(lbClose);
+    // browse with arrows, keys and swipe
+    let lbIdx = -1;
+    const showItem = (i) => {
+      const nItems = lbItems.length; if (!nItems) return;
+      lbIdx = ((i % nItems) + nItems) % nItems; const it = lbItems[lbIdx];
+      if (it.type === 'v') { openVideo(it.src); }
+      else { lbVid.pause(); lbVid.removeAttribute('src'); lbVid.load(); lbVid.style.display = 'none'; openLightbox(it.src, it.alt); }
+    };
+    const mob = window.innerWidth <= 760;
+    const mkArrow = (dir) => {
+      const b = document.createElement('button'); b.type = 'button'; b.id = dir < 0 ? 'lb-prev' : 'lb-next'; b.setAttribute('aria-label', dir < 0 ? 'Previous' : 'Next');
+      b.innerHTML = dir < 0 ? '<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12.5 4L6.5 10L12.5 16" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' : '<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 4L13.5 10L7.5 16" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      const pos = mob ? ('bottom:calc(20px + env(safe-area-inset-bottom));' + (dir < 0 ? 'left:calc(50% - 64px);' : 'left:calc(50% + 12px);')) : ('top:50%;margin-top:-26px;' + (dir < 0 ? 'left:20px;' : 'right:20px;'));
+      b.style.cssText = 'position:fixed;' + pos + 'z-index:510;width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,0.35);background:rgba(11,11,11,0.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;';
+      b.addEventListener('click', (e) => { e.stopPropagation(); showItem(lbIdx + dir); });
+      lightbox.appendChild(b);
+    };
+    mkArrow(-1); mkArrow(1);
+    const lbOpen = () => lightbox.style.opacity === '1';
+    window.addEventListener('keydown', (e) => { if (!lbOpen()) return; if (e.key === 'ArrowLeft') showItem(lbIdx - 1); if (e.key === 'ArrowRight') showItem(lbIdx + 1); });
+    let swX = null, swY = null;
+    lightbox.addEventListener('touchstart', (e) => { const t = e.touches[0]; swX = t.clientX; swY = t.clientY; }, { passive: true });
+    lightbox.addEventListener('touchend', (e) => { if (swX === null) return; const t = e.changedTouches[0]; const dx = t.clientX - swX, dy = t.clientY - swY; swX = null; if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.3) showItem(lbIdx + (dx < 0 ? 1 : -1)); }, { passive: true });
+    /*vlb*/ const lbVid=document.createElement('video');lbVid.controls=true;lbVid.playsInline=true;lbVid.style.cssText='max-width:96vw;max-height:calc(100vh - 140px);width:auto;height:auto;border-radius:14px;box-shadow:0 50px 120px rgba(0,0,0,0.6);display:none;background:#000;';lightbox.appendChild(lbVid);lbVid.addEventListener('click',e=>e.stopPropagation());
+    const openVideo=(src)=>{lbToken++;lbImg.style.display='none';lbVid.style.display='block';lightbox.style.opacity='1';lightbox.style.pointerEvents='auto';lbVid.src=src;lbVid.muted=false;lbVid.play().catch(()=>{lbVid.muted=true;lbVid.play().catch(()=>{})});};
 
     let lbToken = 0;
     const openLightbox = (src, alt) => {
+      lbImg.style.display = '';
       const token = ++lbToken;
       lbImg.style.opacity = '0';
       lbImg.removeAttribute('src');
@@ -335,6 +377,7 @@ class Component {
       if (lbImg.complete && lbImg.currentSrc) show();
     };
     const closeLightbox = () => {
+      lbVid.pause();lbVid.removeAttribute('src');lbVid.load();lbVid.style.display='none';lbImg.style.display='';
       lbToken++;
       lightbox.style.opacity = '0';
       lightbox.style.pointerEvents = 'none';
@@ -358,7 +401,7 @@ class Component {
 
     const wrap = (v, m) => ((v % m) + m) % m;
     const render = () => {
-      canvas.style.transform = `translate3d(${(-viewX + parX).toFixed(1)}px, ${(-viewY + parY).toFixed(1)}px, 0)`;
+      canvas.style.transformOrigin = '0 0'; canvas.style.transform = `translate3d(${(-viewX * GS + parX).toFixed(1)}px, ${(-viewY * GS + parY).toFixed(1)}px, 0) scale(${GS})`;
     };
 
     let raf = null;
@@ -367,8 +410,8 @@ class Component {
       const dt = Math.min(0.05, (now - last) / 1000);
       last = now;
       if (autoplay && !dragging) {
-        viewX = wrap(viewX - SPEED_X * dt, PW);
-        viewY = wrap(viewY + SPEED_Y * dt, PH);
+        viewX = wrap(viewX - SPEED_X * dt / GS, PW);
+        viewY = wrap(viewY + SPEED_Y * dt / GS, PH);
       }
       const targetParX = mouseNX * PARALLAX_RANGE;
       const targetParY = mouseNY * PARALLAX_RANGE;
@@ -409,8 +452,8 @@ class Component {
       const dx = p.clientX - lastPX, dy = p.clientY - lastPY;
       lastPX = p.clientX; lastPY = p.clientY;
       dragDistance += Math.hypot(dx, dy);
-      viewX = wrap(viewX - dx, PW);
-      viewY = wrap(viewY - dy, PH);
+      viewX = wrap(viewX - dx / GS, PW);
+      viewY = wrap(viewY - dy / GS, PH);
     };
     const onUp = (e) => {
       if (!dragging) return;
@@ -420,6 +463,10 @@ class Component {
       if (dragDistance < 6) {
         const tile = e.target && e.target.closest ? e.target.closest('[data-photo]') : null;
         if (tile) {
+          const ix = parseInt(tile.getAttribute('data-idx'), 10);
+          if (!isNaN(ix)) { showItem(ix); return; }
+          const vEl = tile.querySelector('video');
+          if (vEl) { openVideo(vEl.getAttribute('data-full') || vEl.currentSrc || vEl.src); return; }
           const img = tile.querySelector('img');
           if (img) {
             const full = img.getAttribute('data-full');
@@ -437,8 +484,8 @@ class Component {
       e.preventDefault();
       autoplay = false;
       clearTimeout(idleTimer);
-      viewX = wrap(viewX + e.deltaX * 0.5, PW);
-      viewY = wrap(viewY + e.deltaY * 0.5, PH);
+      viewX = wrap(viewX + e.deltaX * 0.5 / GS, PW);
+      viewY = wrap(viewY + e.deltaY * 0.5 / GS, PH);
       wakeAutoplay();
     };
     stage.addEventListener('wheel', onWheel, { passive: false });
@@ -461,5 +508,6 @@ const __component = new Component();
 __component.componentDidMount();
 });
 </script>
+<script data-video-io>(()=>{const io=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting){v.play().catch(()=>{})}else{v.pause()}}),{rootMargin:'150px'});let seen=new WeakSet();const go=()=>document.querySelectorAll('#gallery-canvas video').forEach(v=>{if(!seen.has(v)){seen.add(v);io.observe(v)}});addEventListener('load',()=>{go();setTimeout(go,800)});new MutationObserver(go).observe(document.documentElement,{childList:true,subtree:true});})();</script>
 </body>
 </html>

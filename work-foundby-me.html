@@ -35,7 +35,7 @@
 <body>
 <!-- ═══ NAV ═══ (same chrome as homepage) -->
 <nav style="position:fixed;top:0;left:0;right:0;z-index:200;height:72px;display:flex;align-items:center;padding:0 clamp(24px,5vw,80px);background:#FFFFFF;border-bottom:1px solid rgba(11,11,11,0.08);">
-  <a href="index.html" style="font-family:var(--font-display);font-weight:700;font-size:26px;display:inline-flex;align-items:center;gap:9px;letter-spacing:-0.025em;color:#0B0B0B;text-decoration:none;flex-shrink:0;line-height:1;"><img src="uploads/opt/joke-smile.webp" alt="" style="height:34px;width:auto;display:block;">joke®</a>
+  <a href="index.html" style="font-family:var(--font-display);font-weight:700;font-size:26px;display:inline-flex;align-items:center;gap:9px;letter-spacing:-0.025em;color:#0B0B0B;text-decoration:none;flex-shrink:0;line-height:1;">joke®</a>
 
   <div style="position:absolute;left:0;right:0;top:0;height:72px;display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:1;">
     <div style="position:relative;display:flex;gap:2px;align-items:center;padding:5px 6px;border-radius:100px;pointer-events:auto;">
@@ -55,7 +55,7 @@
 
 <div id="wnav-mobile-menu" style="display:none;position:fixed;inset:0;z-index:300;background:#FFFFFF;flex-direction:column;">
   <div style="height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(24px,5vw,80px);border-bottom:1px solid rgba(11,11,11,0.08);flex-shrink:0;">
-    <span style="font-family:var(--font-display);font-weight:700;font-size:26px;display:inline-flex;align-items:center;gap:9px;color:#0B0B0B;"><img src="uploads/opt/joke-smile.webp" alt="" style="height:34px;width:auto;display:block;">joke®</span>
+    <span style="font-family:var(--font-display);font-weight:700;font-size:26px;display:inline-flex;align-items:center;gap:9px;color:#0B0B0B;">joke®</span>
     <button aria-label="Close" onclick="document.getElementById('wnav-mobile-menu').style.display='none'" style="background:none;border:none;padding:8px;cursor:pointer;">
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 4L16 16M16 4L4 16" stroke="#0B0B0B" stroke-width="1.6" stroke-linecap="round"></path></svg>
     </button>
@@ -76,7 +76,80 @@
     <div id="gallery-canvas" style="position:absolute;top:0;left:0;will-change:transform;"></div>
 
     <!-- source pattern — cloned 2×2 by JS into a seamless, endlessly-panning tile. Empty for now — add data-photo tiles here when images are ready. -->
-    <div id="tile-pattern" style="display:none;"></div>
+    <div id="tile-pattern" style="display:none;">
+      <div data-photo="" data-x="40" data-y="40" style="position:absolute;width:225px;height:282px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/foundby-me-01-web.jpg" src="uploads/opt/foundby-me-01.jpg" alt="Foundby.me — engagement post" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="365" data-y="40" style="position:absolute;width:225px;height:282px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/foundby-me-02-web.jpg" src="uploads/opt/foundby-me-02.jpg" alt="Foundby.me — new UGC campaign post" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="690" data-y="40" style="position:absolute;width:159px;height:282px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/foundby-me-03-web.jpg" src="uploads/opt/foundby-me-03.jpg" alt="Foundby.me — collection detail" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="949" data-y="40" style="position:absolute;width:225px;height:282px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/foundby-me-04-web.jpg" src="uploads/opt/foundby-me-04.jpg" alt="Foundby.me — UGC campaigns Instagram post" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="1274" data-y="40" style="position:absolute;width:397px;height:282px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/foundby-me-05-web.jpg" src="uploads/opt/foundby-me-05.jpg" alt="Foundby.me — influencer home" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="1771" data-y="40" style="position:absolute;width:328px;height:282px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/foundby-me-06-web.jpg" src="uploads/opt/foundby-me-06.jpg" alt="Foundby.me — influencer detail" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="2199" data-y="40" style="position:absolute;width:226px;height:282px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/foundby-me-07-web.jpg" src="uploads/opt/foundby-me-07.jpg" alt="Foundby.me — UGC and affiliate post" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="2525" data-y="40" style="position:absolute;width:515px;height:282px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/foundby-me-08-web.jpg" src="uploads/opt/foundby-me-08.jpg" alt="Foundby.me — wordmark" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="40" data-y="422" style="position:absolute;width:203px;height:253px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/foundby-me-09-web.jpg" src="uploads/opt/foundby-me-09.jpg" alt="Foundby.me — influencer network post" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="343" data-y="422" style="position:absolute;width:117px;height:253px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/foundby-me-10-web.jpg" src="uploads/opt/foundby-me-10.jpg" alt="Foundby.me — mobile discover" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="560" data-y="422" style="position:absolute;width:202px;height:253px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/foundby-me-11-web.jpg" src="uploads/opt/foundby-me-11.jpg" alt="Foundby.me — campaign highlights post" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="862" data-y="422" style="position:absolute;width:484px;height:253px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/foundby-me-12-web.jpg" src="uploads/opt/foundby-me-12.jpg" alt="Foundby.me — launch banner" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="1446" data-y="422" style="position:absolute;width:202px;height:253px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/foundby-me-13-web.jpg" src="uploads/opt/foundby-me-13.jpg" alt="Foundby.me — brand partnership post" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="1748" data-y="422" style="position:absolute;width:329px;height:253px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/foundby-me-14-web.jpg" src="uploads/opt/foundby-me-14.jpg" alt="Foundby.me — brand campaigns panel" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="2177" data-y="422" style="position:absolute;width:404px;height:253px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/foundby-me-15-web.jpg" src="uploads/opt/foundby-me-15.jpg" alt="Foundby.me — landing page" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="2681" data-y="422" style="position:absolute;width:359px;height:253px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/foundby-me-16-web.jpg" src="uploads/opt/foundby-me-16.jpg" alt="Foundby.me — collection links" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="40" data-y="775" style="position:absolute;width:211px;height:375px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/foundby-me-17-web.jpg" src="uploads/opt/foundby-me-17.jpg" alt="Foundby.me — welcome brands story" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="351" data-y="775" style="position:absolute;width:300px;height:375px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/foundby-me-18-web.jpg" src="uploads/opt/foundby-me-18.jpg" alt="Foundby.me — campaign highlights post" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="751" data-y="775" style="position:absolute;width:300px;height:375px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/foundby-me-19-web.jpg" src="uploads/opt/foundby-me-19.jpg" alt="Foundby.me — brand direct post" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="1151" data-y="775" style="position:absolute;width:211px;height:375px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/foundby-me-20-web.jpg" src="uploads/opt/foundby-me-20.jpg" alt="Foundby.me — creator shop page" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="1462" data-y="775" style="position:absolute;width:375px;height:375px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/foundby-me-21-web.jpg" src="uploads/opt/foundby-me-21.jpg" alt="Foundby.me — app icon" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="1937" data-y="775" style="position:absolute;width:300px;height:375px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/foundby-me-22-web.jpg" src="uploads/opt/foundby-me-22.jpg" alt="Foundby.me — commission post" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="2337" data-y="775" style="position:absolute;width:211px;height:375px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/foundby-me-23-web.jpg" src="uploads/opt/foundby-me-23.jpg" alt="Foundby.me — app cover" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="2648" data-y="775" style="position:absolute;width:392px;height:375px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/foundby-me-24-web.jpg" src="uploads/opt/foundby-me-24.jpg" alt="Foundby.me — applications panel" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+    </div>
   </div>
 
   <!-- bottom-left persistent brand mark + prev/next -->
@@ -112,15 +185,19 @@ class Component {
     const patternSrc = document.getElementById('tile-pattern');
     if (!stage || !canvas || !patternSrc) return;
 
-    const PW = 1900, PH = 1400;
-    canvas.style.width  = (PW * 2) + 'px';
-    canvas.style.height = (PH * 2) + 'px';
+    const PW = 3100, PH = 1210;
+    const GS = window.innerWidth <= 760 ? 0.42 : 1;
+    const NX = Math.ceil(window.innerWidth / (PW * GS)) + 1, NY = Math.max(2, Math.ceil(window.innerHeight / (PH * GS)) + 1);
+    canvas.style.width  = (PW * NX) + 'px';
+    canvas.style.height = (PH * NY) + 'px';
 
-    const offsets = [[0, 0], [PW, 0], [0, PH], [PW, PH]];
+    const offsets = []; for (let i = 0; i < NX; i++) for (let j = 0; j < NY; j++) offsets.push([i * PW, j * PH]); // the pattern is wider than a screen, so a row never shows twice side by side
     const sourceTiles = [...patternSrc.children];
+    const lbItems = sourceTiles.map(t => { const v = t.querySelector('video'), im = t.querySelector('img'); return v ? { type: 'v', src: v.getAttribute('data-full') || v.getAttribute('src') } : { type: 'i', src: im ? (im.getAttribute('data-full') || im.getAttribute('src')) : '', alt: im ? im.alt : '' }; });
     offsets.forEach(([ox, oy]) => {
-      sourceTiles.forEach(tile => {
+      sourceTiles.forEach((tile, ti) => {
         const clone = tile.cloneNode(true);
+        clone.setAttribute('data-idx', ti);
         const baseLeft = parseFloat(tile.getAttribute('data-x'));
         const baseTop  = parseFloat(tile.getAttribute('data-y'));
         clone.style.left = (baseLeft + ox) + 'px';
@@ -137,9 +214,40 @@ class Component {
     lbImg.style.cssText = 'max-width:96vw;max-height:94vh;width:auto;height:auto;border-radius:14px;box-shadow:0 50px 120px rgba(0,0,0,0.6);object-fit:contain;opacity:0;transition:opacity 180ms ease;';
     lightbox.appendChild(lbImg);
     document.body.appendChild(lightbox);
+    const lbClose = document.createElement('button'); lbClose.id = 'lb-close'; lbClose.type = 'button'; lbClose.setAttribute('aria-label', 'Close');
+    lbClose.innerHTML = '<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 4L16 16M16 4L4 16" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/></svg>';
+    lbClose.style.cssText = 'position:fixed;top:calc(16px + env(safe-area-inset-top));right:16px;z-index:510;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,0.35);background:rgba(11,11,11,0.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;';
+    lbClose.addEventListener('click', (e) => { e.stopPropagation(); closeLightbox(); });
+    lightbox.appendChild(lbClose);
+    // browse with arrows, keys and swipe
+    let lbIdx = -1;
+    const showItem = (i) => {
+      const nItems = lbItems.length; if (!nItems) return;
+      lbIdx = ((i % nItems) + nItems) % nItems; const it = lbItems[lbIdx];
+      if (it.type === 'v') { openVideo(it.src); }
+      else { lbVid.pause(); lbVid.removeAttribute('src'); lbVid.load(); lbVid.style.display = 'none'; openLightbox(it.src, it.alt); }
+    };
+    const mob = window.innerWidth <= 760;
+    const mkArrow = (dir) => {
+      const b = document.createElement('button'); b.type = 'button'; b.id = dir < 0 ? 'lb-prev' : 'lb-next'; b.setAttribute('aria-label', dir < 0 ? 'Previous' : 'Next');
+      b.innerHTML = dir < 0 ? '<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12.5 4L6.5 10L12.5 16" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' : '<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 4L13.5 10L7.5 16" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      const pos = mob ? ('bottom:calc(20px + env(safe-area-inset-bottom));' + (dir < 0 ? 'left:calc(50% - 64px);' : 'left:calc(50% + 12px);')) : ('top:50%;margin-top:-26px;' + (dir < 0 ? 'left:20px;' : 'right:20px;'));
+      b.style.cssText = 'position:fixed;' + pos + 'z-index:510;width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,0.35);background:rgba(11,11,11,0.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;';
+      b.addEventListener('click', (e) => { e.stopPropagation(); showItem(lbIdx + dir); });
+      lightbox.appendChild(b);
+    };
+    mkArrow(-1); mkArrow(1);
+    const lbOpen = () => lightbox.style.opacity === '1';
+    window.addEventListener('keydown', (e) => { if (!lbOpen()) return; if (e.key === 'ArrowLeft') showItem(lbIdx - 1); if (e.key === 'ArrowRight') showItem(lbIdx + 1); });
+    let swX = null, swY = null;
+    lightbox.addEventListener('touchstart', (e) => { const t = e.touches[0]; swX = t.clientX; swY = t.clientY; }, { passive: true });
+    lightbox.addEventListener('touchend', (e) => { if (swX === null) return; const t = e.changedTouches[0]; const dx = t.clientX - swX, dy = t.clientY - swY; swX = null; if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.3) showItem(lbIdx + (dx < 0 ? 1 : -1)); }, { passive: true });
+    /*vlb*/ const lbVid=document.createElement('video');lbVid.controls=true;lbVid.playsInline=true;lbVid.style.cssText='max-width:96vw;max-height:calc(100vh - 140px);width:auto;height:auto;border-radius:14px;box-shadow:0 50px 120px rgba(0,0,0,0.6);display:none;background:#000;';lightbox.appendChild(lbVid);lbVid.addEventListener('click',e=>e.stopPropagation());
+    const openVideo=(src)=>{lbToken++;lbImg.style.display='none';lbVid.style.display='block';lightbox.style.opacity='1';lightbox.style.pointerEvents='auto';lbVid.src=src;lbVid.muted=false;lbVid.play().catch(()=>{lbVid.muted=true;lbVid.play().catch(()=>{})});};
 
     let lbToken = 0;
     const openLightbox = (src, alt) => {
+      lbImg.style.display = '';
       const token = ++lbToken;
       lbImg.style.opacity = '0';
       lbImg.removeAttribute('src');
@@ -152,6 +260,7 @@ class Component {
       if (lbImg.complete && lbImg.currentSrc) show();
     };
     const closeLightbox = () => {
+      lbVid.pause();lbVid.removeAttribute('src');lbVid.load();lbVid.style.display='none';lbImg.style.display='';
       lbToken++;
       lightbox.style.opacity = '0';
       lightbox.style.pointerEvents = 'none';
@@ -175,7 +284,7 @@ class Component {
 
     const wrap = (v, m) => ((v % m) + m) % m;
     const render = () => {
-      canvas.style.transform = `translate3d(${(-viewX + parX).toFixed(1)}px, ${(-viewY + parY).toFixed(1)}px, 0)`;
+      canvas.style.transformOrigin = '0 0'; canvas.style.transform = `translate3d(${(-viewX * GS + parX).toFixed(1)}px, ${(-viewY * GS + parY).toFixed(1)}px, 0) scale(${GS})`;
     };
 
     let raf = null;
@@ -184,8 +293,8 @@ class Component {
       const dt = Math.min(0.05, (now - last) / 1000);
       last = now;
       if (autoplay && !dragging) {
-        viewX = wrap(viewX - SPEED_X * dt, PW);
-        viewY = wrap(viewY + SPEED_Y * dt, PH);
+        viewX = wrap(viewX - SPEED_X * dt / GS, PW);
+        viewY = wrap(viewY + SPEED_Y * dt / GS, PH);
       }
       const targetParX = mouseNX * PARALLAX_RANGE;
       const targetParY = mouseNY * PARALLAX_RANGE;
@@ -226,8 +335,8 @@ class Component {
       const dx = p.clientX - lastPX, dy = p.clientY - lastPY;
       lastPX = p.clientX; lastPY = p.clientY;
       dragDistance += Math.hypot(dx, dy);
-      viewX = wrap(viewX - dx, PW);
-      viewY = wrap(viewY - dy, PH);
+      viewX = wrap(viewX - dx / GS, PW);
+      viewY = wrap(viewY - dy / GS, PH);
     };
     const onUp = (e) => {
       if (!dragging) return;
@@ -237,6 +346,10 @@ class Component {
       if (dragDistance < 6) {
         const tile = e.target && e.target.closest ? e.target.closest('[data-photo]') : null;
         if (tile) {
+          const ix = parseInt(tile.getAttribute('data-idx'), 10);
+          if (!isNaN(ix)) { showItem(ix); return; }
+          const vEl = tile.querySelector('video');
+          if (vEl) { openVideo(vEl.getAttribute('data-full') || vEl.currentSrc || vEl.src); return; }
           const img = tile.querySelector('img');
           if (img) {
             const full = img.getAttribute('data-full');
@@ -254,8 +367,8 @@ class Component {
       e.preventDefault();
       autoplay = false;
       clearTimeout(idleTimer);
-      viewX = wrap(viewX + e.deltaX * 0.5, PW);
-      viewY = wrap(viewY + e.deltaY * 0.5, PH);
+      viewX = wrap(viewX + e.deltaX * 0.5 / GS, PW);
+      viewY = wrap(viewY + e.deltaY * 0.5 / GS, PH);
       wakeAutoplay();
     };
     stage.addEventListener('wheel', onWheel, { passive: false });
