@@ -1660,7 +1660,11 @@ __component.componentDidMount();
   function place(){
     const st=document.getElementById('v-nojoke'),hero=document.getElementById('hero'),h1=hero&&hero.querySelector('h1');
     if(!st||!h1)return;
-    const hr=hero.getBoundingClientRect(),r=lastCharRect(h1),w=st.offsetWidth,h=st.offsetHeight;
+    // layout position of the period relative to the hero, ignoring transforms (entrance animations can't skew it)
+    const ch=h1.querySelectorAll('.v-ch');let r;
+    if(ch.length){let el=ch[ch.length-1],x=0,y=0;const cw=el.offsetWidth,chh=el.offsetHeight;while(el&&el!==hero){x+=el.offsetLeft;y+=el.offsetTop;el=el.offsetParent}r={left:x,top:y,width:cw,height:chh}}
+    else{const a=lastCharRect(h1),b=hero.getBoundingClientRect();r={left:a.left-b.left,top:a.top-b.top,width:a.width,height:a.height}}
+    const hr={left:0,top:0,width:hero.offsetWidth},w=st.offsetWidth,h=st.offsetHeight;
     const sc=innerWidth<=760?0.62:1, vw=w*sc;            // visual width after the mobile scale
     // the sticker sits on the period, slightly down-left
     let vl=r.left-hr.left-vw*0.24;                          // visual left edge
@@ -1672,7 +1676,12 @@ __component.componentDidMount();
   const go=()=>place();
   // measure only after the headline's entrance animation has finished, so the sticker never jumps
   const h1el=document.querySelector('#hero h1');let anim=false,type=false,ready=false;
-  const start=()=>{if(ready||!anim||!type)return;ready=true;requestAnimationFrame(go)};
+  const start=()=>{if(ready||!anim||!type)return;ready=true;
+    // wait until the period stops moving (child letter animations can still be running), then place and show
+    let last='',stable=0,t0=performance.now();
+    (function settle(){const h=document.querySelector('#hero h1');const r=lastCharRect(h);const k=Math.round(r.left)+','+Math.round(r.top);
+      stable=(k===last)?stable+1:0;last=k;
+      if(stable>=10||performance.now()-t0>3000)go();else requestAnimationFrame(settle);})();};
   if(h1el)h1el.addEventListener('animationend',()=>{anim=true;start()},{once:true});
   addEventListener('v-type-ready',()=>{type=true;start()},{once:true});
   setTimeout(()=>{anim=true;type=true;start()},2200);
