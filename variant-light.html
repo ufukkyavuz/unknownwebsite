@@ -193,7 +193,7 @@
   <div class="v-stk" style="left:20%;top:14%;--r:-8deg"><div class="v-stk-in"><div class="v-face v-pill v-holo">Made you look.</div></div></div>
   <div class="v-stk" style="right:19%;top:10%;--r:6deg"><div class="v-stk-in" style="animation-delay:-2s"><div class="v-face v-circle v-holo"><span class="v-dot"><img src="uploads/opt/joke-smile.webp" alt="" draggable="false"></span></div></div></div>
   <div class="v-stk" style="left:17%;bottom:16%;--r:-10deg"><div class="v-stk-in" style="animation-delay:-4s"><div class="v-face v-star"><svg viewBox="0 0 100 100"><defs><linearGradient id="vg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#CCFF01"/><stop offset=".5" stop-color="#7CF7C8"/><stop offset="1" stop-color="#A48CFF"/></linearGradient></defs><polygon fill="#fff" points="50,0 59,15 76,7 78,25 96,26 88,42 100,55 85,64 91,82 73,82 67,99 53,89 39,100 33,83 15,87 16,69 0,60 12,46 2,31 20,27 21,9 38,15"/><polygon fill="url(#vg1)" points="50,5 58,18 73,11 75,28 91,29 84,43 95,55 82,62 87,78 71,78 65,93 53,85 40,95 35,80 19,83 20,67 5,59 16,47 7,33 23,30 24,14 39,19"/></svg><span>Stay<br>weird.</span></div></div></div>
-  <div class="v-stk" id="v-nojoke" style="right:18%;bottom:22%;--r:-6deg"><div class="v-stk-in" style="animation-delay:-3s"><div class="v-face v-pill v-holo v-holo2" style="font-size:clamp(18px,1.7vw,28px);padding:14px 28px">No joke.</div></div></div>
+  <div class="v-stk" id="v-nojoke" style="left:0;top:0;--r:-6deg;opacity:0;transition:opacity .35s ease"><div class="v-stk-in" style="animation-delay:-3s"><div class="v-face v-pill" style="background:#CCFF01;font-size:clamp(22px,2.1vw,36px);padding:15px 32px;letter-spacing:.01em">NO JOKE.</div></div></div>
 </section>
 
 <!-- ═══ CLIENTS ═══ -->
@@ -1555,13 +1555,16 @@ __component.componentDidMount();
     }
     requestAnimationFrame(tick);
   }
+  // hero headline: split right away so its layout is final before anything is pinned to it
+  document.querySelectorAll('#hero .v-big').forEach(split);
+  document.fonts.ready.then(()=>{fixWidths();window.dispatchEvent(new Event('v-type-ready'))});
   function initType(){
-    document.querySelectorAll('.v-big, section:not(#hero) h2:not(.v-say)').forEach(split);
+    document.querySelectorAll('.v-big:not(#hero .v-big), section:not(#hero) h2:not(.v-say)').forEach(split);
     document.fonts.ready.then(()=>{fixWidths();});
     addEventListener('resize',()=>setTimeout(fixWidths,50));
-    requestAnimationFrame(tick);
   }
-  setTimeout(initType,1600);   // after the site's own heading reveal has split words
+  requestAnimationFrame(tick);
+  setTimeout(initType,1600);   // other headings: after the site's own reveal has split words
 
   /* ---------- 2. stickers: holo shift, peel on hover, drag, drop, return ---------- */
   document.querySelectorAll('.v-stk').forEach(st=>{
@@ -1629,20 +1632,30 @@ __component.componentDidMount();
 
 <script>
 (function(){
-  // pin the "No joke." sticker onto the end of "SOMETHING."
+  // pin the NO JOKE. sticker on the period of "SOMETHING."
+  function lastCharRect(h1){
+    const ch=h1.querySelectorAll('.v-ch');if(ch.length)return ch[ch.length-1].getBoundingClientRect();
+    const w=document.createTreeWalker(h1,NodeFilter.SHOW_TEXT);let n=null;while(w.nextNode())if(w.currentNode.nodeValue.trim())n=w.currentNode;
+    if(!n)return h1.getBoundingClientRect();const t=n.nodeValue.replace(/\s+$/,'');const r=document.createRange();r.setStart(n,t.length-1);r.setEnd(n,t.length);return r.getBoundingClientRect();
+  }
+  let shown=false;
   function place(){
     const st=document.getElementById('v-nojoke'),hero=document.getElementById('hero'),h1=hero&&hero.querySelector('h1');
     if(!st||!h1)return;
-    const ch=h1.querySelectorAll('.v-ch');const last=ch.length?ch[ch.length-1]:null;
-    const hr=hero.getBoundingClientRect(),r=last?last.getBoundingClientRect():h1.getBoundingClientRect();
-    const w=st.offsetWidth,h=st.offsetHeight;
-    st.style.right='auto';st.style.bottom='auto';
-    st.style.left=(r.right-hr.left-w*0.62)+'px';
-    st.style.top=(r.top-hr.top-h*0.55)+'px';
+    const hr=hero.getBoundingClientRect(),r=lastCharRect(h1),w=st.offsetWidth,h=st.offsetHeight;
+    // centre the sticker on the period, sitting on the baseline area
+    st.style.left=(r.left-hr.left-w*0.12)+'px';
+    st.style.top=(r.top+r.height*0.66-hr.top-h/2)+'px';
+    if(!shown){shown=true;requestAnimationFrame(()=>{st.style.opacity='1'})}
   }
-  addEventListener('load',()=>{place();setTimeout(place,1800);setTimeout(place,2600)});
-  addEventListener('resize',()=>setTimeout(place,80));
-  document.fonts&&document.fonts.ready.then(()=>setTimeout(place,50));
+  const go=()=>place();
+  // measure only after the headline's entrance animation has finished, so the sticker never jumps
+  const h1el=document.querySelector('#hero h1');let anim=false,type=false,ready=false;
+  const start=()=>{if(ready||!anim||!type)return;ready=true;requestAnimationFrame(go)};
+  if(h1el)h1el.addEventListener('animationend',()=>{anim=true;start()},{once:true});
+  addEventListener('v-type-ready',()=>{type=true;start()},{once:true});
+  setTimeout(()=>{anim=true;type=true;start()},2200);
+  addEventListener('resize',()=>requestAnimationFrame(go));
 })();
 </script>
 </body>
