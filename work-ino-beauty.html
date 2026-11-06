@@ -259,6 +259,25 @@
       <div data-photo="" data-x="1721" data-y="4648" style="position:absolute;width:346px;height:430px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/hf_20260629_115658_7be92b07-1de4-4721-b8eb-6aaf66f7a096-web.jpg" src="uploads/opt/ino3-hf_20260629_115658_7be92b07-1de4-4721-b8eb-6aaf66f7a096.jpg" alt="hf_20260629_115658_7be92b07-1de4-4721-b8eb-6aaf66f7a096.png" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
+      <!-- video rows -->
+      <div data-photo="" data-video="" data-x="40" data-y="5178" style="position:absolute;width:231px;height:410px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);">
+        <video src="uploads/ino-v01.mp4" poster="uploads/opt/ino-v01.jpg" muted loop playsinline autoplay preload="metadata" aria-label="INO — paper collage promo" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-video="" data-x="371" data-y="5178" style="position:absolute;width:231px;height:410px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);">
+        <video src="uploads/ino-v02.mp4" poster="uploads/opt/ino-v02.jpg" muted loop playsinline autoplay preload="metadata" aria-label="INO — full glam campaign video" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-video="" data-x="702" data-y="5178" style="position:absolute;width:328px;height:410px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);">
+        <video src="uploads/ino-v03.mp4" poster="uploads/opt/ino-v03.jpg" muted loop playsinline autoplay preload="metadata" aria-label="INO — folder collage animation" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-video="" data-x="1130" data-y="5178" style="position:absolute;width:231px;height:410px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);">
+        <video src="uploads/ino-v04.mp4" poster="uploads/opt/ino-v04.jpg" muted loop playsinline autoplay preload="metadata" aria-label="INO — ultimate set motion" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-video="" data-x="1461" data-y="5178" style="position:absolute;width:328px;height:410px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);">
+        <video src="uploads/ino-v05.mp4" poster="uploads/opt/ino-v05.jpg" muted loop playsinline autoplay preload="metadata" aria-label="INO — 3D card carousel animation" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-video="" data-x="1889" data-y="5178" style="position:absolute;width:231px;height:410px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);">
+        <video src="uploads/ino-v06.mp4" poster="uploads/opt/ino-v06.jpg" muted loop playsinline autoplay preload="metadata" aria-label="INO — lip combo campaign video" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
     </div>
   </div>
 
@@ -295,7 +314,7 @@ class Component {
     const patternSrc = document.getElementById('tile-pattern');
     if (!stage || !canvas || !patternSrc) return;
 
-    const PW = 2182, PH = 5118;
+    const PW = 2182, PH = 5648;
     canvas.style.width  = (PW * 2) + 'px';
     canvas.style.height = (PH * 2) + 'px';
 
@@ -461,5 +480,6 @@ const __component = new Component();
 __component.componentDidMount();
 });
 </script>
+<script data-video-io>(()=>{const io=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting){v.play().catch(()=>{})}else{v.pause()}}),{rootMargin:'150px'});let seen=new WeakSet();const go=()=>document.querySelectorAll('#gallery-canvas video').forEach(v=>{if(!seen.has(v)){seen.add(v);io.observe(v)}});addEventListener('load',()=>{go();setTimeout(go,800)});new MutationObserver(go).observe(document.documentElement,{childList:true,subtree:true});})();</script>
 </body>
 </html>

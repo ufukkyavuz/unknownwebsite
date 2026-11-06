@@ -231,6 +231,19 @@
       <div data-photo="" data-x="1928" data-y="4337" style="position:absolute;width:212px;height:377px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/pasted-1784209134890-0-web.jpg" src="uploads/opt/muse-pasted-1784209134890-0.jpg" alt="Muse Lab — bronze cream blush collage" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
+      <!-- video rows -->
+      <div data-photo="" data-video="" data-x="40" data-y="4814" style="position:absolute;width:445px;height:790px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);">
+        <video src="uploads/muse-v01.mp4" poster="uploads/opt/muse-v01.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Muse Lab — colour collage reel" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-video="" data-x="585" data-y="4814" style="position:absolute;width:445px;height:790px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);">
+        <video src="uploads/muse-v02.mp4" poster="uploads/opt/muse-v02.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Muse Lab — L&#x27;appart reel" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-video="" data-x="1130" data-y="4814" style="position:absolute;width:445px;height:790px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);">
+        <video src="uploads/muse-v03.mp4" poster="uploads/opt/muse-v03.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Muse Lab — L&#x27;appart reel" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-video="" data-x="1675" data-y="4814" style="position:absolute;width:445px;height:790px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);">
+        <video src="uploads/muse-v04.mp4" poster="uploads/opt/muse-v04.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Muse Lab — L&#x27;appart reel" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
     </div>
   </div>
 
@@ -267,7 +280,7 @@ class Component {
     const patternSrc = document.getElementById('tile-pattern');
     if (!stage || !canvas || !patternSrc) return;
 
-    const PW = 2181, PH = 4754;
+    const PW = 2181, PH = 5664;
     canvas.style.width  = (PW * 2) + 'px';
     canvas.style.height = (PH * 2) + 'px';
 
@@ -433,5 +446,6 @@ const __component = new Component();
 __component.componentDidMount();
 });
 </script>
+<script data-video-io>(()=>{const io=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting){v.play().catch(()=>{})}else{v.pause()}}),{rootMargin:'150px'});let seen=new WeakSet();const go=()=>document.querySelectorAll('#gallery-canvas video').forEach(v=>{if(!seen.has(v)){seen.add(v);io.observe(v)}});addEventListener('load',()=>{go();setTimeout(go,800)});new MutationObserver(go).observe(document.documentElement,{childList:true,subtree:true});})();</script>
 </body>
 </html>
