@@ -36,7 +36,7 @@
 <body>
 <!-- ═══ NAV ═══ (same chrome as homepage) -->
 <nav style="position:fixed;top:0;left:0;right:0;z-index:200;height:72px;display:flex;align-items:center;padding:0 clamp(24px,5vw,80px);background:#FFFFFF;border-bottom:1px solid rgba(11,11,11,0.08);">
-  <a href="index.html" style="font-family:var(--font-display);font-weight:700;font-size:26px;display:inline-flex;align-items:center;gap:9px;letter-spacing:-0.025em;color:#0B0B0B;text-decoration:none;flex-shrink:0;line-height:1;"><img src="uploads/opt/joke-smile.webp" alt="" style="height:34px;width:auto;display:block;">joke®</a>
+  <a href="index.html" style="font-family:var(--font-display);font-weight:700;font-size:26px;display:inline-flex;align-items:center;gap:9px;letter-spacing:-0.025em;color:#0B0B0B;text-decoration:none;flex-shrink:0;line-height:1;">joke®</a>
 
   <div style="position:absolute;left:0;right:0;top:0;height:72px;display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:1;">
     <div style="position:relative;display:flex;gap:2px;align-items:center;padding:5px 6px;border-radius:100px;pointer-events:auto;">
@@ -56,7 +56,7 @@
 
 <div id="wnav-mobile-menu" style="display:none;position:fixed;inset:0;z-index:300;background:#FFFFFF;flex-direction:column;">
   <div style="height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(24px,5vw,80px);border-bottom:1px solid rgba(11,11,11,0.08);flex-shrink:0;">
-    <span style="font-family:var(--font-display);font-weight:700;font-size:26px;display:inline-flex;align-items:center;gap:9px;color:#0B0B0B;"><img src="uploads/opt/joke-smile.webp" alt="" style="height:34px;width:auto;display:block;">joke®</span>
+    <span style="font-family:var(--font-display);font-weight:700;font-size:26px;display:inline-flex;align-items:center;gap:9px;color:#0B0B0B;">joke®</span>
     <button aria-label="Close" onclick="document.getElementById('wnav-mobile-menu').style.display='none'" style="background:none;border:none;padding:8px;cursor:pointer;">
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 4L16 16M16 4L4 16" stroke="#0B0B0B" stroke-width="1.6" stroke-linecap="round"></path></svg>
     </button>
@@ -78,101 +78,122 @@
 
     <!-- source pattern — cloned 2×2 by JS into a seamless, endlessly-panning tile. Empty for now — add data-photo tiles here when images are ready. -->
     <div id="tile-pattern" style="display:none;">
-      <div data-photo="" data-x="40" data-y="40" style="position:absolute;width:322px;height:399px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
-        <img data-full="uploads/sickscience-28-web.jpg" src="uploads/opt/sickscience-28.jpg" alt="SickScience — Black Friday NetWork ad" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      <div data-photo="" data-x="40" data-y="40" style="position:absolute;width:282px;height:378px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/sickscience-i21-web.jpg" src="uploads/opt/sickscience-i21.jpg" alt="SickScience — ShapeShift pair with lab glassware" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-video="" data-x="462" data-y="40" style="position:absolute;width:226px;height:399px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
-        <video src="uploads/sickscience-15.mp4" data-full="uploads/sickscience-15-full.mp4" poster="uploads/opt/sickscience-15.jpg" muted loop playsinline autoplay preload="metadata" aria-label="SickScience — ShapeShift product film" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      <div data-photo="" data-video="" data-x="422" data-y="40" style="position:absolute;width:213px;height:378px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <video src="uploads/sickscience-s28.mp4" data-full="uploads/sickscience-s28-full.mp4" poster="uploads/opt/sickscience-s28.jpg" muted loop playsinline autoplay preload="metadata" aria-label="SickScience — ShapeShift UGC day 1 to day 14" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
       </div>
-      <div data-photo="" data-x="788" data-y="40" style="position:absolute;width:223px;height:399px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
-        <img data-full="uploads/sickscience-i03-web.jpg" src="uploads/opt/sickscience-i03.jpg" alt="SickScience — product on an X-ray light box" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
-      </div>
-      <div data-photo="" data-x="1111" data-y="40" style="position:absolute;width:223px;height:399px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
-        <img data-full="uploads/sickscience-i14-web.jpg" src="uploads/opt/sickscience-i14.jpg" alt="SickScience — PowerCycle dropper on the scalp" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
-      </div>
-      <div data-photo="" data-x="1434" data-y="40" style="position:absolute;width:223px;height:399px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
-        <img data-full="uploads/sickscience-i11-web.jpg" src="uploads/opt/sickscience-i11.jpg" alt="SickScience — NetWork texture on the hand" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
-      </div>
-      <div data-photo="" data-x="1757" data-y="40" style="position:absolute;width:313px;height:399px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
-        <img data-full="uploads/sickscience-i09-web.jpg" src="uploads/opt/sickscience-i09.jpg" alt="SickScience — NetWork above the Earth" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
-      </div>
-      <div data-photo="" data-x="2170" data-y="40" style="position:absolute;width:223px;height:399px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
-        <img data-full="uploads/sickscience-i04-web.jpg" src="uploads/opt/sickscience-i04.jpg" alt="SickScience — products under a microscope" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
-      </div>
-      <div data-photo="" data-x="2493" data-y="40" style="position:absolute;width:224px;height:399px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
-        <img data-full="uploads/sickscience-34-web.jpg" src="uploads/opt/sickscience-34.jpg" alt="SickScience — cool clean chemistry ShapeShift story" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
-      </div>
-      <div data-photo="" data-x="2817" data-y="40" style="position:absolute;width:223px;height:399px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
-        <img data-full="uploads/sickscience-19-web.jpg" src="uploads/opt/sickscience-19.jpg" alt="SickScience — PowerCycle scene" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
-      </div>
-      <div data-photo="" data-x="40" data-y="539" style="position:absolute;width:348px;height:435px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
-        <img data-full="uploads/sickscience-22-web.jpg" src="uploads/opt/sickscience-22.jpg" alt="SickScience — the vault is open ad" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
-      </div>
-      <div data-photo="" data-x="488" data-y="539" style="position:absolute;width:435px;height:435px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
-        <img data-full="uploads/sickscience-i13-web.jpg" src="uploads/opt/sickscience-i13.jpg" alt="SickScience — NetWork pair abstract" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
-      </div>
-      <div data-photo="" data-x="1023" data-y="539" style="position:absolute;width:349px;height:435px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
-        <img data-full="uploads/sickscience-11-web.jpg" src="uploads/opt/sickscience-11.jpg" alt="SickScience — head to toe measured offer" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
-      </div>
-      <div data-photo="" data-x="1472" data-y="539" style="position:absolute;width:347px;height:435px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
-        <img data-full="uploads/sickscience-38-web.jpg" src="uploads/opt/sickscience-38.jpg" alt="SickScience — 4x award-winning PowerCycle ad" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
-      </div>
-      <div data-photo="" data-x="1919" data-y="539" style="position:absolute;width:243px;height:435px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
-        <img data-full="uploads/sickscience-i05-web.jpg" src="uploads/opt/sickscience-i05.jpg" alt="SickScience — ShapeShift in a specimen jar" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
-      </div>
-      <div data-photo="" data-x="2262" data-y="539" style="position:absolute;width:435px;height:435px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
-        <img data-full="uploads/sickscience-i02-web.jpg" src="uploads/opt/sickscience-i02.jpg" alt="SickScience — NetWork in front of an X-ray" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
-      </div>
-      <div data-photo="" data-x="2797" data-y="539" style="position:absolute;width:243px;height:435px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
-        <img data-full="uploads/sickscience-29-web.jpg" src="uploads/opt/sickscience-29.jpg" alt="SickScience — Vault set product scene" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
-      </div>
-      <div data-photo="" data-x="40" data-y="1074" style="position:absolute;width:228px;height:408px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
-        <img data-full="uploads/sickscience-i07-web.jpg" src="uploads/opt/sickscience-i07.jpg" alt="SickScience — ShapeShift with skull and calipers" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
-      </div>
-      <div data-photo="" data-video="" data-x="368" data-y="1074" style="position:absolute;width:230px;height:408px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
-        <video src="uploads/sickscience-05.mp4" data-full="uploads/sickscience-05-full.mp4" poster="uploads/opt/sickscience-05.jpg" muted loop playsinline autoplay preload="metadata" aria-label="SickScience — founders story animation" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
-      </div>
-      <div data-photo="" data-x="698" data-y="1074" style="position:absolute;width:328px;height:408px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
-        <img data-full="uploads/sickscience-06-web.jpg" src="uploads/opt/sickscience-06.jpg" alt="SickScience — full set Black Friday ad" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
-      </div>
-      <div data-photo="" data-x="1126" data-y="1074" style="position:absolute;width:325px;height:408px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
-        <img data-full="uploads/sickscience-33-web.jpg" src="uploads/opt/sickscience-33.jpg" alt="SickScience — NetWork museum placard ad" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
-      </div>
-      <div data-photo="" data-x="1551" data-y="1074" style="position:absolute;width:408px;height:408px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
-        <img data-full="uploads/sickscience-i10-web.jpg" src="uploads/opt/sickscience-i10.jpg" alt="SickScience — NetWork in orbit" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
-      </div>
-      <div data-photo="" data-x="2059" data-y="1074" style="position:absolute;width:228px;height:408px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
-        <img data-full="uploads/sickscience-i12-web.jpg" src="uploads/opt/sickscience-i12.jpg" alt="SickScience — DropOff texture" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
-      </div>
-      <div data-photo="" data-x="2387" data-y="1074" style="position:absolute;width:327px;height:408px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
-        <img data-full="uploads/sickscience-12-web.jpg" src="uploads/opt/sickscience-12.jpg" alt="SickScience — ShapeShift jawline ad" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
-      </div>
-      <div data-photo="" data-x="2814" data-y="1074" style="position:absolute;width:226px;height:408px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
-        <img data-full="uploads/sickscience-i08-web.jpg" src="uploads/opt/sickscience-i08.jpg" alt="SickScience — ShapeShift under a bell jar" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
-      </div>
-      <div data-photo="" data-x="40" data-y="1582" style="position:absolute;width:181px;height:321px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
-        <img data-full="uploads/sickscience-40-web.jpg" src="uploads/opt/sickscience-40.jpg" alt="SickScience — thicker hair ad" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
-      </div>
-      <div data-photo="" data-x="321" data-y="1582" style="position:absolute;width:180px;height:321px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
-        <img data-full="uploads/sickscience-08-web.jpg" src="uploads/opt/sickscience-08.jpg" alt="SickScience — ShapeShift sculpture scene" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
-      </div>
-      <div data-photo="" data-x="601" data-y="1582" style="position:absolute;width:321px;height:321px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
-        <img data-full="uploads/sickscience-i01-web.jpg" src="uploads/opt/sickscience-i01.jpg" alt="SickScience — NetWork in front of a mammogram light box" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
-      </div>
-      <div data-photo="" data-x="1022" data-y="1582" style="position:absolute;width:257px;height:321px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
-        <img data-full="uploads/sickscience-17-web.jpg" src="uploads/opt/sickscience-17.jpg" alt="SickScience — subscribe and save fine print ad" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
-      </div>
-      <div data-photo="" data-x="1379" data-y="1582" style="position:absolute;width:822px;height:321px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
-        <img data-full="uploads/sickscience-27-web.jpg" src="uploads/opt/sickscience-27.jpg" alt="SickScience — award banner for the website" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
-      </div>
-      <div data-photo="" data-x="2301" data-y="1582" style="position:absolute;width:179px;height:321px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
-        <img data-full="uploads/sickscience-i06-web.jpg" src="uploads/opt/sickscience-i06.jpg" alt="SickScience — ShapeShift between electric arcs" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
-      </div>
-      <div data-photo="" data-x="2580" data-y="1582" style="position:absolute;width:179px;height:321px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="735" data-y="40" style="position:absolute;width:211px;height:378px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/sickscience-42-web.jpg" src="uploads/opt/sickscience-42.jpg" alt="SickScience — DropOff scene" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-video="" data-x="2859" data-y="1582" style="position:absolute;width:181px;height:321px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
-        <video src="uploads/sickscience-18.mp4" data-full="uploads/sickscience-18-full.mp4" poster="uploads/opt/sickscience-18.jpg" muted loop playsinline autoplay preload="metadata" aria-label="SickScience — ShapeShift UGC day 1 to day 14" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      <div data-photo="" data-x="1046" data-y="40" style="position:absolute;width:968px;height:378px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/sickscience-27-web.jpg" src="uploads/opt/sickscience-27.jpg" alt="SickScience — award banner for the website" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-video="" data-x="2114" data-y="40" style="position:absolute;width:213px;height:378px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <video src="uploads/sickscience-s35.mp4" data-full="uploads/sickscience-s35-full.mp4" poster="uploads/opt/sickscience-s35.jpg" muted loop playsinline autoplay preload="metadata" aria-label="SickScience — ShapeShift countdown before and after" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-x="2427" data-y="40" style="position:absolute;width:209px;height:378px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/sickscience-i08-web.jpg" src="uploads/opt/sickscience-i08.jpg" alt="SickScience — ShapeShift under a bell jar" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="2736" data-y="40" style="position:absolute;width:304px;height:378px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/sickscience-17-web.jpg" src="uploads/opt/sickscience-17.jpg" alt="SickScience — subscribe and save fine print ad" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="40" data-y="518" style="position:absolute;width:261px;height:462px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/sickscience-40-web.jpg" src="uploads/opt/sickscience-40.jpg" alt="SickScience — thicker hair ad" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="401" data-y="518" style="position:absolute;width:371px;height:462px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/sickscience-06-web.jpg" src="uploads/opt/sickscience-06.jpg" alt="SickScience — full set Black Friday ad" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="872" data-y="518" style="position:absolute;width:370px;height:462px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/sickscience-12-web.jpg" src="uploads/opt/sickscience-12.jpg" alt="SickScience — ShapeShift jawline ad" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-video="" data-x="1342" data-y="518" style="position:absolute;width:261px;height:462px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <video src="uploads/sickscience-s32.mp4" data-full="uploads/sickscience-s32-full.mp4" poster="uploads/opt/sickscience-s32.jpg" muted loop playsinline autoplay preload="metadata" aria-label="SickScience — PowerCycle UGC how to apply" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-x="1703" data-y="518" style="position:absolute;width:258px;height:462px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/sickscience-i04-web.jpg" src="uploads/opt/sickscience-i04.jpg" alt="SickScience — products under a microscope" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-video="" data-x="2061" data-y="518" style="position:absolute;width:261px;height:462px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <video src="uploads/sickscience-s33.mp4" data-full="uploads/sickscience-s33-full.mp4" poster="uploads/opt/sickscience-s33.jpg" muted loop playsinline autoplay preload="metadata" aria-label="SickScience — NetWork UGC half face primer" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-x="2422" data-y="518" style="position:absolute;width:258px;height:462px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/sickscience-i14-web.jpg" src="uploads/opt/sickscience-i14.jpg" alt="SickScience — PowerCycle dropper on the scalp" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="2780" data-y="518" style="position:absolute;width:260px;height:462px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/sickscience-i03-web.jpg" src="uploads/opt/sickscience-i03.jpg" alt="SickScience — product on an X-ray light box" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="40" data-y="1080" style="position:absolute;width:249px;height:446px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/sickscience-i07-web.jpg" src="uploads/opt/sickscience-i07.jpg" alt="SickScience — ShapeShift with skull and calipers" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-video="" data-x="389" data-y="1080" style="position:absolute;width:251px;height:446px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <video src="uploads/sickscience-s26.mp4" data-full="uploads/sickscience-s26-full.mp4" poster="uploads/opt/sickscience-s26.jpg" muted loop playsinline autoplay preload="metadata" aria-label="SickScience — ShapeShift product film" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-x="740" data-y="1080" style="position:absolute;width:355px;height:446px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/sickscience-33-web.jpg" src="uploads/opt/sickscience-33.jpg" alt="SickScience — NetWork museum placard ad" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="1195" data-y="1080" style="position:absolute;width:250px;height:446px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/sickscience-08-web.jpg" src="uploads/opt/sickscience-08.jpg" alt="SickScience — ShapeShift sculpture scene" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="1545" data-y="1080" style="position:absolute;width:446px;height:446px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/sickscience-i10-web.jpg" src="uploads/opt/sickscience-i10.jpg" alt="SickScience — NetWork in orbit" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="2091" data-y="1080" style="position:absolute;width:249px;height:446px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/sickscience-i24-web.jpg" src="uploads/opt/sickscience-i24.jpg" alt="SickScience — products on a steel tray" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-video="" data-x="2440" data-y="1080" style="position:absolute;width:251px;height:446px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <video src="uploads/sickscience-s27.mp4" data-full="uploads/sickscience-s27-full.mp4" poster="uploads/opt/sickscience-s27.jpg" muted loop playsinline autoplay preload="metadata" aria-label="SickScience — founders story animation" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-x="2791" data-y="1080" style="position:absolute;width:249px;height:446px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/sickscience-i06-web.jpg" src="uploads/opt/sickscience-i06.jpg" alt="SickScience — ShapeShift between electric arcs" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="40" data-y="1626" style="position:absolute;width:246px;height:441px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/sickscience-i11-web.jpg" src="uploads/opt/sickscience-i11.jpg" alt="SickScience — NetWork texture on the hand" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-video="" data-x="386" data-y="1626" style="position:absolute;width:249px;height:441px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <video src="uploads/sickscience-s30.mp4" data-full="uploads/sickscience-s30-full.mp4" poster="uploads/opt/sickscience-s30.jpg" muted loop playsinline autoplay preload="metadata" aria-label="SickScience — brand film" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-x="735" data-y="1626" style="position:absolute;width:353px;height:441px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/sickscience-22-web.jpg" src="uploads/opt/sickscience-22.jpg" alt="SickScience — the vault is open ad" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="1188" data-y="1626" style="position:absolute;width:356px;height:441px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/sickscience-28-web.jpg" src="uploads/opt/sickscience-28.jpg" alt="SickScience — Black Friday NetWork ad" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="1644" data-y="1626" style="position:absolute;width:354px;height:441px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/sickscience-11-web.jpg" src="uploads/opt/sickscience-11.jpg" alt="SickScience — head to toe measured offer" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="2098" data-y="1626" style="position:absolute;width:246px;height:441px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/sickscience-i05-web.jpg" src="uploads/opt/sickscience-i05.jpg" alt="SickScience — ShapeShift in a specimen jar" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="2444" data-y="1626" style="position:absolute;width:248px;height:441px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/sickscience-34-web.jpg" src="uploads/opt/sickscience-34.jpg" alt="SickScience — cool clean chemistry ShapeShift story" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-video="" data-x="2792" data-y="1626" style="position:absolute;width:248px;height:441px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <video src="uploads/sickscience-s34.mp4" data-full="uploads/sickscience-s34-full.mp4" poster="uploads/opt/sickscience-s34.jpg" muted loop playsinline autoplay preload="metadata" aria-label="SickScience — new era of biotech lab film" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-x="40" data-y="2167" style="position:absolute;width:345px;height:428px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/sickscience-i23-web.jpg" src="uploads/opt/sickscience-i23.jpg" alt="SickScience — gift and 22 on lab tiles" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="485" data-y="2167" style="position:absolute;width:239px;height:428px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/sickscience-19-web.jpg" src="uploads/opt/sickscience-19.jpg" alt="SickScience — PowerCycle scene" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="824" data-y="2167" style="position:absolute;width:341px;height:428px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/sickscience-38-web.jpg" src="uploads/opt/sickscience-38.jpg" alt="SickScience — 4x award-winning PowerCycle ad" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-video="" data-x="1265" data-y="2167" style="position:absolute;width:241px;height:428px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <video src="uploads/sickscience-s29.mp4" data-full="uploads/sickscience-s29-full.mp4" poster="uploads/opt/sickscience-s29.jpg" muted loop playsinline autoplay preload="metadata" aria-label="SickScience — ShapeShift line animation" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-x="1606" data-y="2167" style="position:absolute;width:319px;height:428px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/sickscience-i22-web.jpg" src="uploads/opt/sickscience-i22.jpg" alt="SickScience — DropOff among flasks" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-x="2025" data-y="2167" style="position:absolute;width:239px;height:428px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/sickscience-i25-web.jpg" src="uploads/opt/sickscience-i25.jpg" alt="SickScience — full lineup on a light table" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
+      </div>
+      <div data-photo="" data-video="" data-x="2364" data-y="2167" style="position:absolute;width:241px;height:428px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <video src="uploads/sickscience-s31.mp4" data-full="uploads/sickscience-s31-full.mp4" poster="uploads/opt/sickscience-s31.jpg" muted loop playsinline autoplay preload="metadata" aria-label="SickScience — just getting started in store" style="width:100%;height:100%;object-fit:cover;pointer-events:none;display:block;"></video>
+      </div>
+      <div data-photo="" data-x="2705" data-y="2167" style="position:absolute;width:335px;height:428px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+        <img data-full="uploads/sickscience-i09-web.jpg" src="uploads/opt/sickscience-i09.jpg" alt="SickScience — NetWork above the Earth" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;user-select:none;">
       </div>
     </div>
   </div>
@@ -210,7 +231,7 @@ class Component {
     const patternSrc = document.getElementById('tile-pattern');
     if (!stage || !canvas || !patternSrc) return;
 
-    const PW = 3100, PH = 1963;
+    const PW = 3100, PH = 2655;
     const GS = window.innerWidth <= 760 ? 0.42 : 1;
     const NX = Math.ceil(window.innerWidth / (PW * GS)) + 1, NY = Math.max(2, Math.ceil(window.innerHeight / (PH * GS)) + 1);
     canvas.style.width  = (PW * NX) + 'px';
