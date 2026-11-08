@@ -41,7 +41,7 @@ No dependencies. Test both desktop (1440×900) and mobile (390×844) widths.
 - Contact "normal?" → `data-spray="scribble"`. Footer logo → `data-spray="circle"`.
 - "What we do" row hover → CSS layer in `_setupServiceRows` (the `wipe` div): green `#CCFF01` with the spray-edge mask,
   animated with `transform` only. Don't go back to canvas fills there; that froze the page.
-- Nav / mobile menu / footer logo: `uploads/joke-wordmark.svg` ("Joke® Studio" with the J emblem, 22px high; `joke-wordmark-light.svg` on the dark All work page). Hero round badge: `uploads/joke-emblem.svg` on cream, never on black (owner, 2026-11-08). Source: Figma `2dUT2JUuwfITmXhKdqBpcC`, section `173:484` "Logo-Amblem". The old smiley (`joke-smile.webp`) is only used by the unused `hero-smile.js`.
+- Nav / mobile menu / footer logo: `uploads/joke-wordmark.svg` ("Joke® Studio" with the J emblem, 22px high; `joke-wordmark-light.svg` on the dark All work page). Hero round badge: `uploads/joke-emblem.svg` in black straight on the gradient, no inner disc (owner, 2026-11-08). Source: Figma `2dUT2JUuwfITmXhKdqBpcC`, section `173:484` "Logo-Amblem". The old smiley (`joke-smile.webp`) is only used by the unused `hero-smile.js`.
 
 ## Contact form
 `_setupContactSubmit` POSTs JSON to **`/api/contact`** (`api/contact.js`, a Vercel function), which validates it and emails it via **Resend**.
