@@ -92,25 +92,25 @@
 
     <!-- source pattern — cloned 2×2 by JS into a seamless, endlessly-panning tile. Empty for now — add data-photo tiles here when images are ready. -->
     <div id="tile-pattern" style="display:none;">
-      <div data-photo="" data-x="40" data-y="40" style="position:absolute;width:675px;height:380px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="2380" data-y="862" style="position:absolute;width:980px;height:552px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/gc-brains-01-web.jpg" src="uploads/opt/gc-brains-01.jpg" alt="GC Brains 1" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center top;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="815" data-y="40" style="position:absolute;width:675px;height:380px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="1538" data-y="2540" style="position:absolute;width:919px;height:518px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/gc-brains-02-web.jpg" src="uploads/opt/gc-brains-02.jpg" alt="GC Brains 2" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center top;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1590" data-y="40" style="position:absolute;width:675px;height:380px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="1651" data-y="1937" style="position:absolute;width:902px;height:508px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/gc-brains-03-web.jpg" src="uploads/opt/gc-brains-03.jpg" alt="GC Brains 3" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center top;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="2365" data-y="40" style="position:absolute;width:675px;height:380px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="3005" data-y="112" style="position:absolute;width:1043px;height:587px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/gc-brains-04-web.jpg" src="uploads/opt/gc-brains-04.jpg" alt="GC Brains 4" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center top;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="40" data-y="520" style="position:absolute;width:1075px;height:605px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="3210" data-y="1569" style="position:absolute;width:902px;height:508px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/gc-brains-05-web.jpg" src="uploads/opt/gc-brains-05.jpg" alt="GC Brains 5" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center top;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="1215" data-y="520" style="position:absolute;width:1075px;height:605px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="361" data-y="879" style="position:absolute;width:887px;height:499px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/gc-brains-06-web.jpg" src="uploads/opt/gc-brains-06.jpg" alt="GC Brains 6" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center top;pointer-events:none;user-select:none;">
       </div>
-      <div data-photo="" data-x="2390" data-y="520" style="position:absolute;width:650px;height:605px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
+      <div data-photo="" data-x="1630" data-y="701" style="position:absolute;width:514px;height:479px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(11,11,11,0.12);cursor:zoom-in;">
         <img data-full="uploads/gc-brains-07-web.jpg" src="uploads/opt/gc-brains-07.jpg" alt="GC Brains 7" loading="lazy" draggable="false" style="width:100%;height:100%;object-fit:cover;object-position:center top;pointer-events:none;user-select:none;">
       </div>
     </div>
@@ -149,7 +149,7 @@ class Component {
     const patternSrc = document.getElementById('tile-pattern');
     if (!stage || !canvas || !patternSrc) return;
 
-    const PW = 3100, PH = 1185;
+    const PW = 3300, PH = 2600;
     const GS = window.innerWidth <= 760 ? 0.42 : 1;
     const NX = Math.ceil(window.innerWidth / (PW * GS)) + 1, NY = Math.max(2, Math.ceil(window.innerHeight / (PH * GS)) + 1);
     canvas.style.width  = (PW * NX) + 'px';
