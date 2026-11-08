@@ -155,67 +155,101 @@ class Component {
     const patternSrc = document.getElementById('tile-pattern');
     if (!stage || !canvas || !patternSrc) return;
 
-    let PW = 3100, PH = 2419;
+    let PW = 1, PH = 1;
     const GS = 1;
-    const NX = 1, NY = 1;
-    canvas.style.width  = (PW * NX) + 'px';
-    canvas.style.height = (PH * NY) + 'px';
+    let NX = 1, NY = 1;
 
-    const offsets = []; for (let i = 0; i < NX; i++) for (let j = 0; j < NY; j++) offsets.push([i * PW, j * PH]); // the pattern is wider than a screen, so a row never shows twice side by side
     const sourceTiles = [...patternSrc.children];
     const lbItems = sourceTiles.map(t => { const v = t.querySelector('video'), im = t.querySelector('img'); return v ? { type: 'v', src: v.getAttribute('data-full') || v.getAttribute('src') } : { type: 'i', src: im ? (im.getAttribute('data-full') || im.getAttribute('src')) : '', alt: im ? im.alt : '' }; });
-    offsets.forEach(([ox, oy]) => {
-      sourceTiles.forEach((tile, ti) => {
-        const clone = tile.cloneNode(true);
+    patternSrc.remove();
+    // Layout for THIS screen. Looping is only used on an axis where the pattern is longer than
+    // the screen plus its largest tile, so the same image can never be on screen twice.
+    // An axis that cannot loop holds still (no drift, clamped drag). Tiles never cross the pattern edge.
+    const isMob = window.innerWidth <= 760;
+    const GAP = isMob ? 16 : 40, EDGE = 14;
+    const AR = sourceTiles.map(t => Math.min(2.4, Math.max(0.5, parseFloat(t.getAttribute('data-ar')) || 1.5)));
+    let LX = false, LY = false, lastVW = 0, lastVH = 0;
+    const split = (vals, k) => {
+      const n = vals.length, S = vals.reduce((a, b) => a + b, 0), out = []; let cur = [], acc = 0;
+      vals.forEach((v, i) => {
+        cur.push(i); acc += v;
+        const left = n - i - 1, need = k - out.length - 1;
+        if (need > 0 && left >= need && (acc >= S * (out.length + 1) / k - v / 2 || left === need)) { out.push(cur); cur = []; }
+      });
+      if (cur.length) out.push(cur);
+      return out.length === k ? out : null;
+    };
+    const solve = (vw, vh, relax) => {
+      const n = AR.length, T = isMob ? 230 : 400;
+      const hMin = vh * (relax ? 0.08 : (isMob ? 0.15 : 0.25)), hMax = vh * (relax ? 1.3 : (isMob ? 0.72 : 0.75)), wMax = vw * (relax ? 2.5 : (isMob ? 1.15 : 0.9));
+      let best = null;
+      const take = (c) => { if (!best || c.score < best.score) best = c; };
+      const judge = (kind, groups, size, dims, PWc, PHc) => {
+        let wm = 0, hm = 0, hn = 1e9, hs = 0;
+        dims.forEach(d => { wm = Math.max(wm, d[0]); hm = Math.max(hm, d[1]); hn = Math.min(hn, d[1]); hs += d[1]; });
+        if (hn < hMin || hm > hMax || wm > wMax) return;
+        const lx = PWc >= vw + wm + GAP, ly = PHc >= vh + hm + GAP;
+        if (!lx && PWc < vw + 2 * EDGE) return;
+        if (!ly && PHc < vh + 2 * EDGE) return;
+        const score = (lx && ly ? 0 : (lx || ly ? 1 : 3)) + Math.abs(Math.log(hs / dims.length / T));
+        take({ score, kind, groups, size, PW: PWc, PH: PHc, lx, ly });
+      };
+      for (let r = 1; r <= n; r++) {
+        const rows = split(AR, r); if (!rows) continue;
+        const A = rows.map(g => g.reduce((s, i) => s + AR[i], 0));
+        for (let W = vw; W <= vw * 12; W *= 1.025) {
+          const hs = rows.map((g, k) => (W - GAP * g.length) / A[k]); if (Math.min(...hs) <= 0) continue;
+          const dims = []; rows.forEach((g, k) => g.forEach(i => dims.push([AR[i] * hs[k], hs[k]])));
+          judge('rows', rows, hs, dims, W, hs.reduce((s, h) => s + h + GAP, 0));
+        }
+      }
+      for (let c = 1; c <= n; c++) {
+        const cols = split(AR.map(a => 1 / a), c); if (!cols) continue;
+        const B = cols.map(g => g.reduce((s, i) => s + 1 / AR[i], 0));
+        for (let H = vh; H <= vh * 12; H *= 1.025) {
+          const ws = cols.map((g, k) => (H - GAP * g.length) / B[k]); if (Math.min(...ws) <= 0) continue;
+          const dims = []; cols.forEach((g, k) => g.forEach(i => dims.push([ws[k], ws[k] / AR[i]])));
+          judge('cols', cols, ws, dims, ws.reduce((s, w) => s + w + GAP, 0), H);
+        }
+      }
+      return best;
+    };
+    const build = () => {
+      const vw = stage.clientWidth, vh = stage.clientHeight;
+      lastVW = vw; lastVH = vh;
+      const L = solve(vw, vh, false) || solve(vw, vh, true); if (!L) return;
+      const pos = [];
+      if (L.kind === 'rows') {
+        let y = GAP / 2;
+        L.groups.forEach((g, k) => { let x = GAP / 2; const h = L.size[k]; g.forEach(i => { const w = AR[i] * h; pos[i] = [x, y, w, h]; x += w + GAP; }); y += h + GAP; });
+      } else {
+        let x = GAP / 2;
+        L.groups.forEach((g, k) => { let y = GAP / 2; const w = L.size[k]; g.forEach(i => { const h = w / AR[i]; pos[i] = [x, y, w, h]; y += h + GAP; }); x += w + GAP; });
+      }
+      PW = L.PW; PH = L.PH; LX = L.lx; LY = L.ly;
+      NX = LX ? Math.ceil(vw / PW) + 1 : 1; NY = LY ? Math.ceil(vh / PH) + 1 : 1;
+      canvas.textContent = '';
+      canvas.style.width = (PW * NX) + 'px'; canvas.style.height = (PH * NY) + 'px';
+      for (let a = 0; a < NX; a++) for (let b = 0; b < NY; b++) sourceTiles.forEach((tile, ti) => {
+        const clone = tile.cloneNode(true), p = pos[ti];
         clone.setAttribute('data-idx', ti);
-        const baseLeft = parseFloat(tile.getAttribute('data-x'));
-        const baseTop  = parseFloat(tile.getAttribute('data-y'));
-        clone.style.left = (baseLeft + ox) + 'px';
-        clone.style.top  = (baseTop + oy) + 'px';
+        clone.style.left = (p[0] + a * PW).toFixed(1) + 'px'; clone.style.top = (p[1] + b * PH).toFixed(1) + 'px';
+        clone.style.width = p[2].toFixed(1) + 'px'; clone.style.height = p[3].toFixed(1) + 'px';
         canvas.appendChild(clone);
       });
-    });
-    patternSrc.remove();
-
-    // fit: lay the tiles out for THIS screen, one copy only. Rows keep each image's shape,
-    // the block is always larger than the screen (no empty edge), and the view stops/bounces at the edges.
-    const FIT_PAD = window.innerWidth <= 760 ? 14 : 36, FIT_G = FIT_PAD, FIT_T = window.innerWidth <= 760 ? 230 : 400, EDGE = FIT_PAD + 14;
-    const fitTiles = [...canvas.children];
-    const fitAr = fitTiles.map(t => parseFloat(t.getAttribute('data-ar')) || 1.5);
-    const fit = () => {
-      const vw = window.innerWidth, vh = stage.clientHeight, n = fitAr.length, S = fitAr.reduce((x, y) => x + y, 0);
-      const wMin = vw * 1.1 + 2 * EDGE, hMin = vh * 1.1 + 2 * EDGE;
-      let best = null;
-      for (let r = 1; r <= n; r++) {
-        const rows = []; let cur = [], acc = 0;
-        fitAr.forEach((ar, i) => {
-          cur.push(i); acc += ar;
-          const left = n - i - 1, need = r - rows.length - 1;
-          if (need > 0 && left >= need && (acc >= S * (rows.length + 1) / r - ar / 2 || left === need)) { rows.push(cur); cur = []; }
-        });
-        if (cur.length) rows.push(cur);
-        if (rows.length !== r) continue;
-        const A = rows.map(row => row.reduce((x, i) => x + fitAr[i], 0)), C = rows.map(row => 2 * FIT_PAD + FIT_G * (row.length - 1));
-        const inv = A.reduce((x, y) => x + 1 / y, 0), cOver = C.reduce((x, c, k) => x + c / A[k], 0);
-        const W = Math.max(wMin, (hMin - 2 * FIT_PAD - FIT_G * (r - 1) + cOver) / inv);
-        const hs = A.map((ak, k) => (W - C[k]) / ak), H = hs.reduce((x, y) => x + y, 0) + 2 * FIT_PAD + FIT_G * (r - 1);
-        const score = Math.abs(Math.log((hs.reduce((x, y) => x + y, 0) / r) / FIT_T)) + Math.max(0, ...hs.map(h => Math.log(FIT_T * 0.45 / h)));
-        if (!best || score < best.score) best = { score, rows, W, H, hs };
-      }
-      let y = FIT_PAD;
-      best.rows.forEach((row, k) => {
-        let x = FIT_PAD; const h = best.hs[k];
-        row.forEach(i => { const w = fitAr[i] * h, t = fitTiles[i]; t.style.left = x.toFixed(1) + 'px'; t.style.top = y.toFixed(1) + 'px'; t.style.width = w.toFixed(1) + 'px'; t.style.height = h.toFixed(1) + 'px'; x += w + FIT_G; });
-        y += h + FIT_G;
-      });
-      PW = best.W; PH = best.H;
-      canvas.style.width = PW + 'px'; canvas.style.height = PH + 'px';
+      canvas.setAttribute('data-mode', L.kind + (LX ? '-loopX' : '') + (LY ? '-loopY' : ''));
     };
-    fit();
-    const wrap = (v, m) => { const span = m === PW ? window.innerWidth : stage.clientHeight; return Math.min(Math.max(v, EDGE), m - span - EDGE); };
-    let dX = 1, dY = 1;
+    build();
+    const wrapX = (v) => LX ? ((v % PW) + PW) % PW : Math.min(Math.max(v, EDGE), PW - stage.clientWidth - EDGE);
+    const wrapY = (v) => LY ? ((v % PH) + PH) % PH : Math.min(Math.max(v, EDGE), PH - stage.clientHeight - EDGE);
     let fitTimer = null;
-    window.addEventListener('resize', () => { clearTimeout(fitTimer); fitTimer = setTimeout(() => { fit(); viewX = wrap(viewX, PW); viewY = wrap(viewY, PH); }, 120); });
+    window.addEventListener('resize', () => {
+      clearTimeout(fitTimer);
+      fitTimer = setTimeout(() => {
+        if (Math.abs(stage.clientWidth - lastVW) < 2 && Math.abs(stage.clientHeight - lastVH) < 140) return; // phone URL bar: keep the layout
+        build(); viewX = wrapX(viewX); viewY = wrapY(viewY);
+      }, 150);
+    });
 
     const lightbox = document.createElement('div');
     lightbox.style.cssText = 'position:fixed;inset:0;z-index:500;background:rgba(11,11,11,0.94);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 260ms ease;';
@@ -281,7 +315,7 @@ class Component {
     const onKey = (e) => { if (e.key === 'Escape') closeLightbox(); };
     window.addEventListener('keydown', onKey);
 
-    let viewX = wrap((PW - window.innerWidth) / 2, PW), viewY = wrap((PH - stage.clientHeight) / 2, PH);
+    let viewX = LX ? PW * 0.2 : wrapX(1e9), viewY = LY ? PH * 0.35 : wrapY(0); // a still axis starts at one end and drifts once to the other, then stops
     let dragging = false;
     let lastPX = 0, lastPY = 0;
     let dragDistance = 0;
@@ -302,8 +336,8 @@ class Component {
       const dt = Math.min(0.05, (now - last) / 1000);
       last = now;
       if (autoplay && !dragging) {
-        { const nx = viewX - SPEED_X * dt * dX; viewX = wrap(nx, PW); if (viewX !== nx) dX = -dX; }
-        { const ny = viewY + SPEED_Y * dt * dY; viewY = wrap(ny, PH); if (viewY !== ny) dY = -dY; }
+        viewX = wrapX(viewX - SPEED_X * dt);
+        viewY = wrapY(viewY + SPEED_Y * dt);
       }
       const targetParX = mouseNX * PARALLAX_RANGE;
       const targetParY = mouseNY * PARALLAX_RANGE;
@@ -344,8 +378,8 @@ class Component {
       const dx = p.clientX - lastPX, dy = p.clientY - lastPY;
       lastPX = p.clientX; lastPY = p.clientY;
       dragDistance += Math.hypot(dx, dy);
-      viewX = wrap(viewX - dx / GS, PW);
-      viewY = wrap(viewY - dy / GS, PH);
+      viewX = wrapX(viewX - dx);
+      viewY = wrapY(viewY - dy);
     };
     const onUp = (e) => {
       if (!dragging) return;
@@ -376,8 +410,8 @@ class Component {
       e.preventDefault();
       autoplay = false;
       clearTimeout(idleTimer);
-      viewX = wrap(viewX + e.deltaX * 0.5 / GS, PW);
-      viewY = wrap(viewY + e.deltaY * 0.5 / GS, PH);
+      viewX = wrapX(viewX + e.deltaX * 0.5);
+      viewY = wrapY(viewY + e.deltaY * 0.5);
       wakeAutoplay();
     };
     stage.addEventListener('wheel', onWheel, { passive: false });
