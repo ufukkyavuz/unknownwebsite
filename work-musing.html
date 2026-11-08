@@ -180,8 +180,8 @@ class Component {
       return out.length === k ? out : null;
     };
     const solve = (vw, vh, relax) => {
-      const n = AR.length, T = isMob ? 230 : 400;
-      const hMin = vh * (relax ? 0.08 : (isMob ? 0.15 : 0.25)), hMax = vh * (relax ? 1.3 : (isMob ? 0.72 : 0.75)), wMax = vw * (relax ? 2.5 : (isMob ? 1.15 : 0.9));
+      const n = AR.length, T = vh * (isMob ? 0.26 : 0.46); // same tile size as the other galleries
+      const hMin = vh * (relax ? 0.08 : (isMob ? 0.15 : 0.28)), hMax = vh * (relax ? 1.3 : (isMob ? 0.45 : 0.6)), wMax = vw * (relax ? 2.5 : (isMob ? 0.95 : 0.75));
       let best = null;
       const take = (c) => { if (!best || c.score < best.score) best = c; };
       const judge = (kind, groups, size, dims, PWc, PHc) => {
@@ -191,7 +191,7 @@ class Component {
         const lx = PWc >= vw + wm + GAP, ly = PHc >= vh + hm + GAP;
         if (!lx && PWc < vw + 2 * EDGE) return;
         if (!ly && PHc < vh + 2 * EDGE) return;
-        const score = (lx && ly ? 0 : (lx || ly ? 1 : 3)) + Math.abs(Math.log(hs / dims.length / T));
+        const score = 2 * Math.abs(Math.log(hs / dims.length / T)) + (lx ? 0 : 0.25) + (ly ? 0 : 0.25) + (kind === 'cols' ? 0.3 : 0);
         take({ score, kind, groups, size, PW: PWc, PH: PHc, lx, ly });
       };
       for (let r = 1; r <= n; r++) {
